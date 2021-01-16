@@ -1,0 +1,332 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="1" /> 
+<title>_1_Referenz_Datentypen</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="9g50k5">
+<h1 class="e_zu1wia" data-number="1">Referenz-Datentypen</h1>
+<p>In dieser Aufgabe lernen wir die wesentlichen neuen Eigenschaften von Referenzdatentypen kennen.</p>
+<p>Dabei können Sie diese Skills erwerben:</p>
+</div>
+<div class="skill segment" id="7nfp4x">
+<div data-skill="Daten.Referenz-Datentypen" data-uuid="uej0kx" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Referenz-Datentypen</span></div></div></div>
+
+</div>
+<div class="text segment" id="qphwpo">
+<p>Als Beispiel für Referenz-Datentypen verwenden wir den Datentyp String. Unter Zeichenketten kann sich jeder etwas vorstellen, und Sie können Strings auch als Literal angeben, was den Umgang damit sehr vereinfacht. Später lernen wir noch eine Menge anderer Referenz-Datentypen kennen.</p>
+<p><strong>Skizzieren Sie</strong> für jede folgende Unteraufgabe auf einfache Art und Weise, was beim Definieren, Zuweisen und Arbeiten mit den Strings jeweils im Speicher steht – wie wir es in der Vorlesung gesehen haben. Dafür ergänzen Sie die gegebenen Zeichnungen hier im Dokument.</p>
+<p>Wenn die folgende Java-Codezeile ausgeführt wurde</p>
+<p><code>String name = "Heinz";</code></p>
+<p>ergeben sich folgende <strong>Werte im Speicher</strong>:</p>
+</div>
+<div class="gui segment" id="48uawz">
+<svg id="SvgjsSvg10027" width="500" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><defs id="SvgjsDefs1013" data-fic="Grafik"></defs><rect id="SvgjsRect1623" width="60" height="60" fill="#efe9f4" stroke="#000000" stroke-width="2" x="20" y="60" transform="matrix(1,0,0,1,0,0)"></rect><rect id="SvgjsRect1777" width="100" height="60" fill="#efe9f4" stroke="#000000" stroke-width="2" x="180" y="60" transform="matrix(1,0,0,1,0,0)"></rect><rect id="SvgjsRect1876" width="140" height="60" fill="#efe9f4" stroke="#000000" stroke-width="2" x="280" y="60" transform="matrix(1,0,0,1,0,0)"></rect><foreignObject id="fgn" width="57" height="23" x="23" y="37" transform="matrix(1,0,0,1,0,0)" fill="#efe9f4"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin: 0px 0px 0px 2px; height: 55px; width: 75px; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">name</textarea></foreignObject><rect id="SvgjsRect1678" width="100" height="60" fill="#efe9f4" stroke="#000000" stroke-width="2" x="80" y="60" transform="matrix(1,0,0,1,0,0)"></rect><polyline id="SvgjsPolyline7583" points="229,134 229,134 229,134" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><foreignObject id="fgn" width="60" height="20" x="200" y="80" transform="matrix(1,0,0,1,0,0)" fill="#efe9f4"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin-left: 2px; height: 100%; width: 100%; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">"Heinz"</textarea></foreignObject><polyline id="SvgjsPolyline11837" points="48,98 48,98 48,100 48,102 48,104 48,105 48,108 49,111 50,117 51,121 54,126 54,130 56,133 58,140 61,143 64,147 68,152 72,155 77,159 81,162 83,164 85,164 88,166 93,167 96,167 103,167 110,167 117,167 125,167 132,167 139,165 146,163 154,160 161,158 168,157 174,155 178,153 185,149 190,146 191,144 193,142 198,139 200,136 200,134 202,132 203,131 203,130 204,129 204,129" stroke="#00afef" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11881" points="187,132 187,132 189,132 193,132 195,130 196,130 199,128 200,127 201,126 202,126 203,125 204,124 204,124 205,123 205,124 207,126 207,129 207,130 208,131 208,132 209,132 211,134 211,134 211,134" stroke="#00afef" stroke-width="2" fill-opacity="0"></polyline></svg>
+</div>
+<div class="text segment" id="dmo2yr">
+<ul>
+<li>Dabei ist <code>name</code> der Namen der Variable</li>
+<li>Der Wert der Variablen ist ein Verweis auf eine Speicherstelle, ab der ein String im Speicher liegt.</li>
+</ul>
+<p>Technisch ist der Verweis natürlich kein gezeichneter Pfeil sondern eine Speicheradresse, wie in der Vorlesung behandelt. Hier ist die <em>Darstellung mit Pfeilen aber ausreichend</em> und übersichtlicher.&nbsp;</p>
+<h2 class="e_uieqhb" data-number="1.1">Definieren von zwei Variablen, die als Datentyp einen Referenzdatentyp haben.</h2>
+<p><span class="task-link s_swua0h block" data-href="#e_swua0h">Definieren Sie in einem neuen Code-Block zwei String-Variablen <code>name</code> und <code>vorname</code>. Weisen Sie ihnen aber noch keinen (!) Wert zu.</span></p>
+</div>
+<div class="code segment" id="kexcix" data-class="" data-class-name="_1_Referenz_Datentypen" data-segment-id="1" data-solution-id="e_swua0h">
+String vorname;<br>String nachname;<br>
+</div>
+<div class="text segment" id="2guzrb">
+<p>&nbsp;</p>
+<p><span class="task-link s_xswki7 text">Frage: Was steht nun als Wert im Speicher?</span></p>
+</div>
+<div class="hint segment" id="ocam9w" data-title="Hinweis: Es kann nie „nichts“ im Speicher stehen.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis: Es kann nie „nichts“ im Speicher stehen.</span></div></div>
+
+</div>
+<div class="text segment" id="wceqrn">
+<p><span class="task-link s_gzz7l6 action">Skizzieren Sie die entsprechenden Werte im Speicher</span> in der folgenden Zeichnung&nbsp;</p>
+<p>Es sind zwar die beiden Variablen im Speicher vermerkt, jedoch haben diese noch keine Referenz, weil diesen kein Wert zugewiesen wurde.</p>
+</div>
+<div class="gui segment" id="ggumh4">
+<svg id="SvgjsSvg1168" width="500" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><defs id="SvgjsDefs16106" data-fic="Grafik" data-scenewidth="700"></defs><rect id="SvgjsRect17182" width="80" height="80" fill="#efe9f4" stroke="#000000" stroke-width="2" x="120" y="60" transform="matrix(1,-1.370039018403204e-16,1.370039018403204e-16,1,-1.4210854715202004e-14,1.4210854715202004e-14)"></rect><foreignObject id="fgn" width="40" height="20" x="57" y="35" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin-left: 2px; height: 100%; width: 100%; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">name</textarea></foreignObject><rect id="SvgjsRect17994" width="420" height="80" fill="#efe9f4" stroke="#000000" stroke-width="2" x="200" y="60" transform="matrix(1,0,0,1,0,0)"></rect><foreignObject id="fgn" width="61" height="29" x="128" y="36" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin-left: 2px; height: 100%; width: 100%; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">vorname</textarea></foreignObject><rect id="SvgjsRect17182" width="80" height="80" fill="#efe9f4" stroke="#000000" stroke-width="2" x="40" y="60" transform="matrix(1,-1.370039018403204e-16,1.370039018403204e-16,1,-1.4210854715202004e-14,1.4210854715202004e-14)"></rect><defs id="SvgjsDefs1169" data-fic="Grafik"></defs><polyline id="SvgjsPolyline10901" points="76,39 76,39 76,39" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline10945" points="89,42 89,42 89,42" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline10989" points="89,42 89,42 89,42" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11033" points="87,40 87,40 87,40" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11077" points="87,40 87,40 87,40" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11121" points="84,49 84,49 84,49 84,49" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11165" points="84,49 84,49 84,49" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11209" points="84,49 84,49 84,49" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11640" points="160,53 160,53 160,53" stroke="#ffffff" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11727" points="370,158 370,158 370,158" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11771" points="125,124 125,124 125,124" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11815" points="125,124 125,124 125,124" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11859" points="130,127 130,127 130,127" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11903" points="125,130 125,130 125,130" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11947" points="125,130 125,130 125,130" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline11991" points="135,113 135,113 135,113" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12035" points="125,125 125,125 125,125" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12079" points="125,125 125,125 125,125" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12123" points="125,125 125,125 125,125" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12167" points="125,125 125,125 125,125" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12211" points="129,125 129,125 129,125 129,125" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12255" points="129,125 129,125 129,125" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12299" points="125,132 125,132 125,132" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12343" points="125,132 125,132 125,132" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12387" points="125,132 125,132 125,132" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12431" points="125,132 125,132 125,132" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12475" points="125,132 125,132 125,132" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline12519" points="125,132 125,132 125,132" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline></svg>
+</div>
+<div class="text segment" id="v81rhh">
+<h2 class="e_dsuz69" data-number="1.2">Schisserprinzip – Initialisierung wird erzwungen</h2>
+<p>Geben Sie beide Variablen auf die Konsole aus.</p>
+<p><span class="task-link s_qx0v77 block" data-href="#e_qx0v77">Programmieren Sie das in einem weiteren Codeblock:</span></p>
+</div>
+<div class="code segment" id="cejenb" data-class="" data-class-name="_1_Referenz_Datentypen" data-segment-id="2" data-solution-id="e_qx0v77">
+String vorname;<br>String nachname;<br><br>System.out.println("vorname: " + vorname);<br>System.out.println("nachname: " + nachname);<br><br>// Fehler: "variable nachname might not have been initialized"<br>
+</div>
+<div class="text segment" id="ch01j3">
+<p>&nbsp;</p>
+<p>Dann versuchen Sie, diesen und alle vorherigen Code-Blöcke (in denen die Definitionen der beiden Variablen stehen) <span class="task-link s_6j9rqd action">auszuführen</span>.</p>
+<p>Der Compiler lässt Sie diesen Code nicht compilieren, da er dem Schisserprinzip folgt: Sie haben die Variablen nicht initialisiert (d.h. nicht auf einen Anfangswert gesetzt), also ist nicht klar, was der Wert dieser Variablen sein soll.</p>
+<h2 class="e_067171" data-number="1.3">null – definierter Wert für „es wurde noch kein Wert gesetzt“</h2>
+<p>Initialisieren Sie nun die Variable <code>name</code> auf den Wert „definiert auf keinen Wert gesetzt“ (<em>null</em>), den wir in der Vorlesung kennen gelernt haben. Geben Sie nun <code>name</code> auf die Konsole aus.</p>
+</div>
+<div class="hint segment" id="9bfnwk" data-title="Die Fehler im Codeblock in 1.2 sollen hier die Compilierung nicht behindern">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Die Fehler im Codeblock in 1.2 sollen hier die Compilierung nicht behindern</span></div></div>
+<div data-uuid="dbgpz1" data-hint="U2FsdGVkX18vH3q/m99r9Szg3lEevaxWXOQDySw32L2+sYXrquuXvvxghmDbrMNJEhbyU4UM86nsQit9/8+s3aCLf4K4U7OLKKLVoCDi/21FYLjid2YZf4uZApecMXiOoU5xc2W8ucwccTHmeC3cua9oqTKZiRAEc7ssaLmSWFiu2/WLOhaxe6euZGhdJVjGLAnOv77nKBo7z+rLJ8nUV+yfAbnaKUhaYI8vniMcXEoyBf0CkZLSRdYT0UHl4oJE7NvfxSffy2CPheOMKVV0dpyzThdn/tm5pnOXfmdZA6IZy14aBLvilu6ZVgKPk4CmY2+IxXrnU9YUqpscjfn4sPdLl6QcA10YkpYgNTpY9tpKXmLIvBBaLv+znfW1LKXItIt6QD5hsLP2lekEx159PhTyHE7dWlZdLUCcDPCSMtdR/wD77ATVnGbu0zD6akPsAj3uCo87IeAXXG7y7DIYGA==" class="hint"><span style="font-weight: bold;">Kommentieren Sie den fehlerhaften Code aus.</span><br><p>Dazu setzen Sie z.B. vor jede Zeile die Zeichen //.</p></div>
+<div data-uuid="1vivh5" data-hint="U2FsdGVkX19TTaeSSOcwuS34BlNB9dIqSkqADZBb0hT//HQ0LANiyhWudvrvEF3qYyssWhpP3AWLjSplz1f82G9ZyVEscNM241Ktas1zT6JvL7HyT9/8HvXlGqyBr0Yzqt+ZAPstMY8onp8rQrzbty9ekHpz5P7lIBxEJZAm3puWEc+3IA0aPighXZ9UAKblDKTP6/Kl9fG0Waz0QQbB4E6KRq4toPFNJiuKKjiTng5X1RJ0Dyrvs/VfnzJ4L/6r7HSFPHMn6ZnuFaIZU2o14NDNvJq9nRtYEmJLk3cox2ekIrVtlFGZKVskZh0hzwDcAsEpy91ExEpN+TubVfTrwBtiqBCp3fR6tduf0HpVpB4KggpyUbcYZoV9yCjrsKp0jFCPN49xttcurWgnxrRuep5vZfIDYbyMJT6mxOf2jel7SFP4HfyrH3m19UDLz9nEsr93SxZKWtdjTOWKfD6xRXVmxjkolW4Xz3X7ogKj5ANUWwzR9Fh4eV2TYSpCcEhV6XUe10ATHb9FiUOrEDK5lO4GK5uTeRfvoN+UXQwWkUTN340xj5IcavjZHAFjE4L4rmuGIbBZV0eTGHoYxV+Jzq7np8lDBp3fzUyCQP/mtytiODazFz7sG8UDslSxsZ5J08pAdDCCPGZyj5vwxM8+cVjaxBK4DQwFP0b892lt/xlYEbzJ4NOr/Ey9woOU1NLp3KCMPK4Ir66O0GrwEbNJrc+LAXWLyVDJ4IOjo7v+sZi5UZwvy4A5b8G9f8V8H3G3+qaSwwlhBBspExPgA+6c3woOYZnShOnrt0/TJNb1Ozl+CPuVJNWRHChXY3RR5U1S6b07myKZdnz6T4icaKCepACbYEV1n4I/gpEp3zNiXB1KlwGm1KoX5Dd7vUK4UD7iIrzanS7lLDQKXoZM0Uh664cTjBkz3CfeomRyvnhF3xijvswNqb2XY9+UuC/BsbbsUNXMGKwDdZrw5nsER1WVooGXlKPrzQfPA9n4Q9cH0xW7mVBfkCyqxE52IHmYfVNP5F9UMCaFsJZrogZyBl3a5b1x18De3MbYK5xMgjRV25Y=" class="hint"><span style="font-weight: bold;">Sie können auch mit einem Klick den kompletten Code-Block auskommentieren.</span><br><p>Um den kompletten Code-Block "auszukommentieren", gibt es in der Toolbar des Code einen Button //. Probieren Sie ihn aus.&nbsp;</p>
+<p>Mit dem gleichen Button können Sie auch dieses "auskommentieren" wieder rückgängig machen.</p></div>
+
+</div>
+<div class="text segment" id="3azong">
+<p><span class="task-link s_s0v5el block" data-href="#e_s0v5el">Tun Sie das, in einem eigenen Codeblock und führen Sie alle Code-Blöcke aus:</span></p>
+</div>
+<div class="code segment" id="6ylesm" data-class="" data-class-name="_1_Referenz_Datentypen" data-segment-id="3" data-solution-id="e_s0v5el">
+String vorname = null;<br>String nachname = null;<br><br>System.out.println("vorname: " + vorname);<br>System.out.println("nachname: " + nachname);
+</div>
+<div class="text segment" id="sb3le7">
+<p>&nbsp;</p>
+<ul>
+<li>Funktioniert das nun?
+<ul>
+<li>Ja</li>
+</ul>
+</li>
+<li>Was wird ausgegeben?
+<ul>
+<li>Es wird "vorname: null" und "nachname: null" ausgegeben</li>
+</ul>
+</li>
+<li>Inwiefern ist für den Compiler die Situation nun unterschiedlich zu oben in 1.2.?
+<ul>
+<li>Wir haben dem Compiler nun explizit mitgeteilt, dass diese Variable noch keinen konkreten Wert hat, sondern nur "null" ist. Damit weiß der Compiler, dass wir uns Gedanken um diese Variable gemacht und diese beabsichtigt ist.</li>
+</ul>
+</li>
+</ul>
+<p><span class="task-link s_tmw8r2 text">Notieren Sie sich die Antworten</span> zu den gestellten Fragen.</p>
+<h2 class="e_diwi1j" data-number="1.4">String-Literale</h2>
+<p>Weisen Sie nun beiden String-Variablen verschiedene Literale zu (String-Literale werden in doppelte Anführungszeichen gesetzt, z.B. "Huhu" und "Heinz") und geben Sie sie zum Test auf die Konsole aus.</p>
+</div>
+<div class="hint segment" id="xlekux" data-title="Im Codeblock sollte nicht „huhu“ stehen, d.h. mit typografischen Anführungszeichen">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Im Codeblock sollte nicht „huhu“ stehen, d.h. mit typografischen Anführungszeichen</span></div></div>
+<div data-uuid="lnanqn" data-hint="U2FsdGVkX18LkL1fpv4bJHzslJiQ1KU86R/DR6X/PZFzWL60zP2pl7JyDndo/gQC9oWm/atg3NtCgqPhEOdMUW+QZ66PM9ImYAupK1moq6RY1ydwANHyYwTxSHXjpbGxbxHkFSx/0axCU/v//nU5Ir//IiQp2X8JwBjgZ51OGOJFEXeCdsJkV1sOsce3VuRM+FkNQRF/wv1Rd0Hw9xCRfPLEzCfHrD4ubKFtwbkIaJy92RvXr8EttxazwLro7Ts1EXqnjohKTMWx5YcIYOIZ07afvBjTSNx6zy0Xb86QQiJygiqrai/s02+AnH8A+Rqup9xYByCb9k7Ot0jJDHQttIt1xNyTqpk0u4BzgcabdAjvFr3NkRcD60u6kHIya+01yOsyHD/VAlt6tMsThTnH/8Jax44Tx94p6BYILp10+ZA9HiZtGS08Cu4vbuEUZPAKeRjFvvQI53vYGRzlWEhTlKkT5X3joIeUVRAdDuNoIqhdGp6bA2ryVk5gfij2BSPqCGSAR7N+0ERnH36gyUyx28VEVqrVEnEbvGRgZYoQJwoUL7dsutBxzix3GDdJzSORFb4Km/aQxH3OgY2zvsILe+kvhoMgxz+AV2WfLTxdVEtMeHwv8sk4zMT36g2ONadM8LNahkY0Ljq9kDpt5vAr2s8iILjcxEOS9dWDZSDRMDAmPMvECndoj7tr/fNwZmMLS4VbeNCAk5i7uN8BITBAPbNSHdNjJpLz3c9acdeP/LyL/8mw+JHM6K3LL3Yai47xUVEc0XW9w23HpVr8uYwdlEdDUCooUTzK+iEY7zgMb0Blr7AAOwUFIs+7ekUPbEQDGrdB1hEMz4q15CybuysCnHkKBa7ILXcVRgviz8eZqEs3bp5fgT7edSgB5tQhRrZIjgNjC0zcLxiePyqtsAJmrYuBUx6VX84jnjnNJAwAc4iP1PjgSLD+YE5JcGVAbSDXedtOkX0KfusqSu4EHUhx5c9yBigBpPNj+or1TObny0MyM9R3xIH20agLEycpPlQ+" class="hint"></div>
+
+</div>
+<div class="text segment" id="40783h">
+<p><span class="task-link s_fd4l8r block" data-href="#e_fd4l8r">Tun Sie das, in einem eigenen Codeblock</span></p>
+</div>
+<div class="code segment" id="xhd67i" data-class="" data-class-name="_1_Referenz_Datentypen" data-segment-id="4" data-solution-id="e_fd4l8r">
+String vorname = "Max";<br>String nachname = "Mustermann";<br><br>System.out.println("vorname: " + vorname);<br>System.out.println("nachname: " + nachname);<br>
+</div>
+<div class="text segment" id="qj8ijp">
+<p>&nbsp;</p>
+<p>und <span class="task-link s_6d399m action">skizzieren Sie</span> die so entstehenden Speicher-Inhalte (Beispiel-Strings sind bereits bereitgestellt. Die können Sie natürlich gerne auch ändern):</p>
+</div>
+<div class="gui segment" id="dzpajc">
+<svg id="SvgjsSvg1292" width="740" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><defs id="SvgjsDefs16103" data-fic="Grafik" data-scenewidth="740"></defs><rect id="SvgjsRect17182" width="100" height="80" fill="#efe9f4" stroke="#000000" stroke-width="2" x="20" y="60.000003814697266" transform="matrix(1,0,0,1,0,0)"></rect><foreignObject id="fgn" width="40" height="20" x="57" y="35" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin-left: 2px; height: 100%; width: 100%; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">name</textarea></foreignObject><rect id="SvgjsRect17929" width="80" height="80" fill="#efe9f4" stroke="#000000" stroke-width="2" x="120" y="60" transform="matrix(1,0,0,1,0,0)"></rect><rect id="SvgjsRect17994" width="280" height="80" fill="#efe9f4" stroke="#000000" stroke-width="2" x="200" y="60" transform="matrix(1,0,0,1,0,0)"></rect><foreignObject id="fgn" width="61" height="29" x="128" y="36" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin-left: 2px; height: 100%; width: 100%; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">vorname</textarea></foreignObject><rect id="SvgjsRect17994" width="280" height="80" fill="#efe9f4" stroke="#000000" stroke-width="2" x="460" y="60" transform="matrix(1,0,0,1,0,0)"></rect><defs id="SvgjsDefs1291" data-fic="Grafik" data-scenewidth="740"></defs><foreignObject id="fgn" width="89" height="20" x="326.99999999689976" y="22.00000000465036" fill="#efe9f4" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin-left: 2px; height: 100%; width: 100%; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">"Max"</textarea></foreignObject><foreignObject id="fgn" width="89" height="20" x="326.99999999689976" y="22.00000000465036" fill="#efe9f4" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin-left: 2px; height: 100%; width: 100%; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">"Max"</textarea></foreignObject><foreignObject id="fgn" width="120" height="30" x="520" y="20"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">"Mustermann</textarea></foreignObject><polyline id="SvgjsPolyline15005" points="58,90 58,90 58,90 58,91 58,93 58,96 59,100 59,102 61,104 64,105 68,105 71,104 73,104 77,103 78,103 78,103 78,103" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15061" points="68,93 68,93 68,97 70,114 70,115 70,117 70,117 70,118 70,118" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15117" points="77,98 77,98 77,98 77,91 78,90 86,91 87,95 86,101 84,105 82,108 82,109 81,110 81,111 81,111 81,111 81,111 81,111 83,112 85,113 88,113 90,113 91,113 91,113" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15173" points="135,89 135,89 135,89 135,90 135,92 135,99 135,103 135,104 135,104 135,104 135,105 135,106 136,106 136,106 137,106 138,106 141,105 144,105 145,105 145,105 146,105 146,105 146,105 146,105 147,105 147,105 147,105" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15229" points="143,97 143,97 143,98 143,100 143,113 144,116 144,116 144,117 144,117 144,117" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15285" points="149,93 149,93 150,92 157,93 159,94 159,94 159,95 158,98 153,102 152,103 152,103 155,106 159,111 160,111 160,111 160,112 159,112 158,113 155,114 153,114 153,114 152,114 152,114" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15341" points="224,95 224,95 224,95 224,97 224,99 224,102 224,106 223,109 223,112 223,114 223,114 223,114" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15397" points="222,96 222,96 223,96 223,97 224,98 225,99 228,103 228,104 229,105 231,108 231,108 231,107 232,104 233,103 234,100 235,98 235,98 235,98 235,98 235,99 236,103 238,113 238,114 238,114" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15508" points="243,104 243,104 243,104 243,104 243,103 243,103 243,103 243,103 243,103 243,103 242,103 241,102 241,102 240,102 240,103 239,103 239,105 238,107 238,108 239,109 239,110 240,111 240,111 240,111 241,111 242,111 242,110 243,109 244,108 244,107 245,106 245,105 245,105 244,105 245,106 247,108 250,111 252,113 255,115 257,115 257,115 257,115 256,114 256,113 256,113" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15564" points="253,100 253,100 253,100 254,102 259,105 262,107 266,109 268,110 268,111 268,111 268,111 268,111 268,111" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15620" points="258,115 258,115 258,115 258,114 258,114 259,109 262,105 264,101 265,97 265,97 266,96 266,96" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15676" points="206,91 206,91 206,92 207,94 208,97 208,98 209,101 209,102 209,102 209,102" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15732" points="212,93 212,93 212,93 212,93 211,93 211,95 211,96 211,98 211,99 211,100 211,100 211,100" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15788" points="274,91 274,91 275,91 276,96 276,98 277,101 277,102 278,102 278,102" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15844" points="281,90 281,90 281,95 281,98 281,98 281,99 281,99" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15900" points="517,95 517,95 517,95 517,96 517,102 516,107 516,113 516,117 515,119 515,119 515,119" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline15956" points="515,97 515,97 515,97 517,101 521,111 522,111 522,111 522,111 523,111 523,111 524,110 526,106 527,106 528,105 528,104 528,104 529,102 529,100 529,98 530,97 530,97 530,97 530,99 531,103 531,108 531,115 531,118 532,120 533,121 533,121 534,122 534,122" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16012" points="542,105 542,105 541,108 541,116 542,117 543,119 544,119 545,119 546,118 547,117 549,115 550,114 550,112 550,110 550,109 550,109 550,109 551,110 551,112 553,117 555,119 555,120 556,120 556,120 556,119 557,119 557,119" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16068" points="563,106 563,106 561,104 556,104 561,115 566,121 566,121 566,121 565,121 564,121 562,120 561,119 560,119 560,119 560,118 560,118" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16124" points="567,94 567,94 567,95 570,112 572,118 572,118 572,118" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16180" points="567,110 567,110 567,110 568,110 569,110 577,108 577,108 577,108" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16236" points="580,109 580,109 580,109 581,109 581,109 582,108 583,107 584,107 584,106 585,105 585,103 584,101 583,101 583,100 582,100 582,100 581,100 580,101 579,102 579,104 579,106 579,108 580,114 583,118 587,119 589,119 590,119 590,119 590,119 590,119 590,118 591,117 591,117" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16292" points="591,107 591,107 595,114 595,114 595,115 590,104 590,104 590,103 590,103 590,102 591,102 593,101 595,101 596,100 596,100 596,100" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16348" points="603,101 603,101 603,101 603,102 603,105 605,109 606,113 608,115 609,117 609,117 608,117 608,114 607,113 607,112 606,109 606,107 606,103 606,102 607,101 607,101 608,101 609,102 611,104 612,107 614,110 614,111 614,111 614,112 614,113 615,114 615,114 615,114 614,112 614,108 614,104 615,101 615,101 616,101 616,102 617,103 621,106 622,109 624,112 624,112 624,112 624,113 624,113 624,113 624,114 624,114" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16404" points="641,107 641,107 641,105 640,105 640,105 640,104 638,104 637,104 637,104 634,104 634,105 633,105 633,106 632,107 632,110 633,112 634,114 635,115 635,115 636,115 636,115 637,114 639,113 640,112 641,110 641,109 641,108 642,108 642,107 641,106 641,105 641,107 642,108 643,110 644,113 644,114 644,115 645,116 645,116 645,116 645,116 645,116" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16460" points="649,102 649,102 649,102 649,105 649,114 649,115 649,115 649,116 649,114 649,106 649,106 649,106 649,105 650,105 650,105 651,105 652,106 654,107 656,109 656,110 657,111 657,113 658,114 658,115 658,116 658,116 658,116" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16516" points="658,101 658,101 659,111 659,114 659,114 662,105 666,104 667,104 668,106 670,109 672,112 672,112 672,112" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16572" points="499,92 499,92 499,92 499,93 499,94 499,96 499,98 499,101 500,103 500,103 500,103 500,103 500,103 501,103 501,103" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16628" points="504,95 504,95 504,96 504,97 504,99 504,101 504,102 504,102" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16684" points="675,91 675,91 675,93 675,94 675,96 675,100 675,100 675,100" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16740" points="681,92 681,92 681,94 681,94 681,96 681,97 681,98 681,100 681,101 681,101" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16796" points="145,122 145,122 145,122 145,122 145,123 146,124 146,126 146,131 146,134 147,137 151,141 155,143 179,146 185,146 193,146 198,145 201,145 203,144 208,141 211,139 215,136 217,135 219,134 220,132 221,131 222,130 222,130 222,130 222,130" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16852" points="208,126 208,126 210,125 212,125 226,122 227,122 227,134 227,134 228,134 228,134" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16908" points="67,130 67,130 67,130 67,130 67,130 68,132 69,135 72,142 95,158 109,162 127,164 138,165 163,166 176,166 182,166 188,166 199,165 206,164 214,164 223,164 227,164 232,164 238,164 246,164 263,165 273,165 295,166 312,167 324,167 334,167 340,167 358,167 416,168 454,166 475,163 491,159 500,153 505,146 508,139 510,135 511,131 512,128 512,128" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline16964" points="496,128 496,128 496,128 513,119 513,119 513,119 514,119 516,120 517,120 517,121 518,125 518,129 518,131 518,132 518,133 518,134 518,134 518,134 518,135 518,135" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline22283" points="42,132 42,132 42,132 43,131 44,130 46,128 47,126 47,126 48,126 48,126 48,126 49,126 49,127 49,129 49,130 50,132 50,133 50,134 50,134 50,134" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline22339" points="123,130 123,130 124,129 124,128 125,128 126,128 127,128 128,128 128,128 129,129 129,130 129,131 129,133 128,134 127,135 127,135 126,135 126,135 126,135 128,136 130,136 131,136 131,136 132,136 132,136 132,136" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline22395" points="237,124 237,124 237,124 237,125 237,131 237,131 237,131 239,131 240,131 242,130 243,130 246,130 246,130 247,130 247,130 247,130 248,131 248,131 248,131 248,131" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline22451" points="242,125 242,125 242,127 244,133 244,135 244,136 245,136 245,136 245,136 245,136" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline22507" points="251,124 251,124 251,124 251,124 251,123 251,122 252,121 253,121 254,121 254,121 255,121 256,121 256,121 256,122 257,123 256,125 256,126 255,128 254,128 253,129 253,129 252,129 252,129 253,130 254,131 255,132 255,133 255,133 255,133 255,134 255,134 254,134 253,134 252,134 252,134 252,134 251,134 251,134 250,134 250,134" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline22563" points="529,124 529,124 529,125 529,127 529,131 529,133 530,133 530,133 532,132 534,131 534,131 534,131 535,131 536,130 536,130 536,130 536,130 536,130" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline22619" points="536,125 536,125 536,126 535,129 536,133 536,134 536,135 536,137 536,137 536,137" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline22675" points="539,127 539,127 539,126 539,126 540,125 540,124 540,124 541,124 541,124 542,124 543,124 543,124 543,125 544,126 544,127 544,130 544,132 543,134 542,135 541,136 541,136 541,136 541,136 542,136 543,136 546,137 548,137 550,137 551,137 552,137 552,137" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><rect id="SvgjsRect10717" width="89" height="20" class="svg_select_boundingRect svg_select_points" x="327" y="22" transform="matrix(1,0,0,1,0,0)"></rect><circle id="SvgjsCircle10718" r="3.5" cx="327" cy="22" class="svg_select_points_lt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle10719" r="3.5" cx="416" cy="22" class="svg_select_points_rt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle10720" r="3.5" cx="416" cy="42" class="svg_select_points_rb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle10721" r="3.5" cx="327" cy="42" class="svg_select_points_lb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle10722" r="3.5" cx="371.5" cy="22" class="svg_select_points_t svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle10723" r="3.5" cx="416" cy="32" class="svg_select_points_r svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle10724" r="3.5" cx="371.5" cy="42" class="svg_select_points_b svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle10725" r="3.5" cx="327" cy="32" class="svg_select_points_l svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle10726" r="3.5" cx="371.5" cy="42" class="svg_select_points_rot" transform="matrix(1,0,0,1,0,0)"></circle></svg>
+</div>
+<div class="text segment" id="9zj87x">
+<h2 class="e_5twr81" data-number="1.5">Zuweisung ist nicht Kopieren (jedenfalls nicht bei Referenz-Datentypen)</h2>
+<p>Weisen Sie nun <code>vorname</code> der Variablen <code>name</code> zu (<code>name = vorname</code>) und geben Sie <code>name</code> und <code>vorname</code> auf die Konsole aus.</p>
+<p>Ändern Sie nun <code>vorname</code>, indem Sie <code>vorname</code> ein anderes Literal zuweisen.</p>
+<p>Geben Sie wieder <code>name</code> und <code>vorname</code> auf die Konsole aus. Hat sich mit der Änderung von <code>vorname</code> auch <code>name</code> geändert? Machen Sie sich den Grund klar (Skizze der Speicherbelegung!).</p>
+<p><span class="task-link s_vadiif block" data-href="#e_vadiif">Tun Sie das, in einem eigenen Codeblock</span></p>
+</div>
+<div class="code segment" id="blbern" data-class="" data-class-name="_1_Referenz_Datentypen" data-segment-id="5" data-solution-id="e_vadiif">
+String vorname = "Max";<br>String nachname = "Mustermann";<br><br>System.out.println("(1) vorname: " + vorname); // Max<br>System.out.println("(1) nachname: " + nachname); // Mustermann<br><br>nachname = vorname;<br><br>System.out.println("(2) vorname: " + vorname); // Max<br>System.out.println("(2) nachname: " + nachname); // Max<br><br>vorname = "Peter";<br><br>System.out.println("(3) vorname: " + vorname); // Peter<br>System.out.println("(3) nachname: " + nachname); // Max
+</div>
+<div class="text segment" id="6y3fos">
+<p>&nbsp;</p>
+<p>und <span class="task-link s_ij75n6 action">skizzieren Sie</span> die so entsehenden Speicher-Inhalte in einem Grafikblock (Wiederum können Sie die Beispielstrings nutzen).</p>
+<p>&nbsp;</p>
+</div>
+<div class="gui segment" id="f1x1nb">
+<svg id="SvgjsSvg2707" width="680" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><rect id="SvgjsRect53776" width="120" height="100" fill="#efe9f4" stroke="#00afef" stroke-width="2" x="60" y="60"></rect><rect id="SvgjsRect53776" width="120" height="100" fill="#efe9f4" stroke="#00afef" stroke-width="2" x="160" y="60"></rect><foreignObject id="fgn" width="100" height="30" x="53.00000001007578" y="32.99999808722595" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin: 0px 0px 0px 2px; height: 11px; width: 88px; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">vorname</textarea></foreignObject><foreignObject id="fgn" width="100" height="30" x="177.00000773557775" y="31.999998086450887" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin: 0px 0px 0px 2px; height: 11px; width: 88px; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">nachname</textarea></foreignObject><foreignObject id="fgn" width="40" height="30" x="83.00000001782638" y="96.99999999767482" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">42</textarea></foreignObject><foreignObject id="fgn" width="40" height="30" x="83.00000001782638" y="96.99999999767482" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">42</textarea></foreignObject><foreignObject id="fgn" width="20" height="30" x="180" y="100"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin: 0px 0px 0px 2px; height: 46px; width: 27px; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">41</textarea></foreignObject><foreignObject id="fgn" width="40" height="30" x="61.00000001627626" y="137.99999999844988" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">1</textarea></foreignObject><foreignObject id="fgn" width="200" height="30" x="160" y="140"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">2</textarea></foreignObject><rect id="SvgjsRect63851" width="120" height="100" fill="#efe9f4" stroke="#000000" stroke-width="2" x="280" y="60"></rect><rect id="SvgjsRect67610" width="139.99996948242188" height="100" fill="#efe9f4" stroke="#000000" stroke-width="2" x="500" y="60"></rect><foreignObject id="fgn" width="60" height="20" x="300" y="100"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">"Max"</textarea></foreignObject><foreignObject id="fgn" width="20" height="20" x="420" y="100"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;"></textarea></foreignObject><defs id="SvgjsDefs53553" data-fic="Grafik" data-scenewidth="680"></defs><rect id="SvgjsRect71888" width="100" height="100" fill="#efe9f4" stroke="#000000" stroke-width="2" x="400" y="60"></rect><foreignObject id="fgn" width="60" height="20" x="420" y="100"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">"Peter"</textarea></foreignObject><foreignObject id="fgn" width="20" height="30" x="502.9999999713228" y="136.9999923992827" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">43</textarea></foreignObject><foreignObject id="fgn" width="200" height="30" x="520" y="100"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">"Mustermann"</textarea></foreignObject><foreignObject id="fgn" width="20" height="30" x="400" y="140"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">42</textarea></foreignObject><foreignObject id="fgn" width="200" height="30" x="280" y="140" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">41</textarea></foreignObject><polyline id="SvgjsPolyline83151" points="111,145 111,145 111,145 111,147 112,148 112,152 114,159 115,162 115,166 115,167 116,167 116,168 116,169 116,169 116,169 116,169 116,169 116,169 116,170 116,171 116,172 116,173 116,173 116,173 116,173 116,173 117,173 118,173 119,173 122,173 126,173 129,173 131,173 134,173 137,173 139,173 143,173 148,173 154,172 158,172 164,172 169,172 171,173 176,173 181,173 186,173 191,173 199,174 203,174 208,174 216,174 221,174 226,174 233,174 237,174 239,174 242,174 248,174 251,174 253,174 257,174 260,174 263,174 265,174 270,174 272,175 274,175 276,175 281,175 286,175 292,175 298,175 301,175 303,175 307,176 309,176 311,176 312,176 316,176 319,176 324,176 328,176 333,176 338,176 342,176 347,176 353,175 357,175 363,175 365,175 371,175 373,175 379,175 383,175 385,175 388,175 394,175 397,176 400,175 405,175 409,174 412,174 417,174 419,173 421,173 423,173 427,172 431,172 434,172 436,173 439,173 443,173 447,174 449,174 450,174 451,175 453,175 453,175 453,175 454,175 454,175 453,175 453,174 453,173 453,172 452,171 452,170 451,169 450,166 449,162 449,161 448,159 448,158 448,158 447,157 447,155 447,154 446,154 446,153 446,153 446,153" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline83204" points="450,140 450,140 450,140 449,140 432,151 429,154 428,154 428,154 428,154 428,154" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline83257" points="442,142 442,142 442,142 442,142 443,143 444,143 456,150 457,151 458,152 459,153 459,153 460,154 460,154 460,154 461,155 462,156 462,157 462,157 462,157 463,158 462,158 462,158" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline83310" points="194,111 194,111 194,111" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline83363" points="194,106 194,106 194,106" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline84131" points="216,131 216,131 216,132 215,144 215,145 215,145 215,146 215,147 215,149 215,150 215,150 215,151 215,151 215,152 215,153 214,154 214,154 214,155 214,156 215,157 215,158 215,159 215,160 215,160 215,160 215,160 215,160 215,160 215,161 215,161 215,161 215,162 216,162 216,163 216,163 216,164 216,164 216,164 216,164 216,164 216,164 217,164 219,164 222,164 226,164 229,165 234,165 238,166 242,167 246,168 249,168 256,168 259,168 262,168 265,168 271,168 274,168 278,169 281,169 289,169 293,169 296,169 300,169 303,169 307,169 310,169 313,170 317,170 320,170 323,170 327,170 333,169 333,169 333,169 333,168 334,167 334,165 334,162 334,157 334,155 334,153 334,152 334,150 334,150 334,149 334,149 334,149 334,149 334,148 334,148 334,148 334,148 334,148 334,148 334,148 333,148 333,148" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline84184" points="338,137 338,137 337,137 335,140 320,154 320,155 320,155 320,156 320,156 321,156 321,156 321,156" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><polyline id="SvgjsPolyline84237" points="335,139 335,139 336,139 336,139 345,153 347,154 347,155 347,155 348,156 348,156 348,156 348,156" stroke="#000000" stroke-width="2" fill-opacity="0"></polyline><rect id="SvgjsRect57182" width="100" height="30" class="svg_select_boundingRect svg_select_points" x="53" y="32.999996185302734" transform="matrix(1,0,0,1,0,0)"></rect><circle id="SvgjsCircle57183" r="3.5" cx="53" cy="32.999996185302734" class="svg_select_points_lt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle57184" r="3.5" cx="153" cy="32.999996185302734" class="svg_select_points_rt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle57185" r="3.5" cx="153" cy="62.999996185302734" class="svg_select_points_rb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle57186" r="3.5" cx="53" cy="62.999996185302734" class="svg_select_points_lb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle57187" r="3.5" cx="103" cy="32.999996185302734" class="svg_select_points_t svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle57188" r="3.5" cx="153" cy="47.999996185302734" class="svg_select_points_r svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle57189" r="3.5" cx="103" cy="62.999996185302734" class="svg_select_points_b svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle57190" r="3.5" cx="53" cy="47.999996185302734" class="svg_select_points_l svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle57191" r="3.5" cx="103" cy="52.999996185302734" class="svg_select_points_rot" transform="matrix(1,0,0,1,0,0)"></circle><rect id="SvgjsRect58642" width="40" height="30" class="svg_select_boundingRect svg_select_points" x="83" y="97" transform="matrix(1,0,0,1,0,0)"></rect><circle id="SvgjsCircle58643" r="3.5" cx="83" cy="97" class="svg_select_points_lt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle58644" r="3.5" cx="123" cy="97" class="svg_select_points_rt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle58645" r="3.5" cx="123" cy="127" class="svg_select_points_rb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle58646" r="3.5" cx="83" cy="127" class="svg_select_points_lb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle58647" r="3.5" cx="103" cy="97" class="svg_select_points_t svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle58648" r="3.5" cx="123" cy="112" class="svg_select_points_r svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle58649" r="3.5" cx="103" cy="127" class="svg_select_points_b svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle58650" r="3.5" cx="83" cy="112" class="svg_select_points_l svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle58651" r="3.5" cx="103" cy="117" class="svg_select_points_rot" transform="matrix(1,0,0,1,0,0)"></circle><rect id="SvgjsRect59894" width="40" height="30" class="svg_select_boundingRect svg_select_points" x="83" y="97" transform="matrix(1,0,0,1,0,0)"></rect><circle id="SvgjsCircle59895" r="3.5" cx="83" cy="97" class="svg_select_points_lt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle59896" r="3.5" cx="123" cy="97" class="svg_select_points_rt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle59897" r="3.5" cx="123" cy="127" class="svg_select_points_rb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle59898" r="3.5" cx="83" cy="127" class="svg_select_points_lb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle59899" r="3.5" cx="103" cy="97" class="svg_select_points_t svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle59900" r="3.5" cx="123" cy="112" class="svg_select_points_r svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle59901" r="3.5" cx="103" cy="127" class="svg_select_points_b svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle59902" r="3.5" cx="83" cy="112" class="svg_select_points_l svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle59903" r="3.5" cx="103" cy="117" class="svg_select_points_rot" transform="matrix(1,0,0,1,0,0)"></circle><rect id="SvgjsRect61241" width="40" height="30" class="svg_select_boundingRect svg_select_points" x="83" y="97" transform="matrix(1,0,0,1,0,0)"></rect><circle id="SvgjsCircle61242" r="3.5" cx="83" cy="97" class="svg_select_points_lt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle61243" r="3.5" cx="123" cy="97" class="svg_select_points_rt svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle61244" r="3.5" cx="123" cy="127" class="svg_select_points_rb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle61245" r="3.5" cx="83" cy="127" class="svg_select_points_lb svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle61246" r="3.5" cx="103" cy="97" class="svg_select_points_t svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle61247" r="3.5" cx="123" cy="112" class="svg_select_points_r svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle61248" r="3.5" cx="103" cy="127" class="svg_select_points_b svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle61249" r="3.5" cx="83" cy="112" class="svg_select_points_l svg_select_points" transform="matrix(1,0,0,1,0,0)"></circle><circle id="SvgjsCircle61250" r="3.5" cx="103" cy="117" class="svg_select_points_rot" transform="matrix(1,0,0,1,0,0)"></circle><g id="SvgjsG29639" transform="matrix(1,0,0,1,400,40)"><rect id="SvgjsRect29640" width="80" height="20" class="svg_select_boundingRect svg_select_points"></rect><circle id="SvgjsCircle29641" r="3.5" cx="0" cy="0" class="svg_select_points_lt svg_select_points"></circle><circle id="SvgjsCircle29642" r="3.5" cx="80" cy="0" class="svg_select_points_rt svg_select_points"></circle><circle id="SvgjsCircle29643" r="3.5" cx="80" cy="20" class="svg_select_points_rb svg_select_points"></circle><circle id="SvgjsCircle29644" r="3.5" cx="0" cy="20" class="svg_select_points_lb svg_select_points"></circle><circle id="SvgjsCircle29645" r="3.5" cx="40" cy="0" class="svg_select_points_t svg_select_points"></circle><circle id="SvgjsCircle29646" r="3.5" cx="80" cy="10" class="svg_select_points_r svg_select_points"></circle><circle id="SvgjsCircle29647" r="3.5" cx="40" cy="20" class="svg_select_points_b svg_select_points"></circle><circle id="SvgjsCircle29648" r="3.5" cx="0" cy="10" class="svg_select_points_l svg_select_points"></circle><circle id="SvgjsCircle29649" r="3.5" cx="40" cy="20" class="svg_select_points_rot"></circle></g></svg>
+</div>
+<div class="text segment" id="rur0ia">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="e_yezfrw" data-number="1.6">Konkatenieren von Strings</h2>
+<p>Hängen Sie nun die beiden Strings <code>name</code> und <code>vorname</code> aneinander (der Fachausdruck dafür ist „konkatenieren“ oder auf Englisch „concatenate“) und geben Sie sie aus.</p>
+</div>
+<div class="hint segment" id="s2u5sc" data-title="Wir hatten einen Konkatenations-Operator kennengelernt ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wir hatten einen Konkatenations-Operator kennengelernt </span></div></div>
+<div data-uuid="25mbud" data-hint="U2FsdGVkX18aw4kwnVAYF+idSIbQBOMplmbD/7iKiHkdRC7Kyf4yc07A0LXQ+858EdwCVa2ni+ayA61Ql8JYVHFEqEfrRS1/WkpN0IyZDLGDilP5fNeKApkULfnBdgIoLa6Ic86TQW44LuhY1KOnceIGL1JDuq3sYRUPFKuc+oDBzUGsTELNxmk+lH3L8wU6BL6FOIxVruXCOV/fXMk+HwpyYNz33v7sA7uQbAtO2l1oc/SKC0feRkSi8jp99KOSPKN8DehUDjkkEPz024mfR2+6W7Iq8sXVlvqT6w4lq1su3O/jErxaUkQ6SDHg14AwU+QsVZudjwot3aWXrMbJcQCilyZt1cimbdSUdyEpO3i6EVLiNMV1lZBwYbjbZVM90zRWV/04mipfVyrs9lMUyY2TvNN2p1g/sTFId6NddRK5Cz6OUX2mdhqEn9wWpVov/lzW4pS/OEEkFkICw74XJcAC0C5g+bhjUQ09isH9ZG/dyvECqxcqBGS+iJwHqsPSqcE6A4bHSNJ4hS0IyZgRirD+N0yO7V3VmGD1kOuGVs8TbhkoxgH3NhSzUJ3d2uMYsLrHltwzfdwhBShtM1+yY2B2PlStN5scF9xBgxevZVJ28MWxFRAf1FWw61wtfXgkWKIJaANHpZ0Rm0BsGSYz0w==" class="hint"></div>
+<div data-uuid="gz4fzb" data-hint="U2FsdGVkX18xjLxWEedfMw2LLYeujAuiYHBlfUIw496R5WruNTTY48dqts8ljQisw9y4LiX0M87W8cv8T5nnYdKMpqILxFKGNWhfIVsSaGpfgG0xMvOmyf0LdN5e1vb3+KB6npQTeg8rHOg0R0K3OadIUUAISHQpRRIxa3RmbbVedUNQBu7lq2BNFVBSKiwkPKWZW3VH7fO2PPI48ZiZihz45tChmZIN+uiBj5e4x0MWabIWtutRwJIv985xp3KPfuQPB0+WbWVx8IloHKWxjZEJgUOGydnW19PrZLa7hawAX1L0SLEou3cp8EQQUDaaMq8pWLf1A6KEdcvXBTzldSOGiGq9bKQFxYjlji5jLDamp+DIHItVHGgBgaArfj4K6X0XtYcMIpn0OT/5p8O2zBBumMUIpXRPLuRqmRUM4GN8wK06Blzz7E9+MkiZRD9D94c/zzl8vqjYHNVIMTFb07jdAtOqEOeqWUNBRFsnxu+LdasfmG2qlgacRij9Bdlz52CGshGLCgwtzvqXqEbzL3rsySvo7mzpqwxxf8VWnUDj4VtS7TL0J/CzVPkbH4R7tuxWJetU04JHlN07i+fSRx/6pk28ZAhE4bX2F2vd+n4c26U3tLkDGsLzURqNGSU4gqex4GWbYJJAGTjvI7oBiH4PbU4YdEZvht3vRij+UivcwUscsh4DqC41d9WLBngL/t1kObRnK12LpnxEInPsjakmtNMrOgH+Ytz3t8vb4oRGAQnyc1oRvkTFfq9niq/odDmoWcg9IlIOtetFvbbpq2006U4IILSnqM6H0Wa8GhJLoaqm5txY/RFStH3QTqF3wPcpRuNiAeOH6VjjnKj1W9OUl7ojLu31IjqSc31hwnHc5D1OzRRstpx2hVS0AUeRXfHKn96Dc2kYUjic8UikpGoIV6rj62eae0untn5IAVRwSPEWZ0D67AhIGDWJyvo1KEtxduXcZWXSG9GrmCHpPMAxI6Bl4z7+4WKnHW9Y3aINTL8+nXG7/CiDpewmFxNBYsjvP58sbbLzRee4A57V8DjrXjvqHuHbuWmOnzZ67JtmeaN317/p/hH6jmjK6RIw" class="hint"></div>
+
+</div>
+<div class="text segment" id="6c4837">
+<p><span class="task-link s_ig6y6s block" data-href="#e_ig6y6s">Tun Sie das, in einem eigenen Codeblock:</span></p>
+</div>
+<div class="code segment" id="p0cgj9" data-class="" data-class-name="_1_Referenz_Datentypen" data-segment-id="6" data-solution-id="e_ig6y6s">
+String vorname = "Max";<br>String nachname = "Mustermann";<br><br>System.out.println("Vorname: " + vorname + "; Nachname: " + nachname);<br><br>// Da hier geht auch:<br>String name = vorname + " " + nachname;<br>System.out.println(name);
+</div>
+<div class="text segment" id="yrgs0h">
+<p>&nbsp;</p>
+<h2 class="e_583bim" data-number="1.7">Automatische Umwandlung in Strings</h2>
+<p>Der Konkatenierungs-Operator kann auch dazu verwendet werden, um Strings mit Ausdrücken anderer Datentypen als String zu verknüpfen. Das Ergebnis ist dabei immer ein String.</p>
+<p>Konkatenieren Sie name und String-Literale mit Zahlen verschiedener Datentypen sowie mit <code>char</code>- und <code>boolean</code>-Werten und geben Sie das Ergebnis auf der Konsole aus.</p>
+<p><span class="task-link s_brzhec block" data-href="#e_brzhec">Tun Sie das, in einem eigenen Codeblock:</span></p>
+</div>
+<div class="code segment" id="aeg77o" data-class="" data-class-name="_1_Referenz_Datentypen" data-segment-id="7" data-solution-id="e_brzhec">
+String vorname = "Max";<br>String nachname = "Mustermann";<br><br>byte alter = 24;<br>char geschlecht = 'm';<br>boolean hatAbitur = true;<br>double kontostand = 231.23;<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>System.out.println("Vorname: " + vorname + "; Nachname: " + nachname + "; Alter: " + alter + "; Geschlecht: " + geschlecht + "; hatAbitur: " + hatAbitur + "; Kontostand: " + kontostand);<br>
+</div>
+<div class="text segment" id="tmrbe3">
+<p>&nbsp;</p>
+<p>Dass das funktioniert, bedeutet, dass die Ausdrücke anderer Datentypen in diesem Fall <em>automagically </em>in Strings umgewandelt werden. Praktisch ist das unter anderem, um eine „gemischte“ Ausgabe zusammenzubauen,</p>
+<p>z.B.: <code>System.out.println("x=" + x + " ,y=" + y + " z=" + 5);</code></p>
+<p><code></code></p>
+</div>
+
+</body> 
+</html>

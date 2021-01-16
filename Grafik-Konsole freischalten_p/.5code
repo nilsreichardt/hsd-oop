@@ -1,0 +1,256 @@
+{
+	"name": "::dir",
+	"id": "h11fjm",
+	"user": "",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 1,
+	"zoom": 0.8999999999999999,
+	"features": [
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "Daten.Array.2Dimensional",
+					"uuid": "0hb9c1",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren",
+					"uuid": "ud9uer",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Funktionen",
+					"uuid": "hst8sf",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Codieren.Links",
+					"uuid": "mhf1c9",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Grafik-Konsole",
+					"uuid": "p0om1v",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "concept",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Daten.Array.2Dimensional",
+					"uuid": "8wzzmh",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Schleife.Verschachtelt",
+					"uuid": "fpq2jv",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				}
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir\\_3_Grafik_Konsole.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "qvj3hd",
+						"cursor": {
+							"line": 0,
+							"ch": 0
+						}
+					}
+				}
+			],
+			"type": 1,
+			"active": true
+		},
+		{
+			"content": [],
+			"type": 1,
+			"active": false
+		},
+		{
+			"type": 2
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				14.167847414313869,
+				85.83215258568613
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				82.78825286605844,
+				17.211747133941554
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				true
+			],
+			"dimension": [
+				47.73780718300706,
+				32.26219281699294,
+				20
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "_3_Grafik_Konsole",
+			"path": "::dir\\_generated\\exec\\_3_Grafik_Konsole.java",
+			"id": "8v9w4j",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "_3_Grafik_Konsole",
+			"path": "::dir\\_3_Grafik_Konsole.flow.html",
+			"id": "ta0ncu"
+		}
+	],
+	"linkMap": [],
+	"activities": "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",
+	"lastSaveDate": "2020-12-11T09:48:58.647Z",
+	"info": "  "
+}

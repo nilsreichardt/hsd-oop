@@ -1,0 +1,221 @@
+{
+	"name": "::dir",
+	"id": "ilk9g9",
+	"user": "d719bae1994dff7bf719e6b420bdf49a",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 1,
+	"zoom": 0.6,
+	"features": [
+		{
+			"feature": "workspace.explorer.feature.AdvancedUser",
+			"value": true
+		},
+		{
+			"feature": "terminal.feature.ActiveComment",
+			"value": true
+		},
+		{
+			"feature": "terminal.feature.OutputLink",
+			"value": true
+		},
+		{
+			"feature": "terminal.feature.ErrorLink",
+			"value": false
+		},
+		{
+			"feature": "terminal.feature.ErrorHints",
+			"value": true
+		},
+		{
+			"feature": "language.java.feature.Autocomplete",
+			"value": true
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "Daten.Primitiver Datentyp.Zahl",
+					"uuid": "l2loil",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": ""
+				},
+				{
+					"skill": "Daten.Primitiver Datentyp.Logisch",
+					"uuid": "74fnzk",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": ""
+				},
+				{
+					"skill": "Daten.Variable.Definition",
+					"uuid": "b56rmw",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": ""
+				},
+				{
+					"skill": "Daten.Variable.Zuweisung",
+					"uuid": "ky6rto",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": ""
+				}
+			]
+		},
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": [
+				"U2FsdGVkX19sFnM9usNuUhSg2lGsVwzi3LqUlTr/Uons/+9E8VrBUZeyLEyvaZ5S",
+				"U2FsdGVkX1/4DRNF5eTMIUySicDYMecpdZ/p+4Oi5MoMv8a3a53FhM/aHxTq6gQ+",
+				"U2FsdGVkX1/UYiLvPeqioJiAI/Y2Sk/fEfNGdVO/F/itFujfSv9HXGhKeQtMogYb",
+				"U2FsdGVkX1/kw4XvZWhkez61KTipESv1NvZMvgyD40xv0T6r4Mld5axKCrTMdoWN",
+				"U2FsdGVkX1+I6hD+zInS4DS0rW56d1Ojdnx+ivI1M0ATHo/KHJ2fLEQfjxYOtUgn",
+				"U2FsdGVkX1+BWBZykAd9uaHwDht573beQ+gv5oqbFUK2DlCDpmE7i5Dn0pOl8bWm",
+				"U2FsdGVkX18A//nDkloEN60liMjonxg1uTgqWqisDgWCqMG4etmYNpO0igGJ39x3",
+				"U2FsdGVkX1/EIFWiriXOyOiVZknEpHPBwmcCWx6zNqX0EvRpxNEcuWfzcgsjM+yW",
+				"U2FsdGVkX19xjcpdfK0wmbhDvZyIfjuledirxuki0FaOJrOaizoYxDU3yx0Fx24F",
+				"U2FsdGVkX1+w2QaiylVh73v5fYciq84muX0gC8eSI8yqBE2j3edrrGV/4c+ZiUsb"
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/Variable.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "s1ssnc",
+						"cursor": {
+							"line": 18,
+							"ch": 18
+						}
+					}
+				}
+			],
+			"type": 1,
+			"active": true
+		},
+		{
+			"type": 2
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				20.803244047676273,
+				79.19675595232373
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				90.88284221822394,
+				9.117157781776054
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				false
+			],
+			"dimension": [
+				53.53429534476686,
+				46.46570465523314
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "Variable",
+			"path": "::dir/_generated/exec/Variable.java",
+			"id": "gmtbhd",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "Variable",
+			"path": "::dir/Variable.flow.html",
+			"id": "nvsg5h"
+		}
+	],
+	"linkMap": [],
+	"activities": "U2FsdGVkX1+bcPrGt7XlFLlK+b9Edls0Pb5aGCkn1agXJx917zM6aVKDyqXi0irw03+8FdfiofZ6X3OICS3iUSjAybPjU30r13pnnthYeNA9H8rJsnIkpBX7ny/m6JoI8d87XYcbHHWcLYcQD6jwtDP+mPf61Z8xxdGzt5jnAwsrdkBAj1gpTYmkmZ+d6vEwxkHD7nh6DXVuzYGttaoQncDWIpf+QNBS0GAsu2HeQCJP8G+at2XPJ4On1GY3ndaPuO5jO0vjzImRK+2on4Ks/A==",
+	"lastSaveDate": "2020-11-17T09:16:09.831Z",
+	"info": "bis 17./18.11."
+}

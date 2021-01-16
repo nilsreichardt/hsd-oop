@@ -1,0 +1,436 @@
+{
+	"name": "::dir",
+	"id": "tejne4",
+	"user": "d719bae1994dff7bf719e6b420bdf49a",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 2,
+	"zoom": 1.2,
+	"features": [
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": [
+				"U2FsdGVkX19sFnM9usNuUhSg2lGsVwzi3LqUlTr/Uons/+9E8VrBUZeyLEyvaZ5S",
+				"U2FsdGVkX1/4DRNF5eTMIUySicDYMecpdZ/p+4Oi5MoMv8a3a53FhM/aHxTq6gQ+",
+				"U2FsdGVkX1/UYiLvPeqioJiAI/Y2Sk/fEfNGdVO/F/itFujfSv9HXGhKeQtMogYb",
+				"U2FsdGVkX1/kw4XvZWhkez61KTipESv1NvZMvgyD40xv0T6r4Mld5axKCrTMdoWN",
+				"U2FsdGVkX1+I6hD+zInS4DS0rW56d1Ojdnx+ivI1M0ATHo/KHJ2fLEQfjxYOtUgn",
+				"U2FsdGVkX1+BWBZykAd9uaHwDht573beQ+gv5oqbFUK2DlCDpmE7i5Dn0pOl8bWm",
+				"U2FsdGVkX18A//nDkloEN60liMjonxg1uTgqWqisDgWCqMG4etmYNpO0igGJ39x3",
+				"U2FsdGVkX1/EIFWiriXOyOiVZknEpHPBwmcCWx6zNqX0EvRpxNEcuWfzcgsjM+yW",
+				"U2FsdGVkX19xjcpdfK0wmbhDvZyIfjuledirxuki0FaOJrOaizoYxDU3yx0Fx24F",
+				"U2FsdGVkX1+w2QaiylVh73v5fYciq84muX0gC8eSI8yqBE2j3edrrGV/4c+ZiUsb",
+				"U2FsdGVkX1+Km8RkfAn1XxDd53wo8Qwxgy8DRluv2esnn/ZTAoQ8xYzYCvG0Anht",
+				"U2FsdGVkX1/AVNnY+/4hCGC3tLrjL2wxIWJysGy+CrHeOlfuSNo56h8sUcH7pt12",
+				"U2FsdGVkX1/fTlJ0y2LgflKot3ZmPU6rMLPBy0Fjx82+QVCl7YmSyRaA2qg6sAXN",
+				"U2FsdGVkX193qQKUpa/I4rSEOYxi/3hQ1GoeT5yqUhcHfouOz5ycJzi1v1CkTVRo",
+				"U2FsdGVkX1/zpjawyk8tJ1CcHHPlrPrzy27onqdpM3pVbC76pAxqCM9M4Xh4iAhK",
+				"U2FsdGVkX19HA1HlXk5MDHAxWO9IffnRwhQjlQOX9827yn8I2GRb2Rr4wf5KbF6X",
+				"U2FsdGVkX1+mWSoRkcnWEcTKZSyOac9nqfMsswIXDFq9fzA/pclXe7wJ/DY7c1ez",
+				"U2FsdGVkX19ylB/RZLFD9ZIkDlZ4Mk1PbRvf9eL1cD1Od0enz97NE7JRqMSdo8dP",
+				"U2FsdGVkX1/SJE4Zeae9Gw2qdekAv6v+gcHvWiMMVqqgS2E2L1xgeERjU29jwXx3",
+				"U2FsdGVkX1+j5f7BsO0JIQsjg7fmm/SEVzoa/4A6vIz3ZLMq4g9eK4BgpoZgluN/",
+				"U2FsdGVkX18sdml1b+qaLC6gQsOj/pQdF2F8WZR1toWuzhKi4W42MSxcHJRYmwyi",
+				"U2FsdGVkX1/thLX6dc8DndDShWhLhb5Tw12J3h6vYHa4lvhGs3zAk1R/nebWekwp",
+				"U2FsdGVkX1/yAOpdrZEYh8kmePipOJlS2iwgNS7eEDFFytJxkslilR0M4y9f0dlm",
+				"U2FsdGVkX1/7t+xnxexrlbMcBkY52AgwNYGntZ4UnTRWnzQOP6y3A4/puZTIJ/U8",
+				"U2FsdGVkX19ZrIc6WVrs0GsZ6AQleZ4Pv79jhsKjoQtXcASKYNMECpI9M23w5MSe",
+				"U2FsdGVkX19RKX/4wah2WVjF0hjFzVdK5EIICj3idHnSe06nQt6Kaspsa/aMz4I2",
+				"U2FsdGVkX1/yoaUVK9dZoPZxG7csa6leXRoFb3yatNRrVbBAnzvl0Mdnr4GKfpeH",
+				"U2FsdGVkX19uwiA2/I/vJ2BMUy+mhgWfCqT7X/u8HN5gYFUaaoxjUbxccHITngLQ",
+				"U2FsdGVkX1+MMMMzKeR3A1EjX47Fr/Vvs0owSY5DR+K6e1mzhMWlwfz3OfEnOeif",
+				"U2FsdGVkX184o1QGvIkLum/vYjLNS7PIUVBP4ebUoGXUKvaEufTTzcAYbCMwC1M0",
+				"U2FsdGVkX18wfIa8E9u5t18vsO4AGP4eIBASnsl8MtOCw8T8Fh9k9YgTI0J6EQ7m",
+				"U2FsdGVkX19Y8NKzMSOc4himhzbba5UfcSP0oMOg/CUPze1lCVDupDHLDtdAGaf7",
+				"U2FsdGVkX1+wMz+YGX9EmRyKuq6p8BeL4K+246t3RgfEnSkw4sqd5iTU6k7WGNjk",
+				"U2FsdGVkX18CxJXPnueZITycqf61d5cUFEw04O0gypeu860i+b3N6nmAIqapWTiy",
+				"U2FsdGVkX1+/ldT5xAoyfdvFx3QVOLUntDRcbtI70sQlvK0EW/6pBfi+h8s0PqVg",
+				"U2FsdGVkX1/uR1v4kJJQv0YeTRf1on+Ug3hv3/SJ2MrLNGxDOoqV17eg79uSnuZy",
+				"U2FsdGVkX19pBw7od47Fo4ySW6orCpx43hbG/GwGx5OUniZGngjVgu0iWYuG6WeE",
+				"U2FsdGVkX1+I+EDM/PnlDudiD10Hl8DGNXZD2FI0X68YJ9bCcA7UyQUfPpn8Qyrg",
+				"U2FsdGVkX1/hRXqD0doILD+Vz5RqHPYthw8eS90/pKNn5oiseCgGYm62DwEDoTxL",
+				"U2FsdGVkX1/FCbta2NNB1cTl3IfGeOdOXZfTnkO9/2SfoGjEzInp63LLwiB6sJK/",
+				"U2FsdGVkX19bKlQtRUErSqGpl1WRFjgJMvn+RLIOiKEoOrzH2yyjgl+WasFNRJ1I",
+				"U2FsdGVkX1+GURnsO1s3UwGjkbqyJBsAVN/Kb2oS/73tqwKs+hroMtx0mjOxNGY+",
+				"U2FsdGVkX1+rf9XeW2ljcw8ozryvxS0hmh1OCs8zN5HF+lz21hxfz1kZyOYdCccb",
+				"U2FsdGVkX19uf0teVwBGBszP7qg4JKJa7txcd9du0/4yJqAqbRIWNOniM4WErwxI",
+				"U2FsdGVkX19Bi3Zn1RkB2UT2EfFFsMy7gcuMXMfcoKp46wd8igsiUWu7EhlgnO6b",
+				"U2FsdGVkX18lcYyYW0xl790aMUIFCmgk2LFuJNYJDmSI4d8RAwSaFLPfsRZWGCzi",
+				"U2FsdGVkX1/6cMPk3g+T/Qyl4Z9RJehUgrUSP+siuq1o5G0aJnBmmv1D3IZCpFLd",
+				"U2FsdGVkX1/uB2TbALxkPnkovw9TJ3qzAXOK/nWJyOEcLbFxJicKmVW42HKZWQBk"
+			]
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "OO.Klasse.Definieren",
+					"uuid": "ibx15j",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Instanzvariable.Definieren",
+					"uuid": "sfkuwe",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Instanzvariable.Verwenden",
+					"uuid": "ickm30",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Instanzmethode.Definieren",
+					"uuid": "w36omm",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Instanzmethode.Aufrufen",
+					"uuid": "pvkiyc",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Javadoc.Schreiben",
+					"uuid": "284w5i",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Javadoc.Erzeugen",
+					"uuid": "pa3673",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Javadoc.Lesen",
+					"uuid": "wbotm3",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				}
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/_1_Klasse_Objekt_1.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "i0kicz"
+					}
+				},
+				{
+					"type": "document",
+					"path": "::dir/_2_Coding_Style.flow.html"
+				}
+			],
+			"type": 1,
+			"active": false
+		},
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/Karte.java",
+					"active": true,
+					"cursor": {
+						"line": 75,
+						"ch": 12
+					}
+				},
+				{
+					"type": "browser",
+					"address": "file:///Users/nils/Desktop/5Code%20Workspace/07_Klasse_Objekt_1_v14p/_generated/javadoc/allclasses-index.html",
+					"active": false
+				}
+			],
+			"type": 1,
+			"active": true
+		},
+		{
+			"type": 2
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				10.728711790393007,
+				89.271288209607
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				58.442581758015024,
+				41.557418241984976
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				true
+			],
+			"dimension": [
+				23.570096054970605,
+				76.4299039450294
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "Karte",
+			"path": "::dir/Karte.java",
+			"id": "ez6rjl",
+			"isGenerated": false
+		},
+		{
+			"name": "_1_Klasse_Objekt_1",
+			"path": "::dir/_generated/exec/_1_Klasse_Objekt_1.java",
+			"id": "az780z",
+			"isGenerated": true
+		},
+		{
+			"name": "_2_Coding_Style",
+			"path": "::dir/_generated/exec/_2_Coding_Style.java",
+			"id": "60e1aj",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "_1_Klasse_Objekt_1",
+			"path": "::dir/_1_Klasse_Objekt_1.flow.html",
+			"id": "3qotjf"
+		},
+		{
+			"name": "_2_Coding_Style",
+			"path": "::dir/_2_Coding_Style.flow.html",
+			"id": "vvt0eh"
+		}
+	],
+	"linkMap": [
+		{
+			"id": "ystryj",
+			"start": "3qotjf",
+			"end": "3qotjf",
+			"uniId": "hghi1s"
+		},
+		{
+			"id": "7to90g",
+			"start": "vvt0eh",
+			"end": "vvt0eh",
+			"uniId": "qt9cml"
+		},
+		{
+			"id": "7to90g",
+			"start": "3qotjf",
+			"end": "vvt0eh",
+			"uniId": "aycqyf"
+		},
+		{
+			"id": "7to90g",
+			"start": "3qotjf",
+			"end": "vvt0eh",
+			"uniId": "41w3vk"
+		},
+		{
+			"id": "lkwuzk",
+			"start": "3qotjf",
+			"end": "3qotjf",
+			"uniId": "bqg7wi"
+		},
+		{
+			"id": "kf5e2u",
+			"start": "3qotjf",
+			"end": "ez6rjl",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "57263z",
+			"start": "3qotjf",
+			"end": "ez6rjl",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "svmy4r",
+			"start": "3qotjf",
+			"end": "ez6rjl",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "272zf8",
+			"start": "3qotjf",
+			"end": "ez6rjl",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "ma19a1",
+			"start": "3qotjf",
+			"end": "ez6rjl",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "z0zfsw",
+			"start": "3qotjf",
+			"end": "ez6rjl",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "4x974o",
+			"start": "3qotjf",
+			"end": "ez6rjl",
+			"uniId": null,
+			"isExternal": null
+		}
+	],
+	"activities": "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",
+	"lastSaveDate": "2021-01-05T10:02:12.539Z",
+	"info": "bis 05./06. 01."
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="3" /> 
+<title>_3_Arrays</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="ftgegf">
+<h1 class="e_nz58l8" data-number="3">Einfache Arrays</h1>
+<p>Wir beginnen auf einfache Weise, den Umgang mit Arrays zu erlernen:</p>
+<ul>
+<li>Wir erzeugen ein Array.</li>
+<li>Wir füllen es mit Werten.</li>
+<li>Wir geben die Werte wieder (auf die Konsole) aus.</li>
+</ul>
+<p>Sie können hierbei folgende Skills erlernen</p>
+</div>
+<div class="skill segment" id="ox83nb">
+<div data-skill="Daten.Array.einfach" data-uuid="xkd31x" data-acquired="false" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.einfach</span></div></div></div>
+
+</div>
+<div class="text segment" id="ksbp8l">
+<p>&nbsp;</p>
+<h2 class="e_m69z32" data-number="3.1">Ein Array erzeugen</h2>
+<p>Wie gelernt, ist ein Array ein <em>Referenz-Datentyp</em>.</p>
+<p>D.h. eine Array-Variable beinhaltet nicht das Array selber, d.h. nicht den Speicherplatz für die einzelnen Elemente, sondern "nur" <em>eine Referenz</em> auf diesen Speicherplatz. Der Speicherplatz für eine feste (!) Anzahl von Elementen des Arrays muss dann explizit zusätzlich erzeugt ("allokiert") werden.</p>
+<p>Erzeugen Sie&nbsp;</p>
+<ul>
+<li>eine Variable <code>zahlenFeld</code>, die ein Array von <code>int</code> referenzieren kann,</li>
+<li>ein Array von 5 <code>int</code>-Elementen, das von <code>zahlenFeld</code> referenziert wird.</li>
+</ul>
+<p><span class="task-link s_5zmgx1 block" data-href="#e_5zmgx1">in einem neuen Codeblock:</span></p>
+</div>
+<div class="code segment" id="qubadn" data-class="" data-class-name="_3_Arrays" data-segment-id="1" data-solution-id="e_5zmgx1">
+int[] zahlenFeld = new int[5];<br>
+</div>
+<div class="text segment" id="gaesjp">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="e_nm6xqx" data-number="3.2">Ein Array füllen</h2>
+<p>Alle Elemente müssen nacheinander explizit gefüllt werden.</p>
+<p>Dazu schreiben Sie nun eine Schleife, die das oben definierte und allokierte Array mit aufsteigenden Zahlen von 1 an füllt, d.h. mit 1,2,3, ...</p>
+</div>
+<div class="hint segment" id="v8u431" data-title="Hinweise zum Umgang mit Arrays">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweise zum Umgang mit Arrays</span></div></div>
+<div data-uuid="e9vfd1" data-hint="U2FsdGVkX1/PN7HQyVYg30gKDa69L4mI667d99e7SxDQAmShw9dy72p/YVXIvBY6u1s1qLCb+cBcD9urPdidt8A08weUtwr4GBjj/UbxLmSa3r01/J6fYlI0nRaqq0GJmFdbQHp4I4RDQnjlM3HWeDWNirqszrXv4HpeM4gk6b4N7Q7GoprsSk8oEL0O5YwqEs6kmaRgOeEuZUtS6FPJL7bEuyoKqg2BYX3pRNDOj5pyzpGmxiDAgOCz6Y7oiWaogKZj7v+RZrMAEmrDN+CugRIFvWfD+pziUNiDOogH4xMzVoEifRNLh+GnfbHWAC7A59NC4LNwjDTG/Rc2uJ7h1LDrEbxMOzYE8IryUsaU6nlXOd7peW3vFCabIN0ud5/LjPFpC4QFZjYFVvvel3fzbZe9qZFJhLIIPX0r01eU1kAtJ5Ab7OUHVnDcYDZAHM9IQZg1q2S8nwWDwCjtJhreQQ==" class="hint"></div>
+<div data-uuid="25s4ma" data-hint="U2FsdGVkX18rOBqQ23l0NAcUamncN1PZF6yuzUbDZClO23U3OxszigGm0m92TyQGX6dsPorXZ6rUv+Ffw5wBvOKsZzC0dVofKTbnrMfY6KvB6gTcAEBhSNvSGcx0kSR/vqiUz5N9kr+U+YsHmNKuYbp0Z3lTIl+Mgs8uXuiW+SwugIwPt6C5F7x9cltxr613+8zvL1gPQemcG7r9geGEsO6BYVwaYQGiJyjPbyMcNkLVGCp5bossKSEhPmDLYxybCXx088QdLN5beTxZMxAey+OOuRoZ+PLtrkUhVYy29zlzg68D8jckfZej9H5EDefXfdIDgA+td24Hs7kcTRHLAWscSCVzllKuj8AoW6VwaqMIt5sDHz0Q02sJTYZMaER/nG+zbIyWOYC02838opjmpUKXp6wTnOfAiQGnt5hbPtLlLUmOghMoL8wNjQ8THPb8B0pBnIi0pEXXszCgoxiUDgK5MPtWXXu/8oziFDba/gd0U+DpgueylYGDnM8ek5Kr" class="hint"></div>
+
+</div>
+<div class="text segment" id="jft17n">
+<p><span class="task-link s_nkp6cp block" data-href="#e_nkp6cp">Tun Sie das in einem neuen Codeblock.</span></p>
+</div>
+<div class="code segment" id="62ees2" data-class="" data-class-name="_3_Arrays" data-segment-id="2" data-solution-id="e_nkp6cp">
+for(int i = 0; i &lt; zahlenFeld.length; i++) {<br>&nbsp;&nbsp;zahlenFeld[i] = i + 1;<br>}
+</div>
+<div class="text segment" id="ng5qd2">
+<p>&nbsp;</p>
+<p><span class="task-link s_6qj5uj action">Skizzieren Sie</span> nun in der Zeichnung unten, wie die Speicherinhalte aussehen. In der Zeichnung sind bereits Textfelder für die Werte im Speicher vorbereitet, Sie müssen nur passende Werte eintragen.</p>
+</div>
+<div class="hint segment" id="fsjcye" data-title="Für die Referenz zeichen Sie einfach Freihand einen Pfeil ein">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Für die Referenz zeichen Sie einfach Freihand einen Pfeil ein</span></div></div>
+<div data-uuid="unfh42" data-hint="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" class="hint"></div>
+
+</div>
+<div class="text segment" id="ekb2fg">
+
+</div>
+<div class="gui segment" id="tpg04b">
+<svg id="SvgjsSvg1008" width="800" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><defs id="SvgjsDefs225943" data-fic="Grafik" data-scenewidth="800"></defs><rect id="SvgjsRect186305" width="660" height="100" fill="#efe9f4" stroke="#00afef" stroke-width="2" x="40" y="40" transform="matrix(1,0,0,1,0,0)"></rect><foreignObject id="fgn" width="100" height="20" x="40" y="20" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin: 0px 0px 0px 2px; height: 55px; width: 123px; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">zahlenFeld</textarea></foreignObject><line id="SvgjsLine187187" x1="120" y1="40" x2="120" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187245" x1="200" y1="40" x2="200" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187303" x1="260" y1="40" x2="260" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187361" x1="320" y1="40" x2="320" y2="120" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187419" x1="380" y1="40" x2="380" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187477" x1="320" y1="120" x2="320" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187535" x1="440" y1="40" x2="440" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187593" x1="500" y1="40" x2="500" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187651" x1="560" y1="40" x2="560" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187709" x1="620" y1="40" x2="620" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187767" x1="680" y1="40" x2="680" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><foreignObject id="fgn" width="60" height="20" x="200" y="80" transform="matrix(1,0,0,1,0,0)" fill="#efe9f4"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">1</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="260" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">2</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="320" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">3</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="380" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">4</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="440" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">5</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="500" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">Wert</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="560" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">Wert</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="620" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">Wert</textarea></foreignObject><foreignObject id="fgn" width="200" height="30" x="200" y="140"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">18</textarea></foreignObject><foreignObject id="fgn" width="20" height="20" x="40" y="80"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">18</textarea></foreignObject></svg>
+</div>
+<div class="text segment" id="2ntah5">
+<h2 class="e_6wiin2" data-number="3.3">Ein Array ausgeben</h2>
+<p>Um zu kontrollieren, dass das oben gefüllte Array auch wirklich mit den richtigen Werten gefüllt ist, geben Sie nun alle Elemente des Arrays auf die Konsole aus - natürlich ebenfalls in einer Schleife, in der sie die o.a. Hinweise ebenfalls beachten.</p>
+<p><span class="task-link s_t17thj block" data-href="#e_t17thj">Tun Sie das in einem neuen Codeblock.</span></p>
+</div>
+<div class="code segment" id="be6zbr" data-class="" data-class-name="_3_Arrays" data-segment-id="3" data-solution-id="e_t17thj">
+for(int i = 0; i &lt; zahlenFeld.length; i++) {<br>&nbsp;&nbsp;System.out.print(zahlenFeld[i] + " ");<br>}
+</div>
+<div class="text segment" id="02hskg">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="e_kndl64" data-number="3.4">Array-Referenzen kopieren</h2>
+<p>Da ein Array ein Referenz-Datentyp ist, wird bei einer Zuweisung auch nicht das komplette Array mit allen Elementen kopiert, sondern nur die Referenz darauf in eine andere Array-Variable kopiert.</p>
+<p>Definieren Sie ein weiteres Array <code>anderesFeld</code> von <code>int</code>, d.h. Sie definieren nur die Variable - allokieren Sie aber keinen Platz für Elemente.</p>
+<p>Weisen Sie nun der Variablen <code>anderesFeld </code>die oben definierte Variable <code>zahlenFeld </code>zu.</p>
+<p>Schreiben Sie nun einen neuen Wert in ein Element von <code>anderesFeld</code>. Geben Sie dann den Wert des Elements am gleichen Index in <code>zahlenFeld </code>aus. Verifizieren Sie, dass das der gleiche Wert ist.</p>
+<p><span class="task-link s_6gcf7b block" data-href="#e_6gcf7b">Tun Sie das in einem neuen Codeblock.</span></p>
+</div>
+<div class="code segment" id="m84x1d" data-class="" data-class-name="_3_Arrays" data-segment-id="4" data-solution-id="e_6gcf7b">
+int[] anderesFeld = zahlenFeld;<br><br>zahlenFeld[0] = 10;<br><br>System.out.println("");<br>System.out.println("zahlenFeld[0]: " + zahlenFeld[0]);<br>System.out.println("anderesFeld[0]: " + anderesFeld[0]);
+</div>
+<div class="text segment" id="gt4oi5">
+<p>&nbsp;</p>
+<p><span class="task-link s_yo8qj5 action">Skizzieren Sie</span> die Speicherinhalte nach diesen beiden Schritten:</p>
+</div>
+<div class="gui segment" id="i80ptg">
+<svg id="SvgjsSvg1327" width="780" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><defs id="SvgjsDefs221836" data-fic="Grafik" data-scenewidth="780"></defs><foreignObject id="fgn" width="100" height="20" x="40" y="20" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background: transparent; outline: none; border: none; margin: 0px 0px 0px 2px; height: 55px; width: 123px; font-family: &quot;Segoe UI&quot;, sans-serif; font-size: 14px; cursor: text; color: rgb(0, 0, 0);">zahlenFeld</textarea></foreignObject><line id="SvgjsLine187187" x1="120" y1="40" x2="120" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187245" x1="200" y1="40" x2="200" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187303" x1="260" y1="40" x2="260" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187361" x1="320" y1="40" x2="320" y2="120" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187419" x1="380" y1="40" x2="380" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187477" x1="320" y1="120" x2="320" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187535" x1="440" y1="40" x2="440" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187593" x1="500" y1="40" x2="500" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187651" x1="560" y1="40" x2="560" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187709" x1="620" y1="40" x2="620" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><line id="SvgjsLine187767" x1="680" y1="40" x2="680" y2="140" stroke="#000000" stroke-width="2" fill-opacity="0" transform="matrix(1,0,0,1,0,0)"></line><foreignObject id="fgn" width="60" height="20" x="200" y="80" transform="matrix(1,0,0,1,0,0)" fill="#efe9f4"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">10</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="260" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">1</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="320" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">2</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="380" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">2</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="440" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">3</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="500" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">4</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="560" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">5</textarea></foreignObject><foreignObject id="fgn" width="60" height="20" x="620" y="80" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">Wert</textarea></foreignObject><foreignObject id="fgn" width="100" height="20" x="120" y="19" transform="matrix(1,0,0,1,0,0)"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">anderesFeld</textarea></foreignObject><foreignObject id="fgn" width="200" height="20" x="200" y="120"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">16</textarea></foreignObject><foreignObject id="fgn" width="20" height="20" x="60" y="80"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;">16</textarea></foreignObject><foreignObject id="fgn" width="20" height="20" x="140" y="80"><textarea id="selftext" contenteditable="true" style="background:transparent; outline:none; border:none; margin-left: 2px; height: 100%; width: 100%; font-family: Segoe UI, sans-serif; font-size: 14px; cursor: text; color: #000;" data-focused="true">16</textarea></foreignObject></svg>
+</div>
+<div class="text segment" id="wadkjc">
+
+</div>
+
+</body> 
+</html>

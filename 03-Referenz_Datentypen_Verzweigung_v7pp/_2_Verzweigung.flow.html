@@ -1,0 +1,358 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="2" /> 
+<title>_2_Verzweigung</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="5yjocl">
+<h1 class="e_qo8tt5" data-number="2">Verzweigungen</h1>
+<p>Wir führen nun Code aus, der nicht immer das gleiche macht, sondern - je nach den abgefragten Bedingungen - unterschiedliche Aktionen ausführt.</p>
+<p>Das wird erreicht durch <strong>Verzweigungen oder Fallunterscheidungen</strong>, wie wir im Folgenden ausprobieren.</p>
+<p>Dabei können Sie folgende Skills erwerben:</p>
+</div>
+<div class="skill segment" id="rpib1u">
+<div data-skill="Ablauf.Verzweigung" data-uuid="e2tqm7" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Verzweigung</span></div></div></div>
+<div data-skill="Ablauf.Verzweigung.Verschachtelt" data-uuid="c4cqne" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Verschachtelt</span></div></div></div>
+<div data-skill="Ablauf.Verzweigung.Mehrfach" data-uuid="ls741s" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Mehrfach</span></div></div></div>
+
+</div>
+<div class="text segment" id="4lyzk4">
+<h2 class="e_eg8koy" data-number="2.1">Geschwindigkeitstest mit einfacher Verzweigung</h2>
+<p>Entwickeln Sie als einfaches Beispiel einen Geschwindigkeitstest. Dabei soll festgestellt werden, ob der Tachowert die Höchstgeschwindigkeit überschreitet. Für die Unter- und Überschreitung des Tachowertes sollen unterschiedliche Meldungen ausgegeben werden.</p>
+</div>
+<div class="hint segment" id="bbb04k" data-title="Für das aktive Lesen des Texts empfiehlt es sich, die Textmarker zu nutzen.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Für das aktive Lesen des Texts empfiehlt es sich, die Textmarker zu nutzen.</span></div></div>
+<div data-uuid="o7y17c" data-hint="U2FsdGVkX1/BkXPWPAlMGEiTFbSHLi9AcZ5OZKr/WIqitcCf5Qv9APobCNcrlsDxpKDSI0BEZHwH4E7PTDU+IS922RIQW62JlFF6JuNuN1fePNCe/fOAj106sHfvi4oRsdBvTGkNNsJ3CWJL9DCkHhHp3hLi3hGDgqnJwADMQ185lQG/RuybTk4XTOzzJN23JSIwWhLQTEh+fdLNkK6PEYrSrmxGFbGVTSLeEKlgSN4ZXBqUwBnNiNI2RS5UN5tNHankwYasxd7Pp+IF1Km+Gjto3EMbTd88QYGslvhcH/sC4kZD6GJRMVhupnoOzD9ZBftm2ABwWMdux+Krbt6qPfEx16MWZOnAozslBThlgLN/HWmrsINw4jGPlVXFZsEnplKGKRB8knGSB0Nlax8wO8WOCS5t46WSCzcIE0T5Z5qqQ1DjZl74sB2ut8rplFkgJ42gs5j9kQ4wn7qVaRfXoVNMVX2EqdtWVN6WsB6haoWJefZusvNiVxj0W9pBETetR7zh1wkaJdAoq2N1QtJqCOlrJVK5tnTNEltSBKgGULxLf4XAhVtBtBRE5RlrS7tw" class="hint"><span style="font-weight: bold;">Falls Sie sie noch nicht freigeschaltet haben, wäre das jetzt ein guter Zeitpunkt</span><br><p>Genügend 5Coins sollten Sie eigentlich haben.&nbsp;</p></div>
+<div data-uuid="rkw2i5" data-hint="U2FsdGVkX18bwC0MccLgA0ritEfCdQcDdUJSYBIlk+m8B3vtiX0AODUN60zTJ0Sh+F2N/PX3P/PZd9EBnQwsQt4wcNEU2r23yqhLMAixUxPUZyn5ZSSCXLM1lYcFe0t2Mb54VXI/TXNib7hv+T6mmn1w35Sarskcv/M0RNYs4F9BDnVXMFkt89KDL4OV1kW+L2YtLrDH1ioEWTfcEXQ405W3rdL6hyujO1qZES2OdALADobcFSkY768whiRrkTYMP/Y4SJHhpJ3oZrkLashL/xMRxFa2IX2qukqF3s9eISJa91aLfLiaZfcxGipvISHUE95kJChrfzfBrk7fSHSnHNwE44bvhPM/N3ooXjLmzV4kROxF1TPtzVB90Gtb8i+RIVzXtIBoY1XCPA3zDjvd8Svbkwump+CB0e4BnNRBMgRNP+W7fFY6RN50SBKL9Xhx8nb62vwLDkhh81TTCKjJeY7FQsgqyDd9jyLGUOtKX1onMrvy2WOfz7P2MP4O04Ndek8QVw5x3EYpQurMrc+o+51AYns0XFH+sV9TXrh4FS3kquioKSCz7IurlvfR73LTOysPHONQLlYkrIyfv22QhlAwRhSAJOMWTn4++chAH928Lum/TrJgnqcPH1Pc/ILEP69pY+rBNLvJjCsgNqRlMvCVMbOo5xZDCGK4rapqF6Hvc6HA2ntj+2skyR8v4XYC" class="hint"><span style="font-weight: bold;">Mit den Textmarkern können Sie die einzelnen Bestandteile, Variablen, Werte, Abläufe markieren</span><br><p>Suchen Sie sich selber die dazu passenden Farben aus. Vier stehen Ihnen zur Verfügung.</p></div>
+
+</div>
+<div class="text segment" id="6ysezb">
+<p>Die Umsetzung machen Sie der Reihe nach in einzelnen Codeblöcken. Testen Sie Ihren Code der Reihe nach wie schon bekannt mit <em>Menü -&gt; Bis hierhin alle Codeblöcke ausführen</em> oder dem Shortcut <code>Strg-Shift-E</code>&nbsp;oder den Buttons am Code-Block.&nbsp;</p>
+<p>a) Definieren Sie zuerst für den Anzeigewert eines Tachometers und für die erlaubte Höchstgeschwindigkeit eines Autos zwei passende Variablen. Geben Sie die gefahrene Geschwindigkeit und die Höchstgeschwindigkeit (auf die Konsole) aus.</p>
+</div>
+<div class="hint segment" id="7y0gja" data-title="Verwenden Sie passende Datentypen und beschreibende Namen ohne Abk. für die Variablen.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Verwenden Sie passende Datentypen und beschreibende Namen ohne Abk. für die Variablen.</span></div></div>
+
+</div>
+<div class="text segment" id="9apl67">
+<p>Tun Sie das, hier und auch in den folgenden Unteraufgaben, <span class="task-link s_j1p4vj block" data-href="#e_j1p4vj">jeweils in einem eigenen Codeblock:</span></p>
+</div>
+<div class="code segment" id="5xnqgr" data-class="" data-class-name="_2_Verzweigung" data-segment-id="1" data-solution-id="e_j1p4vj">
+double aktuelleGeschwindigkeit = 49.5;<br>double erlaubteMaxGeschwindigkeit = 50.0;<br><br>System.out.println("Aktuell: " + aktuelleGeschwindigkeit + "; Erlaubt: " + erlaubteMaxGeschwindigkeit);
+</div>
+<div class="text segment" id="67uinn">
+<p>b) Definieren Sie dann eine Variable, die angibt, ob Sie zu schnell fahren. („Ob“ bedeutet, dass diese Aussage <em>wahr oder falsch</em> ist.).</p>
+</div>
+<div class="hint segment" id="9qnsrl" data-title="Den Namen einer boolean-Variablen sollten Sie immer so wählen, dass Sie verständlichen Code erzeugen, z.B. boolean istZuGross oder hatRaeder oder kannFahren.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Den Namen einer boolean-Variablen sollten Sie immer so wählen, dass Sie verständlichen Code erzeugen, z.B. boolean istZuGross oder hatRaeder oder kannFahren.</span></div></div>
+
+</div>
+<div class="text segment" id="ymb27o">
+<p>Vergleichen Sie die gefahrene und die erlaubte Geschwindigkeit und weisen Sie der gerade definierten Variable das Ergebnis zu. Geben Sie dann den Wert dieser Variable aus. <span class="task-link s_mpsqds block" data-href="#e_mpsqds">Tun Sie das in einem eigenen Codeblock:</span></p>
+</div>
+<div class="code segment" id="qegc98" data-class="" data-class-name="_2_Verzweigung" data-segment-id="2" data-solution-id="e_mpsqds">
+double aktuelleGeschwindigkeit = 51.5;<br>double erlaubteMaxGeschwindigkeit = 50.0;<br><br>boolean istZuSchnell = aktuelleGeschwindigkeit &gt; erlaubteMaxGeschwindigkeit;<br><br>System.out.println("istZuSchnell: " + istZuSchnell);<br>
+</div>
+<div class="text segment" id="wrfcxc">
+<p>c) Dann verwenden Sie eine Verzweigung (Fallunterscheidung), um je nach Ergebnis des Vergleichs (ok/zu schnell) eine passende Text-Meldung auf die Konsole ausgeben.</p>
+</div>
+<div class="hint segment" id="lagdsf" data-title="Es ist dabei nicht notwendig, den Wert der boolean-Variable mit true zu vergleichen ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Es ist dabei nicht notwendig, den Wert der boolean-Variable mit true zu vergleichen </span></div></div>
+<div data-uuid="qrsuvk" data-hint="U2FsdGVkX1+TpwPGS/T8zzzaCsmR75HXOZrUeDB4c2RLZRVUxUlVEE+jrEvVO2L4B0Fa0Ndpr0Yf9Nm35s680h6Xrtfisy195Nc6Q95B/F4kU4aXUx+udcNpn2igFkqNmSl2PljkQCR4feFd6hQfEa9d2atd48E+IANXcmHKvmKkX4I/BeP9VmON/yYOPf8qjj6oL34/t+ZyOtT5DY0YTV1vjbyDJJvJdXDin7rYouOSMh03sXl9U+/F1u4YRPFPfTHs8F28mIHQsdwck+52ybLLoxhT/K1glvJ4dhr+xvNJkT+lOgmzctPTzyIgNDwq6bn37hdTxFYDUYZL++x9lERDZGGI+e1TQfbxaKDY0z+1aWuHdWE7ORrroMlG3gWT7oHQeXVQFa/1iuiePNCDWHiN/n/H+KYyYmMZvO7XF+NWyor7vnbZTsG0OvocChZycdfUmKZVYKQlyPq1ITNzlgZXhK7NY2W49uCAu9UNiqrzpTUMgEpjWP8P5kyFnFL45ftld8GLYs0epYZuTg+9t1TUlF7gpXhXR2lNxVRhzDEjKoXK5OJOGOBkmWZlF8dU+ILrZAaXOrZQfDFe6q165QtPJLv7yV/O2jbVLRpam6UnzEOceRL+pVNVMV3i6zm095v/NCqY0TbHoEh+ervuH2EZzZu2Ewam/lRlRCS8DbQ/+jz5j8bSvr3ZCf4/VVmwyI4M8wiDQrFvU+RNSpEOSzn1fps1EmXomk8wTLBxslwGN3qXeIdIzBbrm1/kq5sI3GkQ/8QGfy6g2aQtqvT8qkdBZYy1U1yLyDvh/akWLkOB45qUqyn7nEV957/Ika7DBoLAz3AzudxBUSAWytL1Fc+Kf22CIv4jk1eJeqpFXM/mB1l4ex/dMUC3tbimH8xbbq99WH/lHI0WJB8snU8i+AyuVTUAWze6ZUP7t2U7uxO3dKmkgL8dsKnIFzl+JkX9su1dxVwiuxlGnYB8cBy8GFut2eWtpAvfZd0eznYxspydx0uAC9VUDfysAbUyrkzR2aS8hZsfjkUc41jKbKhcUoCi/x2EL+YqwTOqlDXUyW0CfwR/7yEFqPP6KRR/C9BLyw5QUz5RxCD3uqnZPgbRYT170eeMU/iYAe9G/QYUfYwgTvnSF7KaeWxm6K8NnzmPnAy6FWaJjS3NrFEUIOl/0puE72lC+RDJYJk0K5SzcvlgKqU/LDcSABBx2TVo50EXzUbMKdUqtw9rAKP9eSmI6Tz1h0p1zKGdEF6dDmjdM8EHUulHNTGeF2ABiCnw21KfE88t00I2bFa3wQUJ5cS1NKwYKUwKH00i1rSP6UFu9Vzb47mODLg8eyN7vCdJa1HKnEcBy0/XskBhWdNisYLUVE21rLHKByGBy/+jSBu9lr6ubR40zOoQ4zhiyDsinmcm9M0Rsdj/rsK51AzFCXBrstUimMk6SuZQstyurYJkoSU8HuYraxHit74gHR/OFV8yn7g+1YLDcwn7nHlNKyfigA==" class="hint"><span style="font-weight: bold;">Eine boolean-Variable beinhaltet bereits den Wert der Bedingung, die bei if angegeben wird.</span><br><p>Erkennen Sie, dass es nicht (!) notwendig ist, den Wert dieser Variable mit true oder false zu vergleichen (z.B. mit if(var == true)). Die Angabe der boolean-Variablen if (hatRaeder) hat bereits den Datentyp boolean und ist daher bereits die Bedingung. Diese Form sollten Sie daher verwenden. Der Ausdruck sieht dann richtig und lesbar aus, wenn Sie die Variable richtig benennen (s.o.).</p></div>
+
+</div>
+<div class="text segment" id="xyqg9p">
+<p><span class="task-link s_n4zmyt block" data-href="#e_n4zmyt"> Tun Sie das in einem eigenen Codeblock:</span></p>
+</div>
+<div class="code segment" id="ti9aik" data-class="" data-class-name="_2_Verzweigung" data-segment-id="3" data-solution-id="e_n4zmyt">
+double aktuelleGeschwindigkeit = 51.5;<br>double erlaubteMaxGeschwindigkeit = 50.0;<br><br>boolean istZuSchnell = aktuelleGeschwindigkeit &gt; erlaubteMaxGeschwindigkeit;<br><br>if(istZuSchnell) {<br>&nbsp;&nbsp;System.out.println("zu schnell");<br>} else {<br>&nbsp;&nbsp;System.out.println("ok");<br>}<br>
+</div>
+<div class="text segment" id="vn5yit">
+<p>&nbsp;</p>
+<h2 class="e_f567pb" data-number="2.2">Fehlermöglichkeiten</h2>
+<p>Auch bei so einfachen Kontrollstrukturen wie Verzweigungen kann man etliche Fehler machen. Damit wir diese Fehler kennen, probieren wir die wichtigsten nun aus. Sie können Sie dann erkennen und beheben, wenn sie Ihnen selber unterlaufen.&nbsp;</p>
+<p>Setzen Sie ein „;“ fehlerhafterweise hinter die Klammer nach der Bedingung eines if-statements, z.B. so:</p>
+<p><code>if(bedingung);</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(„bedingung ist erfüllt“);</code></p>
+<p><span class="task-link s_g0ryty block" data-href="#e_g0ryty">Tun Sie das in einen neuen Codeblock:</span></p>
+</div>
+<div class="code segment" id="8si78h" data-class="" data-class-name="_2_Verzweigung" data-segment-id="4" data-solution-id="e_g0ryty">
+if(true); else<br>&nbsp;&nbsp;System.out.println("true");<br><br>if(false); else<br>&nbsp;&nbsp;System.out.println("false");<br>
+</div>
+<div class="text segment" id="7obzk6">
+<p>&nbsp;</p>
+<p>a) <span class="task-link s_3uwwsv text">Welche Ausgabe erhalten Sie auf der Konsole jeweils für eine true und eine false bedingung? </span></p>
+<p>(Tipp: Sie können hier auch die Ausgabe aus der Konsole hierher kopieren.)&nbsp;</p>
+<p>Sowohl true, als auch false wird ausgegeben</p>
+<p>b) Welches Problem ergibt sich also mit diesem fehlerhaften Setzen eines „;“ ? <span class="task-link s_8uc9mn text" data-href="#e_8uc9mn">Tragen Sie hier Ihre Antwort ein.</span></p>
+<p><span class="hilitenote e_8uc9mn">Antwort: Durch das ";" wird die if-Bedinung sofort beendet und der normale Code weiter ausgeführt.</span></p>
+<p>c) Hängen Sie ein else - statement an die oben geschriebene Fallunterscheidung an. <span class="task-link s_nc7a0c text" data-href="#e_nc7a0c">Welche Fehlermeldung erhalten Sie? </span></p>
+<p><span class="hilitenote e_nc7a0c">Antwort: Gar keine</span></p>
+<p>d) <span class="task-link s_90vlzq text">Finden Sie noch andere Fehlermöglichkeiten?&nbsp;</span></p>
+<p>Beliebter Fehler ist folgendes:</p>
+<p>&nbsp;</p>
+</div>
+<div class="code segment" id="s9q3yl" data-class="" data-class-name="_2_Verzweigung" data-segment-id="5">
+if(true)<br>&nbsp;&nbsp;System.out.println("1");<br>&nbsp;&nbsp;System.out.println("2");<br>
+</div>
+<div class="text segment" id="injqzq">
+<p>Man denkt, dass 1 und 2 nur bei if == true ausgeführt wird, jedoch wird nur 1 ausgeführt, weil keine Block-Schreibweise verwendet wurde.</p>
+<h2 class="e_3n598d" data-number="2.3">Verschachtelte Verzweigung</h2>
+<p>Nun wollen wir nicht nur eine einfache Verzweigung sondern mehrere, verschachtelte Verzweigungen anwenden.</p>
+<p><strong>Anforderung</strong>:</p>
+<p>Wenn die Höchstgeschwindigkeit überschritten wird, gibt es verschiedene Stufen der Sanktionen, die sich nach der Höhe der Differenz ergibt:</p>
+<ul>
+<li>Wenn die Differenz kleiner oder gleich null ist, gibt es natürlich keine Strafe</li>
+<li>sonst: Wenn die Differenz kleiner als 10 km/h ist, ist die Strafe 10 Euro</li>
+<li>sonst: Wenn die Differenz kleiner als 50 km/h ist, ist die Strafe 300 Euro, 1 Strafpunkt</li>
+<li>sonst: Wenn die Differenz kleiner als 70 km/h ist, ist die Strafe 500 Euro, 3 Strafpunkte und ein Führerscheinentzug auf 1 Jahr</li>
+<li>Ansonsten ist der Führerschein für immer weg</li>
+</ul>
+<p>Geben Sie jeweilige Strafe als Text auf die Konsole aus. Das Muster dafür ist: „Sie sind xxx km/h zu schnell gefahren. Die Strafe dafür ist yyy“.</p>
+<p><strong>Lösungsweg</strong>:</p>
+<p>Sie ermitteln zuerst die Differenz zwischen gefahrener und erlaubter Geschwindigkeit und speichern sie in einer passend benannten Variablen eines passenden Datentyps.</p>
+<p>Zur Ermittlung des Texts bauen Sie <em>zuerst </em>einen String passend zusammen. Den geben Sie dann <em>abschließend </em>auf die Konsole aus.</p>
+</div>
+<div class="hint segment" id="yldovz" data-title="Wie Sie einen String zusammenbauen, haben wir bereits gelernt.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wie Sie einen String zusammenbauen, haben wir bereits gelernt.</span></div></div>
+<div data-uuid="bqrmwc" data-hint="U2FsdGVkX1/OWCcYIvvjZ647eMB5gB2i6RfMKoKt9HdHk1smM8uS3wQgRuszy5qQLxbeImEYpo02FuJtHHGpC/xRzl/MQ1wWDmFhC2YwBB1NSETfppfMknxvx93VRvInHB9AnHF5mOtiaq5g9sdizqoKBdFpNV6mQ9UipNntAUyZKBDdY4sH+UMmKeObjVoRiZs6eIEKk0nO+WtKnpQV5wkwJsJuulthYPIp6E4r7p3kcuguSojHHi8lXKq9R5cv6YXVbeOiAIwxBTTroWvmg7WJzPifYPKvGc4Ec4Y0q+thIHFjKFv8lyAnh4oCpSiPfRNNOf00QbuVCJKmhs9SKrSdzR2TIYP7DF6gnIEKdycVdSem9uOHNUtYWjtoaOFP4i+Mb4ImyEcffyUcGixi3rdwDxcrGRoNpjlrtnbqxoq2bMjVZnDHvAw+hMVI7wOQ+fLs5fsJMbCrJdXaJ9wz7uivsZzf87i7n0k/Xmkzzus=" class="hint"></div>
+
+</div>
+<div class="text segment" id="zup59k">
+<p>Den Wert des auszugebenden Strings ermitteln Sie dann dadurch, dass Sie Verzweigungen "verschachteln", d.h. in einem Zweig einer Verzweigung eine weitere Verzweigung einbauen:</p>
+<p>- Als Bedingung für jede Verzweigung prüfen Sie schrittweise jeweils die Höhe der Differenz:</p>
+<p>- Falls die Differenz der ersten Stufe entspricht, bauen Sie den passenden Text zusammen.</p>
+<p>- Andernfalls testen Sie, ob die Differenz der zweiten Stufe entspricht und so weiter.</p>
+<p>Sie schreiben also <em>Verzweigungen innerhalb von Verzweigungen</em>. Dabei <em>müssen Sie beachten</em>:</p>
+<ul>
+<li>Folgen Sie der o.a. <em>Reihenfolge </em>1..5 für das Prüfen der Höhe der Differenz.</li>
+<li><em>Rücken Sie den Code</em> bei der Verschachtelung so <em>ein</em>, dass Sie den Überblick behalten können, um den Code verstehen und so formal und logisch korrekt schreiben können.</li>
+<li><em>Beschreiben Sie </em>bei jedem Schritt die Anforderung in einem //-Kommentar.
+<ul>
+<li>Diese können Sie aus der Aufgabe oben in Ihren Code kopieren.&nbsp;</li>
+</ul>
+</li>
+</ul>
+<p>Den zusammengebauten String geben Sie erst am Schluss, nach der verschachtelten Verzweigung auf die Konsole aus.</p>
+<p><span class="task-link s_n0eaau block" data-href="#e_n0eaau">Tun Sie das in einem eigenen Codeblock:</span></p>
+</div>
+<div class="code segment" id="a83zo6" data-class="" data-class-name="_2_Verzweigung" data-segment-id="6" data-solution-id="e_n0eaau">
+double aktuelleGeschwindigkeit = 75.5;<br>double erlaubteMaxGeschwindigkeit = 50.0;<br><br>double differenz = aktuelleGeschwindigkeit - erlaubteMaxGeschwindigkeit;<br><br>if(differenz &gt;= 0) {<br>&nbsp;&nbsp;if(differenz &lt; 10) {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Sie sind " + differenz + " km/h zu schnell gefahren. Die Strafe dafür ist 10€");<br>&nbsp;&nbsp;} else if (differenz &lt; 50) {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Sie sind " + differenz + " km/h zu schnell gefahren. Die Strafe dafür ist 300€, 1 Strafpunkt");<br>&nbsp;&nbsp;} else if (differenz &lt; 70) {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Sie sind " + differenz + " km/h zu schnell gefahren. Die Strafe dafür ist 500€, 3 Strafpunkt und Führerscheinentzug für 3 Jahr");<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Sie sind " + differenz + " km/h zu schnell gefahren. Die Strafe dafür ist lebenslanger Führerscheinentzug");<br>&nbsp;&nbsp;}<br>} else {<br>&nbsp;&nbsp;System.out.println("Alles super!");<br>} <br>
+</div>
+<div class="text segment" id="55w2bw">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="e_q3ntbp" data-number="2.4">Mehrfache Fallunterscheidung</h2>
+<p>Wenn man nicht nur eine wahr/falsch- bzw. true/false-Bedingung - wie bisher - auswerten möchte, sondern eine mehrfache Fallunterscheidung mit verschiedenen Werten vornehmen möchte, dann kann die Verwendung von mehrfach verschachtelten <code>if-else</code>-Konstrukten unübersichtlich werden.</p>
+<p>Daher gibt es auch in Java hierfür die Kontrollstruktur <code>switch-case</code>, die Sie nun einsetzen sollen.</p>
+<h3 class="e_oee3t6" data-number="2.4.1">Auswertung von einzelnen Werten</h3>
+<p>Bei interaktiven Anwendungen werden häufig Eingaben vom Anwender angefordert, je nach Eingabe passieren dann unterschiedliche Aktionen.</p>
+<p>Da wir noch nicht mit Eingaben umgehen können, gehen wir wie folgt vor:</p>
+<ul>
+<li>Definieren Sie eine Variable, die den Buchstaben der Eingabe speichert
+<ul>
+<li>verwenden Sie einen passenden Datentypen</li>
+<li>und geben Sie einen beschreibenden Namen</li>
+<li>wobei Sie die Konventionen der Namensgebung für Variablen in Java beachten</li>
+</ul>
+</li>
+<li>Je nach Eingabe geben Sie unterschiedliche Texte auf die Konsole aus.
+<ul>
+<li>bei einem q oder Q: "Programm wird beendet"</li>
+<li>bei einem s oder S: "Daten werden gespeichert"</li>
+<li>bei einem r oder R: "Daten werden berechnet"</li>
+<li>bei allen anderen Eingaben: "Nur q,Q, s, S, r und R sind erlaubt".</li>
+</ul>
+</li>
+</ul>
+<p><span class="task-link s_2ve50c block" data-href="#e_2ve50c">Tun Sie das, natürlich in einem Codeblock:</span></p>
+</div>
+<div class="code segment" id="ko7ygb" data-class="" data-class-name="_2_Verzweigung" data-segment-id="7" data-solution-id="e_2ve50c">
+char eingabe = 'S';<br><br>String ausgabe = null;<br>switch(eingabe) {<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'Q':<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'q':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ausgabe = "Programm wird beendet";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'S':<br>&nbsp;&nbsp;&nbsp;&nbsp;case 's':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ausgabe = "Daten werden gespeichert";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'R':<br>&nbsp;&nbsp;&nbsp;&nbsp;case 'r':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ausgabe = "Daten werden berechnet";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;default:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ausgabe = "Nur q, Q, s, S, r und R sind erlaubt";<br>}<br><br>System.out.println(ausgabe);<br>
+</div>
+<div class="text segment" id="qhlxmk">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="task-link s_j1tgvm action">Testen Sie diese Fallunterscheidung</span> mit unterschiedlichen, erlaubten und nicht erlaubten Werten für die Eingabe. Dazu tragen Sie nacheinander unterschiedliche Werte in die Eingabe-Variable ein und führen den Codeblock aus.</p>
+<p>&nbsp;</p>
+<p>----------------------------</p>
+<p><strong>Die folgenden Aufgaben sind Optional</strong>, d.h. nicht für das Testat notwendig.</p>
+<p>Zur Übung und Vertiefung sollten Sie diese Aufgaben aber bearbeiten.</p>
+<p>&nbsp;</p>
+<h3 class="e_afrpxm" data-number="2.4.2">Auswertung von Strings</h3>
+<p>In Java kann man nicht nur eine mehrfache Fallunterscheidung nach einem Zahlen- oder Buchstabenwert treffen, sondern auch nach Werten einer String-Variablen. Das ist nützlich, wenn man je nach Datei-Endung verschiedene Programme aufrufen möchte, um diese Dateien zu bearbeiten.</p>
+<p>Bauen Sie in einem <span class="task-link s_skzrv5 block" data-href="#e_skzrv5">neuen Codeblock</span> eine mehrfache Fallunterscheidung auf, die unterschiedliche Texte auf die Konsole ausgibt, je nach der Endung, die natürlich in einer Variable steht.</p>
+</div>
+<div class="code segment" id="9w1wy0" data-class="" data-class-name="_2_Verzweigung" data-segment-id="8" data-solution-id="e_skzrv5">
+String name = "test.jpg";<br><br>// Bei name = "test.png" erhalt man die Zahl 4, weil an der<br>// 4. Stellen der letzte Punkte verwendet wird.<br>int stelleDesLetztenPunktes = name.lastIndexOf('.');<br><br>if(stelleDesLetztenPunktes &gt; 0) {<br>&nbsp;&nbsp;String type = name.substring(stelleDesLetztenPunktes + 1);<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;String ausgabe;<br>&nbsp;&nbsp;&nbsp;&nbsp;switch(type.toLowerCase()) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case "jpg":<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ausgabe = "Bilddatei wird geöffnet";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case "doc":<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ausgabe = "Textdatei wird geöffnet";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case "xls":<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ausgabe = "Spreadsheetdatei wird geöffnet";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ausgabe = "Nur .jpg, .doc und xls sind erlaubt";<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(ausgabe);<br>} else {<br>&nbsp;&nbsp;System.out.println("Die Datei hat keine Endung!");<br>}<br>
+</div>
+<div class="text segment" id="dfhaxm">
+<ul>
+<li>bei .jpg geben Sie aus "Bilddatei wird geöffnet"</li>
+<li>bei .doc geben Sie aus "Textdatei wird geöffnet"</li>
+<li>bei .xls geben Sie aus "Spreadsheetdatei wird geöffnet"</li>
+<li>bei anderen Endungen geben Sie aus "Nur .jpg, .doc und .xls sind erlaubt"</li>
+</ul>
+<p><span class="task-link s_c2je8i action">Testen Sie diese Fallunterscheidung</span> mit unterschiedlichen, erlaubten und nicht erlaubten Werten für die Endung.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

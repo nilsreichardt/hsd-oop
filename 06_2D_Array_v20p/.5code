@@ -1,0 +1,427 @@
+{
+	"name": "::dir",
+	"id": "h11fjm",
+	"user": "d719bae1994dff7bf719e6b420bdf49a",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 1,
+	"zoom": 0.8999999999999999,
+	"features": [
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": [
+				"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"
+			]
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "Daten.Array.2Dimensional",
+					"uuid": "0hb9c1",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren",
+					"uuid": "ud9uer",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Funktionen",
+					"uuid": "hst8sf",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Codieren.Links",
+					"uuid": "mhf1c9",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Grafik-Konsole",
+					"uuid": "p0om1v",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "concept",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Daten.Array.2Dimensional",
+					"uuid": "8wzzmh",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Schleife.Verschachtelt",
+					"uuid": "fpq2jv",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				}
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/_1_2D_Arrays.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "71uvld"
+					}
+				},
+				{
+					"type": "document",
+					"path": "::dir/_2_Grafischer_Adventskalender.flow.html"
+				},
+				{
+					"type": "document",
+					"path": "::dir/_3_Grafik_Konsole.flow.html"
+				}
+			],
+			"type": 1,
+			"active": false
+		},
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/Kalender.java",
+					"active": true,
+					"cursor": {
+						"line": 107,
+						"ch": 1
+					}
+				}
+			],
+			"type": 1,
+			"active": true
+		},
+		{
+			"type": 2
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				11.567082690102652,
+				88.43291730989735
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				70.71136444014633,
+				29.288635559853667
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				true
+			],
+			"dimension": [
+				47.73780718300706,
+				32.26219281699294,
+				20
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "Kalender",
+			"path": "::dir/Kalender.java",
+			"id": "l6hmr4",
+			"isGenerated": false
+		},
+		{
+			"name": "_1_2D_Arrays",
+			"path": "::dir/_generated/exec/_1_2D_Arrays.java",
+			"id": "swwnb0",
+			"isGenerated": true
+		},
+		{
+			"name": "_2_Grafischer_Adventskalender",
+			"path": "::dir/_generated/exec/_2_Grafischer_Adventskalender.java",
+			"id": "l9f9rz",
+			"isGenerated": true
+		},
+		{
+			"name": "_3_Grafik_Konsole",
+			"path": "::dir/_generated/exec/_3_Grafik_Konsole.java",
+			"id": "kghwo1",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "_1_2D_Arrays",
+			"path": "::dir/_1_2D_Arrays.flow.html",
+			"id": "t9xjzt"
+		},
+		{
+			"name": "_3_Grafik_Konsole",
+			"path": "::dir/_3_Grafik_Konsole.flow.html",
+			"id": "ta0ncu"
+		},
+		{
+			"name": "_2_Grafischer_Adventskalender",
+			"path": "::dir/_2_Grafischer_Adventskalender.flow.html",
+			"id": "r38pb8"
+		}
+	],
+	"linkMap": [
+		{
+			"id": "brmfx2",
+			"start": "t9xjzt",
+			"end": "l6hmr4",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "xxsegm",
+			"start": "t9xjzt",
+			"end": "l6hmr4",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "b8ki7a",
+			"start": "r38pb8",
+			"end": "ta0ncu",
+			"uniId": "jmo0ti"
+		},
+		{
+			"id": "memewm",
+			"start": "r38pb8",
+			"end": "t9xjzt",
+			"uniId": "1tlmuf"
+		},
+		{
+			"id": "er56yg",
+			"start": "r38pb8",
+			"end": "ta0ncu",
+			"uniId": "51sqdh"
+		},
+		{
+			"id": "er56yg",
+			"start": "r38pb8",
+			"end": "ta0ncu",
+			"uniId": "yoeda8"
+		},
+		{
+			"id": "exsbaj",
+			"start": "r38pb8",
+			"end": "ta0ncu",
+			"uniId": "qmxo0z"
+		},
+		{
+			"id": "exsbaj",
+			"start": "r38pb8",
+			"end": "ta0ncu",
+			"uniId": "h0lh7k"
+		},
+		{
+			"id": "pajg9k",
+			"start": "t9xjzt",
+			"end": "l6hmr4",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "bx5i2t",
+			"start": "t9xjzt",
+			"end": "l6hmr4",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "duoi1p",
+			"start": "t9xjzt",
+			"end": "l6hmr4",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "c3d9gs",
+			"start": "t9xjzt",
+			"end": "l6hmr4",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "wq5ed7",
+			"start": "t9xjzt",
+			"end": "l6hmr4",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "wdz3dl",
+			"start": "t9xjzt",
+			"end": "l6hmr4",
+			"uniId": null,
+			"isExternal": null
+		}
+	],
+	"activities": "U2FsdGVkX1+FWrRXFNPlde+fdyTUWOO5va7xRGGq82mxoh0cOuFa0iPaKoa37/RsuEsGzq43QcVC+MKaFVkmP/u9sOJsUQPwRrPqGOGv8kxYILxIrFF8TNt0Xz0J1x4ifjy0lnsFGCu+xUbp1XDdd3twqG2x8GZuqGUnITopTVjCVxvmPqV9OKOUxhoDeORDe+1J5zL4qQrL5+llkFktbhZkGlkBdRaKNuQ4DRM4msNhsORxAwOPE9dqxglUviEM7L/pHay/CphqF0T04S2BAucG2nPkuy6er/e9bpfWIEB5Z4VJ4a/famJl8LruOu7JNLEzBHa4keVt1B+HnmC8YQW4tMzQQIXbiULLAX3brtkFiPUn53fzzOUrod1l5ixV5VXOTOylxVlyqb0wmBNMv4imlImcWYLtD4yQmHr3MEZ0kao9zUgDLkLmAuRNzLEeRdbpAEkKGeuCJKnzTPW5+oJnvjS/9sYwsUaR2VSBI56RKR2do2ND3VRZfemUem2SLT3GSHKB2Q9XGlhOnVnC0SLtT3bYzI4ME9Fv20pOEXrVNl5QjdIeYC65w8BD4EkZy4YjHiP1qRdOVeshbrPjScSujMJwW0LHvEvBK7j0waaHflCgIT470iYOKx6gYWSZ1yKKS/ADeNQuUN+GQMsoTgZAIecX823aOG3jz1tO7ml3pBQAR4BiqmMjpawvTNbS5FOEg4mZxwldhu08TjL696/GytYxl1hsn60dXkki13fYgHHlqGLiBhLIewrlzExkooNHO2oXyW2oHiv1m1BpApJ+EHpPIOeGpmnSw/QNWURXt1HlkBCl3Rov18qNnHyS+y6S+yqK+UQ5/e8Z+V5xToN89Gl5h8w0Y0gNS4hSmQjncnPJ0K1hJDIwjyvVs5ycW4Doqtsv5GSZfWkHw4B/fmIAR1mDCSx0s4ZClMV5imAedCmjcoJ1Kroy2n3RcmqvnbYWWcom1RC/FMZfx+imAKCZ3v42jPAHBtt6pq+izyvknJufdwxpWrS+Iyy01biKdSfITgTIC454UVo6g2NNChGYWguZ9rzSL0imzAwxhpYza60LFIzgXthFDSfjnUESsdqJ9Ow1k//6gJ7m+Suaim4gEZnohfAKOzpth6jEwLasV6HtCBx2lnBEhFlqcFEO3njD7U5y+Iu0SYA2Q/N+KjWluXnSLFWFj6cisjiWYAfoZAvu9GHVC6CbDDrO9jgSleLQIYgWgNvO7aos7Dq8Miws74qom7uVGP3hIMAv8NhuHBQYs0vxh3XxEXHyPF0kZk/mj09K52EgOvFFHh/p+I5/J+ZeQ/LmDQCJuh1+JYWfJPetdEXpj6/WhlwrrCLnOZq7KsboXskazNuh28w5jnPi43DqF2hqeNL3bJ2fHLTPMDfXJdLnaQxXvJETuQXeRd/MN8+Lt4x0CFS/7mnuXRedwasy705uqF29JG/+6IM1J2uJiljNaIbA+13dhH4kx2ud2XXNDEYP5dfOF8VGh6TKwzf9z6BkuWAKXZ+mi7rlgrMuGQGHEsAAozSUCJ7cgp9t1UDL/Kn092Gzs3d9/9TCf3iwWYg/v4NLma7yLs2VlOg/095ePlHdSuZEeYIg+/VfDnAuSVC4p2uhqaHuPNhiyCEI9RXyABlPbkc1gnjqe1G5KpailIFjCWcM9o+qZ6GaYdjrKsj+8ZUyz43LbtJvw6ROioqs4J8Du7/6Qv8TKJ3y98A1y1zuDgapCw19jtA3wHSJYqkTKkD+0PV132pdVrg48gfh2vZB7f1MTxqRWQeIoijFLIZ5TXS05Sl5eZunMmqv7j67u4v00TFjSYhEc/uFddti1rFNcwxlT6M=",
+	"lastSaveDate": "2020-12-15T12:50:00.957Z",
+	"info": "bis 15./16. 12."
+}

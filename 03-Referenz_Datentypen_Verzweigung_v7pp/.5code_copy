@@ -1,0 +1,227 @@
+{
+	"name": "::dir",
+	"id": "sjwslp",
+	"user": "d719bae1994dff7bf719e6b420bdf49a",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 1,
+	"zoom": 1.2,
+	"features": [
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": [
+				"U2FsdGVkX19sFnM9usNuUhSg2lGsVwzi3LqUlTr/Uons/+9E8VrBUZeyLEyvaZ5S",
+				"U2FsdGVkX1/4DRNF5eTMIUySicDYMecpdZ/p+4Oi5MoMv8a3a53FhM/aHxTq6gQ+",
+				"U2FsdGVkX1/UYiLvPeqioJiAI/Y2Sk/fEfNGdVO/F/itFujfSv9HXGhKeQtMogYb",
+				"U2FsdGVkX1/kw4XvZWhkez61KTipESv1NvZMvgyD40xv0T6r4Mld5axKCrTMdoWN",
+				"U2FsdGVkX1+I6hD+zInS4DS0rW56d1Ojdnx+ivI1M0ATHo/KHJ2fLEQfjxYOtUgn",
+				"U2FsdGVkX1+BWBZykAd9uaHwDht573beQ+gv5oqbFUK2DlCDpmE7i5Dn0pOl8bWm",
+				"U2FsdGVkX18A//nDkloEN60liMjonxg1uTgqWqisDgWCqMG4etmYNpO0igGJ39x3",
+				"U2FsdGVkX1/EIFWiriXOyOiVZknEpHPBwmcCWx6zNqX0EvRpxNEcuWfzcgsjM+yW",
+				"U2FsdGVkX19xjcpdfK0wmbhDvZyIfjuledirxuki0FaOJrOaizoYxDU3yx0Fx24F",
+				"U2FsdGVkX1+w2QaiylVh73v5fYciq84muX0gC8eSI8yqBE2j3edrrGV/4c+ZiUsb",
+				"U2FsdGVkX1+Km8RkfAn1XxDd53wo8Qwxgy8DRluv2esnn/ZTAoQ8xYzYCvG0Anht",
+				"U2FsdGVkX1/AVNnY+/4hCGC3tLrjL2wxIWJysGy+CrHeOlfuSNo56h8sUcH7pt12",
+				"U2FsdGVkX1/fTlJ0y2LgflKot3ZmPU6rMLPBy0Fjx82+QVCl7YmSyRaA2qg6sAXN",
+				"U2FsdGVkX193qQKUpa/I4rSEOYxi/3hQ1GoeT5yqUhcHfouOz5ycJzi1v1CkTVRo",
+				"U2FsdGVkX1/zpjawyk8tJ1CcHHPlrPrzy27onqdpM3pVbC76pAxqCM9M4Xh4iAhK",
+				"U2FsdGVkX19HA1HlXk5MDHAxWO9IffnRwhQjlQOX9827yn8I2GRb2Rr4wf5KbF6X",
+				"U2FsdGVkX1+mWSoRkcnWEcTKZSyOac9nqfMsswIXDFq9fzA/pclXe7wJ/DY7c1ez",
+				"U2FsdGVkX19ylB/RZLFD9ZIkDlZ4Mk1PbRvf9eL1cD1Od0enz97NE7JRqMSdo8dP",
+				"U2FsdGVkX1/SJE4Zeae9Gw2qdekAv6v+gcHvWiMMVqqgS2E2L1xgeERjU29jwXx3",
+				"U2FsdGVkX1+j5f7BsO0JIQsjg7fmm/SEVzoa/4A6vIz3ZLMq4g9eK4BgpoZgluN/",
+				"U2FsdGVkX18sdml1b+qaLC6gQsOj/pQdF2F8WZR1toWuzhKi4W42MSxcHJRYmwyi",
+				"U2FsdGVkX1/thLX6dc8DndDShWhLhb5Tw12J3h6vYHa4lvhGs3zAk1R/nebWekwp",
+				"U2FsdGVkX1/yAOpdrZEYh8kmePipOJlS2iwgNS7eEDFFytJxkslilR0M4y9f0dlm"
+			]
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "Daten.Referenz-Datentypen",
+					"uuid": "uej0kx",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "concept",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Verzweigung",
+					"uuid": "e2tqm7",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Verzweigung.Verschachtelt",
+					"uuid": "c4cqne",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Verzweigung.Mehrfach",
+					"uuid": "ls741s",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				}
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/_1_Referenz_Datentypen.flow.html"
+				},
+				{
+					"type": "document",
+					"path": "::dir/_2_Verzweigung.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "5xnqgr",
+						"cursor": {
+							"line": 1,
+							"ch": 40
+						}
+					}
+				}
+			],
+			"type": 1,
+			"active": true
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				20,
+				80
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				true
+			],
+			"dimension": [
+				60,
+				20,
+				20
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "_1_Referenz_Datentypen",
+			"path": "::dir/_generated/exec/_1_Referenz_Datentypen.java",
+			"id": "flde4c",
+			"isGenerated": true
+		},
+		{
+			"name": "_2_Verzweigung",
+			"path": "::dir/_generated/exec/_2_Verzweigung.java",
+			"id": "zp7sr7",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "_1_Referenz_Datentypen",
+			"path": "::dir/_1_Referenz_Datentypen.flow.html",
+			"id": "u9lng1"
+		},
+		{
+			"name": "_2_Verzweigung",
+			"path": "::dir/_2_Verzweigung.flow.html",
+			"id": "l95cje"
+		}
+	],
+	"linkMap": [],
+	"activities": "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",
+	"lastSaveDate": "2020-11-24T09:34:15.243Z",
+	"info": "bis 24./25.11."
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="2" /> 
+<title>_2_Funktionen</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="5tp0tn">
+<h1 class="e_lohen9" data-number="2">Funktionen</h1>
+<h2 class="e_og57sv" data-number="2.1">Skills</h2>
+<p>In den folgenden Aufgaben können Sie diese Skills erwerben:&nbsp; &nbsp;</p>
+</div>
+<div class="skill segment" id="mqra62">
+<div data-skill="Ablauf.Funktionen" data-uuid="8rzod9" data-acquired="false" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Funktionen</span></div></div></div>
+
+</div>
+<div class="text segment" id="1bp409">
+<p>Das sieht wenig aus, die meisten Skills in diesem Thema haben Sie aber bereits im Kapitel Prozeduren erworben. In diesem Kapitel können Sie sie noch einmal anwenden.&nbsp;</p>
+</div>
+<div class="skill segment" id="4nj3l9">
+<div data-skill="Ablauf.Prozeduren.Definition" data-uuid="s7t06r" data-acquired="false" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Definition</span></div></div></div>
+<div data-skill="Ablauf.Prozeduren.Aufruf" data-uuid="81r0ii" data-acquired="false" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Aufruf</span></div></div></div>
+<div data-skill="Ablauf.Prozeduren.Parameter" data-uuid="j2ylea" data-acquired="false" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Parameter</span></div></div></div>
+<div data-skill="5Code.Codieren.Java-File" data-uuid="xi73vd" data-acquired="false" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Java-File</span></div></div></div>
+
+</div>
+<div class="text segment" id="zkigac">
+<p>&nbsp;</p>
+<h2 class="e_bxakd9" data-number="2.2">Unterschied zu Prozeduren</h2>
+<p>Funktionen sind <strong>sehr ähnlich wie Prozeduren</strong>,</p>
+<ul>
+<li>In ihnen passiert etwas</li>
+<li><strong>Plus</strong>: Sie haben auch einen <em>Wert als Ergebnis</em></li>
+</ul>
+<p>Funktionen</p>
+<ul>
+<li><strong>Definition </strong>- es wird <em>einmal </em><span class="underline">beschrieben</span>, was in der Prozedur passieren soll</li>
+<li><strong>Aufruf </strong>- es kann <em>beliebig oft</em> bestimmt werden, <span class="underline">dass es passieren soll</span></li>
+</ul>
+<p>Auch hier gilt: Diese müssen an unterschiedlichen Stellen im Code positioniert werden, wie Sie bereits in der <a class="u_05fth0 s_h8z6gw" href="_1_Einleitung.flow.html#e_h8z6gw">erstenAufgabe</a>&nbsp;gelernt haben.</p>
+<p><span class="task-link s_b0mjuh action">Beachten Sie nun</span> zuerst die folgenden Richtlinien für</p>
+<ul>
+<li>einen guten Namen</li>
+<li>eine Beschreibung
+<ul>
+<li>mit javadoc</li>
+<li>mit Zeilenkommentaren</li>
+</ul>
+</li>
+</ul>
+<p>die Sie im erweiterten <a class="u_01irrv s_k8hiyf" href="_4_Coding_Style.flow.html#e_k8hiyf">Coding Style</a> finden.</p>
+<p>&nbsp;</p>
+<h2 class="e_qmkgix" data-number="2.3">Einfache Funktionen - ISBN-10</h2>
+<p>Wir entwickeln nun <strong>schrittweise </strong>mehrere Funktionen, die dann zusammen eine ISBN-10 erstellen.</p>
+<p><span class="hilitecolor3">L</span>esen und <span class="hilitecolor3">v</span>erstehen Sie zunächst die hier beschriebene allgemeine Definition einer ISBN. Implementieren Sie dann <strong>in der angegebenen Reihenfolge</strong> die Funktionen in den folgenden Aufgabenstellungen und testen Sie alle diese Funktionen schrittweise durch passend parametrisierte Aufrufe.</p>
+<p>Beachten Sie dabei die oben angegebenen Richtlinen für gute Namen und Beschreibungen um gut lesbaren Code zu erzeugen.</p>
+<p>Allgemein: Bücher werden mit einer internationalen Standard-Buchnummer (ISBN) versehen, damit sie international eindeutig referenziert und bestellt werden können. Die ISBN-10 besteht aus einer 9-stelligen Zahl, zu der noch eine Prüfziffer hinzugefügt wird. Mit dieser Prüfziffer kann festgestellt werden, ob die gesamte ISBN korrekt ist, oder ob eine falsche Ziffer dabei ist. (Wie die Prüfziffer genau ermittelt wird steht z.B. in <a href="https://de.wikipedia.org/wiki/Internationale_Standardbuchnummer">https://de.wikipedia.org/wiki/Internationale_Standardbuchnummer</a>&nbsp;). In den Aufgaben unten wird der jeweils benötigte Teil angegeben.</p>
+</div>
+<div class="hint segment" id="0h62fv" data-title="Hinweis: Den Link können Sie per Klick im integrierten 5Code-Browser öffnen. Es ist also nicht nötig, dafür extra ein separates Programm zu öffnen!">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis: Den Link können Sie per Klick im integrierten 5Code-Browser öffnen. Es ist also nicht nötig, dafür extra ein separates Programm zu öffnen!</span></div></div>
+
+</div>
+<div class="text segment" id="ht2pnm">
+<p>&nbsp;</p>
+<h2 class="e_zuxls2" data-number="2.4">Top-Down Überlegungen zum Aufbau der Berechnung</h2>
+<p>Wir brauchen also folgende Berechnungen zur Lösung der gesamten Aufgabe:</p>
+<ul>
+<li>Berechnung einer formatierten ISBN als String
+<ul>
+<li>Berechnung einer Prüfziffer aus der Zahl
+<ul>
+<li>Ermittlung einer Ziffer an einer Stelle in der Zahl</li>
+</ul>
+</li>
+<li>Darstellung einer Prüfziffer als char</li>
+</ul>
+</li>
+</ul>
+<p>Diese Überlegung geht <em>Top-Down</em> vor, d.h. Wir beginnen mit der <em>obersten </em>(<em>Top</em>) Aufgabe "Berechnung einer formatierten ISBN als String" und überlegen, wie diese in <em>unter</em>geordneten Teil-Aufgaben umgesetzt werden kann. Dadurch arbeiten wir uns weiter nach "unten" (<em>Down</em>) vor - solange, bis eine Teil-Aufgaben nicht weiter zerlegt werden kann. Diese Vorgehensweise werden wir häufig verwenden, und auch noch ausführlicher darauf eingehen.&nbsp;</p>
+<p>Die Funktionen für diese Berechnungen erstellen wir in dieser Aufgabe in einer Reihenfolge, in der wir sie hier einfach testen können.</p>
+<p>&nbsp;</p>
+<h2 class="e_9jns55" data-number="2.5">Ziffer an Stelle s berechnen</h2>
+<p>Wir brauchen eine Funktion, die Ziffer an der Stelle <code>stelle</code> einer 9-stelligen int-Zahl zahl als int-Zahl berechnet und als int-Wert zurückgibt.</p>
+<p>Beispiel: die Ziffer an der Stelle 3 der Zahl 123456789 ist 3.</p>
+</div>
+<div class="hint segment" id="gl35z8" data-title="Hinweis: An die Ziffer an der Stelle 9, einer 9-stelligen int-Zahl kommen Sie mittels des modulo-Operators der den Rest einer ganzzahligen Division ermittelt. Beispiel: 123456789 % 10 = 9.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis: An die Ziffer an der Stelle 9, einer 9-stelligen int-Zahl kommen Sie mittels des modulo-Operators der den Rest einer ganzzahligen Division ermittelt. Beispiel: 123456789 % 10 = 9.</span></div></div>
+
+</div>
+<div class="text segment" id="6xg3tr">
+<p>Beispiel: Zur Ziffer an der Stelle 8 kommen Sie durch</p>
+<ul>
+<li>"Abschneiden" einer Stelle: 123456789 / 10 = 12345678;</li>
+<li>Ermitteln der letzten Ziffer: 12345678 % 10 = 8;</li>
+</ul>
+<p>An die Ziffern der anderen Stellen kommen Sie auf analoge Weise.</p>
+<p><span class="task-link s_f488zq def" data-href="Aufgabe_05.java#e_f488zq">Diese Funktion ist hier bereits vorgegeben.</span> Sie brauchen Sie also nicht selber schreiben - verstehen sollten Sie sie aber schon. <span class="task-link s_dkw600 action">Finden Sie die Funktion in <code>Aufgabe_05.java</code> und verstehen Sie ihre Vorgehensweise.</span></p>
+<p>Die Semantik und Nutzung ist so beschrieben, wie im Coding-Style angegeben</p>
+<ul>
+<li>Name</li>
+<li>Parameter</li>
+<li>Rückgabewert</li>
+<li>Funktionalität</li>
+<li>die Überlegungen zur Vorgehensweise sind im Körper der Funktion beschrieben</li>
+</ul>
+<p>Jetzt testen wir diese Funktion - durch mehrfachen Aufruf, mit falschen und korrekten Werten für <code>stelle</code>:</p>
+<p style="padding-left: 60px;"><code>int testzahl = 123456789;<br></code><code>for(int i=0;i&lt;11;i++) {</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Die Ziffer an der Stelle " + i +</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" der zahl " + testzahl +</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" ist " + zifferVonZahlAnStelle(testzahl, i));</code><br><code>}</code></p>
+<p><span class="task-link s_fjfdgv main">Kopieren Sie diesen Code an die vorgegebene Stelle</span> in der Java-Datei und <span class="task-link s_fnnay5 action">führen die Datei aus</span>.</p>
+<p><span class="task-link s_lwuigu text" data-href="#e_lwuigu">Was wird auf der Konsole ausgegeben? Wie interpretieren Sie die Ausgabe?</span></p>
+<p><span class="hilitenote e_lwuigu">Antwort:&nbsp;</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 0 der zahl 123456789 ist -1</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 1 der zahl 123456789 ist 1</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 2 der zahl 123456789 ist 2</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 3 der zahl 123456789 ist 3</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 4 der zahl 123456789 ist 4</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 5 der zahl 123456789 ist 5</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 6 der zahl 123456789 ist 6</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 7 der zahl 123456789 ist 7</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 8 der zahl 123456789 ist 8</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 9 der zahl 123456789 ist 9</span></p>
+<p><span class="hilitenote e_lwuigu">Die Ziffer an der Stelle 10 der zahl 123456789 ist -1</span></p>
+</div>
+<div class="hint segment" id="keao2h" data-title="Tipp: Wird nach Bearbeiten der vorigen Aufgaben mittlerweile zu viel auf der Konsole ausgegeben, können Sie im Moment nicht benötigte Code-Zeilen &quot;auskommentieren&quot;, z.B. in einen Zeilenkommentar (//) setzen.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Tipp: Wird nach Bearbeiten der vorigen Aufgaben mittlerweile zu viel auf der Konsole ausgegeben, können Sie im Moment nicht benötigte Code-Zeilen "auskommentieren", z.B. in einen Zeilenkommentar (//) setzen.</span></div></div>
+<div data-uuid="rhg9dr" data-hint="U2FsdGVkX18l2ShROcXi0UGA589ho8aopX2Xi/PrVpjSf1vVnGpqxA7arPCLtdqRVi6iybYCpAqOxcJYYk1zjbGSk5IjeEz1hKelLoK70Ltsq9E8BB2JWSnb/0FI7lmRQmBL/I4QTaqIIknoGtx/NK8wCyFPiYDKa1hbxlBlitPiFiDedPOdelCWn7p9fZlf6y5/9pMwDNdspE/VYEcBl8P3/42oREY9C/HobAfT8kAjY8OGZ89RdjjAJBjtrYmugOtub8kMd+eKls0HL5W0epsVv3LnyskNF0XWmpPKHPcVVLAXPm1tpsTo0n6LDejnPr0PFmq7vK14Qjhl/pwNa6fCO2jbKHZZw0t/4+8qe25L4KQGZAwj2/b2xfS1Ay8HyKD5sYYObbwARl6zk4xal8pbkovfRPenbjemF6Cw7/lYv6BMI6X/reT8tn+8+E+tAW2No+ZceWZTa14T2l7SQPFRtrepGtVGA5TPaL66UwdUTvE9bHFcRFsulEimWqWwE7TY8CBa6g0KO8DnLOzmB/ycXmuX7VElSb1NAPmVFJU/tQ8Ji4n/o9ahpIaehDNxs34GaPMO8FnHqt3ocKHYJ4fI1rzyLquos+ffcnfk0humqwNPhsLJ50mRkb7LnlRdkztuf0FjMrIKrW//DAwsVwrGrWjRIGlYUv6luuL2+PHS/R+MLsodeIiUn7+FiWf7" class="hint"></div>
+
+</div>
+<div class="text segment" id="sivf93">
+<p>&nbsp;</p>
+<h2 class="e_ivo13s" data-number="2.6"><code></code>ISBN-Prüfziffer als char</h2>
+<p>Schreiben Sie eine Funktion, die aus einer als <strong>Parameter </strong>übergebenen int-Zahl von 0 - 10 diese Zahl als ISBN-Prüfziffer vom Datentyp char <strong>zurückgibt</strong>.</p>
+<p>Dabei entsprechen den Zahlen 0-9 den Prüfziffern '0' bis '9' als Buchstaben.</p>
+<p>Die 10 wird dagegen als Buchstabe 'X' (d.h. einer römischen Ziffer 10) zurückgegeben.</p>
+<p>Implementieren Sie diese Funktion zur <span class="task-link s_f1qqqh def" data-href="Aufgabe_05.java#e_f1qqqh">Umwandlung in chars</span>.</p>
+</div>
+<div class="hint segment" id="smimz6" data-title="Abbildung der Zahl -> Prüf-Buchstabe ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Abbildung der Zahl -&gt; Prüf-Buchstabe </span></div></div>
+<div data-uuid="1nmzz2" data-hint="U2FsdGVkX1+d2A0cYc4H2wUyVDsvCUB7bZfMEzrJkHYo7GCFszR/fgfWPgrNnOHxjuuE5QwRrOPNcqGvKuAovSOFbG3ftp/EKioUaJjBR9QKodz8WEIifwYtUK/ww/ED14wURFy0U38KhcsfG53LeIyDj3bWXAHnDGn53h95PFkaG62L2Vs5zz60iV3zC7YiRB4i34lmODcTs6OA1SiQbhXgTcPqATcY5Q81crbJmIPEoFZ+VN+OFPXtSTt65PDyyuryPSgpvlGyf9hR6DiW7DKhtgXV60OdBgFscBPx2lkxJy1sXZ//CsgVhyM+RZ9dtCTSpyeo24dd3XyYJALW0Evvd+0xbgY/kREIog8iXVcSskd7mHaZ5pAQfXcDIRPArjNcJbeBTiW7CqFu0BTKcjEuES7crW09utGUOeE1H+Eq0lPIjafWIgM/4gImWJqhs5Xk7BJUENvqpLdBpnDFY8jo3h+38MyY8YFjW6/eLjQ=" class="hint"><span style="font-weight: bold;">Mit Hilfe der Mehrfach-Fallunterscheidung</span><br><p>Erinnern Sie sich an das Konstrukt switch-case aus Praktikum 03.</p></div>
+
+</div>
+<div class="text segment" id="kl4x1w">
+<p><span class="task-link s_3t8ylu main">Testen</span> Sie diese Funktion.</p>
+<p>&nbsp;</p>
+<h2 class="e_ahqbjk" data-number="2.7">ISBN-Prüfziffer errechnen</h2>
+<p>Jetzt sollen Sie in einer Funktion</p>
+<ul>
+<li>die oben geschriebenen Funktionen nutzen, d.h. aufrufen</li>
+<li>und ein bisschen selber rechnen</li>
+</ul>
+<p>Schreiben Sie eine Funktion, die die ISBN-Prüfziffer einer 9-stelligen Zahl auf folgende Art und Weise berechnet</p>
+<ul>
+<li>Zuerst wird die Prüfziffer als Zahlen-Wert berechnet
+<ul>
+<li>wie im Algorithmus unten beschrieben</li>
+<li>an die einzelnen Ziffern z1 bis z9 der Zahl kommen Sie mit der oben gegebenen Funktion</li>
+</ul>
+</li>
+<li>Dann wird dieser Zahlen-Wert in einen char umwandelt
+<ul>
+<li>mit der oben geschriebenen Funktion</li>
+</ul>
+</li>
+<li>Dieser char ist nun die gewünschte Prüfziffer
+<ul>
+<li>daher wird der char als Ergebnis der Funktion zurückgegeben</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>ISBN-10-Berechnung:</strong></p>
+<p>Bei der ISBN-10 wird gemäß wikipedia (s.o.) die <strong>Prüfziffer </strong>wie folgt berechnet:<br>Bezeichnet man die ersten neun Ziffern mit z1 bis z9, so gilt für die Prüfziffer z10</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b2bd8b957dcdd70e984835905e5086dbcf6032e7"></p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d0581b6e118f400d5938af88d8d797ad36a68164"></p>
+<p><br>Dabei wird wie gewohnt der Laufindex i von links nach rechts gezählt.</p>
+<p>Beispiel:</p>
+<p style="padding-left: 60px;">Die Prüfziffer der Zahl 386680192 ist 0</p>
+<p>Rechnung:</p>
+<p style="padding-left: 60px;">1 ⋅ 3 + 2 ⋅ 8 + 3 ⋅ 6 + 4 ⋅ 6 + 5 ⋅ 8 + 6 ⋅ 0 + 7 ⋅ 1 + 8 ⋅ 9 + 9 ⋅ 2</p>
+<p style="padding-left: 60px;">= 3 + 16 + 18 + 24 + 40 + 0 + 7 + 72 + 18</p>
+<p style="padding-left: 60px;">= 198</p>
+<p style="padding-left: 60px;">198 mod 11 = 0, denn 198: 11 = 18, Rest 0.</p>
+<p>&nbsp;</p>
+<p>Implementieren Sie diese Funktion&nbsp;zur <span class="task-link s_f5q8yz def" data-href="Aufgabe_05.java#e_f5q8yz">Berechnung der ISBN-Prüfziffer</span>.</p>
+</div>
+<div class="hint segment" id="wastuy" data-title="Hinweis: Verwenden Sie dabei die Funktionen aus 2.1 und 2.2 oben.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis: Verwenden Sie dabei die Funktionen aus 2.1 und 2.2 oben.</span></div></div>
+
+</div>
+<div class="text segment" id="t3wyk0">
+<p><span class="task-link s_mrmxaa main">Testen</span> Sie diese Funktion wie gewohnt in <code>main</code>.</p>
+<p>&nbsp;</p>
+<h2 class="e_pj2y0j" data-number="2.8">Zahl und Prüfziffer zu ISBN-10 formatieren</h2>
+<p>Zuletzt bauen wir die oben geschriebenen Funktionen zu einer Gesamt-Funktion zusammen:</p>
+<p>Schreiben Sie eine Funktion, die aus einer 9-stelligen Zahl z (z ist also der Parameter der Funktion) eine ISBN-10 als <strong>String </strong>zusammenbaut.</p>
+<p>Der String soll in der Form <strong>„z1z2z3-z4z5z6z7-z8z9-P“</strong> aufgebaut werden.</p>
+<ul>
+<li><strong>z1</strong>, <strong>z2</strong>, etc. entsprechen dabei den einzelnen Ziffern der Zahl z, wie wir sie oben bereits berechnet und genutzt haben</li>
+<li><strong>P</strong> entspricht dabei der <strong>Prüfziffer</strong> wie Sie sie in der Funktion in 2.3 berechnet haben. Geben Sie diesen String als Ergebnis zurück.</li>
+</ul>
+<p>Beispiel: Wenn die Funktion mit der Zahl 386680192 als Parameter aufgerufen wird, wird der String "386-6801-92-0" zurückgegeben.</p>
+</div>
+<div class="hint segment" id="1z8ri7" data-title="Hinweis: Strings werden mit dem Operator + konkateniert (d.h. zusammengebaut).">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis: Strings werden mit dem Operator + konkateniert (d.h. zusammengebaut).</span></div></div>
+
+</div>
+<div class="text segment" id="kqassk">
+<p>Implementieren Sie diese Funktion für eine <span class="task-link s_p2jla7 def" data-href="Aufgabe_05.java#e_p2jla7">formatierte ISBN-Ausgabe</span> und <span class="task-link s_lp703y main">testen</span> Sie sie anschließend.</p>
+<p>&nbsp;</p>
+<p>-----------------------------------------------------------------------------------</p>
+<p>&nbsp;</p>
+<h2 class="e_fyhmu0" data-number="2.9">Optional: Allgemeine Ziffern-Ermittlung</h2>
+<p><em>Optional heißt wie immer: diese Aufgabe ist nicht notwendig, um das Testat zu bekommen.</em></p>
+<p><em>Sie können diese Aufgabe aber zur weiteren Übung oder Prüfungsvorbereitung bearbeiten.</em></p>
+<p>Ermitteln Sie allgemein die Ziffer an der Stelle <code>stelle</code> einer beliebig langen Zahl, d.h. von 1,2,3,4,... stelligen Zahlen.</p>
+<p>Verallgemeinern Sie dazu die oben verwendete Funktion, da Sie nun nicht mehr die Anzahl der Ziffern kennen.</p>
+<p><span class="task-link s_8cqucw action">Beschreiben</span>, implementieren und <span class="task-link s_q1xvrs main" data-href="Aufgabe_05.java#e_q1xvrs">testen</span> Sie diese Funktion für die <span class="task-link s_wqz3o0 def" data-href="Aufgabe_05.java#e_wqz3o0">allgemeine Ziffern-Ermittlung</span>.</p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

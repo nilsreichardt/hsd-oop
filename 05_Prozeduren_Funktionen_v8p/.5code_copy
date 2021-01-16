@@ -1,0 +1,561 @@
+{
+	"name": "::dir",
+	"id": "zgm48h",
+	"user": "d719bae1994dff7bf719e6b420bdf49a",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 1,
+	"zoom": 0,
+	"features": [
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": [
+				"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"
+			]
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "Ablauf.Prozeduren.Definition",
+					"uuid": "4h8nzs",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren.Aufruf",
+					"uuid": "w82b8b",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren.Parameter",
+					"uuid": "0gkm1x",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Codieren.Java-File",
+					"uuid": "fgrnom",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Codieren.Links",
+					"uuid": "2ezrq6",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Codieren.Aktiver Kommentar",
+					"uuid": "8rbpsf",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren.Überladen",
+					"uuid": "b58kiu",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Funktionen",
+					"uuid": "8rzod9",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren.Definition",
+					"uuid": "s7t06r",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren.Aufruf",
+					"uuid": "81r0ii",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren.Parameter",
+					"uuid": "j2ylea",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Codieren.Java-File",
+					"uuid": "xi73vd",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				}
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/_1_Prozeduren.flow.html"
+				},
+				{
+					"type": "document",
+					"path": "::dir/_2_Funktionen.flow.html"
+				},
+				{
+					"type": "document",
+					"path": "::dir/_3_Prozeduren_optional.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "l9qzqk",
+						"cursor": {
+							"startOffset": 1,
+							"endOffset": 1,
+							"nodeData": "Definieren Sie die Prozedur für die ",
+							"nodeHTML": "Definieren Sie die Prozedur für die <span class=\"task-link s_xymmge def\" data-href=\"Aufgabe_05.java#e_xymmge\">Überschrift</span> in der bereits kennengelernten Java-Datei <code>Aufgabe.java</code>.",
+							"nodeTagName": "P"
+						}
+					}
+				},
+				{
+					"type": "document",
+					"path": "::dir/_4_Coding_Style.flow.html"
+				},
+				{
+					"type": "browser",
+					"address": "https://de.wikipedia.org/wiki/Internationale_Standardbuchnummer",
+					"active": false
+				}
+			],
+			"type": 1,
+			"active": false
+		},
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/Aufgabe_05.java",
+					"active": true,
+					"cursor": {
+						"line": 173,
+						"ch": 38
+					}
+				}
+			],
+			"type": 1,
+			"active": true
+		},
+		{
+			"type": 2
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				15.00225283213183,
+				84.99774716786817
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				76.9620253164557,
+				23.037974683544306
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				true
+			],
+			"dimension": [
+				60,
+				20,
+				20
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "Aufgabe_05",
+			"path": "::dir/Aufgabe_05.java",
+			"id": "xb5za2",
+			"isGenerated": false
+		},
+		{
+			"name": "_1_Prozeduren",
+			"path": "::dir/_generated/exec/_1_Prozeduren.java",
+			"id": "f40vqf",
+			"isGenerated": true
+		},
+		{
+			"name": "_2_Funktionen",
+			"path": "::dir/_generated/exec/_2_Funktionen.java",
+			"id": "lim6ow",
+			"isGenerated": true
+		},
+		{
+			"name": "_3_Prozeduren_optional",
+			"path": "::dir/_generated/exec/_3_Prozeduren_optional.java",
+			"id": "n2d64j",
+			"isGenerated": true
+		},
+		{
+			"name": "_4_Coding_Style",
+			"path": "::dir/_generated/exec/_4_Coding_Style.java",
+			"id": "fp6uxj",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "_1_Prozeduren",
+			"path": "::dir/_1_Prozeduren.flow.html",
+			"id": "og2rci"
+		},
+		{
+			"name": "_3_Prozeduren_optional",
+			"path": "::dir/_3_Prozeduren_optional.flow.html",
+			"id": "3qlmus"
+		},
+		{
+			"name": "_2_Funktionen",
+			"path": "::dir/_2_Funktionen.flow.html",
+			"id": "o4igr4"
+		},
+		{
+			"name": "_4_Coding_Style",
+			"path": "::dir/_4_Coding_Style.flow.html",
+			"id": "a1h0ww"
+		}
+	],
+	"linkMap": [
+		{
+			"id": "ucl57n",
+			"start": "og2rci",
+			"end": "a1h0ww",
+			"uniId": "dysr26"
+		},
+		{
+			"id": "k8hiyf",
+			"start": "3qlmus",
+			"end": "a1h0ww",
+			"uniId": "wmoqds"
+		},
+		{
+			"id": "h8z6gw",
+			"start": "3qlmus",
+			"end": "og2rci",
+			"uniId": "adf7mk"
+		},
+		{
+			"id": "k8hiyf",
+			"start": "o4igr4",
+			"end": "a1h0ww",
+			"uniId": "01irrv"
+		},
+		{
+			"id": "h8z6gw",
+			"start": "o4igr4",
+			"end": "og2rci",
+			"uniId": "05fth0"
+		},
+		{
+			"id": "k8hiyf",
+			"start": "a1h0ww",
+			"end": "a1h0ww",
+			"uniId": "03ftc4"
+		},
+		{
+			"id": "k8hiyf",
+			"start": "og2rci",
+			"end": "a1h0ww",
+			"uniId": "tghj35"
+		},
+		{
+			"id": "f488zq",
+			"start": "o4igr4",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "2hrh5a",
+			"start": "og2rci",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "mgndne",
+			"start": "og2rci",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "zvhix2",
+			"start": "og2rci",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "f1qqqh",
+			"start": "o4igr4",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "f5q8yz",
+			"start": "o4igr4",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "p2jla7",
+			"start": "o4igr4",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "gtewl9",
+			"start": "3qlmus",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		},
+		{
+			"id": "xymmge",
+			"start": "3qlmus",
+			"end": "xb5za2",
+			"uniId": null,
+			"isExternal": null
+		}
+	],
+	"activities": "U2FsdGVkX1+EJUKSCVTjr3orTmE1M1ljiBCg4+06ehzJBKXVUqaZyAI2zBSme0sqXqSfQU8OLcvnBxatc5PZZVj7w/mQG+aZj46S9Q6ONET6s+ksI5PpgUzQ9lTnqHOOejhzbyD2dQelTHKmtxNjLtOJYwwiF3b3bQ2RUFHgwbAjDBGb9hONoDiXf9jXRh5X8c4XLZhIGT4ZEluDZT78Iot859z0VASxOUn4dKpzF3lrF0p7vbRaYwtoga51TiH1FvgGSV4D/22e8OKiS9C5Ns1kRMqPgvQKSGxm3EYxyXCpk6Deji1DJ3RVRJBXmq9gWJLyFvjEKfSAofg1fyFRuCyGcWFeUt3GHipBYq12AoBv9PKWfIKV+bFZ+Unbnb99YIoBjdWG1qLnycaSAxomZNipg6IBf4nSr3VPF0Hmg3t2OXZJ3quDRDPab0lvA9Vz9q9td5Z8bYqcKH51nb/Ux+5QnD+qiQLtqBzIKeI4r9Izf9GV8Lzqp+mOe6z920r1Z26K1JjO4D00cHgCIFXt9vN4DCggws8yfRhH1ACiaY0iOeQLrq8cGxbW6HwQc/VNeYQ2Rv6auVz3UfJBEe7Hudl9syMxp1T5XVHQZ1m0+/k4QzQeykIwav5Z5Exmy7hhunYbrBTNZ4C6+4NPh0TFdB0Nb6fRtWWhXcY04pH8LV4NXTWXSl+rbBPoyn/2iQvRWFXxvcywNXRjvkH6aFs3ThQr1ql2d32luDlImvJtq9tW4m4BRdZqYFEguhx1d8+Vg32uH/cR363YHh1b90NW7qexDWl2oyGLu2qRofArAHrF0MCH+O6cx9lJO9+URhJeeBvkHncC34fatIKSyZm2RQR5V0Xm6o1qZBdSWFj6sshaKsVDT0/nUXPQ5AfHLV5J3TozD+eL80irrP7Hye+xRnpyu6OfQBLidZ1AZg39zXeBTMffDzFtIGkiQM4P/yJy3N2ZECay3scdFiEophpLNfCIyxxaLM+shW1j+Upm1zWRArA/tba+ifnYZQNVnOQmpXAXqEg+gfVKX3mFZ5NTtTeE+8I26zN+aa6+UDkmfs4sCI7iugcLq7DfaRWGfWgisciCo042VO9WZn8Dx5I8D8kfRO1yUcEgUJRwSGlPRmC0g+Z74Q9ZSudlpXUEO4VdFzQIsu1vKD6y1orjXeUPR/wwrt2xt9A9zvmKK1dDmyF08Cx1tPTLiDFOuVj24uwh+8O5i0TtX8aondHTCb8wP/qxRN0+UWpoYHS/xvW6eG5a9SF9PjGKpZjN+Lw0FCbT6iKq0uiv3jcB0Aa/IdePpjc3VTkGIngplsI5hJO0gTtVHa9WLMZWC8Y5583MMgFqzYWv+H2HpjhpwzynHGxn468yvczvN7dv5/kCO/3O1jHUvkormmIOzVxCCfJfLQwRYM5F852LisGHAiqnoEaVWnVHTY3BGPT6wWsV/HI+HfpXXzmaHuIzySlMN3ANtRqT239gLRridByJoYeys3ef5MQuqDJqhWBzJPivnpk0/C7t/ba0IRC4JNwtaPTqHijnkXl8CxeczjdrKQmq2y7owTzz9nEXOZiYlUqTQWQEv73a/Vn9AajiA+vKRm+F8gFSkhgX+JgDXyiOOQN99u0zJAbzMo5adWiXL8ErxUHgfSvburQltjWQVKGAKrsqK/f2AZRgdlQw4CiHowK3O8vb9u6AKESQCvsX03Wcj05ub3yCah658khL1aSB/l+GWWUftAuEExHyFL+AQnA44q7QHCWvD0+OD2/hH9p35G1ORwNewKdZQ/LiRXM3rhlqoMR9yA7V7BUCvaOVQQyBFaHpc7EHX7rPgtXZHkc7C852UGDwA89UHCLAg3q9GA91Xg3Xu64x5JaMAuu715sNTMnV6eZ/Yobv2wNPCIPQY1KiLNkEn4Hiqzhs7/5hHpOfx/jw7XvhjPPClGOkenLwG4Ur/hYKWYY5bVmisaKvoiAEiIlZKoT89Or1VhBkqXINkNXI",
+	"lastSaveDate": "2020-12-08T09:34:31.183Z",
+	"info": "bis 08./09. 12."
+}

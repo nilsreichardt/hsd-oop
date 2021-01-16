@@ -1,0 +1,279 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="2" /> 
+<title>_2_Schleifen</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="5qkkzi">
+<h1 class="e_xfym0h" data-number="2">Schleifen</h1>
+<p>Wir probieren in dieser Aufgabe die verschiedenen Arten von Schleifen in Java aus.</p>
+<p>Dazu verwenden wir zunächst sehr einfache Beispiele, in denen wir nur Reihen von Zahlen auf verschiedene Arten und Weisen erzeugen.</p>
+<p>Da die Beispiele sehr einfach sind, können Sie sich auf den reinen Umgang mit Schleifen konzentrieren. In der nächsten Aufgabe wenden wir dann Schleifen auch an.</p>
+<p>Sie können hier diese Skills erwerben:</p>
+</div>
+<div class="skill segment" id="oiw1mq">
+<div data-skill="Ablauf.Schleife.for" data-uuid="i45y3b" data-acquired="false" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>for Schleife</span></div></div></div>
+<div data-skill="Ablauf.Schleife.while" data-uuid="etudfu" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>while Schleife</span></div></div></div>
+<div data-skill="Ablauf.Schleife.do-while" data-uuid="shkrjb" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.do-while</span></div></div></div>
+<div data-skill="Ablauf.Schleife.verschachtelt" data-uuid="38xapl" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.verschachtelt</span></div></div></div>
+
+</div>
+<div class="text segment" id="jbiody">
+<h2 class="e_2sqsaw" data-number="2.1">Einfache Schleifen</h2>
+<p>Geben Sie in einer Schleife alle Zahlen <code>n</code> von 1 bis 10 (auf die Konsole) aus.</p>
+<p>Formulieren Sie diese Schleife als <code>while</code>-Schleife.</p>
+<p><span class="task-link s_hzeivo block" data-href="#e_hzeivo">Probieren Sie das in einem neuen Code-Block aus.</span></p>
+</div>
+<div class="code segment" id="li6v5v" data-class="" data-class-name="_2_Schleifen" data-segment-id="7" data-solution-id="e_hzeivo">
+int zaehler = 1;<br>while(zaehler &lt;= 10) {<br>&nbsp;&nbsp;System.out.println(zaehler);<br>&nbsp;&nbsp;zaehler++;<br>}<br>
+</div>
+<div class="text segment" id="31j0yn">
+<p>&nbsp;</p>
+<h2 class="e_bs6ss6" data-number="2.2">Andere Schrittweiten</h2>
+<p>Geben Sie in einer Schleife alle Zahlen <code>n</code> von 20 bis 11 in Schritten von 3 aus.</p>
+<p>Formulieren Sie diese Schleife</p>
+<ul>
+<li>als <code>for</code>-Schleife und</li>
+<li>als <code>do-while</code>-Schleife.</li>
+</ul>
+<p><span class="task-link s_uz6vbw block" data-href="#e_uz6vbw">Probieren Sie das in einem neuen Code-Block aus.</span></p>
+</div>
+<div class="code segment" id="4qzb9n" data-class="" data-class-name="_2_Schleifen" data-segment-id="1" data-solution-id="e_uz6vbw">
+for(int n = 20; n &gt; 10; n -= 3) {<br>&nbsp;&nbsp;System.out.println(n);<br>}
+</div>
+<div class="text segment" id="3iokkx">
+
+</div>
+<div class="code segment" id="gv6zyd" data-class="" data-class-name="_2_Schleifen" data-segment-id="2">
+int n = 20;<br>do {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(n);<br>&nbsp;&nbsp;&nbsp;&nbsp;n -= 3;<br>} while(n &gt; 10);
+</div>
+<div class="text segment" id="gh7dsw">
+<p>&nbsp;</p>
+<p><span class="task-link s_9hm9ad action">Testen Sie diesen Code</span> mit verschiedenen (kleinen) Werten für <code>n</code>, z.B.: 3, 8, 12.</p>
+<p>&nbsp;</p>
+<h2 class="e_elcyw0" data-number="2.3">Fehlermöglichkeiten</h2>
+<p>Nun probieren wir, welche Fehler man beim Schreiben von Schleifen machen kann - damit wir diese Fehler erkennen und beheben können.</p>
+<p>Kopieren Sie dazu den Code der vorherigen Aufgabe <span class="task-link s_r79o5p block" data-href="#e_r79o5p">in einen neuen Codeblock</span>.</p>
+</div>
+<div class="code segment" id="pg540j" data-class="" data-class-name="_2_Schleifen" data-segment-id="3" data-solution-id="e_r79o5p">
+for() {<br>&nbsp;&nbsp;&nbsp;&nbsp;int n = 20; n &gt; 10; n -= 3<br>&nbsp;&nbsp;System.out.println(n);<br>}<br>
+</div>
+<div class="text segment" id="0evklq">
+<p>Dann testen wir darin ein paar Fehlermöglichkeiten:</p>
+<p>a) <span class="task-link s_v3vcni action">Geben Sie testweise</span> die Schleifenvariablen nach Ende des Körpers der <code>for</code>-Schleife (d.h. nach der schließenden Klammer } des Blocks) auf die Konsole aus.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;-&gt; Der Compiler meldet nun einen Fehler, weil die Schleifen-Variable nur im Schleifen-Kopf und im Schleifen-Körper verfügbar ist.</p>
+</div>
+<div class="hint segment" id="pa36f6" data-title="Das ist ein weiteres Feature der Kontrollstruktur &quot;Block&quot;">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Das ist ein weiteres Feature der Kontrollstruktur "Block"</span></div></div>
+<div data-uuid="a7sl1o" data-hint="U2FsdGVkX19a47pPGgJsJVo5SrA973QyiWZy+bdDsQadvA7T3Qz60qK65V+79lRIH31MuH5HqUqtNhbBzVNTaaxD+5eZduWVE+qGwG5QVlBge1ZX/ObloxV3rvDjnrIOO0CAgoKeoSKpzBKgnO6oGuLmOF0QMEfAGo7jJghQHvheG6EV6w3i73ZjUp5MEGxi6EZ8xwB0SKcLS3q0nhWuazFKnbh/kq2rh7QlqV4lrEzy/hbXca95h5W4Ht4Cf8eQCzhY/3FoIpdyqFDNAnAuTpWZ6vQEbLl5VztTmaTUm70eKmi33ZCmQXQD5HD/km/Ld/IS6c4iFTGl+xTEu13u41eo/m0egMywE5xSOdIZMg7cgqaHnEoNX4K92QVVyGOKl4+WGoGf//QUV850vMSYRIaAUXjX1PddbiSXtC/SQYQMX+miWMvjyMc9u+0PU0PES4wSR/VVs4JC0blsrMY6sAw/eCY1ULG1wuhKmqeWIJyIC188dJA6JITJBq8it9FhswTqWiVDcyq3cW9rkWh9jznwKKmzGleBgap+8Y4DtiFjmJojEllyvHt8cmu5+QM1/mcaGb4t/YbRk9mtNq5YpJt2YzxLhstQ3RhnT+ns/daxYuIGTPB4C2gy4fENgpEUAhiyq3EnLUcf7jlGnoPs52JECHmg7LQKpECuuMwq26wTayX1UY4bNoDgcuiamXj8jIxwic5Nf45QXJsv9GNUnm7ztw2YLRuMEW5nWOMeK4LPIphBe9D5RHTIWIyY3EBK1jSaLrqACRplQ6yXl6sgFqaVe/EYV9NGG22R3hDDjX8dtDo9koUMtdQWFTPxI55Fgz1WgiidleI3klKMnKVSqd8URFxzYZZDKGRAezCuJ8fWjI97zLqlK+1JHczDV4sEXG0EAlvbNdKnN/vMreqC34Ap5CFi8G7+zjv8tsQ8u5FMo/mi+XTvTkSUnpGNvpBLqmWtAbCJ7cjE+MoMmlFwYsTSdFYFCGiSNLtlnr3ibWXihsmNlqxC3fGIGj90pHyIgMczaLoWQd2hdaCYFQ5nSmyD95DMF9xldYt5mMXLK3HAy9h/DK3Dwhj43QVMbPAIjoH7ItIf4gD3qW4KhWGleyw/u+wdlXWSOWQnjC8MYkqev4vt7LGYze43u3Cd7jSp0AcWIQbIyCftH3G1bXwvlsgHxBMp92NM+RKfXz9Cw8qZQAy58+EJ5anWDdGQcN5aI0d2SIMJH1rgCbzxlrVGvSjKrGPKCHiC65aiZVZn+8k3Rg5zKODK5uv5sZEWJf50WfBJk5LFy/diSEgHNiRvtBFPmYoGP1OfjveeXISzIvF39/xKefzi6+sMvoCmeCukXxkYky7krWl5K5J7jey+yA==" class="hint"></div>
+
+</div>
+<div class="text segment" id="9and60">
+<p>b) Definieren Sie vor der <code>for</code>-Schleife jeweils eine Variable, die genauso heißt wie die Schleifenvariable. <span class="task-link s_ilql7u text">Warum meldet der Compiler nun einen Fehler?</span></p>
+<p><span class="task-link s_mmxub5 action">Probieren Sie das ebenfalls</span> auf der oben erstellen Code-Kopie aus.</p>
+<p>&nbsp;</p>
+</div>
+<div class="code segment" id="iwrufw" data-class="" data-class-name="_2_Schleifen" data-segment-id="4">
+int n = 12;<br>for(int n = 20; n &gt; 10; n -= 3) {<br>&nbsp;&nbsp;System.out.println(n);<br>}<br>
+</div>
+<div class="text segment" id="elaomz">
+<p>Antwort: Es kann nicht mehrmals eine Variable mit dem selben Namen erstellt werden.&nbsp;</p>
+<h2 class="e_gixcwx" data-number="2.4">Verschachtelte Schleife</h2>
+<p>Geben Sie das Einmaleins von 1 bis <code>n</code> als Tabelle auf die Konsole aus.</p>
+<p>Beispiel für das Einmaleins von 1 bis 3:</p>
+<p><code>1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp; &nbsp; 3</code><br><code>2&nbsp; &nbsp; 4&nbsp; &nbsp; 6</code><br><code>3&nbsp; &nbsp; 6&nbsp; &nbsp; 9</code></p>
+</div>
+<div class="hint segment" id="gb8pbl" data-title="Dafür müssen Sie zwei Schleifen verwenden">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Dafür müssen Sie zwei Schleifen verwenden</span></div></div>
+<div data-uuid="qrd7qu" data-hint="U2FsdGVkX19GdWZLr5JzAodM7u2hWu0QYiyUG2ZYc7aGdebXk9/z8+TJADrTh6cnFCU/HdGfXCSPHz90QceqbT/0Ady44AHsCAhVwP6r3lwfO/57isD2jlNr9FiRb/RCehjiu+Gte0+zIDThortca57uE4CFfoAUyd7/ZttRUkCruFGs7SuzLv7n5OmYf2dOMJPDpZuQWnGDI+utm186MUUIGP8uWgu9mO/VQJ/s62vgjYMWcqp13vefVjpS3fbWmYVkIPWXesKO+AbgpYkgdeefuOFPWL+Uh+gSVvMN+zGC84F/XcGlHXpCPpPEGR5VML7PJwKc8glTUeEt/BwavHCSFW8+kPUfTH7cRwQe/LXnxZWgrMLQupZ82MFgN9tMdf4aRyEBPzBgY8GRxQ82JF5wkKtHIhKSh7BT/Yyx+fsGJTzTwXPnJJ1As6HIiGAPtDtNerH6S7xHsVSWnx2chRP5mGXpNEf6xkgTAUrtbFFt4banaLBjio90sIRcGHHz9asWmpv+PE4EpSE8m5vyBIoAOhlqoGMGC0b22wVltEI/a8BacBLb0B8fmOqpOon1KZL3grpKTOXaR8+UNCiHNeUlBSXe8zSZqSRE3E3IJ0/s3OIsHGSBQNJsvsPLuHCFpjOld/kIoosrqqMISa2zVzHBTfzrZN3lej24w4k99JeI8zUzuFWfwOl+hMK94MCutVWHfVuYwWfmVdsmITbNetoICHqZKZe7mgUKcRDVMsSPzdo9NhED9b9pESMiHoLqm6Q3AWpZ0NHMg5zPjzhVpg==" class="hint"></div>
+
+</div>
+<div class="hint segment" id="s4ptg9" data-title="Ordnen Sie die Zahlen möglichst geordnet untereinander an">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Ordnen Sie die Zahlen möglichst geordnet untereinander an</span></div></div>
+<div data-uuid="fvswbh" data-hint="U2FsdGVkX19XaVnecYnsh1lnKNpgzjxJuALZHkbHTmqS6QH6OWUUrCA727Df1SqhMJAtn59OCbuDAi7CH79PY27Lb8gJGYXrQXLgIG0LPRb0REc6QBvoEQjNisTVDeT4lJSCGk5Z0KOraRdknERoYhsWBn/7BlIsVTx9L0ERF9kd3jzVKs7FFUNU2oqovzjWeZD27cWv28Cf634d8v+F1bdSN8FEMIrmoRq6FP8GtXtqHS9uhtMw89E4Rq68p0WoxHeo2v5jYdreC4ik3wcl2z2QUzaZM4JzEUy52nuKaTCSBPj39Qe4WmC43Pm4oupL7U26HBU4m6RAMDHZnxL+WZJ2QphamQ167a6yYSXEwu8UMi6VnkwmrWAWh4jiYzcAdQjy4cId+tJ8KPSBVtRaMIL2tc5fLU9FlBcw0FqTJ5iVqoHtSD0FximYrHiBA/EDkcMsf7/SD7oaL0KyXG3BWkMvfuqStLUIvukMdymyRuAuBBKNikE+63JxJGvxH65GjYDGRCyr0kQVsd/jednmBHJa3CHIKgal350C+Cv1WB6RrewzURyi4Vve7EVQrZ5CvyvBo5hAxmC36EjqLcWfjhsOggI+8sYXD6h2szQPfxRdoas3UnNoJkYcfvqKmY3laQLeGvybToJtFOky1hdBaeKr515o08kBO9bkEHOtGQ6FxFUZHhSyKda6tx9XVkAvtEwG1a9/byPz7QDmzeDuSz+11TBUd9W2VDLX+5G0lQ0P1wCVa0JWcLLu9z0TEDET" class="hint"></div>
+
+</div>
+<div class="text segment" id="1a5rrq">
+<p>Beschreiben Sie zuächst die beiden Schleifen und codieren Sie sie dann <span class="task-link s_5vh5ns block" data-href="#e_5vh5ns">in einem neuen Codeblock</span></p>
+</div>
+<div class="code segment" id="oeeaov" data-class="" data-class-name="_2_Schleifen" data-segment-id="5" data-solution-id="e_5vh5ns">
+int n = 10;<br>for(int zeile = 1; zeile &lt;= n; zeile++) {<br>&nbsp;&nbsp;for(int spalte = 1; spalte &lt;= n; spalte++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int rechnung = zeile * spalte;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(rechnung + " ");<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("");<br>}<br>
+</div>
+<div class="text segment" id="xhdbxx">
+<p><span class="task-link s_9wxrig action">Testen Sie diesen Code dann mit kleinen Werten von n (3,6,9).</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;----------------</p>
+<p>&nbsp;</p>
+<p><em>Optional, d.h. nicht für das Testat notwendig, für das Üben aber gut geeignet sind die folgenden Aufgaben:</em></p>
+<h2 class="e_7lvev4" data-number="2.5">Einmaleins mit Überschriften</h2>
+<p>Erweitern Sie die Ausgabe des Einmaleins so, dass zusätzlich Überschriften für Zeilen und Spalten ausgegeben werden, z.B. so:</p>
+<p><code>&nbsp;&nbsp; &nbsp; 1&nbsp; &nbsp; 2&nbsp; &nbsp; 3</code></p>
+<p><code>1&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp; &nbsp; 2&nbsp; &nbsp; 3</code><br><code>2&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp; &nbsp; 4&nbsp; &nbsp; 6</code><br><code>3&nbsp; &nbsp; 3&nbsp; &nbsp; 6&nbsp; &nbsp; 9</code></p>
+<p>Kopieren Sie dafür den Code von oben und <span class="task-link s_xz7u1v block" data-href="#e_xz7u1v">erweitern ihn in einem neuen Codeblock</span></p>
+</div>
+<div class="code segment" id="atdfpm" data-class="" data-class-name="_2_Schleifen" data-segment-id="6" data-solution-id="e_xz7u1v">
+int n = 5;<br>for(int zeile = 0; zeile &lt;= n; zeile++) {<br>&nbsp;&nbsp;for(int spalte = 0; spalte &lt;= n; spalte++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if(zeile == 0 && spalte == 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Links oben in der Ecke soll ein leeres Feld ausgegeben werden<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("\t");<br>&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(zeile == 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// In der ersten Zeile sollen einfach nur die Zahlen 1 - 10 ausgeben werden.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(spalte + "\t");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if(spalte == 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Am Anfang einer Zeile soll die Nr. der Zeile ausgegben werden. Dies ist<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// in diesem Fall ein i.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(zeile + "\t");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int rechnung = zeile * spalte;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(rechnung + "\t");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp; <br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;System.out.println("");<br>}
+</div>
+<div class="text segment" id="slb9t9">
+<p>:</p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

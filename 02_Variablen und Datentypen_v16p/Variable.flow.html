@@ -1,0 +1,532 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="1" /> 
+<title>Variable</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="urih73">
+<h1 data-number="1">Variable und Datentypen</h1>
+<p>In diesem Praktikum lernen Sie, mit Variablen verschiedener <strong>einfacher (primitiver) Datentypen</strong> umzugehen.</p>
+<p>Dabei lernen wir auch die einfachen <strong>Operationen</strong> auf diesen Datentypen kennen.</p>
+<h2 class="e_pu19tz" data-number="1.1">Skills</h2>
+<p>Sie können in den unten stehenden Aufgaben diese Skills erwerben:</p>
+</div>
+<div class="skill segment" id="7m4myb">
+<div data-skill="Daten.Primitiver Datentyp.Zahl" data-uuid="l2loil" data-acquired="false" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Zahl</span></div></div></div>
+<div data-skill="Daten.Primitiver Datentyp.Logisch" data-uuid="74fnzk" data-acquired="false" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Logisch</span></div></div></div>
+<div data-skill="Daten.Variable.Definition" data-uuid="b56rmw" data-acquired="false" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Definition</span></div></div></div>
+<div data-skill="Daten.Variable.Zuweisung" data-uuid="ky6rto" data-acquired="false" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Zuweisung</span></div></div></div>
+
+</div>
+<div class="text segment" id="kfhmvi">
+<p>Sie können die Skills abhaken, sobald Sie sie beherrschen, d.h. sobald Sie die Aufgaben in diesem Dokument erfolgreich bearbeitet haben.&nbsp;</p>
+</div>
+<div class="hint segment" id="0zp95i" data-title="Das Abhaken von Skills dient nur für Ihre eigene Übersicht. ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Das Abhaken von Skills dient nur für Ihre eigene Übersicht. </span></div></div>
+<div data-uuid="v63r3g" data-hint="U2FsdGVkX19k5ZoWRb9NFHKL+RttCdidv6ImFE4teVgG6Ja42Buvo0PELjlfHrIawtlGitSUWjugNN1Sc2z+eeVCmjicn3tLaCbQPacxfbdjx0m/ZU6ddHraWdi80bPsWUQJbRMcqi4odkiEdrQBLdeiqcxX2MPi3qnHMRRkFzXae4bnNZlERzwxZkdnb6vP+WTmxonxU3XhiTMFbBU1KAvkocfWVGvSrE7LPDEtt0DsNH7nE+98iwyLtx9mSkinxYc+kiCIAVg0QPfOPnNnhYzlNJiVm3tHEmcys9D30VCDML8gHYRkbxgUwSPxUPqtdIGjk+SUnW0BncaBEs+SdMbqZAOv4rZxl1Nt1ZjIMv+8Qhe0M1kKKxuYYoIVA7j8qTZjKL6/pJKhVoKtYskSfkAcHWaJsONzGqrAV0ZNb8gBQI+ubIOBfjYSSRxn6yZ8rPAfiCExX3saHERD26llxF/zlrWr3cNes6W1GfTCt4odj/67Ak+42fuVPTeB79fvIO9MAc2ZJk8R10XjNCkSW8grKmyNrEDb2m/mm3t8kSGdg+kbLyCB8UTPvpyBHTlQ9vqeiTSng3xVMyUOzSx94vk9pHErt7NCDL+/5k8p5ughLDD3Nx6H3tJANDqIrH81ZziD7k+qQZjQ6rbG7HDvMVb2Ztzi0SA63Hwjxg/t2kjTU2po65SF4HcZ0LuwJR10EmDLzeURCLRdHulI59bZsoDS59lHH/o0v6FQMHMsB7YoX+siQ1/2+exlPTqM1aZn/Kp8HtIOEhK64YatHjamPQ==" class="hint"></div>
+
+</div>
+<div class="text segment" id="g5wt7h">
+<h2 class="e_lf70rl" data-number="1.2">Arbeiten mit 5Code</h2>
+<p>Wie Sie in einem 5Code-Projekt arbeiten, haben Sie im letzten Praktikumstermin gelernt und ausprobiert.</p>
+<p>Die <strong>Aufgabenstellungen </strong>umfassen jeweils</p>
+<p>&nbsp;- Einführenden Text</p>
+</div>
+<div class="hint segment" id="xqnb95" data-title="Hinweise und Tipps erhalten Sie, wenn Sie auf das (i) oder diesen Text klicken.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweise und Tipps erhalten Sie, wenn Sie auf das (i) oder diesen Text klicken.</span></div></div>
+<div data-uuid="3w3o8y" data-hint="U2FsdGVkX1+PlQBiGoBTYcqMajISykDYv2AnialfFQ149NY0Oufd6eeqTcDnZLXdmlyUvwOhtfPf+M3PIlA3cAbGVd0fU3cRJQl8aZcB8ZlG2ELGZNwogi50yTze/RtEq5Ad/gAevPMz5LY2wAMdLCWK/GKugRDFsh82gU1y3r2QY1W4Fhtvvi30t2v2+iS2xDmbqtGfsRyMepQEhhVfQWtgCxYzzFjIVPyOIb0c11YHHnhxIsnG0TChC6mVn/px3EIipn5dhNF2w5GOjXcGXUL6JjyCyw0vA/f8/EKI0+4w4ocWOK4DkH+8hE4ZF5q00i8wmzsZXM4elf5YfTp77g0dUXmU0ptjnjuP3MsGR2cyv996S+m4zh8Krtkxu1mCtIJQ8x2jTmpbly/YIT7i1+WeTS5NTO0ss940h9eI8J5o0nqSKbKd5atoOxOYA6K3VJ96tFYqhvDCJ0JGdB3FIGmhNBexH0dSSmDhnSrcu7g4FeXNl3lqIw5JiV6dcESj5IRr07FlSDsXPtRRQUcpfPekH2wmMic1p87H0vbCgyA=" class="hint"><span style="font-weight: bold;">Hier stehen z.B. weitere Erläuterungen zur Aufgabenstellung.</span><br><p>Hier stehen z.B. weitere Erläuterungen zur Aufgabenstellung.</p></div>
+<div data-uuid="8chgd5" data-hint="U2FsdGVkX1/kWUBv7O5aUV+sD3JFHXef78JtnsJASTnVtp6nAriXjcwOr1kuayf2fbKlRidIlY22syDcH5YR7xEM4iPiSpvr4gXiHM1yRFj4UXI1pxmuSeJguZtLVhD90ds0Ey/GQzlZE73j9typp1n9pOuRk2R1++jMMQ3YkEtWgPgpy3zJ5aeW8ek+d9l9MSeGO60AAzivk00Oz5o3Qz8LHxThN4YSnM5p9wB3zMWOZuQSjoI23iZr0dzoTEGnuWYJygmMaDQQuoSXx6/YT4wpPZHn0SWcDaBTbo1OdmD9Zgc7ZLS9eHOtP9E5TTBo8OlY6g5j2m1zWQBprC8uAeCFzVUTZzrITE2ZVd+jMWIaLJqsrB90GKiQxy2k3SQYA8TxqlLuK+henjsNC8s9pIGaZWyfgAYv/CFEpDa6zJzARHqhrE3ACu8ePStlr361L2uUUF2FSBfzaa5ssqsOnH0VJ6Mi87FD9ON+zZXwhXCIn7i0Z1E8V+UX1fRser7uhkUIjLljGUJNboexgBBKiKOMBIeuzk+yzPy3VzsKT+6gIamf1yAlKRbBVkBDd4tk5fATlY6nghUbFvjDpl9+RNjLwdWBlNh6b9qTB9D8hGHYQcMCMseMPby7rddL6v+sVHvaTVpYFSjWlDsIWxS5PNeIW8pvvx+U/UAowFisPwakHy5U8zIJasyapzQkfSBmQB+RrBjncUQ+g1RTEKk/GXJ/Hg+BQb2QCSnf+aROTVktKEUVotXHc67kIHAK0lAKVY6zOZ9YeB798RVsX/aCr1eZgvIwte/NO6DEdIfPhZdHEn569Qym7v3pr8YupTeYOogMznC1HUNq8r0K5wyo8DG5TNgscnlzXXQxeND6ZKdlE8TwswSrM3gG2vp39NFw3QZclEFx9Tl4kiDnHeY1NvofnkIMA4+gJXVlIBXLueXpXhWqhYNyO2QbfLv7CwkNoCMh9KMVyb8cWSBhHrdr6g==" class="hint"><span style="font-weight: bold;">Außerdem gibt es vielleicht noch Tipps zur Lösung, die kosten dann aber 5Coins</span><br><p>Wenn Sie diesen Text sehen, haben Sie 1 5Coin bezahlt.&nbsp;</p>
+<p>Gute Investition, jetzt wissen Sie auch, wie das geht.</p>
+<p>Den 1 5Coin haben Sie aber bereits zu Beginn des Projekts bekommen.&nbsp;</p></div>
+
+</div>
+<div class="text segment" id="fhtqrn">
+<p>&nbsp;- Sowie konkrete, zu erledigende Aufgaben, z.B. <span class="task-link s_xqol6z action" data-href="#s_xqol6z">korrigieren Sie den folgenden Code</span>&nbsp;</p>
+<p>&nbsp;- oder <span class="task-link s_2s3kic text" data-href="#e_2s3kic">Inwiefern ändert sich die Ausgabe auf die Konsole</span></p>
+<p><span class="hilitenote e_2s3kic">Antwort: gar nicht</span></p>
+<p>Klicken Sie jeweils auf das <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAlCAYAAACzpJKIAAABUklEQVRYCe2UMQ7CMAxFmTlBuQGcoNyAk8BJ4BJMlZBgYuICVYdKIDowdoMFMSIWxqBfYclpmsStaAdUS5UdN/FrftwMVIc26JClethP1O5l7GV0KiBqkPfrqp73RN2yVeExbmJOGADZfqqS9dB4kMf7OmaF5fHcAFRB83gh5lXCpCCCS4EGDNJQEe6P27G6npcKnucplkhqwLJ9WFnscpgVcsETgHucoc80GLqMF+CxD4a5vi7VYDYJUUgC80mpwXAmfDc8lsAe+cappAZz7SyNRsXu4PlH8LjWzlxnlkbBFxZYYbXODBo078bQKSFeajIiYZPytJsUdyM8l45in4SVMCTr3yBzLPOasTNaIQVintSsMBSANLYzRF4iHf8QJ4wmostQGP8hvK/raF3Zi2DlRU3HPaypctq6P5aRrps2vKYh7sY2IFTTgJUTbY47bZAP/5wc4PVj6JcAAAAASUVORK5CYII=" width="20" height="27">, das <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAfCAYAAAD0ma06AAABb0lEQVRIDe2UMU4DMRBFt+YEHAFOADfISeAkcAI6KiSkUKXiAlEKJBBbRFTbJRJCFBQIIVEaPYtZecdjYmeXbchIkeOxPW/nz9iVG9mqkXluB3RfHyv3/rJw6/rcj8z7WFJSIPXs2C0u96Iffta3MRPYzE8iiAVu5qfFzAioYcvbift8W/rAjMxDeCm0A0SmMFg9O/Ig6kYNpX74w30l8naAOtDq8cwD76cHHvBwc+jn+EMgNc21FsjXh0Gs/3dX+z7u89NFtFey3wRugVpOC/jaXPt4Wgn25sraArVMGkhWmG4q2ScfM0iGIiVBBaDH4gx/q6Fc9NRDALy4hkhh1UZnYs05l2ttDTmQahyuBTWW66GhuXLC6ABxWE3B64LpVwYw+0ssAnLYguqstoER2wSygEypmuIvkTFUIAmUTXQfwakhY243ynk9bgTqA33nO2BfBaPz/0BS60IP4Yu0/HFUQwS3YiSBqYW/8o/eNN+b9yiJY/WLGwAAAABJRU5ErkJggg==" width="20" height="22">oder welches Icon noch da steht.&nbsp;Dadurch ändert sich auch die Farbe des Unterstrichs, sodass Sie schnell sehen, ob Sie diese Aufgabe bereits bearbeitet haben.&nbsp;</p>
+<h2 class="e_79n7bh" data-number="1.3">Kommentare schreiben</h2>
+<p>Um den Code zu beschreiben, werden <strong>Kommentare </strong>verwendet.</p>
+<p>Das ist immer <strong>wichtig und sinnvoll</strong>, da Sie immer wissen sollten, was Ihr Code tun soll.</p>
+<p>1) Sie schreiben auf, was der Code tun <strong>SOLL</strong> - in einem Kommentar</p>
+<p>2) Sie schreiben den Code, das <strong>IST</strong> das Programm</p>
+<p>3) Wenn der Code nicht tut, was er soll, können Sie im Kommentar<br>&nbsp; &nbsp; immer nachlesen, was er eigentlich tun sollte.<br>&nbsp; &nbsp; D.h. Sie können das <strong>IST gegen das SOLL prüfen</strong></p>
+<p>Das Schreiben von Kommentaren entspricht den Schritten&nbsp; <span class="hilitecolor3">Ü</span>&amp;<span class="hilitecolor3">A</span> in der allgemeinen Vorgehensweise, die Sie in der ersten Aufgabe kennengelernt haben.:</p>
+<p><strong><span class="hilitecolor3">L</span>esen -&gt; <span class="hilitecolor3">V</span>erstehen -&gt; <span class="hilitecolor3">Ü</span>berlegen -&gt; <span class="hilitecolor3">A</span>ufschreiben -&gt; <span class="hilitecolor3">C</span>odieren</strong></p>
+<p>Wenn Sie im Code keine oder zu wenig eigene Kommentare schreiben, können Sie schon nach kurzer Zeit selber nicht mehr nachvollziehen, was Ihr eigener Code denn eigentlich tun soll, und wie er das tut. Das sollten Sie aber, wenn Fehler auftreten, wenn der Code weiterentwickelt werden soll, wenn jemand anders mit ihm arbeiten soll, wenn Sie sich auf eine Prüfung vorbeireiten, ...</p>
+<p>Im folgenden Code-Block sind die beiden Möglichkeiten aufgeführt, Kommentare zu schreiben:</p>
+<ul>
+<li>Der <strong>Zeilen-Kommentar</strong>, der mit <code>//</code> beginnt und bis zum Ende der Zeile geht</li>
+<li>Der <strong>Block-Kommentar</strong>, der mit <code>/*</code> beginnt, über mehrere Zeilen gehen kann und mit <code>*/</code> endet</li>
+</ul>
+</div>
+<div class="code segment" id="vjgiur" data-class="" data-class-name="Variable" data-segment-id="1">
+<br>System.out.println("Hello World");<br><br><br>// Es gibt zwei Arten, Kommentar zu schreiben:<br><br>// 1) Ein Zeilen-Kommentar beginn mit // und geht bis zum Ende der Zeile<br><br>/* 2) Ein Block-Kommentar kann<br>* auch über mehrere Zeilen gehen.<br>* Er wird verwendet, um längere Erläuterungen zu geben.<br>* Er beginnt immer mit /* und endet mit */<br><br>// Diese Kommentare werden vom Compiler nicht übersetzt.<br>// Wenn Sie diesen Code-Block ausführen wird also nur Hello World ausgegeben<br>// Die Beschreibungen in den Kommentaren werden nicht ausgeführt.
+</div>
+<div class="text segment" id="ovj1p5">
+<p>Probieren Sie den Code oben aus</p>
+<ul>
+<li><span class="task-link s_5a2l4o action" data-href="#s_5a2l4o">führen Sie ihn aus</span></li>
+<li><span class="task-link s_qmvhoi action" data-href="#s_qmvhoi">ergänzen Sie eigene Kommentare und führen Sie ihn noch einmal aus</span></li>
+</ul>
+</div>
+<div class="hint segment" id="c4tn8p" data-title="Wie führt man noch mal Code aus? Und was tut man bei Fehlermeldungen?">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wie führt man noch mal Code aus? Und was tut man bei Fehlermeldungen?</span></div></div>
+<div data-uuid="qf6eim" data-hint="U2FsdGVkX18Qdea9Tal2cyzVnJcmAA94IAYYuHkdyU3DvvhmKnVR2kNLptabZtppr1DEOL8tRicJ0/PCj1TvOnZLCv5yMvzhnfOtZt3RUEDxohbrBDF9UcvqWcyAi3RSPooMx74PcZ7GE/8N2VAU0YBaB3DEMDd4e+GhY9fILbkOzljXLTkADSXEN2reK4xABIm2jnzX68A54+01ZQMS1QRKkdEWyDy9jhaDI78SED2BiF41BHR17UwyOlQhD1X9MwA2sHGGno2ZICIqyzhwVUDGp7B9KYFF6Zou382u3QCAiee+YNUTiieGzEI/3DVE+3yyqhPo/i5cC3hNHP0GDDRwYcFXX4jODCcnUSejpd8wk4I/fbQ0E0dUSNHtkUVQpFBX1Wxp9uj1+FzmiYQbgtN06s7igsgmTtSnyxwQisAf2aRze1ileeKu9/7UYVeSoKKkE1+NARVFOzCwFlIxDoviw18XXMBnouCdewwoeRQNzBGTzqFWcaX21IRyG1MvGfb4If0awBFfHRTMMjUsXsdTJhEN7Od/ylqYGdtcA60dBn0jBdWRs46T7cZIUAYCfj1z86mwCHfukjHYIWTNpMYE3H+Npa2Hd+DWTrnwxgKMI3SV7xmKYibbNwtKxybXlhvpDA6JLFlb2/puia6sDopAX58gHKXtroICLLRA2wxdPSlKS5pn5S4KyweeENoyZVUOS0DYww73BrQdjZ5e49ZmNF8Ki0OYXZ+w0jm64nQDetlkSw4EEX8sX1tYevGUbbBqzOUSQAfLwYrgyNHrwQ+a91tUXt+Q0o7GpkDe0N5jFxGKaqEiL+XJw593FC/BbAjBFLOqJr6Q+kgKbynT0i1DoWoQN3mGe00Uo1Nmyu2p+Z+0C9oUz4bkeMf3UsykG54MHD1syyrzSqU2gmCqCIpu/xQ5NNCzAAn2eGu2iMM0e5D2k5AXJRxKpvOaZcNHgAq2ECufjUDC7yQq8g8TThUWXYEu/O9ccSI0UAs9vm8R0PJTZQv9GfXbMRoR/9V65t+0tD86f6hHcbPA8lDdMK7q7TKCPcYBIGkVO/10Gc7/USqLV3tiIW4AN0dwAxclSBF4X6CIwJRV48BZYCT7md7Feq8UeP+WTvQEfQpKc9WLFHr6TdHZ4aE/lUeHKIB8AHMDfmi2Ejs5/KV4MV+5ZYHlJhzO+nTGGhhsF5Yg8ZCGeawqE/07Dz1b0JzAtDtxDUYtLHZ9a9iIRCuvgtu8wOgMQJK1L7fGAFKOsYHt+Ko9rLaQSv05qiV5w9+6tm69" class="hint"><span style="font-weight: bold;">Einen Code-Block können Sie ausführen, indem Sie&nbsp;</span><br><ul>
+<li>entweder im Kontext-Menü des Blocks "Diesen Codeblock ausführen" auswählen</li>
+<li>oder in den Code-Block klicken und rechts oben auf das Run-Icon klicken (beachten Sie die tooltips)</li>
+<li>oder den passenden shortcut verwenden (wird in den tooltips angegeben)</li>
+<li>Mehr dazu finden Sie auch in der Hilfe.</li>
+</ul></div>
+<div data-uuid="s3aaz5" data-hint="U2FsdGVkX1+Ake9ITIG1w3FJx3ZNlMZGZknsBJ0NnATvQqCq5hrn6Gnd6471+Ksqb0qVS5u95ULnJXX58pQ1puex/AUbfTCnsuSSBn4cdJeAw8kiyqf4wkW00hIgIo+F5AQYDCgf85Qa3phxCVL0ljbs/bHbkZ91omH6hCd6uxsdsTotOJQo2i8PSJTioEbSq/18iyIJaztJ494GkSjn60AjszM+jphbBI2E57LPtOT996RgKqPZD08LZ348cqs8KyEOhJDZHJWlq5WYd/9DxaxVGx7OqRL3gc//KB6GQ7/0nE3LYpWo9Qdg+qdIJsn2euaNksr4oyf+j1qcdcLz9Lam9LNXezn4xgmoze4xJYNP7Ww/BR6FI3Q2pNRcCZTRnl7gRh4ebt97GLV4TMJ0j+xS9RupTMpXbBnINkCJEGE5o0SHDqVLo/KdciFgeFex9FUpn7435o0KWaNbFHjoOLvOBNMDw4aL4DQY91V2oLoIsZtsBLUy86LRnkZmZEyB8FUlaHkqMAs9zNSpGySvkamZtmIT+UucJ7uRaYQt+EAaX7ZMs/n9hTjSo8y94LnxpfJo69vgZLd3A7uYwlWFuzCYCP+2fyBRyk6S6ru/wqIEgnwQxz/xVHFBaM7eA19pGspe+wNLMZJpuDIUUfafuZ40KcMmIryOxby3Y2L21hB1oRZD4/PWRgqLeYAC1EXbMGQnU6PrHzBd7BXpn+iBlEzOJoG2YLsY0I24fJaV3L8HwTMVggd57URCeROs6fXP5Wki/1NbLZXcK1FuWG4Z1fxt29L3uwhuMDUz+4ppPI4tiFlRG4J24S68XYJbgYXrIJKwksifvg0fUPeDl0ZSU+P3Dk2dNkBVsIl8PXnoO5SA4iBMVp2wC7iIaNTubW5N" class="hint"></div>
+
+</div>
+<div class="code segment" id="hxn15z" data-class="" data-class-name="Variable" data-segment-id="3">
+System.out.println("Hello World");<br>
+</div>
+<div class="text segment" id="g4x69f">
+<h1 data-number="2">Variablen definieren</h1>
+<p>Jetzt geht los mit dem Thema Variable.</p>
+<p><span class="hilitecolor">Definieren Sie jeweils eine </span>Variable <span class="hilitecolor">von jedem primitiven Datentyp</span> (<code>long, int, short, byte, float, double, boolean, char</code>).</p>
+<p>Eine Variable wird immer definiert mit einem Datentyp und einem Namen.&nbsp;</p>
+<p><em> Beispiel: </em><code>int einInt;</code></p>
+<p>Hinweis: Der <strong>Name einer Variable</strong> beginnt mit einem kleinen Buchstaben oder einem Unterstrich _<br>Große Buchstaben sind für andere Dinge vorgesehen. Kein Name darf mit einer Ziffer beginnen.&nbsp;</p>
+<p><span class="task-link s_ar5k7o action">Definieren Sie die o.a. Variablen im folgenden Code-Block:</span></p>
+</div>
+<div class="code segment" id="h1qpp7" data-class="" data-class-name="Variable" data-segment-id="2">
+/** * Variablen definieren <br>* In diesem Block schreiben Sie Ihren eigenen Code,&nbsp;&nbsp;<br>* um die oben stehenen Aufgaben zu bearbeiten. <br>* <br>* Zum Ausführen und Testen:&nbsp;&nbsp;<br>* im Kontext-Menü des Blocks "Block ausführen" auswählen. */<br><br>// Beispiel für die Definition einer int-Variablen:&nbsp;&nbsp;<br><br>int einInt;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>// Nun folgt Ihr eigener Code für die Definition jeweils einer Variablen der anderen primitiven Datentypen:<br>// long, short, byte, float, double, boolean, char <br><br>long einLong;<br>short einShort;<br>byte einByte;<br>float einFloat;<br>double einDouble;<br>boolean einBoolean;<br>char einChar;<br>
+</div>
+<div class="text segment" id="kv9byu">
+<p><span class="hilitecolor task-link s_icfr1a action" data-href="#s_icfr1a">Zum Testen führen&nbsp; Sie den Block aus.</span></p>
+<p><span class="hilitecolor3">Wenn es keine Fehlermeldung gibt, haben Sie korrekten Java-Code geschrieben.&nbsp;</span></p>
+</div>
+<div class="hint segment" id="76ykox" data-title="Wenn es doch Fehler geben sollte">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wenn es doch Fehler geben sollte</span></div></div>
+<div data-uuid="6udv8e" data-hint="U2FsdGVkX18IFysjr39HxpKv4FCaMMpUPT4A3KR1rgzmv4trOUc5Nisu58bBRbEJeVKacbpRQ0WKxesH5+fRXepgop9y8BYmRWtFQVaZWrJi1XUX5cD7ICcSUtHABdlBqXobAPaAUSs4Q6o9wCy+f4xWuS/I2YU/y34mvq6SFiv7tQZ3G9D3v4dVNj/QPlWejtr04+Me6ZcCEw43yqaFA8A/Xmfsap59kS6tQmSRm15SPODGYJo5utbsfXepbMua7HrdpIBFEnTUugT7u0o0q/LRZtFskwzIuBDAyGqPPf8hzOahhZDHB7e3E5q2bCAX6Shs7wQZ/HyCZlfSzDJBV77UrJVR/cbYLOLTIeZKO0A5Hht1oKiDFT4uHSlGVLP7RTDv76qI/5xBw82dED6X+6n/RiC+l6r+zGlXcbaMs9/J9mCUHDJBmQqFGlPKADSNWRt4J5fOJNHw/l50o6G9Fl/L1RbH39UGm6Owxry8xB/X0Q1syuQJFECanKS9QvNljII5YQIzeUx43QDvN0bN3gC5sGZRG4llce2p+2iNV1GUvu8XtleulzQJ9SPrBKL46AhDkIu0rakCemCQ9GfnDrPTnIJsS4ZmNcqI18lQ3QmG3IgzT0RCssrlQQwhk+PLDhI4+THeoqCyVbgRqIcUDkAfOq1hFPls2JFiPdhecUb6lYJgD+zyzcP3BLQmrKMPS2QaTzSuGKti4irElCd+9cA07Q286Som+oYqM1NwQn1veYXmBGl3TNNCk7DfWG9TA2OV692fcUAMT/327Q+pFcQGDcNV61EHu45d0eK22ht1bZL01b3fMSRLWIQtKjoCSYcORKuNXU7H6UGm7FBcfSt4KUNAMop+2y/3TUF4tXHKcdFYZfLWhaPWFZVnNwnmk0mvjJ9W5d7JMFQ3iiQqv/2IJVeJozl35qUsSlvU2ClSLvQL87LTzYwOGBKVfWoKrtm/DP3iixsOJ/u8pMPB0Q==" class="hint"><span style="font-weight: bold;">haben Sie möglicherweise:</span><br><ul>
+<li>Groß/klein-Schreibung nicht beachtet</li>
+<li>ein ; am Ende einer Definition vergessen</li>
+<li>Code, der ausgeführt werden soll, als Kommentar geschrieben</li>
+<li>Oder Kommentar nicht als solchen mit // oder /* */ gekennzeichnet</li>
+</ul></div>
+
+</div>
+<div class="text segment" id="jvo0cs">
+<h1 data-number="3">Variablen Werte zuweisen</h1>
+<p>Nun weisen wir den oben definierten Variable Werte zu, oder anders ausgedrückt: wir schreiben Werte in die Variablen. Das geht auf mehrere Arten, von denen wir jetzt zwei ausprobieren</p>
+<h2 data-number="3.1">Werte zuweisen - Literale</h2>
+<p>Weisen Sie den oben definierten Variablen nun Literale (also direkt angegebene Werte) des passenden Datentyps zu.</p>
+<p>Beispiel: <code>einInt = 123;</code></p>
+<p>Verwenden Sie jeweils ein passendes der unten angegebenen Literale für Zuweisungen an die oben definierten Variablen.</p>
+<p><code>123&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -132.8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-132.8f&nbsp; &nbsp; &nbsp; &nbsp; -21932&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'w'</code></p>
+<p><code>true&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;false&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1.0e-6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;72763&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0L</code></p>
+<p><span class="task-link s_lju6z4 action">Schreiben Sie die Zuweisungen in den folgenden Code-Block.</span></p>
+<p><span class="hilitecolor3">Wenn es keine Fehlermeldung gibt, waren Sie erfolgreich.</span></p>
+</div>
+<div class="code segment" id="s1ssnc" data-class="" data-class-name="Variable" data-segment-id="4">
+/** * Werte zuweisen *&nbsp;&nbsp;<br>* Zum Ausführen und Testen:&nbsp;&nbsp;<br>* im Kontext-Menü des Blocks "Block und alle vorherigen ausführen" auswählen. */<br><br>// Beispiel für eine int-Variable:<br><br>int einInt = 123;&nbsp;&nbsp;&nbsp;&nbsp;// Zuweisung des Werts 123 an eine int Variable <br><br>// Nun folgt Ihr eigener Code für die Wertezuweisung an die anderen Variablen<br><br>double einDouble = -132.8;<br>float einFloat = -132.8f;<br>short einShort = -21932;<br>char einChar = 'w';<br>boolean einBoolean = true;<br>boolean einWeitererBoolean = false;<br>double einWeitererDouble = 1.0e-6;<br>int nochEinInt = 72763;<br>long einLong = 0L;<br>
+</div>
+<div class="text segment" id="3hxum7">
+<p>Zum <span class="hilitecolor">Testen</span> müssen die Variablen natürlich definiert sein. Das haben Sie im Code-Block ja schon oben gemacht. Der Code der beiden Blöcke gehört also zusammen.</p>
+</div>
+<div class="hint segment" id="rqyla2" data-title="Daher müssen Sie nun sowohl den gerade bearbeiteten Code-Block ausführen, als auch alle anderen darüber.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Daher müssen Sie nun sowohl den gerade bearbeiteten Code-Block ausführen, als auch alle anderen darüber.</span></div></div>
+<div data-uuid="4wqfgh" data-hint="U2FsdGVkX18jKiv0vcIfL5bkBn1WIv2A9LSZ1hJ4YtPOSVnIJK02tPuy4KlLpNBbC6nDhEPVvPSrCKY4TpunSWIMksdpxyREYwPFIOY5xyTRKvTd0Hhyh0U9wphPwkPikr5qVgEPLIFUI8QUYDLaseKGxQ4TBmOD6lazi83wgAA1pNJixnJmf/TiQ4cy+JBfUQ/9RHjw3oz5CL/DhSJqVDsT4WcrzoYXuvbVXQHybo8EKzSnFwIhB1yzeg15k4/69Koxnsm2KKwZfS3Nxb5Xn5bNxkJd6Ts+DZFbA+gabWLz9bA/l5GZvuZeBhD65FCrVFilz+B7lsntiZPZ1y3G1WkIUS70D0qNY/FAri8vOqALswnj9aAkJnSQHpTWsjfkHa5svLWKckPxU4tkFiOs4BAbP067W9pIBD2z+TWh2Ht2upP/qaIGG4Yjw1hR+NRR5kfXkIAoDyxeb2Hv7lXHAnhseEAycH0w8W4I739c06X/h6nNzWskfne3xl+y1xRyg4ZQjp7moJ/jYb+gMb5rYi/3KywNuc71AHZAOv/qQZrxnFWgjdAZ08+Op/KGf4vYK4L9whwR+6gl4a7Upp673xjteEnWRUpPIuSFcMtYcQdhgfTJMNeOOIaQie4MpMnYFAIodhvzaOAa7RZka7uEEOwBgK+arpQGYEM5x4khthjiqgC/T5RLRffeSt2LMfEzcC35fctucYTNi/qtScY7tiNXynx191O+f89w3iIfwS8ra88PEr+I+e2M6Lkci/bYvREDkDqdIj0AvzOhro3pITufebAQz2kjGbPCnug8lgkJNZNrUVkKy7TrXFamLMDA3ifsO07T3icmlF9MjBpB3Oxwqb3xfxr4Y3za6y75C3PFFkz117Wl6CmyLKfaHgIvGSIuROpYm3qgMg8UCxljjL0N21hJibCkMcasoZuTMOvy5o/dkos3S7OZkUg5gw29SdX6o9tSzxJStrG5F4LU39by5Ifr7poXxT8HchoCCrt4XXjsWxmeCqXfBlZR3qAXDOPjfUCsnYsWlSmO6lEZNauzuE3RG7pRksC0GPi63cY/eQMBD190SpuK5maRJHobpnyxUnT3xcL+muhnDycW8ZjdF8AUGAxvPPkewKe4MGW1D85BGCbd1nR38EJh59TCOW5N3YzmNsjkwTIGsKe+qWVRwg0fEtu+VVXkVgjEIaWRqdJsL2SXh+KD44nYZYuEYKyAo1z3fqpJmr5NsfFa4Fv5S6pWKE6teYr8csSE+uEsKzOZ0BmQ6EJi8quNEBC2cVPI36AJk3HoRl8P604snO8jxA/TzyQYjriuP0kxpVc=" class="hint"><span style="font-weight: bold;">Das hatten wir im letzten Termin bereits gelernt:&nbsp;</span><br><ul>
+<li>mit dem <em>Kontext-Menüpunkt</em> "<code>Bis hierhin alle Codeblöcke ausführen</code>".</li>
+<li>oder mit dem entsprechenden grünen Icon (welches das richtige Icon ist, zeigt der tooltip, der erscheint, wenn Sie mit die Maus darüber bewegen)</li>
+<li>oder mit dem shortcut (Strg-Shift-E), den auch der tooltip anzeigt.</li>
+</ul></div>
+
+</div>
+<div class="text segment" id="oht459">
+<h2 data-number="3.2">Werte zuweisen - Variablen</h2>
+<p><span class="hilitecolor">Probieren</span> Sie nun einige (ca. 10) Zuweisungen der oben definierten und mit Werten gesetzten Variablen untereinander, z.B. <code>einInt = einFloat;</code>&nbsp; Probieren Sie insbesondere aus</p>
+<p>- die Kombination von verschiedenen Zahlenarten untereinander</p>
+<p>- die Kombination von Zahlenarten und <code>boolean</code>&nbsp;</p>
+<p><span class="task-link s_epi2ww action">Schreiben Sie die Zuweisungen in den folgenden Code-Block.</span></p>
+<p><span class="hilitecolor3">Wenn es keine Fehlermeldung gibt, waren Sie erfolgreich.</span></p>
+</div>
+<div class="code segment" id="qpkqfq" data-class="" data-class-name="Variable" data-segment-id="12">
+/** * Werte von anderen Variablen zuweisen */<br>int einInt = 1;<br>short einShort = 2;<br>byte einByte = 1;<br>char einChar = 'a';<br>double einDouble = 1.2;<br>float einFloat = 2.3f;<br>einInt = einShort;&nbsp;&nbsp;// Zuweisung des Werts einer short-Variable&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; an eine int-Variable <br><br>// Nun folgt Ihr eigener Code für die gegenseitige Wertezuweisung <br>// der von Ihnen oben definierten Variablen ...<br><br>int intVonByte = einByte;<br>int intVonShort = einShort;<br>int intVonChar = einChar;<br><br>long longVonByte = einByte;<br>long longVonShort = einShort;<br>long longVonInt = einInt;<br>long longVonChar = einChar;<br><br>char charVonByte = (char) einByte; // hier muss man casten<br>char charVonShort = (char) einShort; // hier muss man casten<br>char charVonInt = (char) einInt; // hier muss man casten<br><br>double doubleVonFloat = einFloat;<br>double doubleVonInt = einInt;<br><br>float floatVonInt = einInt;<br>float floatVonDouble = (float) einDouble; // bei diesem Cast könnten Daten verloren. Beispiel: double ist 2.328993483 wird zu float 2.3f;<br><br>// boolean booleanVonInt = einInt; // funktioniert nicht<br>
+</div>
+<div class="text segment" id="rwkcsl">
+<p><span class="task-link s_bwno20 text" data-href="#e_bwno20">Welche dieser Zuweisungen sind erlaubt, d.h. sie lassen sich compilieren?</span></p>
+<p><span class="hilitenote e_bwno20">Antwort:</span></p>
+<p><span class="hilitenote e_bwno20">die Kombination von verschiedenen Zahlenarten untereinander: Es lassen sich Datentypen mit einer geringeren Größe zu Datentypen mit einer größeren Größe zu weisen, z.B. short --&gt; int, jedoch nicht andersherum z.B. int --&gt; short</span></p>
+<p><span class="hilitenote e_bwno20">die Kombination von Zahlenarten und <code>boolean: <span class="hilitenote">Funktioniert nicht.</span></code></span></p>
+<p><span class="task-link s_opow0k text" data-href="#e_opow0k">Welche Fehlermeldungen bekommen Sie?</span></p>
+<p><span class="hilitenote e_opow0k">Antwort: incompatible types: int cannot be converted to boolean</span></p>
+<p><span class="task-link s_p40zas text" data-href="#e_p40zas">Warum funktionieren manche Kombinationen aber andere nicht?</span></p>
+<p><span class="hilitenote e_p40zas">Antwort:&nbsp;<span class="hilitenote">Es lassen sich Datentypen mit einer geringeren Größe zu Datentypen mit einer größeren Größe zu weisen, z.B. short --&gt; int, jedoch nicht andersherum z.B. int --&gt; short</span></span></p>
+<p><span style="background-color: #ccdfff;"><em>Zudem darf nicht zu einem Datenverlust kommen, anonsten muss gecastet werden</em></span></p>
+</div>
+<div class="hint segment" id="5lh0pc" data-title="Beantworten Sie die Fragen, indem Sie auf das Fragezeichen klicken. Dann wird eine Text-Zeile eingefügt in die Sie Ihre Antwort schreiben.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Beantworten Sie die Fragen, indem Sie auf das Fragezeichen klicken. Dann wird eine Text-Zeile eingefügt in die Sie Ihre Antwort schreiben.</span></div></div>
+<div data-uuid="u5wlhl" data-hint="U2FsdGVkX1+zT1iT3oujIYyQLkdMB6ROay7eJ++IP5YSZvKaji739y1wJjQHapxbtuaVoA35p7JCVlzlQkVmBMslJFDeh4/Enzqkk71Y44qfWD5MtchszgzpHI7bD4ccuQYKCIU3E9yKgAUEyBr4so4ENL7W8/7pdjHuWxxn2Tr0Zh8gd/J0sELApT/0wmN6TzipK7uiwmeuCDJ7dDVa064V4nJo1aNf9h7++2n2h9XXS2lwWlauGF5f6fjGuy8GHkEcMJAMKuKGsWZ6Q/PRs16evGdR30Kw2vhmNBJwQXUG94eL2UQf26s2nQHg9Xy61PSLA6U5aL5RO+FcdDblZrdmfyWrSZma7LBETB9AsLYa1VOyZBxZhFyxVZ+T3ELEWSpkjJKg95K94OR1YrO2OklDr1JVHUuZnnIr6Q03M0Oor5/lCzUID1VapoTdkfdQbMHP8anaw7xzsBolg1cTvquL5htLTB7+7kZhPj5obIc52zHkPIp2RKgBOdVM/+6xyAztOl6C3pFPGFQ60BGDBRpAh9/hebN4WEQxnyZoHuQKtXKLGaNcZ/oPWPQ/jly4UrvBKoPEegtIIYpRfyALwXXMibM0iPoxc3+Lzx3u0K2fR9aVHMOMW6J4UvG+syVe" class="hint"></div>
+
+</div>
+<div class="text segment" id="ai55y7">
+<p>Merken Sie sich, welche Kombinationen funktionieren, und welche Anlass zu Fehlermeldungen geben.&nbsp;&nbsp;</p>
+<p>Wiederum müssen Sie zum <span class="hilitecolor">Testen</span> <span class="hilitecolor">alle bisher geschriebenen Blöcke ausführen</span>, da Sie die dort definierten Variablen hier nutzen wollen.</p>
+<h1 data-number="4">Ausgabe von Werten von Variablen</h1>
+<p>Um den Wert einer Variablen auf die Konsole (das Fenster, das auch schon „hello world“ angezeigt hat) auszugeben, verwenden wir ebenfalls die Anweisung <code>System.out.println()</code>, die wir schon kennnengelernt habe. Was genau diese Anweisung macht und warum sie so aufgebaut ist, lernen wir schrittweise bis zum Ende des Semesters.&nbsp;</p>
+<p>Folgender Code gibt den Wert einer Variable aus. <span class="hilitecolor task-link s_a5i26q action">Probieren Sie ihn aus, indem Sie nur diesen Code-Block ausführen.&nbsp;</span></p>
+</div>
+<div class="code segment" id="leew2j" data-class="" data-class-name="Variable" data-segment-id="5">
+/** * Variable ausgeben */<br><br>// Variable definieren und Wert setzen<br>int zumAusgeben; zumAusgeben=42;&nbsp;&nbsp;<br><br>// Variable auf die Konsole ausgeben<br>System.out.println(zumAusgeben);&nbsp;&nbsp;<br>
+</div>
+<div class="text segment" id="tckoj5">
+<h2 class="e_vyu9nr" data-number="4.1">Mehrere Variable ausgeben, Text und Variable ausgeben</h2>
+<p>Wenn Sie mehr als eine Variable und/oder erläuternden Text ausgeben möchten, gibt es mehrere Möglichkeiten:</p>
+<p>Sie schreiben: a)</p>
+<p><code>int zumGutAusgeben; zumGutAusgeben=84;&nbsp; &nbsp; // Variable, die ausgegeben werden soll<br></code><code>System.out.<strong>println</strong>("Der Wert von zumGutAusgeben ist ");&nbsp; &nbsp; // Ausgabe der Beschreibung<br></code><code>System.out.<strong>println</strong>(zumGutAusgeben);&nbsp; &nbsp; &nbsp; &nbsp;// Ausgabe des Wertes der Variablen</code></p>
+<p>oder b)</p>
+<p><code>int zumGutAusgeben; zumGutAusgeben=84;    // Variable, die ausgegeben werden soll<br>System.out.<strong>print</strong>("Der Wert von zumGutAusgeben ist "); // !! print ohne ln<br></code><code>System.out.<strong>println</strong>(zumGutAusgeben);</code></p>
+<p>oder c)&nbsp;</p>
+<p><code>int zumGutAusgeben; zumGutAusgeben=84;    // Variable, die ausgegeben werden soll<br>System.out.<strong>println</strong>("Der Wert von zumGutAusgeben ist " + zumGutAusgeben );&nbsp;</code></p>
+<p>Probieren Sie diese Varianten aus, indem Sie die Werte von zwei Variablen auf verschiedene Arten auf die Konsole ausgeben..</p>
+<p><span class="task-link s_8c35y7 action" data-href="#s_8c35y7">Dazu <span class="hilitecolor">fügen Sie zunächst hier einen neuen Codeblock ein</span></span></p>
+<p>&nbsp;</p>
+</div>
+<div class="code segment" id="5s5ebu" data-class="" data-class-name="Variable" data-segment-id="13">
+int zumGutAusgeben; zumGutAusgeben=84; // Variable, die ausgegeben werden soll<br>System.out.println("Der Wert von zumGutAusgeben ist"); // Ausgabe der Beschreibung<br>System.out.println(zumGutAusgeben); // Ausgabe des Wertes der Variablen
+</div>
+<div class="text segment" id="z33clv">
+
+</div>
+<div class="code segment" id="9zozpu" data-class="" data-class-name="Variable" data-segment-id="14">
+int zumGutAusgeben; zumGutAusgeben=84; // Variable, die ausgegeben werden soll<br>System.out.print("Der Wert von zumGutAusgeben ist"); // !! print ohne ln<br>System.out.println(zumGutAusgeben);
+</div>
+<div class="text segment" id="wlca1h">
+
+</div>
+<div class="code segment" id="65zkap" data-class="" data-class-name="Variable" data-segment-id="15">
+int zumGutAusgeben; zumGutAusgeben=84; // Variable, die ausgegeben werden soll<br>System.out.println("Der Wert von zumGutAusgeben ist " + zumGutAusgeben );
+</div>
+<div class="text segment" id="0pqpo4">
+
+</div>
+<div class="code segment" id="63lp5e" data-class="" data-class-name="Variable" data-segment-id="20">
+int zumGutAusgeben; zumGutAusgeben=84; // Variable, die ausgegeben werden soll<br>System.out.println("Der Wert von zumGutAusgeben ist"); // Ausgabe der Beschreibung<br>System.out.println(zumGutAusgeben); // Ausgabe des Wertes der Variablen<br><br>int zumGutAusgeben; zumGutAusgeben=84; // Variable, die ausgegeben werden soll<br>System.out.print("Der Wert von zumGutAusgeben ist "); // !! print ohne ln<br>System.out.println(zumGutAusgeben);<br><br>int zumGutAusgeben; zumGutAusgeben=84; // Variable, die ausgegeben werden soll<br>System.out.println("Der Wert von zumGutAusgeben ist " + zumGutAusgeben );
+</div>
+<div class="text segment" id="69sg8o">
+<p>&nbsp;</p>
+<p>- entweder mit dem Kontextmenü - Codeblock einfügen</p>
+<p>- oder mit dem shortcut (Tastenkürzel) Strg+Shift-C</p>
+<p>- oder mit dem Icon <strong>{ }</strong>&nbsp;oben rechts in diesem Fenster</p>
+<p>Der neue Codeblock wird dann dort eingefügt, <span class="hilitecolor">wo der Cursor gerade steh</span>t. Er steht damit direkt bei der Aufgabe, die Sie damit bearbeiten und lösen wollen.</p>
+<p><span class="task-link s_zn9c5q action" data-href="#s_zn9c5q">Schreiben Sie dann ihren Code dort hinein (oder kopieren Sie ihn passend von oben), und führen Sie ihn aus.&nbsp;</span></p>
+<p>&nbsp;</p>
+<h1 data-number="5">Initialisierung von Variablen&nbsp;</h1>
+<p><span class="task-link s_ba6e2f action">Führen Sie den folgenden Code-Block aus</span>:</p>
+</div>
+<div class="code segment" id="pl9p7a" data-class="" data-class-name="Variable" data-segment-id="6">
+int variable1;<br>int variable2;<br>variable2 = variable1;
+</div>
+<div class="text segment" id="m45ag2">
+<p><span class="hilitecolor task-link s_2n14vm text" data-href="#e_2n14vm">Welche Fehlermeldung bekommen Sie?</span></p>
+<p><span class="hilitenote e_2n14vm">Antwort: variable variable1 might not have initialized</span></p>
+<p>Der Compiler ist auch hier wieder sehr vorsichtig ("Schisserprinzip" :-): Da Sie im Code nicht angegeben haben, welchen Wert <code>variable1 </code>hat, ist dann auch nicht eindeutig, welchen Wert <code>variable2 </code>nach der Zuweisung hat.&nbsp;</p>
+<p><span class="task-link s_iio92o text">Was müssen Sie tun, um diese Fehlermeldung verschwinden zu lassen?</span></p>
+<p>(Die Lösung steht am Ende dieses Abschnitts, denken Sie aber zuerst selber nach).</p>
+<p>Noch ein Hinweis:</p>
+<p>Variable der primitiven Datentypen lassen sich schon bei der Definition einen Wert zuweisen, z.B.:&nbsp;</p>
+<p><code>int huhu = 34;</code></p>
+<p><span class="task-link s_ydwhv4 action">Probieren Sie das am obigen Beispiel aus</span>.</p>
+<p><em>Lösung: Richtig, variable1 muss vor der ersten Verwendung explizit einen Wert zugewiesen bekommen.</em></p>
+<p><span class="task-link s_stgt4m action">Korrigieren Sie den Code-Block oben und verifizieren Sie, dass mit der angegebenen Lösung keine Fehlermeldung mehr erscheint.</span></p>
+<h1 data-number="6">Operationen auf Variablen</h1>
+<p>In diesem Abschnitt lernen wir einige Operatoren kennen, die auf ganze Zahlen angewendet werden können.&nbsp;</p>
+<h2 data-number="6.1">Einfaches Rechnen</h2>
+<p>Die einfachen Rechenoperationen <code>+ - * /</code> funktionieren natürlich auch mit Variablen eines Zahlen-Datentyps.&nbsp;</p>
+<p><span class="task-link s_bhqd7o block" data-href="#e_bhqd7o">Probieren Sie ein paar Rechenoperationen </span></p>
+</div>
+<div class="code segment" id="ahx039" data-class="" data-class-name="Variable" data-segment-id="21" data-solution-id="e_bhqd7o">
+double a = 1.23;<br>double b = 2.12;<br><br>double ergebnis = a + b;<br><br>System.out.println(ergebnis);<br>
+</div>
+<div class="text segment" id="lvdjmw">
+<p>&nbsp;</p>
+<p>mit den oben definierten Variablen und Literalen aus und geben Sie das Ergebnis auf die Konsole aus (Wenn Sie auf <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAABnElEQVQ4EcWTTUsCQRjHPYfUoSDoUEHQvVOnvkCHoGunrtG5Dn2FPkEp9mIRBFKXXqAI8m0NCiGtxNgCraxERdpyU9d/zNQMM7u+bCA4sMzszPP85v+8jANtHo4289A5YKmoQvEOw7/axb/Y4ZQlQNsKGTBzt0Yh+fQpFO8QyCyOzgPFkNXwgiiOrqlCXXtCVvXBqJYsBmzDHHJFz+PKNw6WAmZHgUZVx/XBJIKePiTOZvFZSLBzPv8LSLyyj/sIenp/K+hy4mJ7FKnoMip6gUIZUAyZKCRKxcGLUi1/ILo3wVuCOQbcPSDtUXxVANRE37prDiSnLzcrCLi7LVAGD28MQA0v4lt7rgsjmxKw/PWOy92xhkAG9rucNJq3+x1LISUgueEhstQaKLwWUsjk+RzPpQRk1eZKBEfLnstJoyFtI7abBCxmQgit9zdV2CqPArCG25OZujBW6VzqGDWj0rAgUlG0XAzK5qAEjGyNSL3YlPR3yBUm/fMUxl6Llovb6jvzJRSoa2nEj6bpuxQTbDa2888V2jG2Y9N24A/DcSXQ/8YShgAAAABJRU5ErkJggg=="> klicken, wird als Service für Sie ein neuer Code-Block erstellt).</p>
+<p>&nbsp;</p>
+<h2 data-number="6.2">post/pre - increment - Operator</h2>
+<p>Nun kommen wir zu spezielleren Operatoren: Um das Erhöhen eines Wertes um 1 abzukürzen (für faule Programmierer :-) gibt es einen speziellen <strong>Inkrement-Operator</strong>:</p>
+<p>Statt <code>pi = pi + 1;</code> kann man auch&nbsp; <code>pi += 1;</code> schreiben oder auch ganz kurz: <code>pi++</code>. Dabei ist <code>++ </code>der Inkrement-Operator.</p>
+</div>
+<div class="code segment" id="ygclch" data-class="" data-class-name="Variable" data-segment-id="7">
+int pi;&nbsp;&nbsp;&nbsp;&nbsp; // Definition einiger Zahl-Variablen<br>int pj;<br><br>pi = 1;<br>pi++;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Variable pi incrementieren (d.h. um 1 erhöhen)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;!! geben Sie nun den Wert von pi aus:<br><br>System.out.println(pi);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// -&gt; Ausgabe:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+</div>
+<div class="text segment" id="yxfuon">
+<p><code></code><span class="task-link s_ow1aoo action">Ergänzen Sie im Codeblock</span> oben Anweisungen, um den Wert der Variablen pi zuerst zu inkrementieren und geben Sie ihn dann auf die Konsole und führen Sie den Codeblock dann aus. <span class="task-link s_ngssyo action">Dokumentieren Sie in ihren Code</span> das Ergebnis.</p>
+</div>
+<div class="hint segment" id="9drpka" data-title="Sie können die Ausgabe in der Konsole auch kopieren und in den Code (oder Text) einfügen.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Sie können die Ausgabe in der Konsole auch kopieren und in den Code (oder Text) einfügen.</span></div></div>
+<div data-uuid="tfm3xo" data-hint="U2FsdGVkX19cjBImELzJHqjsaJkIngD5x6MG4uTn2A+0XOx6mFOQ+cDCuCZhkilGEqcePtEqHThqg2q7AdGiFw0XspU/ILuK356lYd6r5Vpyn0avKJfTiHPgF1KNNjq+5tXUWMa/h6eOFnFTFT1GqbR0WSa/5MywAcKjtQ9VBSaOtUtpY9touxKvHZoSuseZ4jb2UWZOI1H6S9KvGTgRR64Q51J10bHPSIDKxWK3oYC81u8YA22R2ZdJ5RXWUye3JKTjSC/H8evGid2z7MX9hTbHlDcNYcmGtC4xydZfLBp8C/xy6gDQY02IRn9ZZ9Xu1Xx6931Ro7S92OHutohxvKRHHw+/ihC0/nF5MtrGwzXMdls3lFxsGdPRuv7WVnlYOTFBOVtuZ0op3s/k6SwRUWsSZ63p7HGzdjmIQ6st6oYW163N9Ab55jiivTbJ3Dxfs5dNPdidRcsr5dFmGOrKeGNYeSaHP1K5Yb9+YSLYXQ0UsOkkAG6XLL+hhi8Tmhwhl0L5IwDdhwkiB0D0uCzrKytcWTJ954LLtnqN1+BEajvvV80B12YxVn0cdNLgbgGI9WEoXm/KL0EA/pZfYuWCcg==" class="hint"></div>
+
+</div>
+<div class="text segment" id="dj1v1u">
+<p><code></code></p>
+<p><span class="task-link s_k0ffek text" data-href="#e_k0ffek">Haben Sie das Ergebnis verstanden?</span></p>
+<p><span class="hilitenote e_k0ffek">Antwort: Ja.</span></p>
+<p><code></code></p>
+<p><code>pi++</code> ist zusätzlich ein "Ausdruck", der immer dort eingesetzt werden kann, wo auch <code>pi</code> erlaubt ist. z.B. so:&nbsp;</p>
+</div>
+<div class="code segment" id="3r0van" data-class="" data-class-name="Variable" data-segment-id="8">
+int pi=42;&nbsp;&nbsp;&nbsp;&nbsp; // Definition einiger Zahl-Variablen<br>int pj;<br><br>pj = pi++;&nbsp;&nbsp;//&nbsp;&nbsp;!! geben Sie nun pi und pj aus:<br><br><br>System.out.println(pi);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// -&gt; Ausgabe:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+</div>
+<div class="text segment" id="d04lgy">
+<p><span class="task-link s_jtukd8 action">Ergänzen Sie&nbsp;im Codeblock oben</span> eine Anweisung, um den Wert der Variablen pi auf die Konsole auszugeben und führen Sie den Codeblock dann aus.&nbsp;<span class="task-link s_9s0w1c action">Dokumentieren Sie in ihren Code</span> das Ergebnis.</p>
+<p><span class="task-link s_6u4y3d text" data-href="#e_6u4y3d"> Haben Sie das Ergebnis verstanden?</span></p>
+<p><span class="hilitenote e_6u4y3d">Antwort: Ja, weil von rechts nach links gearbeitet wird. Erst wird pi inkrementiert und danach pj zugewiesen.</span></p>
+<p>Da der Operator <code>++</code> <em>nach</em> dem Variablennamen <code>pi</code> geschrieben wird, deutet das darauf hin, dass der Wert von <code>pi</code> erst <strong>nach</strong> der Verwendung des ganzen Ausdrucks <code>pi++</code> incrementiert wird. <code>pi++</code> heißt daher auch "<strong>post-increment-operator</strong>". ("post" = lateinisch für "<em>danach</em>")</p>
+<p>Dementsprechend gibt es auch einen <strong>pre-increment-operator</strong>: <code>++pi</code>.</p>
+</div>
+<div class="code segment" id="xwkrcm" data-class="" data-class-name="Variable" data-segment-id="9">
+int pi=42;&nbsp;&nbsp;&nbsp;&nbsp; // Definition einiger Zahl-Variablen<br>int pj;<br><br>pj = ++pi;&nbsp;&nbsp;//&nbsp;&nbsp;!! geben Sie nun pi und pj aus<br><br>System.out.println(pi);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// -&gt; Ausgabe:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+</div>
+<div class="text segment" id="zr1nda">
+<p><span class="task-link s_rdqgyn action">Ergänzen Sie&nbsp;im Codeblock oben </span>eine Anweisung, um den Wert der Variablen pi auf die Konsole auszugeben und führen Sie den Codeblock dann aus.&nbsp;<span class="task-link s_0t70iq action">Dokumentieren Sie&nbsp;in ihren Code das Ergebnis</span>.&nbsp;</p>
+<p><span class="task-link s_8gzm2c text">Haben Sie das Ergebnis verstanden?</span></p>
+<h2 data-number="6.3">post/pre - decrement - Operator&nbsp;</h2>
+<p>Ergänzend gibt es natürlich auch einen <strong>post</strong>- bzw. <strong>pre-<em>decrement</em>-operator</strong>, der den Wert der Variable um 1 <em>erniedrigt</em>.</p>
+<p><span class="task-link s_pwmde3 block" data-href="#e_pwmde3">Probieren Sie diese Operatoren aus! </span></p>
+</div>
+<div class="code segment" id="12rsm8" data-class="" data-class-name="Variable" data-segment-id="16" data-solution-id="e_pwmde3">
+int einInt = 1;<br>einInt--;<br><br>System.out.println(einInt);<br>
+</div>
+<div class="text segment" id="zx9x90">
+<p>Z.B. in dem Sie den Code, den Sie oben für das Ausprobieren des post/pre-increment - Operators verwendet haben, in einen neuen Codeblock kopieren und statt der increments (<code>++</code>) nun decrements (<code>--</code>) berechen.</p>
+<h2 class="e_xyahj5" data-number="6.4">Vorsicht bei der Verwendung</h2>
+<p>Um keine Verwirrung und unerwartete Ergebnisse aufkommen zu lassen, sollte man sehr vorsichtig mit diesen "Auto-Increment-Operatoren" sein.</p>
+<p>Vollziehen Sie die Rechenschritte im folgenden Codeblock nach und <span class="task-link s_la26w9 action">tragen Sie Ihre Erwartung direkt in den Code ein</span>.&nbsp;&nbsp;</p>
+<p><span class="task-link s_lubkfv action">Nun ergänzen Sie den Code im Codeblock unten und führen ihn aus</span>: Fügen Sie Ausgabe-Anweisungen (s.o., <code>System.out.println()</code> ) in Ihren Code ein, um die Werte von i und j auf die Konsole auszugeben. <span class="task-link s_f4zjoi action">Dokumentieren Sie</span>&nbsp;in ihren Code das Ergebnis.&nbsp;</p>
+<p><span class="task-link s_p58m9p text">Haben Sie das Ergebnis jeweils verstanden?</span></p>
+</div>
+<div class="code segment" id="3od1ox" data-class="" data-class-name="Variable" data-segment-id="10">
+/** * Verzwickte Anwendung von pre/post in/decrement-Operatoren *&nbsp;&nbsp;<br>* Dokumentieren Sie die Ergebnisse im Code,&nbsp;&nbsp;<br>* um sie beim späteren Nachschlagen sofort zur Hand zu haben. */<br><br>int i = 55;&nbsp;&nbsp;// Variable definieren und sofort auf einen Anfangswert setzen<br>int j = 67;&nbsp;&nbsp;<br>i = j+34;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Welche Werte haben die Variablen&nbsp;&nbsp;i = 101 j = 67&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>///" vars = " + i + "&nbsp;&nbsp;&nbsp;&nbsp; " + j<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>System.out.println("1. i =" + i + "&nbsp;&nbsp;j =" + j ); <br><br>j = i + j + 12; // Erwartung: i = 101&nbsp;&nbsp;j = 180<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Ergebnis:&nbsp;&nbsp;i = 101&nbsp;&nbsp;j = 180<br>System.out.println("2. i =" + i + "&nbsp;&nbsp;j =" + j ); <br><br>i = j++ + 17;&nbsp;&nbsp; // Erwartung: i = 198&nbsp;&nbsp;j = 181 &lt;--!!!!!!!!!!!<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Ergebnis:&nbsp;&nbsp;i = 197&nbsp;&nbsp;j = 181<br>System.out.println("3. i =" + i + "&nbsp;&nbsp;j =" + j ); <br><br>j = --i;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Erwartung: i = 196&nbsp;&nbsp;j = 196<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Ergebnis:&nbsp;&nbsp;i = 196&nbsp;&nbsp;j = 196<br><br>System.out.println("4. i =" + i + "&nbsp;&nbsp;j =" + j ); <br><br>// Es folgt eine knifflige Kombination von Operationen.<br>// Sie sollte Ihnen vor allem zeigen, dass solche Operatoren<br>//&nbsp;&nbsp;&nbsp;&nbsp; mit Bedacht zu verwenden sind.<br>System.out.println("5. i =" +&nbsp;&nbsp; (++i) + "&nbsp;&nbsp;i =" + (i--) );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Erwartung: 197 = ?&nbsp;&nbsp;j = 196 &lt;--!!!!!!!!!!!<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Ergebnis:&nbsp;&nbsp;i = 197&nbsp;&nbsp;j = 197<br>
+</div>
+<div class="text segment" id="tbvzva">
+<h2 data-number="6.5">Modulo</h2>
+<p>Ein eher selten verwendeter, aber nützlicher, Operator ist der Modulo-Operator %, der den Rest einer ganzzahligen Division angibt. Beispiel: <code>8 % 3 ist 2</code></p>
+<p><span class="task-link s_lg0qdm action">Ergänzen Sie den unten stehenden Code, zu einem kleinen Programm</span>, das eine Fließkommazahl auf den nächsten Hunderter abrundet.</p>
+<p>Beispiele: Ein Originalwert von 123.34 ergibt abgerundet 100.00, ein originalwert von 4567.39 ergibt abgerundet 4500.00</p>
+</div>
+<div class="code segment" id="gtsaah" data-class="" data-class-name="Variable" data-segment-id="11">
+/** * Der folgende Code zeigt beispielhaft,&nbsp;&nbsp;<br>* wie Sie mit LVÜAC zum Ziel kommen<br>* Die Überlegungen sind bereits als Kommentar geschrieben <br>* Sie ergänzen nun zwischen die Kommentarzeilen&nbsp;&nbsp;<br>* Ihren Code für die ausführbare Lösung. */<br><br>// Definieren einer Variable für den Originalwert<br>// als Fliesskommazahl<br>double originalwert = 123.34;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>// Eine Variable für den abgerundeten Wert<br>double abgerundet;<br><br>// Eine Variable für die differenz zwischen orginalwert und abgerundetem Wert<br>double differenz;<br><br>// Die differenz wird nun berechnet als Rest einer Modulo-Berechnung <br>differenz = originalwert % 100;<br><br>// Jetzt berechnen wir den abgerundeten Wert mit Hilfe der differenz<br>abgerundet = originalwert - differenz;<br><br>// Zum Schluss geben wir den abgerundeten Wert auf die Konsole aus&nbsp;&nbsp;&nbsp;&nbsp;<br>System.out.println("abgerundet: " + abgerundet);
+</div>
+<div class="code segment" id="iex7nk" data-class="" data-class-name="Variable" data-segment-id="17">
+<br>
+</div>
+<div class="text segment" id="qbr9vt">
+<h1 data-number="7">Logisch</h1>
+<p>Nachdem wir nun viel mit Zahlen gearbeitet haben, wollen wir zum Schluss auch noch ein wenig mit logischen Variablen umgehen lernen.&nbsp;</p>
+<h2 data-number="7.1">Vergleichs-Operatoren</h2>
+<p>Definieren Sie drei neue Zahl-Variablen, weisen Sie ihnen Werte zu und vergleichen Sie sie auf vier verschiedene Arten miteinander.&nbsp;</p>
+<p>Die folgenden Operatoren können für den Vergleich genutzt werden:</p>
+<p><code>	&gt;&nbsp; &nbsp;&lt;&nbsp; &nbsp;&gt;=&nbsp; &lt;=&nbsp; ==&nbsp; !=</code></p>
+<p>Weisen Sie das Ergebnis jedes Vergleichs einer neuen logischen Variablen (Datentyp <code>boolean</code>) zu.&nbsp;</p>
+<p>z.B.: <code>boolean ergebnis = (a &lt; b);</code></p>
+<p>Geben Sie das Ergebnis jeweils auf die Konsole aus.</p>
+<p>&nbsp;</p>
+</div>
+<div class="code segment" id="celg4v" data-class="" data-class-name="Variable" data-segment-id="18">
+int a = 10;<br>int b = 15;<br><br>boolean kleinerAls = a &lt; b;<br>System.out.println("kleinerAls: " + kleinerAls);<br><br>boolean groesserAls = a &gt; b;<br>System.out.println("groesserAls: " + groesserAls);<br><br>boolean kleinerGleichAls = a &lt;= b;<br>System.out.println("kleinerGleichAls: " + kleinerGleichAls);<br><br>boolean groesserGleichAls = a &gt;= b;<br>System.out.println("groesserGleichAls: " + groesserGleichAls);<br><br>boolean gleich = a == b;<br>System.out.println("gleich: " + gleich);<br><br>boolean ungleich = a != b;<br>System.out.println("ungleich: " + ungleich);<br><br><br>
+</div>
+<div class="text segment" id="v83tuu">
+<p>&nbsp;</p>
+<p><span class="task-link s_n28ovo block">Lösen Sie diese Aufgaben in einem neuen Codeblock</span></p>
+<h2 class="e_ov4sq7" data-number="7.2">Logische Verknüpfungen</h2>
+<p>Dann verknüpfen Sie die logischen Variablen, mit den kennengelernten logischen Operationen UND, ODER, EX.ODER und NICHT. Nutzen Sie jede Verknüpfung einmal und geben Sie das Ergebnis auf die Konsole aus.&nbsp;</p>
+<p><span class="task-link s_42488t block">Lösen Sie diese Aufgaben in einem neuen Codeblock</span></p>
+<p>&nbsp;</p>
+</div>
+<div class="code segment" id="rwhfst" data-class="" data-class-name="Variable" data-segment-id="19">
+boolean und = true &amp;&amp; true;<br>System.out.println("und " + und);<br><br>boolean oder = true || false;<br>System.out.println("oder " + oder);<br><br>boolean nicht = !false;<br>System.out.println("nicht " + nicht);<br><br>boolean exOrder = true ^ false;<br>System.out.println("exOrder " + exOrder);<br>
+</div>
+<div class="text segment" id="2rgkia">
+<p>&nbsp;</p>
+<p>---------------------------------------------------------------------------------------------------</p>
+<p><strong>Viel Spaß und viel Erfolg&nbsp;</strong></p>
+<p>---------------------------------------------------------------------------------------------------</p>
+<p>PS: denken Sie daran, ganz oben Ihre nun neu erworbenen Skills abzuhaken.&nbsp;</p>
+<p>&nbsp;</p>
+<p>---------------------------------------------------------------------------------------------------</p>
+<h1 data-number="8">Optionale Aufgaben</h1>
+<p><em>"Optional" bedeutet, dass Sie diese Aufgaben bearbeiten können, wenn Sie weiter üben wollen.</em></p>
+<p><strong><em>Sie brauchen die Lösungen aber nicht für das Testat vorweisen.</em></strong></p>
+<h2 data-number="8.1">Polynomberechnung&nbsp;</h2>
+<p>Ein weiteres Beispiel für Rechenoperationen findet sich in der Berechnung von CRCs (Cyclic Redundany Checks). Diese werden z.B. in Protokollen für Netzwerk-Transfers oder für die Daten auf CDs berechnet, um feststellen zu können, ob Fehler in Daten vorgekommen sind. Für die Berechnung werden sogenannte „Generatorpolynome“ bestimmt.</p>
+<p>Schreiben Sie ein Programm, das den Wert eines Polynoms als Fließkommazahl berechnet&nbsp;</p>
+<p>&nbsp;(x3 bedeutet dabei die Potenzierung: x hoch 3).</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<code>genpoly = a*x12 + b*x11 + c*x3 +d*x2 + e</code></p>
+<p>1)&nbsp; &nbsp; &nbsp;Überlegen Sie zuerst, wie die Lösung aussieht.&nbsp;</p>
+<p>2)&nbsp; &nbsp; &nbsp;Beschreiben Sie dann Ihr Vorgehen im Code mit //-Kommentaren,&nbsp;</p>
+<p>3)&nbsp; &nbsp; &nbsp;bevor Sie danach den ausführenden Java-Code dazu schreiben !!</p>
+<p>ganz so, wie Sie es in der vorangegangenen Aufgabe getan haben.</p>
+<p>Definieren Sie für den Parameter x, die Koeffizienten a-e und das Ergebnis y jeweils eine Variable mit einem geeigneten Datentyp.&nbsp;</p>
+<p>Setzen Sie die Variablen auf verschiedene Werte, berechnen Sie das Polynom an dieser Stelle und geben Sie das Ergebnis auf die Konsole aus.</p>
+<p>- Verwenden Sie die vier Grundrechenarten mit den Operationen + - * und /</p>
+<p>- Verwenden Sie Klammern um die Reihenfolge der Berechnung eindeutig und lesbar zu machen</p>
+<p><em>Hinweis: der Operator ^ existiert zwar für Zahlen, er berechnet allerdings keine Potenzen</em><em>. Wir hatten ihn an einer anderen Stelle kennengelernt.</em></p>
+<h2 data-number="8.2">Optimierung</h2>
+<p>Versuchen Sie, nachdem Sie eine einfache Lösung der Aufgabe hinbekommen haben, die Lösung auf geschicktere Art und Weise zu berechnen.&nbsp; D.h. versuchen Sie, mit so wenig Multiplikationen wie möglich auszukommen.&nbsp;</p>
+<p>Lösen Sie diese Aufgaben in einem neuen Codeblock. Schreiben Sie dabei immer als Kommentar auf, WAS sie im nächsten Schritt codieren wollen, dann schreiben Sie als Code hin, WIE sie es tun.&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

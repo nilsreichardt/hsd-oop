@@ -1,0 +1,270 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="3" /> 
+<title>_3_Prozeduren_optional</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="3i91ab">
+<p><strong><em>Optional heißt wie immer: diese Aufgabe ist nicht notwendig, um das Testat zu bekommen.</em></strong></p>
+<p><em>Sie können diese Aufgaben aber zur weiteren Übung oder Prüfungsvorbereitung bearbeiten.</em></p>
+<p><em>-----------------------------------------------------------------------------------</em></p>
+<h1 class="e_tj8ame" data-number="3">Prozeduren - weiter Übungsaufgaben</h1>
+<p>Bisher haben wir alles, was wir als Code geschrieben haben, sofort auch direkt ausgeführt - dank der Unterstützung von 5Code.</p>
+<p>Wenn wir nun Code in Prozeduren packen, müssen wir allgemein unterscheiden zwischen:</p>
+<ul>
+<li>der <strong>Definition </strong>der Prozedur - es wird <em>einmal </em><span class="underline">beschrieben</span>, was in der Prozedur passieren soll
+<ul>
+<li>nur dadurch, dass eine Prozedur definiert wird, wird ihr Code noch nicht ausgeführt</li>
+</ul>
+</li>
+<li>dem <strong>Aufruf </strong>der Prozedur - es kann <em>beliebig oft</em> bestimmt werden, <span class="underline">dass es passieren soll</span>
+<ul>
+<li>erst durch den expliziten Aufruf einer Prozedur wird ihr Code auch ausgeführt.</li>
+</ul>
+</li>
+</ul>
+<p>Diese müssen an unterschiedlichen Stellen im Code positioniert werden, wie Sie bereits in der <a class="u_adf7mk s_h8z6gw" href="_1_Einleitung.flow.html#e_h8z6gw">ersten Aufgabe</a>&nbsp;gelernt haben.</p>
+<p><span class="task-link s_gwl22o action">Beachten Sie nun</span> zuerst die Richtlinien für</p>
+<ul>
+<li>einen guten Namen</li>
+<li>eine Beschreibung
+<ul>
+<li>mit javadoc</li>
+<li>mit Zeilenkommentaren</li>
+</ul>
+</li>
+</ul>
+<p>die Sie im Dokument mit dem hierfür erweiterten <a class="u_wmoqds s_k8hiyf" href="_4_Coding_Style.flow.html#e_k8hiyf">Coding Style</a> finden.</p>
+<p>In den folgenden Abschnitten erstellen wir nun schrittweise Prozeduren, um ein Einmal-Eins auf der Konsole darzustellen.</p>
+<p>&nbsp;</p>
+<h2 class="e_woybec" data-number="3.1">Einmal-Eins als Prozedur</h2>
+<p>Das Einmal-Eins von 1 bis n soll wieder als 2D-Tabelle auf die Konsole ausgegeben werden. Den Code für das Berechnen und das Darstellen, den wir bereits in Aufgabe 2.4 des vorigen Praktikums (04) als direkt ausführbaren Code geschrieben hatten, packen wir nun in eine Prozedur.</p>
+</div>
+<div class="hint segment" id="p0d3o1" data-title="Tipp: Den Code für die Berechnung und die Ausgabe können Sie natürlich aus Ihrer vorigen Lösung kopieren und für diese Aufgabe übernehmen.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Tipp: Den Code für die Berechnung und die Ausgabe können Sie natürlich aus Ihrer vorigen Lösung kopieren und für diese Aufgabe übernehmen.</span></div></div>
+
+</div>
+<div class="text segment" id="l9qzqk">
+<p>&nbsp;</p>
+<h3 class="e_es4hff" data-number="3.1.1">Einmal-Eins - Definition</h3>
+<p>Definieren Sie eine Prozedur, die das Einmal-Eins bis n auf die Konsole schreibt, dabei sollen in dieser Prozedur nur (!) die Produkte dargestellt werden, die Überschrift bauen wir später zusammen.</p>
+<ul>
+<li>n soll dabei ein Parameter der Prozedur sein
+<ul>
+<li>geben Sie ihm einen sinnvolleren Namen</li>
+</ul>
+</li>
+<li>Geben Sie der Prozedur einen guten Namen (siehe Coding Style)</li>
+<li>Beschreiben Sie die Prozedur (so, wie dort ebenfalls angegeben)
+<ul>
+<li>mit javadoc</li>
+<li>mit Zeilenkommentaren</li>
+</ul>
+</li>
+</ul>
+<p>Definieren Sie die Prozedur zur <span class="task-link s_gtewl9 def" data-href="Aufgabe_05.java#e_gtewl9">Ausgabe des Einmal-Eins</span> in der bereits kennengelernten Java-Datei <code>Aufgabe.java</code>.</p>
+<p>&nbsp;</p>
+<h3 class="e_ad5tv9" data-number="3.1.2">Einmal-Eins - Aufruf</h3>
+<p>Testen Sie nun die oben definierte Prozedur ein paar Mal - durch Aufrufe mit jeweils anderen Parametern.</p>
+<p><span class="task-link s_hbi3aj main">Testen</span> Sie die Prozedur in <code>public static </code><code>void</code><code> main</code>.</p>
+<p>&nbsp;</p>
+<h2 class="e_xobxhj" data-number="3.2">Überschrift für Einmal-Eins als Prozedur</h2>
+<p>Nun soll die Überschrift für das oben erzeugte Einmal-Eins erzeugt werden.</p>
+<p>Die kann z.B. so aussehen:</p>
+<p style="padding-left: 60px;"><code>*&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7</code></p>
+<p style="padding-left: 60px;"><code>--------------------------------</code></p>
+<p>&nbsp;</p>
+<h3 class="e_du46m2" data-number="3.2.1">Überschrift - Definition</h3>
+<p>Definieren Sie eine Prozedur, die die Überschrift für das Einmal-Eins bis N auf die Konsole schreibt.</p>
+<ul>
+<li>N soll dabei ein Parameter der Prozedur sein</li>
+<li>Geben Sie der Prozedur einen guten Namen (s.o.)</li>
+<li>Beschreiben Sie die Prozedur so, wie oben angegeben
+<ul>
+<li>mit javadoc</li>
+<li>mit Zeilenkommentaren</li>
+</ul>
+</li>
+</ul>
+<p>Definieren Sie die Prozedur für die <span class="task-link s_xymmge def" data-href="Aufgabe_05.java#e_xymmge">Überschrift</span> in der bereits kennengelernten Java-Datei <code>Aufgabe.java</code>.</p>
+<p>&nbsp;</p>
+<h3 class="e_1em2qg" data-number="3.2.2">Überschrift - Aufruf</h3>
+<p><span class="task-link s_bx33f8 action">Testen Sie nun</span> die oben definierte Prozedur ein paar Mal - durch Aufrufe mit jeweils anderen Parametern.</p>
+<p><span class="task-link s_vgcpkg main">Testen</span> Sie die Prozedur in <code>public static void main</code>.</p>
+<p>&nbsp;</p>
+<h2 class="e_acnlhe" data-number="3.3">Einmal-Eins mit Überschrift</h2>
+<p>Nun bauen wir eine weitere Prozedur zusammen, die</p>
+<ul>
+<li>die Überschrift ausgibt</li>
+<li>das Einmal-Eins bis n ausgibt.</li>
+<li>Beschreiben Sie die Prozedur so, wie oben angegeben
+<ul>
+<li>mit javadoc</li>
+<li>mit Zeilenkommentaren</li>
+</ul>
+</li>
+</ul>
+<p>Diese Prozedur implementieren Sie jetzt so, dass Sie die beiden oben geschriebenen Prozeduren aufrufen.</p>
+<p>Definieren Sie die Prozedur für das <span class="task-link s_2fir56 def">Einmal-Eins mit Überschrift</span>, wie bereits oben.</p>
+<p><span class="task-link s_uomy5t main">Testen</span> Sie die Prozedur in <code>main</code>.</p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

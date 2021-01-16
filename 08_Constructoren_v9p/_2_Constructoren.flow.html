@@ -1,0 +1,244 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="2" /> 
+<title>_2_Constructoren</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="09uidd">
+<h1 class="e_846bhm" data-number="2">Karten erzeugen</h1>
+<p>Nun sollen <code>Karte</code>n-Objekte auch unter kontrollierten Bedingungen <em>erzeugt </em>werden können.&nbsp;</p>
+<p>Dazu definieren Sie nun einige Constructoren. Mit ihnen können <code>Karte</code>n-Objekte erzeugt werden, mit und ohne explizite Angabe von initialen Daten. Dabei wird auch die neu hinzugekommenen Eigenschaft, <code>Karte</code>n auch grafisch darstellen zu können, einbezogen.</p>
+<h2 class="e_edascs" data-number="2.1">Generierter Default-Constructor</h2>
+<p>Wenn in einer Klasse kein Constructor definiert ist, wird automatisch ein Default-Constructor vom Compiler zur Verfügung gestellt, der im Code benutzt werden kann ("Armenrecht").</p>
+<p>Bisher haben Sie noch keinen Constructor in der Klasse Karte definiert. Daher überprüfen Sie als Erstes dieses "Armenrecht".</p>
+</div>
+<div class="hint segment" id="gqym6f" data-title="Was war nochmal der Default-Constructor?">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Was war nochmal der Default-Constructor?</span></div></div>
+<div data-uuid="rngj2b" data-hint="U2FsdGVkX1+i1tHhL5EHIORsNKaqfpD3MKnDKUYp5pzs+oyWDzlwFAPb1N+vxuGKMENQLPPplNR3POPz16vqewi3lHr4hcL9vhq8tWhXvFlrtNegld66tPCqL/ow4IFAodAYH3OsyR3JiC+I9ElpdOtcOYInwkIwVr1d1WGDI/XyEX3bCqEdzENf6FPCQruRFUQZrRCRR+1DvHdLlnXof7R0VHpJzDb8RdipF/rRsjIQXYu231Ie+cYLKGjiMmwCITkmeqbRpaBDDBYiv1ed1jD0zqp2RxTg0J9dOcomWb5TAgAvkTXYfIUQGK+9i1dPQKHghhCxGI5p0R299VnPPtAaGU4pn9oYFh+JpCBVexXF5BNHWGqDMENTi89GGnz9t/taouij4A3aORiZkiwTUB4NTERM/JT0ci8v6oCUIazgpmG2kgdQGg82QslygmIM7WlAp6dvCQ0JTjJbFg30BezkRB1j1B4B4Y+kbg4ss39VdGsrmb3wM7OPzZ7TC5B0A96gFLS/VuvAyhuS6boXOsSKws3697TbPBVRpAY8UQgISCxBsjOthWHxCfQL+3rjZ71Kb5NOuI0gUrnlmeq5TcyZ7zm97PrycAMuLmuuL4s=" class="hint"></div>
+
+</div>
+<div class="text segment" id="zww1aw">
+<p><span class="task-link s_20v0nc main">Testen Sie</span>, dass Sie ein Objekt der Klasse <code>Karte </code>unter Angabe des Default-Constructors erzeugen können.</p>
+<p><span class="task-link s_7afk31 action">Dokumentieren Sie</span>&nbsp;im Testcode, dass das zu diesem Zeitpunkt funktioniert hat.&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="e_nijp5c" data-number="2.2">Constructor mit Parametern&nbsp;</h2>
+<h3 class="e_818vvg" data-number="2.2.1">Constructor mit Parametern definieren</h3>
+<p>Eine Karte ist sinnvollerweise nur zu verwenden, wenn folgende Daten sinnvolle Werte haben:</p>
+<ul>
+<li>Position (Zeile, Spalte)</li>
+<li>Aussehen (Text, Farbe)</li>
+</ul>
+<p><span class="task-link s_pseyae def">Definieren Sie</span> daher nun als erstes einen Constructor, bei dem alle diese Daten als Parameter übergeben werden - inclusive der Javadoc-Beschreibung.</p>
+</div>
+<div class="hint segment" id="ufb3js" data-title="Beim Erzeugen des Karten-Objekts muss nun auch ein Text-Objekt erzeugt und von der entsprechenden IV referenziert werden.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Beim Erzeugen des Karten-Objekts muss nun auch ein Text-Objekt erzeugt und von der entsprechenden IV referenziert werden.</span></div></div>
+<div data-uuid="vbsgaj" data-hint="U2FsdGVkX1/sH2CCUwQQ8UpPOnuUXQnAD+htcuIy41RzVUe4sPdpQSMcwM2U0AVIRF1BaE+QTG7VvH4wav+txq+WEuPZKOcUBg91JBeulscICwDxsve2gF8P634kLGkKpXl88CyQzxvwPTEEtPl+FhK8PCgSXzlfSW2oZz/hpgEp2rY126hXXxPSEqh4DxCn7N1Qm7FpYDv8wFgTKuPAiGiteFuKVJqp9wq5XciVRcyXWT3xCabrKVZfR71J4uOHo9PHPXHncjXbzsY+AJF5ZzjrCC7m9Ft+9txoMKEu0cIlmKOBMv7H2n47uazoXzuOYHOvo63+XgPhy/KF4xrIvBh6P3oIxmkMSs4K+aL5acgsbg33G/0G0laWMZVAkggcAFuEZKeEJ81Gx9rlQa53/U2TzyfLuNpljnlI80vHN5FkLuQnQkynBjqsBN/UDR0QgRIDgG9xxKW5U7pXen44B/mOmNaNHx2C5FNJqm/OuXVn5MMhVpJmZNSnGNuj1etVUzOW9Uq3bvJm+PSJMYlvam8Au0o4FeS6ZxZH2h2RJp1lkyUmnjCBEkT7f2qDqC3keU1cP3/JVlJoZgcHtcypwS51HI8MMnhQns3Ol1cazIyb4Qt/Q2NSZuTBGUhwU9fhFH1E679zpHh5E1BNFJ5HDZNWQxGUR6z8cnJ1VOedNO8QzctPRkc8hfxLW8Qfo6onU3Zm44fZ0yWQONEQpqtRxhwcuTF8AUxMUKibHX089WUgvnob9+tDupL4/IKAcV3XOBXvRtB0zVwGi/sM9HeGyO3rrY9yj6/AsFgwvFdeV2luiJRlPaw0WWR10Zm20Lugk2V9M4gWyFJFUnfZd8zQ5L2448MhypcVL3LQ6h68vH+WTRCUMMPqaFgfzjfcX9EB5LINjxonoIlhH0vLPZYL8+pfdGnpyBcM9jWv1SiB7Y97ccVf3mX+x4zhp3c0ILyLkB5rSp0/eq/dLOHoo0dJYUkL4FqfKF2HAuZ7Fb8GQgfqvJal1sAEFSa5GoBZ2x+CEeTDr/ouQv1YbWlbHFkF/le0uhpRPsOGcH3Yxdrc6NrUuZk1THuaB+I/Ywjl8y3enfnFPqXPHoU6dZB0ITSJEWPCwgyfigZksG1WhINQo2QqT+ko8y+EsC+U4HG6mLbIRNHlDjZ+a05uWGIfpXHVGD2B4U6aMelYkbIKqcQyp+cscKyJ84rv3UpLt9zUDtUULKQHcLB2e8ElOHj/PAUsSDzQABB08lI1Iaz4+95CPyzQc7o3UZ4u7OFpLjswszn+GMjYnOUbCuhSb0qMcSKji8RHjGlbX/h4nQK7l6wIf6DkOQHqZ7BXBMhiVJzQzJ32bPnPlGFUA4tf5iATB+yj2QM1DBZQOthxz48HJtNOPUnHPkyPh8S86ceNi2kkn7ymmV4CWfAzf4Ti/K4akjoPv9Yz9AdBL2aTcj+zovAtD3oH2TsvgdBihw7eyVEG1C3IVwc2F+o3yACHXXJlXHUHXMVyhXvtzrGtNTOpi03+PGSkYafll6CGQeA7Coc4BhMcuAIgAuylLXjQUn4GDHo1oePUbSkfp9okKBOAuA9rwzZFENaF8s1ek7jQZKw1r/wLNf1FJ8FX3HUc5rkkoyUpR5MY3peFGkxuzkQUEsBHONL9Xo3cEmLPIJAML4k+tIlPAm+bcnbbfr8CVTjWLtlMCL/o9oNvZXqeLyq8/yaa1RDG5kiQNJYEhswqfHOgJI2Pv/XEzCib1xYBncRvp6+K5J1B/3TEGj/7V80fUzEHI3YeTP6hTww3FlDwuAwV13U0F55V674Lp7kfvNwF8xFCWHf5pV7nMbf5daIWDaCgKmcim7OeWyzuTlE0+T58XRQBVVB1gCJlWdp6QmpfTYF70Hgk0CIuKGkcUmG3Qlo5GFJDqgLcUetHSu7z6+it585/PEAFkKCHPjnpxHcD2oxk/A==" class="hint"></div>
+
+</div>
+<div class="text segment" id="1y9p5o">
+<p>Und auch hier gilt:</p>
+</div>
+<div class="hint segment" id="49w2cy" data-title="Denken Sie daran, dass Sie auch im Constructor nicht einfach Werte in die IV schreiben.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Denken Sie daran, dass Sie auch im Constructor nicht einfach Werte in die IV schreiben.</span></div></div>
+<div data-uuid="mp3e11" data-hint="U2FsdGVkX1+MCOBfU5jmoJHR8LTHgFtOYW5bXOp4z0CdhlInEJaGBd7ufSGad6iEveeGEEMC20KkE6hlYOgt+Bw4+C7PirrjItveTpuqK2VXhHQkM8PudlqDjHg15UtipzssI8DJGpENbt6E8V7lWZyfEfo/8DObDQm5hSY6Jp7RXxyXsI+LhVKqYMtIyAFcFwkFiaBhinzH62005NVIbI4qvKSZWxoEs2NWykEnjV39gAAnq5TdTGJA9U5OIFls5SnmOVmSJ9Wp7nrFAA7Gp8zgCFc6PLLCh1o+UBPTxBcR9pb/8GkDGTKlbXvBkO5+fjycnW2khRFpUyOMWyStUqCupL/UH7var2gqXYu6OMAbFPvbdQTP/Hm75xoLbWgumXsXpPem6mrO8gzIbQibdpjZRxyTqUxb+QN+9bwKYqxhqzDoy8ze8/ujnkSQ7wLAt0zo32ZE1kqUOO20rhZRT/3NcCi16dJ6dpKhFMo77ggwXBFekEBFNknLUpDL4M3JB9kOY2IRVzd59cioAs5RjvvrPDgp7xNbxSl9zqvyWmrpoMTIJxgvaEALJNi9Qu/T1NtMwMxt1uWJvKn53AvhENuVUO4gwTmi/5Fbe5yjVb+m5L/fEQISPqbwWMCa4Cg0ztTQY+zZzUoMdMB7jo5rzWaK/b8e51/89BUkINWe5hxNoU1MtvVQe8RRPLnVRPEJwFaCYjQwi6RoKqP342m9S00+G7lFvDvbCDEKf/1opgQ=" class="hint"></div>
+
+</div>
+<div class="text segment" id="dl9hgp">
+<h3 class="e_h0o3cs" data-number="2.2.2">Constructor verwenden</h3>
+<p><strong><em>Wichtig: </em></strong>Da Sie nun zum ersten Mal etwas auf der Grafik-Konsole darstellen, müssen Sie vor dem Aufruf der Constructoren <span class="task-link s_vkzan2 main">die Grafik-Konsole in <code>main()</code> initialisieren</span>. Wie das geht, steht in der <a class="u_kz1fmz s_6kdjaa" href="_3_Grafik_Konsole.flow.html#e_6kdjaa">Beschreibung</a>.</p>
+<p>Nun <span class="task-link s_fynron main">erzeugen Sie zum Test </span>drei Karten-Objekte an verschiedenen Positionen mit verschiedenem Aussehen und geben Sie dessen Eigenschaften auf die Konsole aus. Außerdem sollten diese Karten-Objekte nun auf der Grafik-Konsole zu sehen sein.</p>
+</div>
+<div class="hint segment" id="z216l3" data-title="Wenn Sie keine oder nicht alle Text-Objekte auf der Grafik-Konsole sehen">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wenn Sie keine oder nicht alle Text-Objekte auf der Grafik-Konsole sehen</span></div></div>
+<div data-uuid="4uwgum" data-hint="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" class="hint"></div>
+
+</div>
+<div class="text segment" id="dq6c9y">
+<p>&nbsp;</p>
+<h3 class="e_zpo9cf" data-number="2.2.3">Kein generierter Default-Constructor&nbsp;</h3>
+<p>Da Sie nun selber einen eigenen Constructor definiert haben, wird Ihnen vom Compiler keiner mehr automatisch generiert.</p>
+<p><span class="task-link s_knykow main">Testen Sie</span> nun, dass Sie <strong>kein </strong>Objekt der Klasse <code>Karte </code>unter Angabe des Default-Constructors erzeugen können.</p>
+<p><span class="task-link s_uhjsmb action">Dokumentieren Sie </span>am Testcode, dass das zu diesem Zeitpunkt <em>nicht mehr</em> funktioniert.</p>
+<p>&nbsp;</p>
+<h2 class="e_nijp5c" data-number="2.3">Standard-Karte - Default-Constructor</h2>
+<h3 class="e_j6ix5j" data-number="2.3.1">Default-Constructor definieren</h3>
+<p>Definieren Sie den Default-Constructor der Klasse Karte.&nbsp;</p>
+<p>Das ist nun sehr einfach, da Sie nun den oben bereits definierten Constructor aufrufen können. Es sollen folgende Standard-Werte verwendet werden:</p>
+<ul>
+<li>Position = 0,0</li>
+<li>Text = "Default", Farbe = "schwarz"</li>
+</ul>
+</div>
+<div class="hint segment" id="ic5s1y" data-title="Beachten Sie die bekannten Randbedingungen für den Aufruf eines anderen Constructors der gleichen Klasse ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Beachten Sie die bekannten Randbedingungen für den Aufruf eines anderen Constructors der gleichen Klasse </span></div></div>
+<div data-uuid="j3tuwj" data-hint="U2FsdGVkX18ioZ0E73hYFzV7NumdnMqKbmUSIWdp5yQTriWfEuWHLL6w8cY0uj/Rchzi9qtc6LRLxs/QLAT0Diu2JSdFu7Wl2VSd+HrPJ8CmVrhVBnqeZsqZHiYLWkU8tkLhHPUIzXiVOfjVpkJ1EFReoDKBO35rh0UVyVOjCrksOVjuGa0BrBCuX5R2buN6OElYQr7eJXYpBiRp6QphDUCT9vn1wVZIeJe3BnCuK8tBh9Jn3KpQkkakA/Fb7rnzSZXFKyI6sGZVtwsJZiNrWi+8+fbjxMOzRqS78ezNh613I9Akr0icQtfQuymEG1h501W5IYs/cDmsMqV7cydCtc3WLpzyThKrz8tOyYWZtrplYoV224GZXGrOaoIHzzQpGpDmWjcmg4HCJlgTL9ZKwtxe7iPu1jobd6/tvfc4htUAE5FA6dywBdWNWbrooTTTnn7PJzkD6Q8ZVUYvRGRAOtglesa0GDoBLyQo1YQV1leiBngbpviG9f5/H5VKtSoE" class="hint"></div>
+<div data-uuid="u4byy0" data-hint="U2FsdGVkX1+k+mLyCcmqLH7E5xUoNSA5UgKS7p0z2A7grZfc2ss9PnZnBrLJIi34De+AJKihOZjYGJ9qSNMEbP3VPYUd6ec1DDBYH0QDo9slwWGuDHYqhIVnGljqKNwh6hckn3oOovl9BW/eJ5Cp4VQrq2RtouGDA1wRuzfLiQThJzitmMe6jlwT4F/mpxdsDdj0FTPmrh4XkgOrShcCvq4dtc1SpK+OFvpQe2PnCnKh0365Uhk8rlNMxLoPDexPziwcW4syW9PsvlLZKq62foD+OTb1ndEaERnxfnSAgrn1tEs4SMxTMotTNkJymOOX8O6jnxbofZoU87oHAPDWtn42Y6rBA03v9u68eYUUzYiU2i/mx7niw9k/D/pukLEo0r21Rwu9BX3RDxwBo7uRbmMYwdGdl1d0k++Ff+ckLYOmXkJ6QoHOTaTFwQ4TnPJKDIUwv6BGfRdhh3bP5NicAMsUqqp8q0DAjAq/FQhj64FZ9KsqrTu6v4GLZJaqRjIxpUmCgmUrWTRtszXAWhK1d9f3+xq+nVeJh7aDPjwKSEjnTH/nELmdHsJnHtykzYeLG8TCYdhwZflTpEWGdojfzSvtO5PtTykWaZfSgi24tRPhgBtIjzkAcXFRRro4pAeSc7KgxbAeL0Z+PrCPYbg17qjy1MeorYqJAzSC4zt8IoMk9s7Feld5PKT+eSRwpQy0cuK9YeixFr9vblsUsQoUBCjmwuEG3/4Ogct8P7usASm9MOXL0OxgRBjquDrF3SWfpUxJdNH+uB1TfE6JuT42W5Vvy5XFnOdhQNLBgR/1AyQ=" class="hint"></div>
+
+</div>
+<div class="text segment" id="pqgq9e">
+<p><span class="task-link s_pdxu6k def">Definieren Sie</span> nun entsprechend den Default-Constructor- inclusive der Javadoc-Beschreibung.</p>
+<p>&nbsp;</p>
+<h3 class="e_bxzjz7" data-number="2.3.2">Karten-Objekt mit Constructor erzeugen</h3>
+<p>Nun <span class="task-link s_v1ukr0 main">erzeugen Sie zum Test</span> ein Karten-Objekt mit dem Default-Constructor und geben Sie dessen Eigenschaften auf die Konsole aus. Außerdem sollte dieses Karten-Objekt nun auf der Grafik-Konsole zu sehen sein.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

@@ -1,0 +1,412 @@
+{
+	"name": "::dir",
+	"id": "tejne4",
+	"user": "d719bae1994dff7bf719e6b420bdf49a",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 2,
+	"zoom": 1.2,
+	"features": [
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": [
+				"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"
+			]
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "OO.Instanzvariable.Definieren",
+					"uuid": "sfkuwe",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Instanzvariable.Verwenden",
+					"uuid": "ickm30",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Instanzmethode.Definieren",
+					"uuid": "w36omm",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Instanzmethode.Aufrufen",
+					"uuid": "pvkiyc",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Javadoc.Schreiben",
+					"uuid": "284w5i",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Javadoc.Erzeugen",
+					"uuid": "pa3673",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Javadoc.Lesen",
+					"uuid": "wbotm3",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				}
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/_1_Grafische_Darstellung.flow.html"
+				},
+				{
+					"type": "document",
+					"path": "::dir/_2_Constructoren.flow.html"
+				},
+				{
+					"type": "document",
+					"path": "::dir/_3_Grafik_Konsole.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "otax84",
+						"cursor": {
+							"line": 2,
+							"ch": 2
+						}
+					}
+				}
+			],
+			"type": 1,
+			"active": false
+		},
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/Karte.java",
+					"active": true,
+					"cursor": {
+						"line": 56,
+						"ch": 38
+					}
+				}
+			],
+			"type": 1,
+			"active": true
+		},
+		{
+			"type": 2
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				13.048584437347614,
+				86.95141556265239
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				69.8853420552113,
+				30.114657944788704
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				true
+			],
+			"dimension": [
+				23.570096054970605,
+				76.4299039450294
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "Karte",
+			"path": "::dir/Karte.java",
+			"id": "5rxdho",
+			"isGenerated": false
+		},
+		{
+			"name": "_1_Grafische_Darstellung",
+			"path": "::dir/_generated/exec/_1_Grafische_Darstellung.java",
+			"id": "dnu3vs",
+			"isGenerated": true
+		},
+		{
+			"name": "_2_Constructoren",
+			"path": "::dir/_generated/exec/_2_Constructoren.java",
+			"id": "zs2904",
+			"isGenerated": true
+		},
+		{
+			"name": "_3_Grafik_Konsole",
+			"path": "::dir/_generated/exec/_3_Grafik_Konsole.java",
+			"id": "sn5igh",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "_1_Grafische_Darstellung",
+			"path": "::dir/_1_Grafische_Darstellung.flow.html",
+			"id": "3qotjf"
+		},
+		{
+			"name": "_3_Grafik_Konsole",
+			"path": "::dir/_3_Grafik_Konsole.flow.html",
+			"id": "b6auz3"
+		},
+		{
+			"name": "_2_Constructoren",
+			"path": "::dir/_2_Constructoren.flow.html",
+			"id": "6s4k28"
+		}
+	],
+	"linkMap": [
+		{
+			"id": "b8ki7a",
+			"start": "3qotjf",
+			"end": "b6auz3",
+			"uniId": "ifc26y"
+		},
+		{
+			"id": "b8ki7a",
+			"start": "3qotjf",
+			"end": "b6auz3",
+			"uniId": "1o6iof"
+		},
+		{
+			"id": "gy9cwf",
+			"start": "3qotjf",
+			"end": "b6auz3",
+			"uniId": "dllxaf"
+		},
+		{
+			"id": "4g78mm",
+			"start": "3qotjf",
+			"end": "b6auz3",
+			"uniId": "uisq2l"
+		},
+		{
+			"id": "exoz8p",
+			"start": "3qotjf",
+			"end": "b6auz3",
+			"uniId": "0o1g2d"
+		},
+		{
+			"id": "b8ki7a",
+			"start": "3qotjf",
+			"end": "b6auz3",
+			"uniId": "smsrrt"
+		},
+		{
+			"id": "er56yg",
+			"start": "3qotjf",
+			"end": "b6auz3",
+			"uniId": "dsftwc"
+		},
+		{
+			"id": "gy9cwf",
+			"start": "3qotjf",
+			"end": "b6auz3",
+			"uniId": "vwbw7d"
+		}
+	],
+	"activities": "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",
+	"lastSaveDate": "2021-01-12T10:07:08.640Z",
+	"info": "bis 12./13. 01."
+}

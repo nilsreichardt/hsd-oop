@@ -1,0 +1,340 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="1" /> 
+<title>_1_Grafische_Darstellung</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="bxssg7">
+<h1 class="e_6t97co" data-number="1">5Crush nun auch grafisch darstellen</h1>
+<p>Das Spiel 5Crush soll natürlich auch grafisch dargestellt werden.&nbsp;</p>
+<p>Dafür</p>
+<ul>
+<li>entwickeln Sie die Klasse Karte Schritt für Schritt <em>weiter </em>und</li>
+<li>nutzen dabei das neue Feature Grafik-Konsole.</li>
+</ul>
+<p>Dabei üben Sie den Umgang mit Instanz-Variablen und Instanz-Methoden.</p>
+<h2 class="e_596fl2" data-number="1.1">Klasse Karte weiterentwickeln</h2>
+<p>In dieser und den folgenden Aufgaben entwickeln Sie die bereits geschriebenen Klasse(n) weiter:</p>
+<p>- Sie verwenden dabei die bisher erstellten Instanz-Variablen und Instanz-Methoden weiter<em>. </em><strong>Diese sollten also funktionieren</strong>.</p>
+<p>- In dieser und den kommenden Aufgaben werden Sie das bereits erstellte <strong>Java-File ergänzen </strong>und ggf. bereits vorhandene Methoden anpassen und erweitern<em>.</em>&nbsp;</p>
+<ul>
+<li><span class="task-link s_un3bbk action">Dazu kopieren Sie</span> daher das File <code>Karte.java</code>, das Sie für die letzte Aufgabe erstellt haben und fügen Sie es in den Ordner dieses Projekts ein. Das machen Sie in Ihrem Betriebssystem, d.h. im Windows Explor oder im Finder.&nbsp;
+<ul>
+<li>Benennen Sie es nicht um! Das Java-File muss so heißen, wie die Klasse - und die heißt weiterhin <code>Karte</code>.</li>
+</ul>
+</li>
+<li>Um ab jetzt mit diesem File in 5Code arbeiten zu können, <span class="task-link s_mjoumy action">schließen Sie dieses Projekt und öffnen Sie es wieder</span>.
+<ul>
+<li>So ist sichergestellt, dass alle Daten und Verweise im Projekt konsistent sind.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="hint segment" id="zjozyx" data-title="Inzwischen ist der Umfang des Codes in Karte.java schon recht ansehnlich.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Inzwischen ist der Umfang des Codes in Karte.java schon recht ansehnlich.</span></div></div>
+<div data-uuid="2zi7a3" data-hint="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" class="hint"></div>
+
+</div>
+<div class="text segment" id="vdc1j4">
+<p>&nbsp;</p>
+<h2 class="e_qr0zt4" data-number="1.2">Grafik-Konsole</h2>
+<p>Auf der Grafik-Konsole können Sie einfache grafische Elemente zeichnen, z.B. mit der Klasse <strong><code>Text</code></strong>, die in 5Code verfügbar ist. Wie man sie verwendet, wird <a class="u_1o6iof s_b8ki7a" href="_2_Grafik_Konsole.flow.html#e_b8ki7a">in einem eigenen Dokument beschrieben</a>.&nbsp;</p>
+</div>
+<div class="hint segment" id="87yjus" data-title="Das Feature Grafik-Konsole wurde bereits beim Öffnen dieses Projekts freigeschaltet. ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Das Feature Grafik-Konsole wurde bereits beim Öffnen dieses Projekts freigeschaltet.&nbsp;</span></div></div>
+<div data-uuid="lgdjr4" data-hint="U2FsdGVkX18jUAEHFY3XKq9bbLQyf5N3hMlnpBScCVAQs8niPM/ayRHNeMKgxG+G+BIjjxAeXL/NArvKYwBOF0I6UI/9P2P87UW6EOw/I57Ce8qx6H/PGtBsrFQ+/4xFDHHZ1NMKOqLVocdkmrG7vHzD2VaEZXMJJ1+5a1FKZdk75ApTTS6+6lHPbWj0oKnX/64zrcVVQMwNk9fdjXvj91zTZvgQDgS2xdM54GTWuUsgKyXIYC77fZ47iSbPwydZa9p1BFP0HZF20dTH9dspIBrLD7XKkFKE7lf156koEloZEdanZt9k29UJOWqc+Jha/cKItCItWlX5U/B+DAQDiTCWbcLNBUGFQx/uohUe+g0q+ki4J7BDwn5nGtAxuWgN34QzwH7ZGQizJPcGa1eznPfaliDAsSP693GzSyKVimsXOUNkiqaZNTZ/jLcu3ATXLIrEKxAiLHgtNMFN27wz2k9IC7G+Bg9qYgvWRue/hNdMzW/UsVj0XEffah+bHnGEBa7BORioltUi+s7MiAcvzwgUvr8OCErkcHTxPcH+e4fYYPYDWKNm/Y+qm0eXZsUo" class="hint"></div>
+
+</div>
+<div class="text segment" id="hmyn6w">
+<h2 class="e_kht7zn" data-number="1.3">Skills</h2>
+<p>Sie können in dieser Aufgabe folgende Skills erwerben</p>
+</div>
+<div class="skill segment" id="i0kicz">
+<div data-skill="OO.Instanzvariable.Definieren" data-uuid="sfkuwe" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Definieren</span></div></div></div>
+<div data-skill="OO.Instanzvariable.Verwenden" data-uuid="ickm30" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Verwenden</span></div></div></div>
+<div data-skill="OO.Instanzmethode.Definieren" data-uuid="w36omm" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Definieren</span></div></div></div>
+<div data-skill="OO.Instanzmethode.Aufrufen" data-uuid="pvkiyc" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Aufrufen</span></div></div></div>
+<div data-skill="OO.Javadoc.Schreiben" data-uuid="284w5i" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Schreiben</span></div></div></div>
+<div data-skill="OO.Javadoc.Erzeugen" data-uuid="pa3673" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Erzeugen</span></div></div></div>
+<div data-skill="OO.Javadoc.Lesen" data-uuid="wbotm3" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Lesen</span></div></div></div>
+
+</div>
+<div class="text segment" id="ztnlo7">
+<p>&nbsp;</p>
+<h2 class="e_4bdcnj" data-number="1.4">Karte mit Grafik-Text ergänzen</h2>
+<p>Um das Spiel attraktiver gestalten zu können, soll eine Karte mit Ihrem Text nicht auf der Text-Konsole ausgegeben werden, sondern auf der Grafik-Konsole. Für die Darstellung des Textes verwenden wir nun ein <strong>Objekt </strong>der Klasse <code>Text</code>, die einen String an einer angegebenen <em>Position</em>, <em>Farbe </em>und Größe auf der Grafik-Konsole darstellt. Ausprobieren können Sie das in der <a class="u_smsrrt s_b8ki7a" href="_3_Grafik_Konsole.flow.html#e_b8ki7a">Beschreibung der Grafik-Konsole</a>.</p>
+<p>Beispiel:&nbsp;<strong><img src="data:image/png;base64,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" width="101" height="70"></strong></p>
+<h3 class="e_kkk8m3" data-number="1.4.1">Instanz-Variable für Text&nbsp;</h3>
+<p>Ein <code>Text</code>-Objekt gehört nun also zu den Daten eines <code>Karte</code>n-Objekts.</p>
+<p><span class="task-link s_mzg9w0 def" data-href="Karte.java#e_mzg9w0">Definieren Sie</span> daher eine entsprechende Instanz-Variable (IV) in der Klasse <code>Karte</code> - natürlich mit einer passenden Javadoc-Beschreibung.&nbsp;</p>
+</div>
+<div class="hint segment" id="88q6zk" data-title="Falls Ihnen nicht klar ist, wie Sie das tun sollen">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Falls Ihnen nicht klar ist, wie Sie das tun sollen</span></div></div>
+<div data-uuid="6uegtx" data-hint="U2FsdGVkX1/jiC/QloWWnJcsFPRRmBhXSU/+TamFeCbTv+SbnnNDf1XiT2HUIJYqURZQ/icpvSsLSP9r5RJh1EsLIr3iCqZPz9no/b4K484/ZCmurqf7a7A/lC53FmUMXOgtRDQIxPMpO+hpcrf0lBMC8Ichj6cqzhYHDEgYc9WTgkU/YR3KqYsCHg4EJtfyoYLafIo+S6kMIBD8JKhywBRtEaj6a4xfMZN5N2cwVWl9ASVpq42WOkCDwQmaDP6tqBJ80I7jqao+s0guHwRhEAEDObj5M9OQvMdRHwP/yTMW5ZQNYE+xVyWMKXeC3F2dqxlBpzRIhTprYzPKFXbfTrOSKgCY4wMLLGT5cCV3QORyKsCe4k29XuSO9AeUQSGXEAjmm5/0Ofakuty4U0uxVb78wMLahRH37fhI3DqTovH3556PrHwmOqeJChgwls6HUGHW02J7BBpUZh43ju3au55M7PxCiiqZ8V+TKmDpdy2TAEwqf+A2cAGodcDH6SUvevDNMKOHW5bGAsXpHlGwd8Snpba5qMyzDo8vPsKRAglLRhlcOncA1WBiODu00YOq1Jv9Vlvg2toqAbMrQ1pWrv90ki3u93/9vkIGBJYKTio=" class="hint"></div>
+<div data-uuid="ab47wd" data-hint="U2FsdGVkX1/YoiQqaLXqVNx89EV2rdsD2EC6L7jPsTWr6QaHqvWRFECocLaJgkXK5FyLpFvsQ4xwrKlVGFYX9ylx72p0xboS3lUrLPWfpBWcVt3ZTElLcnAHdHwMYmk9LWvZdIUVQ2mkVXxhk/HMehSZzVLpvpOvCdDnVnNw5CJCvh9nOFcnWi8rC4w6bsrenc+oEQfnpJOwXVt+6qFMQzX7CnZSgz+oviNhGfM7sWFEkSD2L6hCupSM0iKJ85RLDQ5Pu2DIwk7FLS44+S1h49o3Mnt8/GZVvFF3mPi592t+FyBXgwKQoAoW08r/UYp7ZQABoZvPYET4V+623GDIu8ofU8LWRk5ZEJFYEstWKv8E0AjTv1xSGwFmNRg+jZ0yYLRiHdT7SEagcsIEGloyMqfqWbcpPqKrZnjP/PHATIMcqr4mgiUdYQpQVAp7tAP0iuCJvcSc6n93Fm+qECG+pcAzYEszEFuMONPAS7keVaJGprJaIpVFRuei6RPo+CdbV6jKothNWat03Cg2wpnqdz3SVQTbVzyf/cO32rgPmFUBGdbdIFi+JAMZLrYSh7jLjMGei7M/5hfQbmdPBvyyOcIYR2F86Aqha8TjW/oTZVgGfKDU2kLxL3KeMAxKF8/eX9nvfRRFAsA6JeO8NDRfK85mKIyoIussa6iHrDE4/ONjJr8aIAN7RAvruW1V73BtLS756uwkaZhcmJRxeObCTfVji0kobkVgExxef4MOqjIOOu+oXVEbEAtid8hSVGhrAo5E5GJQfyesyIaexgtAFLQifUmbKPrSZ/lF461dwrQp45Vfid8fCQU6WzIGjrTAgqZUT0TL8xnnooT7NpUnoa1QrUzvdTA+IVrWtVcEVjoHHwNVysa91jzg876y7SQ9pAYhs4OoM+ZYCPErlymY64gkJn+43rHvLSH8YIwcBPcdhL8jwCztsugEAlErpO9H0vq3t71jqULMNTzXfYzMy/Fb+v78WIhTJ4QbPQ0akM4cro5xx1TyOOB7c/f2tZNPhyO9H/kEkOMMgwKO6fytA2omlnd2Y3yGb+yHKsgdboRLLEj2lnqS/j5hUL23eQtUUX5mk6kExmlbHnQvKu/7O+nTwky6a/lm4VAaXYoP6h2sS0H0XGYy4dzR8qR/CM9V" class="hint"></div>
+<div data-uuid="4jfzfh" data-hint="U2FsdGVkX199eqdgoF0YOl0IdYJXCGbDhv1XdU0SwyEjm3oI2rCQpRsU3F9LpdH1waItv36GpXTdh97pYAS7ATQtNpgpbAhT0ScCzxBKEGEXL35bvBA+/HIE4uq04xYnK1p9x0QiYUc7eDgz1spPVK5fJgPPu+xcx2RRxh6pO1mq1TCC7Ui5cJ6EY2ltfwIpCqO43CvBRDvy2hyT44GEx3qyoPN2eeVmL49PMZy3Vk25GZzIkNYRUaeuGbOP7/RfvINnPuRm6Y+p49xSvv0wvH2OjMpyIEFmbVQ52ZZP7gjzhZxuyL/IpJVIjWAm6fLF2aP1RlVQ/nRADU4wGCXwtF1pBbEP0Q+06SBLAer+zx1vMC3f6TeZjCVTDlfVHC4jjDwLkBUY8aJXJTW9Lpchqu7nELiim24z2Lu5k/Z6GV92f81gcNmz0EOrFIjt4xN0nXnDls2TFhWwr9HgIUw1YJo6SX1uIE0AxRpNoK06Pl4849HKV8qHVx8/cc4aU0/kZ2E2jUsA3+puc1FDykRRnQRxyQ9oTJnAvGWhyN/noyEPQtmkwXUsz2qNNwBN7zY7hwJVE3s58YQZB2qB4ncIWjRo4OMkX6Td8R/TTXMC8/Jw/W8qOte+gK36K3WPTPVmtCINutK1xZOtBxHv47EFIop6kGnmNMkWA+piTFUnBlDH0JlXjlOTKMltZsGS7Y21Im89tANMppFVR76WF7F4yj8UjePgeourt4ZikSzK8VOSkkb023qB2+qa9Yo+sb62bUXdCgKX9cIhmedJ9IMHBviVSGOS3RkFmhjILTSthQwSsofj9oObzrxVkm1Ptw6U" class="hint"></div>
+
+</div>
+<div class="text segment" id="bjlxo1">
+<h2 class="e_v9fgcu" data-number="1.5">Position des Text-Objekts</h2>
+<h3 class="e_v9fgcu" data-number="1.5.1">Anordnung von Text-Objekten im Raster</h3>
+<p>Sie hatten bereits eine Methode definiert, die ein <code>Karte</code>n-Objekt an eine Position legt, die durch Zeile und Spalte<em> </em>angegeben wird.&nbsp;</p>
+<p>Die neuen grafische <code>Text</code>-Objekte werden für das Spiel auf der Grafik-Konsole an <em>x</em>- und <em>y</em>-Koordinaten dargestellt. Dabei sollen sie in einem festen Pixel-Raster angeordnet werden. Da Texte typischerweise länger als hoch sind, sollen daher für die Zeilenhöhe und die Spaltenbreite unterschiedliche Werte verwendet werden.</p>
+<p>Die Zusammenhänge werden von folgender Skizze dargestellt:&nbsp;</p>
+<p><img src="data:image/png;base64,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" width="386" height="214"></p>
+<p><span class="task-link s_focptv def">Definieren Sie</span> zwei Instanz-Variablen für diese beiden Rasterangaben (Zeilenhöhe und Spaltenbreite)- natürlich mit einer passenden Javadoc-Beschreibung.</p>
+<p><span class="task-link s_ay4seq action">Initialisieren Sie</span> diese beiden Instanz-Variablen <em>direkt bei der Definition</em> mit den in der obigen Skizze angegebenen Werten. D.h. weisen Sie ihnen direkt bei der Definition den entsprechenden Wert zu.</p>
+</div>
+<div class="hint segment" id="r9h8e9" data-title="Wenn Sie schon mehr über solche allgemeinen Werte wissen ...">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wenn Sie schon mehr über solche allgemeinen Werte wissen ...</span></div></div>
+<div data-uuid="wt8a7y" data-hint="U2FsdGVkX19tsz6HaAvSGBowylrkvhcdCnCWuf6lDBSAV3hKCk0a0rYBJvYqDdF9vmDWQeizCJD6noZTPg8ysxvgXMClhytpiTm9oTaTE6RpTeXOI6SAWf/GTgkTHJu8AJsjLfDNSU1zPtbYe7hciYOH+4I2ybRrC5Kn0L4hLeIPM1kHkwlJkxjwieM0XDgpKiw44QUDltP8CyG9B9GoxzrtZO20sJwEWKIgsszGDz5UGsOH5qXiHBpB5YQO1Uo3C/xsCg3jt8PEs24b5lwRvFbgVYiDE9Uacx3RM+RqAdnwujiqN/LVOKEGE9XGWrUj/Ik+Plw9d2UegXpognHNlbh0X/HpnfitLA+rxvcZ22XRmUh2qNZzCVZiKWHw8R/eqny1G+F3UX59/oA3vq7HMPCnISZJ2wyD1jcHY+QEQAnT9dxw+CYxUpIg9dUgFTvASecydTE7MkHCRGII8eVEYRG3onPFm7DDSzhnm3fi5KFuVwdO+6qLTdLJG2C0WLzFG3D3a11IEvidN6jVlJZ22cpEwETfvFXztAXgmRFpVsUpHlrKWgfskH4AfXMqQl+ZlQkP/KN806xnW24ckoiJNChotM9uiujvfu3s8WI+Z4MQKg3PLocUk/LDzMs1S7fadqBmwSV1T8kSLr2X4Me+5PJVwDxxIZTgzXdUGttt+pdkjGghZqsv+6einphuDA35EU0aY6ZKiZkiIp9Z+YAMI/pffct9LJnyn82IAgGUh29GrS/obvuDwIwRl9OiukVi8jXaf1SgNWaZsxNGwKeSV/V8cmXg7/GgutlH4FifZiohWwyYrfWimCptPWA7h/75TGO7sNeCeCljyO1dowuqATQJQ2zuSNkLOPq6viWxONMIJPzldijNWrh/hLIjspSWXClrM+uwLJBYHNgtOn+vxj2qWJjIHCOOThWq0Se02DaXZ2LdTCL97LDC2uattIfYPkdomarC8//jwcmYCjO/lEtMMSZQnZHoMvE2IRzdQY79fQdnp1qYNE7+1dEObpkuASuWsP08mjJglWwXi39dV2pd/QmgC7RiGkforCrvfTqYL+5bRZgfHM1K3pr8mX60ewZAQ/bDNCIFKxsaATzutRW/WspRNy1oAfpszlKmkij5HpRYquqOF3oGzNUck7PInd77kur1Mp45sZRck36dwA==" class="hint"></div>
+
+</div>
+<div class="text segment" id="gz1esx">
+<h3 class="e_vtdfts" data-number="1.5.2">Die Änderung der Position ändert nun auch das Text-Objekt</h3>
+<p>Die Position der linken oberen Ecke eines grafischen <code>Text</code>-Objekts wird mit x und y in Pixeln angegeben (<a class="u_dsftwc s_er56yg" href="_3_Grafik_Konsole.flow.html#e_er56yg">siehe Beschreibung</a>).&nbsp;</p>
+<p>Ihre Methode zur Positionsänderung einer <code>Karte</code> muss nun wie folgt ergänzt werden:</p>
+<ul>
+<li>Wenn die Karte bereits ein <code>Text</code>-Objekt referenziert
+<ul>
+<li>d.h. wenn die IV für das <code>Text</code>-Objekt der Karte nicht null ist</li>
+</ul>
+</li>
+<li>Dann bewegen Sie das <code>Text</code>-Objekt an die x/y-Position, die der Angabe Zeile/Spalte entspricht.
+<ul>
+<li>Dafür verwenden sie die Instanz-Methode <code>moveTo(x,y) </code>der Klasse <code>Text</code>, die im Dokument zur Grafik-Konsole <a class="u_vwbw7d s_gy9cwf" href="_3_Grafik_Konsole.flow.html#e_gy9cwf">beschrieben </a>ist.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="hint segment" id="h022al" data-title="Aus der Angabe Zeile/Spalte im Raster wird eine Pixel-Position in x/y errechnet.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Aus der Angabe Zeile/Spalte im Raster wird eine Pixel-Position in x/y errechnet.</span></div></div>
+<div data-uuid="zeb613" data-hint="U2FsdGVkX19G1wUl87np4zVMpcxvknPhPkv2t1YgNMxolbBPPllen4w1mV9C7uqULK/XhB0oukq2rxcS9OmKeAVHwh4z2HbAcCTdf1tzlXjrLTSFxcTPK9z+RGmvaSGDidGxs1nVWD4Lbumxue5+T6GGU0m20uqh2EXRuv+ba0DF2cqDx/7MNNzUA6rf/eV30hhd/dbmpiegzbX9bm+oIbACBEZW959fSm5yxweCHngyyrdTdA4sjSYK5i2Q2U53cAb/6jBJGmJ7a9R0d/HoPYu5+ge3/QFm+bTqQfACZI9L7rHvOhshbZEtyDKPL7DcIzYwPh+xngwfuz+smns7IvwqOxL77FieNJh2E8Irqhmk/ZeZDUA0tKHPRaUfv+imq9Evi7/+YeUkFfeVD9rWPRTAc72pN/K5AdcxOYKcJvo1RQc1gfhD6Lt+y7xQSU60reBfgC8sXpJhe/fAgxIcVjmJEoR6We6tFAl3eX6cLRp+9kv18XiHbqPRbysrQPdIgmDIzfp+9/Ca5jtP1clQfeswGtAsBAEq2UWjVl5KkfAJ0kTMgZXyWHuZTOwWV5WbWGTpfJoLUZjZMYhiC2o7ZvfJdqbPqNEEmYm7v69XnQsunwDs5DCt6D3WkSSZjDyIwXJTd1ZUZo7ntuudyM4U5h96LRH4aOZhcYCwj9w353wMrR6iQ6+BQVwXXJzrV5I2AHxP6tlJDtA5Q9LAKNfkN+XrWZgVPA4beoJietqH2nw=" class="hint"></div>
+<div data-uuid="ie4mf0" data-hint="U2FsdGVkX1+6xrZF6NaAghcf4mEBPX/ntOZtEWZx2iHL1S+2ZG/FfUzISd5/njX0iCHHxjthGnZgTa/wtcmdSAY+BV+fMDb5MQmLPBHOnsHjoy76sZV9e+REvn+5Yic1lSEQv4Yh/fqpcHTonwhUZUPjULZ5crAbqkiWYZNe65qaHlLwhK60r208yNAQSiMXJraWAVNkmNueO+aifbJtL/wsGooZ5qw5w6W30m9PM1Pmixzc9AS4AXqoHugZUCWYWhtLoBArUN8VSIZ3S5rDT5D+XAb9cYcsvYlnBi2aQYfYeVk7cfEpynRJ/aHVRxX4fuRHvccDNECRUgcM+Ak4HQWxHqaOKtLeQGTMFLosPkEjDwvl5xRuw14WltkD518TuLT89Sw/RSeOdz4mFvtnZ88PL6D1LWGx4MepcxWWKqbS81dql77y7MFPyBFcNfD9xAWFlSPBCwivZnANC52BWMoDhS1qJaurDlBaMjvv4MOU4Ui8u15dwVocmDThsKGogC7HmDVIyLaBhx7Np+yFfBA6CfmZ2CSZGPPydc7Gwg3D7Z1wMLld/4lmcv7e2Eg+n+W0HY/mkIOLcM7opMeLyOZ8cky5e+uvw7MsbxqkFrBB3TgmP4VKTmC87YpvqMWJT60MOLxOdujU6et3K0pOJCSAbB/M6+6ftzwHhq/ng82bMJ/CMPXZBEZtznEZTAn6VGDf73Cb3N32Cb/NQhqr8u/KowaaDRBIkX06rbGZ4bN3U8FTq3HAsc7Gr2kV6bQmxEBUeg8If8A8DcB0mXHoje82HcstBxMyv8IDYd8Cz/+lubXRAI+/XJGZ6zC7u5KsEBWqQyHvbHyvnZ/TFjwQ989sQ0eiZYFhhpp9CiAtQKbo7wTT1wRqgpDTVSZs3q3Wah9ATimZpLasYSqbjMCp4w==" class="hint"></div>
+
+</div>
+<div class="text segment" id="lx39zm">
+<p><span class="task-link s_2qftj3 action">Ergänzen Sie</span> Ihre Methode entsprechend - passen Sie auch die <span class="task-link s_v9dkxt action">Beschreibung im Javadoc-Format</span> an!</p>
+</div>
+<div class="hint segment" id="yqd7sa" data-title="Die Methode moveTo(x,y) ist eine Instanz-Methode der Klasse Text, und nicht der Klasse Karte">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Die Methode moveTo(x,y) ist eine Instanz-Methode der Klasse Text, und nicht der Klasse Karte</span></div></div>
+<div data-uuid="yh7ze0" data-hint="U2FsdGVkX19Vy2a4v1g72Iys4grE0b1Gh1+wG6ULe4U0FO+o7y+JIxpmOzE5WM7xGsP3ciD1vCTjJkN/5/x375UmgrgQm9fdHaHf7iyksoOtzxosGFmQXzOt20XqGFXEZ13+sdzyxAX1gYy0D4oJx8FEwQO1piajMxL7Rfzn8P+t3yNYAweos2/fjFjOieU7xpT/quSILzbI3gS14NJa+FmTc+tpne36jEfSj3tLLv8HAhoHsFrHqlwaN/ZwME7+z9gJyHi7wD4sW/IGmuSzuIBoVIiH89lt1xefUH5GAvbWhb+h/VHVziWsiZRvgbI0+33MNz8spCL6vNEy880jBap5Pg4OaNK0Ws6zKBbzScFwajYNOZrEn8jM0sdXHZf6N2PwL5UPNKk0LhRKr4xjkVp7A0/pe5e6B3AOlZmqyAXfNzyhWMZahdib0DUjE9yCEpc7IGnTMypF8joCfGUSUszTQiQZap+5OR1BAOoTdrfInDW8MC3iedjkwfhlVh3LyagCsEAzl678nkRqZKJURbjx1EsHcpirXwnLBrU0i1YRI2pyoxvThx58v1Vs/cXJ4BJnjqoVgUXXWVSqP51rjigjGZ5f2b3O3zFIdLBe9YuNcwTlMmSkD6nQ1lAWmDBOQbjC7ES0V1htjr8CWsqGoQ==" class="hint"></div>
+<div data-uuid="ojwlvx" data-hint="U2FsdGVkX191zAivcMwnUOej7dJE6Xp6z9Tt/sAmRXd0urBw5LGjx8RRTUlk+Xs9pj30Ilv1S1YtUzTyInSsPZ9qTU5ltuZhYWXTTeoDKid/RHx2Intz58ntAdLNirEKuSGNHV4PksV6me7AHtCaDDkjRee5Pq3rjUideFBQPumDLUzNnSTVTZEY3atx6qCi6jGN4PyllTwBbnYliW5YFQHFx9VeDRfeiIAK+AN/NSp3jLpBWT+oLgKI+gElUWV71uxUQHZ6ayT4CY4nXxrEe7vixHH94AXDSWgQQf+DhovprwkA5FIKOaaS5K2FOFL0v55kxxH0fhFyDN8GpA6GPaTkk8qJQrz5QLhbjIxPLve6L06tSh0GzSkzfG8y4aQkfThD0Z7CDGtjogZuYdEcX8FDaxsFsBTiNrBdr1VZbM4GUBmBT5749lTnyCc1cbhiIWm7BRU9bS+5+RdzrJj+CMazF0KlidqiYF2PuxmlqqSJjnvSRw3mLAeP6sufG5/ImVkjcnD20THZZWZLcBWdnIxojjuBvy9NnNjR9P3+xMuy1Hf8uYvh3VdDJ6zZdJKcNhRWuMd5Ta3tJq8YzrBtjm7NRbfdQ2Ji72lb1pUWJmc6HxIGFBm2cL8jEL0iniCWgCOTV8AIV+QthjppG/zRjUT1NBCYQSBaGRF2gLUFkqYbXkz52G8eXfvCClNXYwOufBQHoEBYyH5jW2Khorkwmkz6QwmY4bZaXY1M0rTnBV8aeJIJR1/unPe9YJUl4f0ggxUEmC0DoRugOjQDJMOZoQllIZUDZ1Owx8dWSKeEDlRvKCtvY2T/QT6Yjmys/sXj1LXDNpW5iwWBy1rfuCEJAJ7gnOD3EG696JmMOc43djYXND4MMNricer4bGSMqJ6QKKkgw+XCFhOD0EWwS9WulA==" class="hint"></div>
+
+</div>
+<div class="hint segment" id="xga9s6" data-title="Die Prüfung, ob ein Text-Objekt überhaupt referenziert wird ist ratsam ... ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Die Prüfung, ob ein Text-Objekt überhaupt referenziert wird ist ratsam ... </span></div></div>
+<div data-uuid="zoox5n" data-hint="U2FsdGVkX181H8V/EEczDmyU1eHoxD9YGwvsawft0HrxhkHl2lR5DWhhMeatcF7jI4+55sKWlPrECCoW/2EfiLztS1jvfN2mFqrWhquncYnEgi+G63fFLMnzH2hQ53rcdzniPfOPruoLa0ZtCmNXgvJH3sRVYcbSZ6WODBsWwaZZOah/7j86zoxncIRTT77xOEpR297B8iu+wOEJb+Yj9gW4Sq1afF1NmPmUAfxKAId202R7qxP0DizIzQF5m67DOu45v9Uy09nlY5Q3jmOBCvaMcsBMqIJl0p299KWiuY/9fXAM/C+mPNKJQsJ1qJ6ZJfripc3/2UIFd45T6JMtEjThncciLsI/AlVVOhTG95UzC3sLyAxcgqfavp5HubI14+lR76/FI5x+jKciTcZvBvmQs2HMStuo/Lc20QNnzEpYtb9pXS8qMjMZArVe+61fbY/dWHkwiVbq3l9vpKBRODqd534qbYZl4BLDmI0uRELi39HkOsJ2KQsUfOFhcbCCJasJpIrmj3KCLiBy95Qy4gNVyGOTHPXCWvmeGpKQkY3OIicVu5CkWIfvZHSnPO1b45X9KgfXyUwFnX43+IcCmUjuvfhqMPuej+Z/5t6/x3xBVYjC2XEuDcRWJg3upA/BscoDRsLR9eDfVzKv57b6b4gBR/PC9DTGgFYW3eVf/W85v0Qa7PMYRuPb2EbURta7TG8exWv6BC3i4A0HX1kM7nHMDGSx2vNmClqSvfif6n0=" class="hint"></div>
+<div data-uuid="o0knat" data-hint="U2FsdGVkX18kkifKBnNzvQlTaBUPC2nDJbmkG0YJ3b0YSRahHYItbMEOC8lEucBqJa8CcoRKVV1ma6iRe+09W/YqkjH/8XBepWQ7f8zVfWGkzVEOQ8Vt+hm0Q5wyJkpMG23aZMwgqoxEylXlVqJYMuJtxDPkMBmSgNlhRlEFKD/yU0+Njxs7GMcxoICYwI+pZfypov2sgGjUUPVG/aixmVbArndaj3k98DxnsOfbs/1O6XUw5IGHxawtVnjIDukQetSJx4j6uVa00XkYR+l2zv8Buxl4C4jqdT1lZ+vSh4vDWBCGQelc+jYDFBarfCf4gyoRozS4WyJ7jBrRYelc177neYStXGe1QDiZFiWxkl/7BqMH8fWcSld48DYUAWG+G4qqfdR8+MgsR4GLElcPsS1a7Gw6IlxafJb43bfj2EG8qj9bPppBogc7RksG2l82jzdb64lCwrzwUJNISUE2B7JNt1LFeb80e1zkvl4B2wmKeQL32gu29+uM4Uezzq747zK8F/3jqs8SZ+o3qrKQjkoC+djtmkNgl9J6u0AfiH5sQCddkR8iMQD7yBDebFxPipzsjXLBg6/djvqK1MQ0TIHCuDo1rwDefZfSqPrkb293ACB6kGmUXxUFDX8h092gohDdq67DKTV1IMAERMkutmgFordcA+iJ0zTBH4PNuOhJ89b6/Any/xczaRu2p7XJTEBQ0RJmmsHn3O4TtLzU1fyEyiCvjZz0SnD64QQAItNa6HchVShN78Vni1Us4KRoYnrM8PWho1VsTjiZILW6AqHqxgi+GcTlDCHoqASOs6PQ5gk4dBipVA2WQ/e6ZYMe8St54w6wj4tLPTRNXctnudxG99AAw7HFxd/5eGffexRLRy5Fm28VIZ6pn9fL66ti5ICQtXg61QOG3o5gIH0MhaeOFsm0oc9nAT2zfxjbpHSb8Ep42SDvAgMFr7caQ6pkIkDs6dqEU1lvO1Z9IR3cekVMdKGbjp4btq/8YHkJrItJI+INkBkVgUiDg2tolJ9TdcQLxAr4p5Q5iCH4yYVfUYL34KgfHXt+LEIoJ1a8XdxqpnopyE05neLEOjKjEKEi6P6GLxH0hsg/ygD3ZrgBwaGMFtxvAahSD1TeTvuVVoSfqZ8UCg6kNCNNHQnTdKMRI9Bc9PEuz3PG4wXNWZ5bfp2Vq1++appPTJWS02SJF08aDYLfzR5emMgefgcwWpwXEmj2V1bIP1Y532775tEBLrB2OfbVrtVQ0kOTYT6wNt0=" class="hint"></div>
+
+</div>
+<div class="text segment" id="xin9qw">
+<h3 class="e_qefmgq" data-number="1.5.3">Testen der Positionierung</h3>
+<p>Diese ergänzte Methode kann erst dann komplett getestet werden, wenn im Constructor auch ein <code>Text</code>-Objekt angelegt wurde - was Sie gleich in den Aufgaben ab 2.2 auch tun werden.</p>
+<p>Die bisherigen Tests in <code>main()</code> sollen aber immer noch funktionieren. <span class="task-link s_k4laqq action" data-href="#s_k4laqq">Probieren Sie das aus. </span></p>
+<p>&nbsp;</p>
+<h2 class="e_0j5p27" data-number="1.6">Aussehen der Karte ändert auch das Text-Objekt</h2>
+<h3 class="e_5f41zu" data-number="1.6.1">Farbe ändern</h3>
+<p>Das Ändern der Farbe soll nun - <span class="hilitecolor1">sofern die Farbe gültig ist</span> - nicht nur die IV im <code>Karte</code>n-Objekt ändern, sondern soll auch die Farbe des grafischen <code>Text</code>-Objekts ändern.&nbsp;</p>
+<p>Dafür ergänzen Sie die bereits geschriebene Methode, in der die Farbe einer <code>Karte </code>geändert wird - sowohl im Code, als auch in der Javadoc-Beschreibung - (Siehe Aufgabe 07 - 2.3.2) wie folgt:</p>
+<p><span class="hilitecolor1">Wenn es ein referenziertes <code>Text</code>-Objekt gibt</span>, ändern Sie dessen Farbe mit dessen (!) Methode <code>setFillcolor(_farbe)</code>, die im Dokument zur <a class="u_uisq2l s_4g78mm" href="_3_Grafik_Konsole.flow.html#e_4g78mm">Grafik-Konsole beschrieben</a> ist.&nbsp;</p>
+</div>
+<div class="hint segment" id="w9889h" data-title="Die Implementierung kann aufwändig werden. Hier finden Sie eine Beispiel-Implementierung">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Die Implementierung kann aufwändig werden. Hier finden Sie eine Beispiel-Implementierung</span></div></div>
+<div data-uuid="xlk5cw" data-hint="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" class="hint"></div>
+
+</div>
+<div class="text segment" id="nohyne">
+<h3 class="e_6aecqt" data-number="1.6.2">Farbe und Text ändern</h3>
+<p>Ebenso muss die Methode ergänzt werden, die sowohl die Farbe als auch den Text ändert - sowohl im Code, als auch in der Javadoc-Beschreibung.</p>
+<p>Das ist nun deutlich einfacher, da diese die aufwändigere Methode zum Ändern der Farbe (siehe oben) bereits nutzt (jedenfalls, wenn Sie es richtig gemacht hatten).</p>
+<p>Sie brauchen also nur den neuen Text auch im <code>Text</code>-Objekt zu ändern, mit der gleichen Vorgehensweise: <br><span class="hilitecolor1">Wenn es ein referenziertes</span> <code>Text</code>-Objekt gibt, ändern Sie dessen Text mit dessen (!) Methode <code>setText(_text)</code>, die im Dokument zur <a class="u_0o1g2d s_exoz8p" href="_3_Grafik_Konsole.flow.html#e_exoz8p">Grafik-Konsole beschrieben</a> ist.</p>
+</div>
+<div class="hint segment" id="5rzktx" data-title="Auch hierfür können Sie die Beispiel-Implementierung verwenden ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Auch hierfür können Sie die Beispiel-Implementierung verwenden </span></div></div>
+<div data-uuid="1w32vc" data-hint="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" class="hint"></div>
+
+</div>
+<div class="text segment" id="5b65lw">
+<h3 class="e_ltomuo" data-number="1.6.3">Testen der Änderung des Aussehens&nbsp;</h3>
+<p>Diese ergänzte Methode kann erst dann komplett getestet werden, wenn im Constructor auch ein <code>Text</code>-Objekt angelegt wurde - was Sie gleich in den Aufgaben ab 2.2 auch tun werden.</p>
+<p>Die bisherigen Tests in <code>main()</code> sollen aber immer noch funktionieren. <span class="task-link s_kgf2or action">Probieren Sie das aus</span>.&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="e_kuni63" data-number="1.7">Position tauschen und Aussehen übernehmen</h2>
+<p>Die bereits in der letzten Aufgabe definierten Methoden</p>
+<ul>
+<li>zum Tauschen der Position mit einer anderen Karte</li>
+<li>zum Übernehmen des Aussehens einer anderen Karte</li>
+</ul>
+<p><em>brauchen wir gar nicht an die neue Situation anzupassen.&nbsp;</em></p>
+</div>
+<div class="hint segment" id="qcol0t" data-title="Warum ist eine Anpassung nicht nötig?">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Warum ist eine Anpassung nicht nötig?</span></div></div>
+<div data-uuid="8uornt" data-hint="U2FsdGVkX1+c9Rgqsdy9wDobFqIWT+igoHjJrRzRjWB1q8ZWM8XMaydGExDsL9piYZ6R/V3sAa+oHZTJsBYoIOEIp+GlsR8qxnSKJtOpMx8vlNW15whh0MAwbFT66T8EUU2yXxMMGPVEMw9ogUnFSEr/HEEaxWKvUSbgaL1DxCC1WOkU5FQwqVu05GfZiZccIvupmF0neAd2u83lsoYmkPgAllSDqN8tx7IXX0ZlyFrdfeDDaZID4YSZnDoEE8ob6XogDlVU5WI9JatVoCVNHZDnPxHohmmYFG8gyU4P+P1s4/soaCXHBGn9aFiO0DMkIoqTXReilx1GEpsqFAcQnd1N3qiKbGIEm11L/1tYjdQTU7+khvIrHSyAVZ1J+oVSAqv3UQ9A/pnikmK15YK67OhChyeICpjnxIVTRiGWA3Dn8UL+8xe+HAAI2h9SD4L9cpc3rvwBk6cIgsshjYA//kL/gazwUT4mmsBroJy7VYpi6CnoefVE4chxPdpaNmxwe/2ECJSGZuFceotSwG6oaAwLdy6/NBj3oHpBWCu4K/0D2TUoeO4MTaSdpZf5iQ8e3YFBQksu00uxCFkLGtDSONo3J11ApEhD67XZ29NFqooausaVw5ZRIrZh4pc3r0GhuAua0f3DV+zn7RO7RGEX+LBW8KmhldtlNr5fiMp2sk/OtuVNP95sROhRb3Z01jgnPQTs3TG7krVid1IsoNCYPGpE6Mmg9rbirVst4NDJ63xgQ4cdzNgT21xPfHuaqApWwjT1VyvhTR9F4J5lqDSlJn84cnGHXh8GrZB7qPuEqcWADUGW1H+mnLOVqr9VUg+YxvHHiYnIvccN5OgtkiZ1d51+DDvDXFLr4WFjRI8GqcIw4xSs2gLfbAeZMdosMpr+g0wD4FtIWXMDYMPv/BZcAbRwe+kZEyJ8sVtQL/fkqdL0U6itb9PXj1zR2PxLqLdHCkQzEOxJJULOnlvwfXe6BPzGzl0kjbLTV6ijUdRpVqkwJg/WFVH4rwTsUS8Lr6mSnKuyLD/yOQbHZMnWsPpGRGjTGQ7ZWAoqMO/1rBzTRlVPzAe2h+OiB4SrsfKjdDExr331R7w7m1fR3TluNi//iOTr6RtvEh1zjS2aVLKHjszpORaGZIAL1iajQRWecpdTOI3fL8AicbKHh9yCMA4JVCG9uyr+4DrsdC4WV1rUX6M=" class="hint"></div>
+
+</div>
+<div class="text segment" id="ivxzla">
+<p><strong>Hier zeigt sich ein wichtiger Vorteil des Denkens in Objekt-Kapselung: </strong></p>
+<p style="padding-left: 20px;">Zum Ändern des Zustands eines Objekts werden immer Methoden aufgerufen, diese kümmern sich dann um die notwendigen Schritte in der aktuellen Implementierung des Objekts.&nbsp;</p>
+<p style="padding-left: 20px;"><strong>So kann man sich sowohl Arbeit sparen, als auch Fehler vermeiden.</strong></p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="1" /> 
+<title>_4_Coding_Style</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="me7pfx">
+<p>&nbsp;</p>
+<p><span class="hilitecolor1"><strong>Neu in diesem Praktikum:</strong> Kapitel 3 <a class="u_03ftc4 s_k8hiyf" href="_4_Coding_Style.flow.html#e_k8hiyf">Beschreibung von Prozeduren und Funktionen.</a></span></p>
+<p>&nbsp;</p>
+<h1 class="e_62m6n3" data-number="1">Coding Style</h1>
+<p>Da wir nun und in Zukunft mehr als nur wenige Zeilen Code schreiben und dazu übergehen, auch <strong>zusammenhängende Abläufe und Algorithmen</strong> zu programmieren, sollten Sie sich klar machen, dass und wie man dabei <strong>methodisch </strong>und <strong>strukturiert </strong>vorgeht.</p>
+<h2 class="e_ucl57n" data-number="1.1">Erst Beschreibung, dann Codierung</h2>
+<p>Ohne die <strong>Beschreibung </strong>dessen, was da in Java programmiert werden soll, können Sie keinen Code schreiben.</p>
+<p>Wie sollen Sie Code schreiben, wenn Sie nicht wissen</p>
+<ul>
+<li><strong>Was</strong> der Code eigentlich leisten soll?</li>
+<li><strong>Wie </strong>der Code aufgebaut sein soll?</li>
+</ul>
+<p>Daher ist es notwendig, <strong>VOR </strong>dem Schreiben des Java-Codes auf Deutsch (oder Englisch, ...) zu beschreiben, <strong>was </strong>codiert werden soll. Diese einfache Maßnahme erlaubt es Ihnen, die Aktivitäten <span class="hilitecolor3">LVÜAC</span>, nämlich</p>
+<ol>
+<li>Nachdenken über das Problem (<span class="hilitecolor3">L</span>esen)</li>
+<li>Notieren von Anmerkungen (<span class="hilitecolor3">V</span>erstehen)</li>
+<li>Nachdenken über die Lösung (<span class="hilitecolor3">Ü</span>berlegen)</li>
+<li>Beschreibung der Lösung (<span class="hilitecolor3">A</span>ufschreiben)</li>
+<li>Codieren der Lösung (<span class="hilitecolor3">C</span>odieren)<br>incl. <strong>Dokumentation </strong>von Implementierungsdetails</li>
+</ol>
+<p>in mehreren Durchläufen in der richtigen Reihenfolge hintereinander ausführen zu können.</p>
+<p>So brauchen Sie nicht auf allen diesen Baustellen (1 bis 5 oben) gleichzeitig Ihr Gehirn einzusetzen, was JEDEN Programmierer überfordert und was kein guter Programmierer tut.</p>
+<p>Die richtige Vorgehensweise kostet Sie keine Zeit sondern <strong>spart im Gegenteil jede Menge Zeit</strong>, die Sie sonst mit Fehlersuche und Rätseln über Ihrem Code vergeuden.</p>
+<p>Zudem werden Sie, wie Generationen vor Ihnen, feststellen:</p>
+<p style="padding-left: 60px;"><strong>Sie lesen Ihren Code sehr viel häufiger als dass Sie ihn schreiben.</strong></p>
+<p>Sie lesen Ihren Code nämlich, um sich zu orientieren, zu prüfen, was Sie noch codieren müssen, wo das hinkommt, warum zum Teufel dieser Fehler auftritt und wo überhaupt was passiert.</p>
+<p>Das geht&nbsp; &nbsp; &nbsp; <strong>schlecht</strong>, wenn da nackter Code steht, der erst wieder nachträglich enträtselt und verstanden werden muss</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>gut</strong>, wenn da steht, was der Code tun soll</p>
+<p><strong>Nutzen </strong>Sie daher die Möglichkeit von Java, zusätzlich zum Programmcode auch solchen Text in das Sourcefile zu schreiben, der den Code erläutert. (Der Compiler ignoriert diese Beschreibung).</p>
+<p>Gehen Sie daher IMMER bei der Erstellung eines Programmes in der Reihenfolge LVÜAC vor:</p>
+<p>Das mag Ihnen wie Zeitverschwendung – oder sogar uncool – vorkommen. Immerhin ersparen 30 Minuten Fehlersuche das Aufschreiben des Lösungswegs in 5 Minuten ;-) Dass dieses strukturierte Vorgehen aber im Gegenteil <strong>höchst professionell</strong> ist (und nicht: „vom Hirn in die Tastatur zu programmieren“ !), können Sie in allen Büchern von anerkannten Fachleuten nachlesen, z.B.:</p>
+<ul>
+<li>Inden: Der Weg zum Java-Profi, dpunkt-Verlag,<br><a href="http://www.amazon.de/gp/product/3864902037/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3864902037&amp;linkCode=as2&amp;tag=fachschaftmed-21">http://www.amazon.de/gp/product/3864902037/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3864902037&amp;linkCode=as2&amp;tag=fachschaftmed-21</a></li>
+<li>Martin: Clean Code, A Code of Conduct for Professional Programmers, Prentice-Hall Verlag,<br><a href="http://www.amazon.de/gp/product/0137081073/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0137081073&amp;linkCode=as2&amp;tag=fachschaftmed-21">http://www.amazon.de/gp/product/0137081073/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0137081073&amp;linkCode=as2&amp;tag=fachschaftmed-21</a></li>
+</ul>
+<p>Die Links verwenden übrigens die Fachschaft Medien als Tag, d.h. die Fachschaft wird am Umsatz beteiligt der über diese Links entsteht. Wenn Sie andere Bücher kennen, die auch „über die Fachschaft“ bestellt werden sollten, sagen Sie dort Bescheid: <a href="mailto:info@fachschaftmedien.de">info@fachschaftmedien.de</a></p>
+<p>Im Folgenden lernen wir die verschiedenen Formen kennen, in denen wir Beschreibungen, Anmerkungen oder Kommentare in Java-Code einbringen können.</p>
+<p>&nbsp;</p>
+<h2 class="e_9jzhv1" data-number="1.2">Inline-Kommentare</h2>
+<p>Alles, was nach <code>//</code> in einer Zeile geschrieben wird, wird nicht vom Compiler als Java-Code ausgewertet. Das bedeutet, dass man nach <code>//</code> einen menschenlesbaren Kommentar anbringen kann. Ab dem Anfang der nächsten Zeile erwartet der Compiler wieder Java-Code.</p>
+<p>Beispiel:</p>
+<p>&nbsp;</p>
+<p style="padding-left: 60px;">&nbsp;</p>
+</div>
+<div class="code segment" id="zg3ajy" data-class="" data-class-name="_4_Coding_Style" data-segment-id="7">
+// Begrüßung ausgeben<br>System.out.println("Hello World");<br>int maxTeilnehmerzahl = 25; // Die Teilnehmerzahl im Praktikum ist durch die Anzahl der Sitzplätze begrenzt.
+</div>
+<div class="text segment" id="goxrzv">
+<p>Im Beispiel oben wird der inline-Kommentar (nach <code>//</code>) dazu verwendet, im Code auf Deutsch</p>
+<ul>
+<li>den nächsten Schritt zu beschreiben</li>
+<li>oder eine Anweisung zu erklären</li>
+</ul>
+<p>Dabei ist sinnvoll, dass Sie <em>im Kommentar nicht noch einmal den Code wiederholen</em>. Oben ist die Zuweisung von 25 zur Variable sinnvoll, weil inhaltlich, erläutert. Der folgende Kommentar wiederholt aber nur den Code und ist daher schlecht:</p>
+<p style="padding-left: 60px;"><code>int maxTeilnehmer = 25; // maxTeilnehmer wird auf 25 gesetzt. &lt;- unsinniger Kommentar</code></p>
+<p>Einen solchen wiederholenden Kommentar sollten Sie immer vermeiden, da</p>
+<ul>
+<li>keine Zusatzinformation hinzukommt,</li>
+<li>aber trotzdem mehr zu lesen und zu verstehen ist,</li>
+<li>sie außerdem sowohl im Code als auch im Kommentar die 25 ändern müssten</li>
+</ul>
+<p>Statt dessen sollte der Kommentar immer Zusatzinformationen, vor allem Anforderungen und Begründungen für den Code, bieten.</p>
+<p>&nbsp;</p>
+<h2 class="e_8te9lm" data-number="1.3">Namensgebung</h2>
+<p>Der Compiler akzeptiert jeden Sourcecode solange der Syntax von Java gehorcht wird. Die Lesbarkeit des Textes für den Menschen ist ihm dabei nicht wichtig. Der folgende, offensichtlich schlecht lesbare, Code wird ohne Fehlermeldung übersetzt (wenn alle Variablen definiert und initialisiert sind):</p>
+</div>
+<div class="code segment" id="2xzi7h" data-class="" data-class-name="_4_Coding_Style" data-segment-id="6">
+while(a+hf&lt;=wrg) if(hb*4+mpf&lt;89%blb) System.out.println(" " + hb + " " + mpf-2);
+</div>
+<div class="text segment" id="ge644w">
+<p><code></code></p>
+<p>Um den Sourcecode aber für sich selber und die KollegInnen lesbar zu halten, sollte man sich an <strong>einige wenige Regeln</strong> halten. Nicht alle sind Ihnen jetzt schon verständlich, der Vollständigkeit halber werden aber schon die wichtigsten an dieser einen Stelle aufgeführt, damit Sie hier später nachschlagen können:</p>
+<p>Namen beginnen (in Java) immer mit einem kleinen Buchstaben. Danach können kleine und große Buchstaben, Ziffern und _ verwendet werden</p>
+<p>Namen sollten immer <strong>sinnvoll </strong>sein, da Sie sie sich so leichter merken und verwenden können</p>
+<ul>
+<li>Namen sollten so lang sein, dass man sie verstehen kann
+<ul>
+<li>z.B: <code>counter</code>, <code>zeile</code>, <code>spalte</code>, <code>spielfeld</code>, <code>summe</code></li>
+</ul>
+</li>
+<li>Namen sollten andererseits so kurz sein, dass der Code übersichtlich bleibt
+<ul>
+<li>eher nicht <code>inHorizontalerRichtungAlleSpielsteineUmdrehen()</code>,</li>
+<li>sondern besser <code>horizontalUmdrehen()</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Zusammengesetzte Namen</strong> werden gebildet</p>
+<ul>
+<li>entweder durch <code>BinnenGroßBuchstaben </code>(CamelCase notation)</li>
+<li>oder durch <code>binnen_unter_striche</code></li>
+</ul>
+<p>Namen sollten <strong>nicht abgekürzt</strong> werden, da Sie sonst immer nachsehen müssen, wie die Abkürzung lautet.</p>
+<ul>
+<li>D.h. z.B.: <code>counter</code> statt <code>cntr</code></li>
+<li>Ausnahmen sind <strong>Zählvariablen </strong>in Schleifen, diese können und dürfen<code> i, j, x, y </code>lauten</li>
+</ul>
+<p>Wählen Sie nur englische oder nur deutsche Begriffe, mischen Sie sie nicht, im Zweifel verwenden Sie nur englisch</p>
+<p>&nbsp;</p>
+<h1 class="e_1p0y0r" data-number="2">Formatierung</h1>
+<p>Eine übersichtliche Formatierung trägt wesentlich dazu bei, den Code schneller erfassen und verstehen zu können.</p>
+<p>&nbsp;</p>
+<h2 class="e_jnesxl" data-number="2.1">Abschnitte unterteilen</h2>
+<p>Verwenden Sie <strong>Leerzeilen </strong>zur Strukturierung von logischen Abschnitten. Sehr schlecht lesbar ist offensichtlich, möglichst viel in eine Zeile zu quetschen:</p>
+<p style="padding-left: 60px;"><code>public class Main{public static void main(String a[]){System.out.println("Hello World");}}</code></p>
+<p>In 5Code können und sollten Sie außerdem Ihren Code in einzelnen Code-Blöcken schreiben, die Sie dann auch einzeln testen können.</p>
+<p>&nbsp;</p>
+<h2 class="e_yn8xq3" data-number="2.2">Einrücken</h2>
+<p>Verwenden Sie <strong>Einrückungen </strong>(jeweils 1 Tabulatorschritt) durchgängig</p>
+<p>Für die Anordnung der <strong>Klammern { und }</strong> gibt es zwei Varianten, von denen Sie eine durchgängig verwenden sollten:</p>
+<p>Entweder verwenden Sie die etwas platzsparendere Variante, bei der ein Block in der gleichen Zeile wie z.B. eine Verzweigung oder Schleife beginnt:</p>
+<p>&nbsp;</p>
+<p style="padding-left: 60px;">&nbsp;</p>
+</div>
+<div class="code segment" id="2df9lo" data-class="" data-class-name="_4_Coding_Style" data-segment-id="3">
+// { direkt nach z.B. der if-Anweisung<br>if (a &gt; b) {<br>    System.out.println("a ist größer als b");<br>}
+</div>
+<div class="text segment" id="ic9q9a">
+<p>oder: Sie beginnen einen Block immer in einer neuen Zeile. So wird es sehr einfach, zu sehen und zu prüfen, ob es ein <code>{ </code>für jedes<code> } </code>gibt:</p>
+<p>&nbsp;</p>
+<p style="padding-left: 60px;">&nbsp;</p>
+</div>
+<div class="code segment" id="p6qxom" data-class="" data-class-name="_4_Coding_Style" data-segment-id="4">
+// { in einer neuen Zeile<br>if (a &gt; b)<br>{<br>    System.out.println("a ist größer als b");<br>}
+</div>
+<div class="text segment" id="trgtkf">
+<p>Die beiden zusammengehörenden Klammern eines Blocks werden Ihnen übrigens auch in Entwicklungsumgebungen wie 5Code typischerweise markiert dargestellt, wenn Sie mit dem Cursor auf Klammern gehen, egal ob rund, geschweift oder eckig. Probieren Sie es aus.</p>
+<p>Diese Varianten der Einrückungen gelten natürlich genauso für andere Kontrollstrukturen wie Schleifen:</p>
+<p>&nbsp;</p>
+<p style="padding-left: 60px;">&nbsp;</p>
+</div>
+<div class="code segment" id="a0ba21" data-class="" data-class-name="_4_Coding_Style" data-segment-id="5">
+// gebe alle ungeraden Zahlen von 1 bis 9 aus<br>// Beginn des Blocks in der gleichen Zeile<br>for(int i=1; i&lt;10; i+=2) {<br>    System.out.println(" " + i + " ist ungerade");<br>}<br>// Beginn des Blocks in der nächsten Zeile<br>for(int i=1; i&lt;10; i+=2)<br>{<br>    System.out.println(" " + i + " ist ungerade");<br>}
+</div>
+<div class="text segment" id="ek8oit">
+<p><code></code>---------------------------------------------------------------------------------------<br><br><span class="hilitecolor1"><strong>Neu im Praktikum Prozeduren und Funktionen:</strong></span></p>
+<h1 class="e_k8hiyf" data-number="3">Beschreibung von Prozeduren und Funktionen</h1>
+<p>Da Prozeduren und Funktionen einen zusammenhängenden Block von Anweisungen darstellen, die eine Aufgabe erfüllen, muss auch ihre Beschreibung ausführlicher sein.</p>
+<h2 class="e_hcqikl" data-number="3.1">Gute Namen</h2>
+<p>Ein guter Name für eine Prozedur oder Funktion ist, ebenso wie bei Namen von Variablen, sehr wichtig für das Verständnis und die Lesbarkeit von Code.&nbsp;</p>
+<h3 class="e_k85z5y" data-number="3.1.1">Allgemeine Grundsätze für gute Namen</h3>
+<ul>
+<li>Der Name ist <strong>kurz, aber lang genug</strong>, sodass man seine Bedeutung verstehen kann
+<ul>
+<li>um den Code <em>lesbar und übersichtlich </em>zu halten</li>
+<li>z.B. <code>groessterEintrag()</code></li>
+</ul>
+</li>
+<li>Aber nicht zu kurz
+<ul>
+<li>um den Code <em>lesbar </em>zu halten</li>
+<li>um klar zu <em>verstehen</em>, was der Aufruf bewirkt</li>
+<li>z.B. nicht: <code>gE()</code></li>
+</ul>
+</li>
+<li><strong>Abkürzungen sollte man vermeiden&nbsp;</strong>
+<ul>
+<li>um beim Schreiben des Aufrufs noch zu wissen, wie die Prozedur heißt</li>
+<li>war das <code>grEintr()</code> oder <code>grossEintrag()</code> oder <code>grEintrag()</code> oder ...</li>
+</ul>
+</li>
+<li>Werden mehrere<strong> Worte zusammengesetzt</strong>, um den Namen der Prozedur zu bilden, gibt es im Wesentlichen zwei Konventionen:
+<ul>
+<li>CamelCase: <code>DieWorteWerdenMitGrossenBinnenBuchstabenZusammengesetzt</code></li>
+<li>Underscore: <code>Die_Worte_werden_Unterstrichen_Zusammengesetzt</code></li>
+<li>Halten Sie sich an eine Konvention in einem Kontext und mischen Sie sie nicht, um den Code lesbar zu halten
+<ul>
+<li>Im Java-Umfeld wird im Allgemeinen CamelCase bevorzugt.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="e_657uk0" data-number="3.1.2">Ein guter Name für eine Prozedur</h3>
+<ul>
+<li>Der Name einer Prozedur beschreibt, <em><strong>WAS </strong></em><strong>passiert</strong>.&nbsp;
+<ul>
+<li>Der Name einer Prozedur entspricht damit einem <strong>Befehl</strong>.</li>
+<li>z.B. <code>druckerInitialisieren()</code> oder <code>initialisiereDrucker()</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="e_ec2h3f" data-number="3.1.3">Ein guter Name für eine Funktion</h3>
+<p>Für den Namen einer Im <em>Unterschied zu einer Prozedur </em>gilt für den Namen einer Funktion</p>
+<ul>
+<li>Der Name beschreibt das <strong>Ergebnis</strong> der Funktion</li>
+<li>damit das Ergebnis der Funktion weiter verwendet werden kann, ohne sprachlichen Schirffbruch zu erleiden
+<ul>
+<li>Beispiel: <code>int g = groessterEintrag(); // sieht gut aus, ist verständlich</code></li>
+</ul>
+</li>
+<li>Er beschreibt aber (normalerweise) nicht, wie das Ergebnis zustandekommt
+<ul>
+<li>Also nicht: <code>int g = berechneGroesstenEintrag(); // sieht blöd aus, ist umständlich</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="e_wu05wc" data-number="3.2">Javadoc</h2>
+<p>Damit man sich in jeder Beschreibung, auch von anderen Leuten, Unternehmen, Quellen, zurechtfindet, gibt es auch ein vorgegebenes Format, mit dem dieses beschrieben wird - diese Format heißt <strong>javadoc</strong>.</p>
+<p>Mehr Informationen über das Format und die möglichen Tags finden Sie z.B. in der wikipedia: <a href="https://de.wikipedia.org/wiki/Javadoc">https://de.wikipedia.org/wiki/Javadoc</a>. oder bei Oracle (dem aktuell für Java verantwortlichen Unternehmen): <a href="https://www.oracle.com/de/technical-resources/articles/java/javadoc-tool.html">https://www.oracle.com/de/technical-resources/articles/java/javadoc-tool.html</a>&nbsp;</p>
+</div>
+<div class="hint segment" id="lj0u5f" data-title="Mehr Informationen über das javadoc-Format und die möglichen Tags">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Mehr Informationen über das javadoc-Format und die möglichen Tags</span></div></div>
+<div data-uuid="umrpqi" data-hint="U2FsdGVkX1+mTQCxSdwJGakMpOClYAVFo5xwJx0Qef7pSOaZ/X2YZ8EFdE4dvIZWrJLnwtPT05gvBzZDfEss4QlxNLx/vXAOp5dCvZcSo03cTNBm1/CyAjaS3i3Rn4583vO5ac0l3U+QNux6sKBY+xTpYJOBGWueWcTQh+LwZLEsna8pHpkA2qgRD2Wh17nmGAk1fh8T08XBvSSmo34Z25QU2QR3gZK8b2ElfafRqCYE3JcVRoHCUSwOM3wny5XgYSg64QJEeJMduKu1v9MS8sHUfLqKTaJ8gFDFBe5tj894rUnlyG9CpnqTtAdukLi7WHpZJayyVQABXcafDB7DjHMgusNFLb94ukU3qkl+Uxb5o5F7I9IjqUygDgXejNK8Af3e0ibA38g6x9pekgtJir3ap3hBleVVO2fgKkeHyekjKndwjuM+zV9XGS2iGWHPJZQsG8i5sIJoltR7h12vi6kBw2C30phYrTYGrJToMVAux79rt6VVBZdPlbn+GTjnozwoZzp65OBdNM+WokRgIQ4OkmelEjy4gJ8/D73KZRP3bnq3zcilSdBABP4Z3nwbJcjqy6slgaX2GFuP7irg/O/Xh24V/bA5Xf+ahcI9GpSAcvkUjE9locNgonIQ0iBY4xswbSoTHqZ4AXXqJ7GWPJbakTbrO0fQQHayiIMb+ZzQMZJOaory8pwuo62GSEJhVpVzpfL1gG4HD64hRWcSyygVAnRA1WgWx13/E0Depfo6zDMkGUnwadC9c5f29EnCLrCvYeu6gRjQlQysIWVpJl0YuQnCzLzws0Xo8ci+xOP9xNyLaC+eODUqkmHutbaaNPsJQQSAEV4p635GRcASCQ5YbKZezoUPNfIw+N9bmeyMDSGHh/A06+HO8M3wDBuQeApBdCgU4HU2HeqqhpK4WOXm8syEUI225kcvbNlYD5y0kmUTNRlxFHBlkyDf7FKV7nosadQNmRlH6pjNbwz8LOuI3ZXWfXXTsbUdCwUVzvvqiB+XM4y3RLxN698VYhFnOQIwihNowJM1TBYAqHzRD1E6k3Jkrj1SJm+kqncU/kQQh7QljUJmygSJfYg40BkxBwVw6fbqaQXLwlf1ZkngZv+bPBTE9o486xWdJmwiC0nimF3BqCsaAbEeq+3GnzeOi9VDeAWAZsdfrxACQCtjhEp6bNpouEKqdTMYpBtFzZXzHRWtmv9P7kLVZnFnBHE4x0KSNrMSTvEQsRgh1OtRLw==" class="hint"></div>
+
+</div>
+<div class="text segment" id="2nshyq">
+<p>In diesem Format wird <strong>alles beschrieben, was man wissen muss, um die Prozedur oder Funktion zu NUTZEN</strong>, d.h. sie korrekt aufzurufen.</p>
+<ul>
+<li>Was soll diese Prozedur bzw. Funktion tun?
+<ul>
+<li>Diese Beschreibung findet in einem Blockkommentar statt, der mit <code>/**</code> beginnt und mit <code>*/</code> endet. Achten Sie auf die 2 <code>*</code> am Beginn.</li>
+</ul>
+</li>
+<li>Welche Rolle spielen die Parameter?
+<ul>
+<li>Jeder Parameter wird in 1 Zeile beschrieben nach einem speziellen Tag:</li>
+<li><code>@param name beschreibung</code></li>
+</ul>
+</li>
+<li>Was wird als Ergebnis einer Funktion zurückgegeben?
+<ul>
+<li>Das Ergebnis wird in 1 Zeile beschrieben nach einem speziellen Tag:</li>
+<li><code>@return beschreibung</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Nicht beschrieben wird dagegen (meistens), WAS genau passiert,</strong> wie die Funktion abläuft.</p>
+<p><em>Ausnahmen </em>davon sind z.B.:</p>
+<ul>
+<li>eine bestimmte Reihenfolge von Aktion ist wichtig</li>
+<li>ein bestimmter Algorithmus soll verwendet werden</li>
+</ul>
+<p>Wie was warum genau in der Funktion passiert, wird im Körper der Funktion beschrieben, meistens als Zeilenkommentare.<code></code></p>
+<h3 class="e_wrse3g" data-number="3.2.1">Eine gute javadoc-Beschreibung für eine Prozedur</h3>
+<p>Im <strong>javadoc-Kommentarblock <code>/** ... */</code></strong> bei der Definition einer Prozedur beschreiben Sie <strong>was man wissen muss, um die Prozedur verwenden zu können</strong>:</p>
+<ul>
+<li>was in der Prozedur passiert</li>
+<li>kurz, aber nicht zu kurz</li>
+<li>ggf. notwendige Randbedingungen</li>
+<li>welche Rolle die Parameter haben, welche Werte sie annehmen dürfen, etc</li>
+</ul>
+<p>Beispiel:<code></code></p>
+</div>
+<div class="code segment" id="9p7wxf" data-class="" data-class-name="_4_Coding_Style" data-segment-id="1">
+/**<br> * Diese Prozedur initialisiert einen Drucker,<br> * der über ein Netzwerk angesprochen wird.<br> *<br> * Dabei wird<br> * - Die Netzwerkadresse eingerichtet<br> * - Der Tonerstand abgefragt<br> * - Der Papiervorrat abgefragt<br> *<br> * Wenn beim Bearbeiten dieser Ressourcen ein Problem auftritt,<br> * z.B. zuwenig Papier oder Toner, oder eine fehlende Netzwerkverbindung<br> * oder ein falscher Wert für den nutzerLevel,<br> * passiert nichts und es wird nur ein Eintrag im zentralen Logfile vorgenommen.<br> *<br> * @param nutzerLevel kann 0=Allgemein oder 1=Spezial sein<br> */<br>public void druckerInitialisieren(int nutzerLevel) {<br>    // ...<br>}
+</div>
+<div class="text segment" id="t0jttr">
+<p><code></code></p>
+<h3 class="e_2cf7rl" data-number="3.2.2">Eine gute javadoc-Beschreibung für eine Funktion</h3>
+<p>Im <strong>javadoc-Kommentarblock <code>/** ... */ </code></strong>beschreiben Sie - ähnlich wie bei der Definition einer Prozedur -<strong> was man wissen muss, um die Funktion verwenden zu können</strong>:</p>
+<p>Ähnlich wie bei der Definition einer Prozedur, aber doch etwas anders, wird beschrieben:</p>
+<ul>
+<li>was von der Funktion berechnet und zurückgegeben wird</li>
+<li>d.h. das Ergebnis der Funktion</li>
+<li>kurz, aber nicht zu kurz</li>
+<li>ggf. notwendige Randbedingungen</li>
+<li>welche Rolle die Parameter haben, welche Werte sie annehmen dürfen, etc</li>
+</ul>
+<p>Und nun noch zusätzlich, speziell für eine Funktion:</p>
+<ul>
+<li>wie genau das Ergebnis aussieht, welche Werte es annehmen kann, etc.</li>
+</ul>
+<p>Beispiel:</p>
+</div>
+<div class="code segment" id="pgqar3" data-class="" data-class-name="_4_Coding_Style" data-segment-id="2">
+/**<br> * Diese Funktion berechnet den größten Eintrag in einer<br> * Tabelle von Umsätzen.<br> * Die Tabelle muss nicht sortiert oder geordnet sein.<br> * Die Tabelle kann auch leer sein.<br> *<br> * @param umsatzTabelle beinhaltet alle relevanten Umsätze<br> * @return der größte Eintrag in der umsatzTabelle, -1.0f wenn sie leer ist<br>*/<br>float groessterEintrag(float [] umsatzTabelle) {<br>    // ...<br>}
+</div>
+<div class="text segment" id="tgn0ir">
+
+</div>
+
+</body> 
+</html>

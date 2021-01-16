@@ -1,0 +1,319 @@
+{
+	"name": "::dir",
+	"id": "h11fjm",
+	"user": "88a1c75b09b235b894d6ddad926d1556",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 1,
+	"zoom": 0.8999999999999999,
+	"features": [
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": [
+				"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"
+			]
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "Daten.Array.2Dimensional",
+					"uuid": "0hb9c1",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Prozeduren",
+					"uuid": "ud9uer",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Funktionen",
+					"uuid": "hst8sf",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Codieren.Links",
+					"uuid": "mhf1c9",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "5Code.Grafik-Konsole",
+					"uuid": "p0om1v",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "concept",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Daten.Array.2Dimensional",
+					"uuid": "8wzzmh",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Ablauf.Schleife.Verschachtelt",
+					"uuid": "fpq2jv",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": false,
+					"acquired_tutor": false,
+					"was_acquired": false,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				}
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir\\_3_Grafik_Konsole.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "qvj3hd",
+						"cursor": {
+							"line": 0,
+							"ch": 0
+						}
+					}
+				}
+			],
+			"type": 1,
+			"active": true
+		},
+		{
+			"content": [],
+			"type": 1,
+			"active": false
+		},
+		{
+			"type": 2
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				14.167847414313869,
+				85.83215258568613
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				82.78825286605844,
+				17.211747133941554
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				true
+			],
+			"dimension": [
+				47.73780718300706,
+				32.26219281699294,
+				20
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "_3_Grafik_Konsole",
+			"path": "::dir\\_generated\\exec\\_3_Grafik_Konsole.java",
+			"id": "8v9w4j",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "_3_Grafik_Konsole",
+			"path": "::dir\\_3_Grafik_Konsole.flow.html",
+			"id": "ta0ncu"
+		}
+	],
+	"linkMap": [],
+	"activities": "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",
+	"lastSaveDate": "2020-12-11T09:48:54.032Z",
+	"info": "  "
+}

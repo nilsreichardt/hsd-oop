@@ -6,7 +6,7 @@
 	"mainClass": "",
 	"libraries": [],
 	"javadocVisibilityType": 2,
-	"zoom": 2.1,
+	"zoom": 2.4,
 	"features": [
 		{
 			"feature": "gamification.feature.Hints",
@@ -325,13 +325,13 @@
 					"path": "::dir/_1_Mehrere_Klassen_Sichtbarkeit.flow.html",
 					"active": true,
 					"cursor": {
-						"segment": "dtl0s1",
+						"segment": "zkygqd",
 						"cursor": {
-							"startOffset": 31,
-							"endOffset": 31,
-							"nodeData": "Der Ablauf eines Spiels soll in ",
-							"nodeHTML": "Der Ablauf eines Spiels soll in <code>main()</code> implementiert werden.",
-							"nodeTagName": "P"
+							"startOffset": 0,
+							"endOffset": 0,
+							"nodeData": "Erweitern Sie ",
+							"nodeHTML": "Erweitern Sie ",
+							"nodeTagName": "SPAN"
 						}
 					}
 				},
@@ -341,13 +341,18 @@
 				}
 			],
 			"type": 1,
-			"active": true
+			"active": false
 		},
 		{
 			"content": [
 				{
 					"type": "document",
-					"path": "::dir/Karte.java"
+					"path": "::dir/Karte.java",
+					"active": true,
+					"cursor": {
+						"line": 89,
+						"ch": 5
+					}
 				},
 				{
 					"type": "document",
@@ -355,16 +360,11 @@
 				},
 				{
 					"type": "document",
-					"path": "::dir/Spielfeld.java",
-					"active": true,
-					"cursor": {
-						"line": 32,
-						"ch": 47
-					}
+					"path": "::dir/Spielfeld.java"
 				}
 			],
 			"type": 1,
-			"active": false
+			"active": true
 		},
 		{
 			"type": 2
@@ -387,8 +387,8 @@
 				true
 			],
 			"dimension": [
-				64.12974212356164,
-				35.870257876438366
+				82.09632499218598,
+				17.903675007814012
 			]
 		},
 		"split2_right": {
@@ -435,13 +435,13 @@
 		{
 			"name": "_1_Mehrere_Klassen_Sichtbarkeit",
 			"path": "::dir/_generated/exec/_1_Mehrere_Klassen_Sichtbarkeit.java",
-			"id": "6kzw5d",
+			"id": "lhhoi4",
 			"isGenerated": true
 		},
 		{
 			"name": "_2_Grafik_Konsole",
 			"path": "::dir/_generated/exec/_2_Grafik_Konsole.java",
-			"id": "5tgdl9",
+			"id": "dqh0so",
 			"isGenerated": true
 		}
 	],
@@ -479,7 +479,7 @@
 			"isExternal": null
 		}
 	],
-	"activities": "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",
-	"lastSaveDate": "2021-01-16T17:54:25.672Z",
+	"activities": "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",
+	"lastSaveDate": "2021-01-19T09:50:20.646Z",
 	"info": "bis 19./20. 01."
 }

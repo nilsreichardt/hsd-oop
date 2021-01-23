@@ -1,0 +1,476 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="1" /> 
+<title>1_Weitere_Klasse_Spielfeld</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="bxssg7">
+<h1 class="e_6t97co" data-number="1">Vererbung</h1>
+<h2 class="e_lhb2ts" data-number="1.1">Weiterentwicklung</h2>
+<p>Sie entwickeln die bereits geschriebenen Klasse(n) weiter und fügen weitere hinzu.</p>
+<p>Alle Tests schreiben Sie in die Methode <code>main() </code>der Klasse <code>FiveCrush</code>.</p>
+<p><strong>Im Spiel </strong>geht es in diesem Termin folgendermaßen weiter:</p>
+<p>Im Spiel klickt man auf Karten um eine Reaktion auszulösen. Die Reaktion soll von der Karte selber abhängen.&nbsp;Daher muss die geklickte Karte gefunden werden. Dann wird für die Karte eine Reaktions-Methode aufgerufen.</p>
+<p>Um verschiedene Darstellungen und Verhaltensweisen möglich zu machen, werden spezielle Karten-Arten in Subklassen implementiert.</p>
+<h2 class="e_av8cm9" data-number="1.2">Top-Down-Entwicklung - Objektorientiert</h2>
+<p>Sie entwickeln nun <strong>Top-Down </strong>die Anwendung weiter. D.h. Sie beginnen bei einzelnen Aspekten einer Funktionalität (oben) und überlegen, wie diese umgesetzt werden können. Dabei ergeben sich weitere Anforderungen, die ihrerseits umgesetzt werden, wie ausführlich bereits in der Vorlesung dargelegt.&nbsp;</p>
+<p><strong>Objektorientiert </strong>gehen Sie dabei vor, weil für jede Umsetzung (Variable, Methode) überlegt wird, in welcher Klasse diese gehört.</p>
+<p>Außerdem folgen Sie dem <strong>OO-Weg "Beauftragen statt Zugreifen"</strong>.</p>
+<h3 class="e_56ovqz" data-number="1.2.1">Hauptklasse in 5Code</h3>
+<p>Wie in allen IDEs können Sie auch in 5Code eine "<strong>Hauptklasse</strong>" definieren. Diese können Sie dann im Hauptmenü compilieren und ausführen, ohne immer den passenden Tab zu suchen.&nbsp;Wenn Sie noch keine Hauptklasse gewählt haben, sieht Ihr Hauptmenü so aus:</p>
+<p><img src="data:image/png;base64,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" width="308" height="44"></p>
+<p>Klicken Sie auf "Hauptklasse wählen ...", wählen Sie dann im Dialog die Klasse aus - in diesem Semester ist das dann immer FiveCrush. Diese Klasse muss natürlich die Methode <code>main() </code>beinhalten, damit man die Klasse auch ausführen kann.</p>
+<p><img src="data:image/png;base64,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" width="186" height="41"> - so sieht das Hauptmenü danach aus. Für jedes Ausführen der Tests in main() müssen Sie dann nur noch auf den Ausführen-Button klicken.&nbsp;</p>
+<p>Dafür muss das <em>Feature "Klassen" aktiviert</em> sein, was Sie sicher längst getan haben.&nbsp;</p>
+<h2 class="e_kht7zn" data-number="1.3">Skills</h2>
+<p>Sie können in dieser Aufgabe folgende Skills erwerben</p>
+</div>
+<div class="skill segment" id="i0kicz">
+<div data-skill="OO.Klasse.Definieren" data-uuid="ibx15j" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Definieren</span></div></div></div>
+<div data-skill="OO.Instanzvariable.Definieren" data-uuid="sfkuwe" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Definieren</span></div></div></div>
+<div data-skill="OO.Instanzvariable.Verwenden" data-uuid="ickm30" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Verwenden</span></div></div></div>
+<div data-skill="OO.Instanzmethode.Definieren" data-uuid="w36omm" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Definieren</span></div></div></div>
+<div data-skill="OO.Instanzmethode.Aufrufen" data-uuid="pvkiyc" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Aufrufen</span></div></div></div>
+<div data-skill="OO.Javadoc.Schreiben" data-uuid="284w5i" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Schreiben</span></div></div></div>
+<div data-skill="OO.Sichtbarkeit" data-uuid="thvlon" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Sichtbarkeit</span></div></div></div>
+
+</div>
+<div class="text segment" id="ztnlo7">
+<p>&nbsp;</p>
+<h1 class="e_2zy7uc" data-number="2">Auf Interaktionen reagieren</h1>
+<p><strong>Weiter im Spiel: </strong>Das Klicken auf eine Spiel-Karte soll eine Aktion genau dieser Karte auslösen.&nbsp;</p>
+<h2 class="e_ovg14u" data-number="2.1">Karte identifizieren</h2>
+<p>Im letzten Termin hatten wir bereits gesehen:</p>
+<ul>
+<li>Bei jedem Klick auf ein Text-Objekte auf der Grafik-Konsole kann man einen String einlesen.&nbsp;</li>
+<li>Dieser Reaktions-String wird als eindeutige ID bei der Erzeugung angegeben.</li>
+</ul>
+<p>Um die Karte zu finden, zu identifizieren, suchen wir einfach das Karten-Objekt, im Array des Spielfelds. Das hatten Sie schon beim Adventskalender gemacht.&nbsp;</p>
+<p>&nbsp;</p>
+<h3 class="e_f8mj6g" data-number="2.1.1">ID der Karte als Instanz-Variable&nbsp;</h3>
+<p>Da wir eine Karte anhand ihrer ID identifizieren wollen, müssen wir uns die ID als Eigenschaft des Objekt merken.&nbsp;</p>
+<p><span class="task-link s_v3yv4c def" data-href="Karte.java#e_v3yv4c">Definieren Sie</span> eine entsprechende Instanz-Variable.</p>
+<p><span class="task-link s_rold2l action">Ergänzen Sie den Constructor</span> so, dass die darin erzeugte ID in dieser Instanz-Variablen gespeichert wird.</p>
+<p>&nbsp;</p>
+<h3 class="e_bbf9cz" data-number="2.1.2">Ist die angegebene ID die der Karte?</h3>
+<p>Getreu dem <strong>OO-Weg "Beauftragen statt Zugreifen"</strong> greifen Sie beim Test, ob der Reaktions-String der ID einer Karte entspricht, nicht auf die ID der Karte zu - weder direkt, noch indirekt.</p>
+<p><span class="task-link s_7cudpv text" data-href="#e_7cudpv">Warum ist der Zugriff von außen auf die Instanz-Variable nicht zulässig?</span></p>
+<p><span class="hilitenote e_7cudpv">Antwort:&nbsp;</span></p>
+<p><span class="task-link s_w47g12 text" data-href="#e_w47g12">Wodurch wird das im Code verhindert?&nbsp;</span></p>
+<p><span class="hilitenote e_w47g12">Antwort: Durch die Sichtbarkeit --&gt; privat</span></p>
+<p><span class="task-link s_ku9lxr text" data-href="#e_ku9lxr">Warum ist eine getter-Methode wie getID() nicht sinnvoll?&nbsp;</span></p>
+<p><span class="hilitenote e_ku9lxr">Antwort: Weil somit die Logik außerhalb der Klassen stattfinden würden.</span></p>
+<p><span class="task-link s_8ash7l def" data-href="Karte.java#e_8ash7l">Definieren Sie </span>&nbsp;daher eine Methode, die für eine Karte testet, <em>ob </em>ein übergebener String der ID der Karte entspricht und das Ergebnis zurückgibt.&nbsp;</p>
+</div>
+<div class="hint segment" id="a31c7q" data-title="Geben Sie der Methode (einer Funktion) einen passenden Namen">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Geben Sie der Methode (einer Funktion) einen passenden Namen</span></div></div>
+<div data-uuid="mlefmg" data-hint="U2FsdGVkX1/yK6fLhb07/pagRsyjQir7DAsNue1x3/yVsv5KG/2CHo8pdER8jNmXcGE+7O7nw5LCXAhTGxK2jzaJKtA7Gr2ru3lEeqbz2kKE6O/C5EZsjJBZqnlhsyea2EMFfWlpRoi7BL3xSjyfDhVIb5jfezoe39F5t7p2IYnicTkFapC5+R5xbZKkUgAZcJMK6185o9lbh7JpHY08zZAPcYuhIS9yxq1wqs5KZiwK1nsiLMtPRuIb0IthJ7hli2R/9T7nnLL43Wc88gxifGEpeXRrtRLtg7SI7cALt2M8p54mqSAjGhhmv8BBD8BvUUtPRhE72e6QhP85hufOkMNnMJzrsGp8OWMxhqgNe/Iv/bG9wBs9omn7zwJPohkeQgx/RhDiBG3QX8Ll0khPE/7692QfE7LxqZtjiYPieqopWo69+wYGVpv/6qWk0QUxtd/cvRLYgeGFOZlqbO2vJDc6biucdTkHnqHf3Q6XWDBL6IElHPF+JQOgmGn2e8beX93+cI+MZKO/V4kieLDEp2X5FbZotqMZY7LCGA5UeS+COdEMtGJYURPi/P7YrcWuFGL+Cd3p2YgDiw8xdDpLDuLvhrz4hqK6xAKIB7fFf9mLAi9Mctt+AOuC3+gD2aqC" class="hint"></div>
+
+</div>
+<div class="text segment" id="loy9ui">
+<p>&nbsp;</p>
+<h3 class="e_8wdebl" data-number="2.1.3">Finden der angeklickten Karte im Spielfeld</h3>
+<p><span class="task-link s_ug6fl0 def" data-href="Spielfeld.java#e_ug6fl0">Definieren Sie</span> eine Methode, die eine Karte im Array des Spielfelds sucht, die dem übergebenen Reaktions-String entspricht. Diese Karte wird dann zurückgegeben. Wenn keine Karte gefunden wird, wird null zurückgegeben.&nbsp;</p>
+</div>
+<div class="hint segment" id="wmf5zg" data-title="Eine ähnliche Methode hatten Sie bereits in der Erstellung des Adventskalenders im Praktikum 07 geschrieben.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Eine ähnliche Methode hatten Sie bereits in der Erstellung des Adventskalenders im Praktikum 07 geschrieben.</span></div></div>
+<div data-uuid="0lrzuy" data-hint="U2FsdGVkX1+QG637YQQHM+NMt6lAv5GM84HN4BgZUc09tCFvp+k0P5TfGDTS3SD09TbNh9Io7ekGddf41gW4/Qe+/+tzsKFPgPP5BxgokRQNjwRZPtU4N2gwbwI62LkiLgof0C7KLbO1gUT3KCeI8gE3mc9zhYOSCyiZuxHNLAO9RvNhqiNfwMJ6KMTNjpJefPi/zJy59tnJdus+uS8Z2Lr75HNPQ2BVYFxZRx45Puntz3kNjpm0vwKjlzkd5j2w5+Mvct2gvm7vRLnKIqDMpvtsQMGFEsSb+aLi6F4+1XGVe8oBm3CWa5bxteaLHVIZelY8KT4Aqrl5BYJ62yU5ophKABbCyBQPyhYduF/3KIWUocaFpUVpeJUZ2GDeMUHXPLu2j2bkQ01cjBSMJo4Wv3pAqGkOxj7ykz4CO/XN3WxpNUTXf8ekbqw+uyBr6omNcI1btADeYw+5eGJXlGYP8hzByWzSSigty+uQzdjbvPhOWqdRmKTYGV5pqgUTLp7HbbFVikB3nnnWt98E8aTfuc/SJ9XnfC3FE7iDxqUeoPhmxGZEsfxRdTIorNvKKSerxbYPIOgTc5fTx9H2hq7myWOBkyuKJcFl29sHgvhQ8hTEfNW8XVVCdp+TzmFTb8gSSxMXiJbVElLMsy62oC9bnzS3nxrUeqdsoR2PlwS1KpglzyTLnuruUtvCYdlKeGHrTg2PswtfS+H6LEd0E7nYbA==" class="hint"></div>
+<div data-uuid="tbfr4a" data-hint="U2FsdGVkX19Dvs9m7C03FZc9iNdfqh9CRxa7TJNyENdtn+XzIe8vya9Nq38gZyMrIWd+reNoxfVFV1xLB0cawYCVIPAksHividvbeYd56Ps9bnL16U1WF6bw9LPA4z9zTeitqoXh/JGjSo7jelPBW+gjJ1S5B8meSazBjKRdzXUWYIl7ehIAj/EqDJwfP1JHS45AKLoghYqj3ADy8CLIq2uc6iX4M/Ns8NsW0euhYn4mJSDOVmmwG+4aGWQPhL9P65VHRSYnYfdGnFyqpeOrOGBxN7IrTf7TvYksasqSCB9SLUtApY8hiG7tl7ni+g235EH+/RtRMcmLC6RQSLsYIrIL8ddew6qD33hWT9WdimMjn/dMtCahGg/MsKpFCapaZqyUhBLZc1uIy17RahFYpeEawh3Rh4PCi4V16S0snQ8CCoEYZ2BHjLDivzjgcIDCtev9JICL+y33RB9dtys1/QRAkEv5DIPUDMqbssFr6hD0nWosEMn2Sx+6CRQPH4TjvBYas5ly6M4uOWFkeXBiEvqti+1VIPnadM1pi4jl2h9TOWGFojeaqjTU0EicEMwTORrw/Y1yg0mgDja7fBq4gA==" class="hint"></div>
+
+</div>
+<div class="text segment" id="vybvkw">
+<p>In dieser Methode sollten Sie berücksichtigen, dass es auch <em>Elemente im Array geben kann, die null sind</em>.&nbsp;</p>
+<ul>
+<li>Damit können Sie gleich einfacher testen,
+<ul>
+<li>weil Sie nicht das ganze Array mit Karten füllen müssen&nbsp;</li>
+</ul>
+</li>
+<li>Außerdem kann es im Spielverlauf vorkommen, dass Karten entfernt werden</li>
+</ul>
+<p>&nbsp;</p>
+<h3 class="e_sppnhw" data-number="2.1.4">Methoden zur Identifizierung testen</h3>
+<p><span class="task-link s_sming7 main" data-href="FiveCrush.java#e_sming7">Testen Sie</span> diese Methode, indem Sie&nbsp;</p>
+<ul>
+<li>ein Spielfeld erzeugen und auf der Grafik-Konsole darstellen</li>
+<li>die Reaktion von der Konsole einlesen</li>
+<li>auf eine Karte klicken</li>
+<li>die Karte suchen, und, wenn gefunden, die Karte auf die Konsole als String ausgeben.&nbsp;</li>
+</ul>
+<p>Dazu wandeln Sie passend die Methode <code>main()</code> in <code>FiveCrush</code> ab, die beim letzten Termin verwendet wurde.&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="e_xpu0wl" data-number="2.2">Auf einen Klick reagieren&nbsp;</h2>
+<p>Nachdem die Karte gefunden wurde, auf die geklickt wurde, soll sie nun eine Aktion ausführen.&nbsp;</p>
+<p>Diese Aktion findet natürlich in einer Instanz-Methode statt. Zunächst implementieren Sie als Reaktion nur eine einfache Ausgabe auf die Text-Konsole, die Karte als String. Sinnvollere Spiel-Logik als Reaktion implementieren wir im Anschluss.</p>
+<h3 class="e_d79ldb" data-number="2.2.1">Methode für die Klick-Reaktion</h3>
+<p><span class="task-link s_69xduy def">Definieren Sie</span> eine entsprechende Methode, die aufgerufen werden soll, wenn auf die Karte geklickt wurde.</p>
+<h3 class="e_qdnj9i" data-number="2.2.2">Test der Klick-Reaktion</h3>
+<p><span class="task-link s_o3kp5r main" data-href="FiveCrush.java#e_o3kp5r">Ergänzen Sie</span> den bereits oben geschriebenen Test dadurch, dass Sie für die gefundene Karte die gerade implementierte Methode aufrufen.</p>
+<p>&nbsp;</p>
+<h1 class="e_g05ams" data-number="3">Nachbarschaft auf dem Spielfeld</h1>
+<p><strong>Weiter im Spiel: </strong>Bei den Aktionen die der Klick auf einen Spiel-Karte auslöst, sind fast immer die Nachbarn dieser Karte auf dem Spielfeld betroffen.&nbsp;</p>
+<p>Typische Aktionen von Karten im Spiel, wenn man auf sie klickt, sind</p>
+<ul>
+<li>Tausch der Karte mit einem Nachbarn auf dem Spielfeld</li>
+<li>Übernahme der Eigenschaften eines Nachbarn auf dem Spielfeld</li>
+</ul>
+<p>Sowohl den Tausch als auch die Übernahme haben Sie bereits umgesetzt. Es fehlt noch, für eine Karte die Nachbar-Karte zu ermitteln. Das ist eine wichtige Funktionalität für das Spiel, die häufig verwendet werden wird.&nbsp;</p>
+<h2 class="e_8a7bur" data-number="3.1">Ermitteln der Nachbar-Karte</h2>
+<p>Die Nachbar-Karte einer gegebenen Karte wird in einer Methode ermittelt.</p>
+<h3 class="e_if5rhp" data-number="3.1.1">Methode zum Ermitteln der Nachbar-Karte</h3>
+</div>
+<div class="hint segment" id="u013ku" data-title="In welcher Klasse wird diese Methode definiert?">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>In welcher Klasse wird diese Methode definiert?</span></div></div>
+<div data-uuid="tj8fvz" data-hint="U2FsdGVkX18yHtNL4Pv0rrul/kVWUJwVzM8TVS1fm7Qe//f5ukksgrGrKR+6mLwDTyiCbMzavbMd+kzXZ0U8bbepHGcHMdp5jXASRpBwGPIyjg3yAY5rm0RcuRjjS5+B+cviDcb1i0QakVWtigZS7xnJ3nGLBgf1U+c0mY9+R8s7MUXGVBohwzJzr1/6vloBbRmBxlAUdBJrVmw0m8iOSa/3zjXdny2JvQRjlotW3EFZiv1aF/N74rXkaZxzyGrVTos15Aa1jid5OHG3gci7Q0/OGL0JxCXUqTHxd+pNOKSFlgYu1rYsUbGd3OhgteZY6N5ET+2BGaUkEKPyJ3q97dt+ediPAAV7kNQBhyP73IK9lHdXe1cWm4FbioDoDHSJFabaPTaC1jnK+e85pM0+fEuNOApHgoMaU/w1oRyRN8U9Wru4N7GUGXtiq37f1oODqRG29ZccB8Aw4LgKUOTSaAY0bsULJTopvjVIjXMUXHY=" class="hint"></div>
+
+</div>
+<div class="text segment" id="7gvx7n">
+<p>In den folgenden Aufgaben werden Nachbarn einer Karte in einer bestimmten Richtung (oben, unten, rechts, links) gesucht. Daher ist es sinnvoll, eine einzige verallgemeinerte Methode zu schreiben, die in alle diese Richtungen funktioniert.&nbsp;</p>
+</div>
+<div class="hint segment" id="7vqg4a" data-title="Wie findet man eine Nachbar-Karte im Spielfeld?">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wie findet man eine Nachbar-Karte im Spielfeld?</span></div></div>
+<div data-uuid="ci0cq3" data-hint="U2FsdGVkX19TJc+O7CT1Dzc6xWfgWg8g9PollvKH182jBot8W7j6Tm7MYrIqeyo1brwxpmDywW44jyyYVV9/cJqBQWc2C83iUDr3qmGWhB2JRugTMmtkHCy6FuVqTQNSoR/DBjXzhyqAp9y/s6u09+0wXJ/xMqKot45kBkHf4Kk/BIxnFn2wx6QP0DAysoYoTK26RfZ1sW59tHRbGRwvD1798nSXguHIXGqI2bc3EcaihFkL4N1YTTzYhXnGy89EYXlMPKVib1Hv9vUSUWhPkikcuTpmutGhFz7Vt5ZbC32TdiVeKNDcpI77hFXviaKicZRz6NeM3RfODFj19Mzy5Ryv+NfaO/zyRkCK2ZfNJ0RdXt+jcscTL9l2Q8XcelktfRaVFWNNCsvWxyWpK59BHZ077+hkeXvvyiITTYD+UXZJJ/oE+aaA6lHNwQLQ7/tXMt6BcpFcsazbAoO9RrYCiPFpqHJmLtXDnfrQzFgKdl3Fw5zdOtvluiSozXU94KFT6pO1TltmUfeAImrQ4pG0K6KBq+xkVpg3/fAjyAxavdha7D0hG+Q7IwqIOdZUBeEawc7YB0juQs4IJynLU0CmZnNNwJHBvlJJxNbGGrscZas=" class="hint"></div>
+<div data-uuid="scz6pv" data-hint="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" class="hint"></div>
+<div data-uuid="86fzsd" data-hint="U2FsdGVkX1/cpBNhfPd2DlbQGYm7AmkpDaG7ByFskvwebvpHaSUTLaCFQ6qTmS282ax+ulHsdOBbR0uK9FWiCQMmcvqebg0B1PHg5YGX4usBwTS8p4RNaG7CvEjELSjxOifhQktOofBlot8PAGv6OA/uhdKssLEqV0fg5GASB59S80lr49uTzyu3Q7DZahcAnLDW79W4WXtsweopDG1Xnu/YpxhZXTPdapthkL7j8vLMRYZb7RWot2PlCV5ltN4Nsgmz7igQeZ0i54HXB/Uk19P372sI4II2R3U5HzAdTbwnbzEslW4/jWh4bRDYR7L1u76PwEb4zipuzdUXiuyCVwSqIiVgsrVwdDTx95OfWtoKwVjO8cPYx9MyMOBoOkja9ohXzI41bNsnmWx1wyJf0fryvkXuLj+EFqES97XBbCnmI4bLaBrcwcjIEr2T83d8Z4CzrEcnFMnTpcZNRhl6ErRaOw4z9xQ+9zbD8MK2W31DBVJlLnK1dV5iwBuEQ6/eOUXGXP5iAfE4ckQT4gMxZyLlmNWLrF/JGo8BoqEUhZOYmr2BE4TI2q6WBN6Rc/L1vhhcP0Au7I1AG1iWec5pcfgL/DgeX2R7X2Urzx4nqN6ZyVJOOtJPEkEGsCZ1FoufxXs4MYRAUtgjxm/lWZvM3iMDguATBtsj1ILrW28WqbDNW2BloURVeggLFdkv0uKqJenUIaZLldrXPeaAEo2EkkzhgZR8YuL1tFtMTiSwuDi9oJOIlQ7ir2XGXdqWRD6OPkexi2q3I7TdJcSBfr83q7/M+K63gr+iFpA3rqhQl+lA1mrvnvqknFpifrrKTR5x+EgNd5Rjoc7Dq2SfRQUDJirURTq+YYdPhWPOffIIeN6Mgk5elbFD89F4UgPoY+75oWElM2HWhUIHZ73X4IYePAexzM/thomDR4f+C1IKmcI=" class="hint"></div>
+
+</div>
+<div class="hint segment" id="fatkgy" data-title="Zur Verallgemeinerung werden der Methode ein oder mehrere Parameter übergeben. ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Zur Verallgemeinerung werden der Methode ein oder mehrere Parameter übergeben. </span></div></div>
+<div data-uuid="qw4zop" data-hint="U2FsdGVkX19lC9LawnGqriCzexngCQL2VmPipgn5DuEXTfn3Fu1jgZ7S079hJTysqNSs+ftLagR0Fg1mwpJb3EnXnZUQVlcSBUfvzkD7jvr+buvo3dQDKn0tI9ZOgXe2AzFy2a8nGsKlp+2T5Ao+RdiI+jS/ifeT6zwQ1AcR8yKifsFhBc3nudf2f1cu/5aPSF0f/kVdbxovru9G7nNGD7g41HSvU+LG4aN1qCyglbuzFg0SgROLiE7k5PrstsQhF83/aQSffs75AG1z9nAfh83IAcRW4NGrxiifFo5hjNPTZyz+2io6NtqpPptwW/AdNVGkdzOH/8oHEPL8PL5tSEi/B131xQcDSrmOnukj22XJq0Fb8j5SCCvfd7ESKMjgwSf3dm2MsTMc64NFCAp1pGqLi144/oe6nl2XbSnxcZSEjT8zCrz/agcPTSmnIiHP0aMEITJyL5i9Ha0K7WK/leDyED1W3LlH71ZXIIRRakfCGD3JPEMmfR9KElFQH26DfmfnZdOaK4zxmS+fwgfUHMqUUPds+yK1xKJ8ddrG2Z8UR2S4y0HsSSFPpkyMOAIOxCzEV/SxehOT7RxQJ9RK6z7nYLya3OBo+x00bjhEQ8c=" class="hint"></div>
+<div data-uuid="1ll19z" data-hint="U2FsdGVkX1/1J7NIN00kn/J9K9FIcAAm7LSNdrKNflAVDe099+jMR1e7v6rH/qIUYP6+hxwqcAr7TArPUIWgCiuCinydprIAq1gGx0lUEls/quvlRUeYie5m/amB/gs5wO1PHYNl0YXmrXPLnfol3WDqNb7x9hPOlx+t/2GlpoDq9vP+PvK1+OEg2XgpE2Nj/kdayK99Q6tDSTf+1PuE4iwsIbAfab+Wx7LvHlXF35X6LhfAGcumdz2rJJ1HEVId34UTEQqfAVjzlZY59+bqvAhhi1PGCzzrnbCe0JRziPfHWWuqct/O06gbQZ28yjHg7J65uWcBX46MJjeFEkiGzgNvaYXDW73eO7UImyrWqxLKRizeBAyJ5VORctMfUhC2l7ZnakhThdlqeP55YyZdRpI4mjIOUrnAUepcHMGHBKq12RX00A/JzT2h7nVIFIMNB/R+cm1KR2aEBvJDYnSUPZOg6bq00xLEeFn2RnLyVOalXdceW8tN0kl8KF7B+pult3MOealHyyAhx11Exi5ndQih9GqI3Cl0PtE5s6DnlvL3lnEto5j6eDhEsAaD04RkvQiAgMhy8tp4N3uS0BgJbl1iIQ7nEs/RTPCZyY5nniU1Fe4ZZa02erR+J3a26rFLCqtVqCTJ2eN+Z/IJiR1NIJS4/vIQdJpDHjSP8WIrwvhCfEMTtM75cI6q958q/tzIdnwTJzVH2k+u0ihiz7RwXFnJH0H180cMyBiqtWiqkeldyKpyR16eq7xCrZKLYGbVpD3HBDi9pI3KsIyhWqaufUGS/s8g/o9dWgBU5zN0jAr3zu44J8WlP+NyMpO7e7jCYLPyKjohVhlxmHyczZu655DpD6HtpEBDZLOxh1lToTeBOn8CyOv9wUeyujNjUrU2mLABeQnCKMwkZ+lvs+nWt39yugeuhkdaEhcPutLACbWHSe75BNNsd0uDp7SH+SN6kWLr60lYs37KjjM0e0xhd99uHtOK0h0Xjk2boGftCAk=" class="hint"></div>
+
+</div>
+<div class="text segment" id="lfaodj">
+<p>Einen <em>Sonderfall </em>muss man noch beachten: Wenn in der angegebenen Richtung kein Nachbar existiert, wird <code>null </code>zurückgegeben.&nbsp; Das ist z.B. dann der Fall wenn der linke Nachbar einer Karte ermittelt werden soll, die am linken Rand liegt. Beachten Sie also die Ränder des Arrays.&nbsp;</p>
+<p><span class="task-link s_fjvnft def" data-href="Spielfeld.java#e_fjvnft">Implementieren Sie </span>&nbsp;eine Methode mit der oben genannten Funktionalität.</p>
+<p>&nbsp;</p>
+<h3 class="e_g7e503" data-number="3.1.2">Ermitteln der Nachbar-Karte testen</h3>
+<p><span class="task-link s_kl8ou7 main">Testen Sie</span> diese Methode, indem Sie ein paar Karten auf ein Spielfeld setzen, die Nachbarn der Karten ermitteln und diese auf die Text-Konsole ausgeben.</p>
+<p>&nbsp;</p>
+<h1 class="e_2zy7uc" data-number="4">Spezielle Karten</h1>
+<p><strong>Weiter im Spiel: </strong>Für ein spannendes Spiel sollen nun verschiedene Arten von Karten definiert werden.</p>
+<p>Diese haben einiges <strong>gemeinsam</strong>, nämlich die Eigenschaften, die in der Klasse Karte bereits definiert wurden. Sie <strong>unterscheiden </strong>sich aber auch&nbsp;</p>
+<ul>
+<li>in der Darstellung.</li>
+<li>in der Reaktion auf einen Klick</li>
+</ul>
+<p>Die bisher definierte Klasse <code>Karte </code>stellt alle Daten und Methoden zur Verfügung, um mit einer Karte überhaupt umgehen zu können. Die nun gewünschten verschiedenen Arten von Karten mit speziellen Funktionen und Aussehen implementieren Sie daher als <strong>Subklassen </strong>der Klasse <code>Karte</code>.</p>
+<p>&nbsp;</p>
+<h2 class="e_bb1nev" data-number="4.1">Rechts-Karte</h2>
+<p>Als erste spezielle Karte implementieren Sie die "Rechts-Karte". Diese hat folgende speziellen Eigenschaften:</p>
+<ul>
+<li>Sie beeinflusst (später) den <em>rechten</em> Nachbarn.&nbsp;
+<ul>
+<li>Das implementieren wir später, noch nicht in diesem Termin</li>
+</ul>
+</li>
+<li>Darstellung: Ihr Text ist "&gt;&gt;&gt;", Ihre Farbe ist immer zufällig gewählt.</li>
+</ul>
+<h3 class="e_p9apg5" data-number="4.1.1">Definition der Klasse RKarte</h3>
+<p><span class="task-link s_emh50v action">Definieren Sie</span> eine Klasse <code>RKarte </code>als Subklasse von Karte</p>
+<p><span class="task-link s_adhpyd action">Probieren Sie</span>, diese - noch leere - Klasse zu compilieren.&nbsp;</p>
+<p><span class="task-link s_73g8bb text" data-href="#e_73g8bb">Warum meldet der Compiler hier einen Fehler?</span></p>
+<p><span class="hilitenote e_73g8bb">Antwort: Der Constructor der Superklasse muss aufge</span></p>
+</div>
+<div class="hint segment" id="cpo88s" data-title="Auf welches Element bezieht sich die Fehlermeldung?">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Auf welches Element bezieht sich die Fehlermeldung?</span></div></div>
+<div data-uuid="ai3d1l" data-hint="U2FsdGVkX1+1OMliwVPiAOUCEFKmMp4Bg6eRzKlVDUR5Rlq4DBTM9duRVyP19TtPuXxVGLXmIP9y9EC75NQKCUuu1bFWjstqZPBkHDRZ4x47uVKnY9tRqsNG4KxfpzPkvkhh9oBQSRNi2S84iB8aNpDPhh3t3KQ+tnBCRH+ZW8IGXSlj7bkTFx0z+kknIvOBLn59zZgu4nirTWW5XoDNHtrFc8WMZk76QeRwNKXZ1kn2Zn/3QhcAG0AeBrE5IWwmavtqvXAH3YpAGmkvbYrfKKmTg/e/TKoZJz+V113eXEZTT72riylTF/0bC/4rEq0sW1DStyQRmQqJpLhFIzZXPgE0AvB7cZ13FrTDJcDlGXJu6/pikm/mAGnX+2+tgobCDxoHpNZQ9t3F6rE4qJ8yyoxYXxydzrAsTEIOj4cNW4V/CRTgTeDJl/64GBYWPDjOGvT9sdS5UB62AYV6i8/4aBMpn+sFK7uI8c5pZwkylu4zXiMMX/fNIx6ixwDuRV1IWNR0ceD5Ky5Rqf5oVrmbUKP4Urtzz+yZedqNjIYX7tJZT+v28c+o7b3atWOCX3tqZF+Tar5wH3HAR9yLuH8+5rEebnjQLQpMEor6E+nYLoYPeNS/u/jyua1AVmvcf9G6kDQrgHXlPrBktKSUqqZvU3vlBKa3aaRV8GEyV1Z9px5NXAK4fAmjvSGvLdOFIvX1FzdC91vZyPNhVXGA3bX7UatPAGQ6cJZLp9cqnccdm7XrdAS6nFMs/FqV361dHN9a" class="hint"></div>
+<div data-uuid="92ablm" data-hint="U2FsdGVkX1+q2Vg1hVdufHDRDZQWSnrWmMwbHq1rnJ1PMcCxdF2Rx7m9KWDdbsrSLuWm+T5DnDmKhQ0Nc8Il2ZmeOF3DiYbs3iErpbbhDZqEuETdmkr5CuiHve9SKx50vU14Qs/XfLX1BWJZSs9N51p7vntiIVfgsy98BAw1LKlrwDe01mCqtiskfFMdHtbC/GkRpXj0px1RDX7ZkUAIyLJu99Y8XsSUzxFoCJr+Al2COBp90jtVDQeDYqQ+3QHg1sDTZPuEgEaFUbBUuTO+gXxkzUaUN9zOKrhExQiiLDPDrFuhBjWWQ4dQ/mv6jL74OznVYcbHDWe+Xq75zWb+hecXEEoAXu4BPRBbyarOH8ukiG6Kr5sYJk6Y1/dZxaLQ9/KdvjjQPAWrj0GZiFNcpJa8JYgI7Vz3FHqfxcuiFCHyKuW4DX96caTcb5H1kiz1yUzozQGcN4BW4KmeqhlAUKiC1j/ekCRfyZlnF2AIlIvfBqxIp51msmvYHZIFz6WR0ZIKtxEb8Ke2mgsSO/AroLnJ1outazPm3Ow/oj6MbYtx6awhF97pHup8G8m/19cq8iaAA26LTpFw2ROuBuJRPcaNUQUJ5keyuvGZNTjTKoM9+r1QytMdKcJ61GFVetCkJi8dbK+SsRwSGA3g/MR57kBGi70wSLyhWWCnwqfFyV5pxxVD1B3PSO5KnN8UpXQ5" class="hint"></div>
+<div data-uuid="96j8yb" data-hint="U2FsdGVkX189CLEJYyo5nzTFwlVvl7XuLD/l7DY68KtDPGYzKRsQkj8MeA8QyFkWA5INvdKqFYBj8ne55PfDaEh8Gw6RAhtNiw+clrlrZtd2B+b17LzAYfMW6AP1MuMYV3PovZq0RviSsnJxJ37vFeuI5KbpNVV0osYMs+D0/n4hCqbIKWUygeUnCLWpMNGaAIydDfuGPq6N58Y9WcycLJkTCUbYMZTRmGmJLUyUxsTrYEbjundL5HoDX2Wl7wAb8SLQS8+4jZMHj3YMfqIjBlg8zJqDgNWycHGQnRmOGOPWd0sQxUmoJ3SuQzZouL58Q7koEs90z2eLiepjhQbDERbVzF0ZuQKPmr6aZVwqK8Oh5M0+oio4sdW3FPxs2E8NJOprJjqfTqg3RK9Jd62am8tZKex5fy4Tg1Ll9AUzlBAQDzLlJM6Sr1szO3IRzx39DICMxZ8R2Q/xVzcVIxudPVT7WIsZw9zUjK1Di18a6kqFjdCSuCTRYLK2JUQwBcWDEOxibVY+hZMqPGucPtgiQeE0MaeVNLXjcqoTGXuQl59Z5aYCa7triYs4danAcWfwOP2unNxxBnPFCI904FBRH6rlkCdtn87+ntIqYoid3/9W9h+tM3LyIPFN5IFDBlbBYNrsIRnwaVMFW1A5Vc8cQRb0rGU6jsJUlVKwcJfSrfTtsXQekKDmNzih0zJZart+zxFpKnaZezUgSoDWqQ5MufkY7XDVElVzK+YFiPVDBSghnUDcoVPQNb3DLcQKUBfN44ksct3FbXU4Rafdd91g3ML1XqKXf09JNSwB1Um9gPsmnn5aNogym7buOdqeydS05yPWQGJz9vZLx5Bd218qC/rpcEKQ1YxO1khYN1X8v2KM537X7TIoBBbcgs9RQxZ2" class="hint"></div>
+<div data-uuid="hhx2hq" data-hint="U2FsdGVkX1/DDUH8Cy6bfvLJZCsL2LPNFSPJZ2S19lflUTzXcFSeiVs/7leyiRjY0zu6OYO6wdNVEIZgNuVfM58qJk6Txksh4fe7smLeCOFOpjRS8HGAPFWtxiJr27NQGwCahh8/GP7cEo7GUEl4spoWQM+qLSytYeqRXLQ1wj/jFcu8ewXdueSRBkxkDzELv5ZtjejbkiWXJPRi9aPpmiJZ0Npn7+63RxARV854kUXSJzfbnCy+dtb+QLLQhlxhbc1DvmnOPo7eXRznrcBFaolYrD/DcqDhnd8XajMmQJObZDGG5rZlv2QYylCPp8mHPFllmLiM0SAIiKaqv9gednMM+gpXAI88mQUmz11cFVzkuOi+M9/dKDhciuJS+C5L1bmM9K73QXKLiktE/7QMneyYaJMQAHrfD+FA/Yft7YEzIjgTWb63vmRlMq/pbKrwLOy6tjtTDK/OAXo7AzPcCXUUXTWS2qjbnjtQvU+bI9TJmAGz8D+rLLiT9gvP5dnWFjlTM7onV1u6I1Ve7JZ3J6BSRlLh1ZQY7loUYnKfnsg=" class="hint"></div>
+<div data-uuid="ft4zbu" data-hint="U2FsdGVkX19gKzUViDnv2UbtFLJw5IXjmGr++iwAjWo0fVNZ1IPE1rKafwPd2rAxqoKGRf+G2bemba13sann6Yf/uHPbPrYKySyQeWRBOPqCalWuJ0086YNEd6MihnAKwg/WdAvnz2m3I86S9uDi/0Xv5kRtCPQRxCNQ2jYNfG7QCSrjUd7Eyj568OHmuioaFO3xju+5Vmvv9xbAr7vpb31A53JLdeSh295HepztUeVtSZBz+g3sbd5pvZJxxwEzAQUQU30IYYkg0/eC/nyMbAKiLd/zm3PGZ5mXDYy6+/FYBPnwn8Cia2gdCiSsCI+HDjTjM8riH81nxbQZ0YGuHbm6DH+qtxj1mRIaH/FBNwS13vxDRp5eM7iuM1p0njPvVBAuI6jm9N4PzBb9k3ai9Qxh2vdsboYqOVIKhfgH1PDcVEyWJGtO3I/zvLzStlg2LudwDXJ6jF4Rsvd5PqT+EmNtJwojddy/YLBwANJxtJA=" class="hint"></div>
+<div data-uuid="f5nw1t" data-hint="U2FsdGVkX1+IcrJOe+f2Cv9Rszy/+bYjur+9O5UYjKAVyCExK4cuSK6oWQ6PTFhpQjjNVkMkUI18xzoIyTXjoAf1gzwAc93p6dYITHjAANVwn2aaYZNqWM9itiHOYUGxd7xvKyCAkMHbsME9USTiUFQU15OFLrSH2ndYAO7Lr5YuQCU5rNrJcLgA5UyFRsbk3yx0FTuZA03LiAm/i4EwlxtQwM/kb0NBLJ/GbCYYOvEXcg9bR0IrhWbtqDip/yUKsmUlllxDQlnL4aJJfXYncvWka2LSwbTWWTjv9lYmWCAhmphJTv1YnIdWX4l3/mWsnFCtpg1ZOD+k+IByCDkTAaZ5cEx4VPJmzElgq40+S5Tbki/PubYKCsUOsPFFzFKBxORpbYMl9suy36kUK35DbifO/L1a7vr0YIetcXYYtIaF4RE3NHnS2AG5dGmuJvUEl3eOsmuOHBmtWv0XOCKi4VV7Agrc++PojDV5NFEoXG5BPfQiwHgwubLLrUpke0CWGfpxoqtC0fuL7qRVc1sMmbEF7vDAjSKKMFJZ3wg9yLRf4mGaoBL6I5cZ1Qlqpik1phkiVOaxQw21uuNzQou1MUvQWkGfqwDAsHyRyxUXpqkWF+zcA7SrlmLkWxK5qO56J9rrHi04ZMo+QdcFKP06BXBCXZXCtTUfyA/MAE3JrcSUmhmbpGlfbmQ87i3tcUH5RfTzRSEsDajj64qyj9YlORP+aTt7HrzvV98mOwB7gDIHcT8TnCB0v2l11uERn/27MFtof+/JGOZAoQ+mvIT6/UYq9ISraW2ZqhEfTYsFbbwRWAqygHTY347LUo7ovdK97p5jScFm8SOtO4m2zpXMs9wn7YzPbfORWRQcaNLks3N21Nf/KQjRxmHeZkoyidrnMeAEZj0zFmPAuML/i2La7UNc1DNnQRfrGZJFSWW4ByruyBYZPMGTUEbcuH/oQ0ROwQUrx5k+1hq2hAX9mgIdA+BnGwcYlkgMLHf62WBwYCPOmbQECobMNBOfIDFgtC9WORm7DuiWROPgGJtk89ZfSFJnaV2eMoRGW//uq+gbJRf08bq2lvWE8yDNFkkE5Obnqxmwi4YIKvWWCPEFDNe3LusRWgepdnbbN4RgvDW2a9KbLBPzmIMOBmEXQLmKIa8VvfPGuxSR6A2PBvxA4CieS7vy612ImPZaFsMV1vUaIx2ucXFByQo0c4mzr2aUEaGF" class="hint"></div>
+
+</div>
+<div class="text segment" id="lox8m6">
+<h3 class="e_ke5tgf" data-number="4.1.2">Definition des Constructors von RKarte</h3>
+<p><span class="task-link s_vttx89 def" data-href="RKarte.java#e_vttx89">Definieren Sie</span>den Constructor für die Klasse <code>RKarte</code>. Dabei müssen nur Zeile, Spalte und das Spielfeld übergeben werden, die Farbe und der Text wurden in den Eigenschaften der Karte oben bereits definiert.</p>
+<h3 class="e_o90pv7" data-number="4.1.3">Test der RKarte</h3>
+<p>Ergänzen Sie die bisherigen Tests:</p>
+<p><span class="task-link s_t0io5i main">Erzeugen Sie</span> eine RKarte und lassen Sie sie damit auf der Grafik-Konsole anzeigen.&nbsp;</p>
+<p><span class="task-link s_brf6il action">Klicken Sie</span> auf die Karte, um festzustellen, dass die RKarte ebenfalls gefunden und als String auf die Text-Konsole ausgegeben wird.&nbsp;&nbsp;</p>
+<p><span class="task-link s_fatntn action">Machen Sie sich klar</span>, dass Sie für die Klasse <code>RKarte</code> NUR die oben beschriebenen neuen Eigenschaften definiert haben. Andere Methoden, z.B. für die Ausgabe auf die Grafik-Konsole, für die Reaktion auf einen Klick und auch für die Ausgabe auf die Text-Konsole, haben Sie NICHT für RKarte definiert - sie werden aber trotzdem erfolgreich aufgerufen.</p>
+<p><span class="task-link s_l69m1q text" data-href="#e_l69m1q">Warum können Sie diese Methoden trotzdem auch für eine RKarte verwenden?</span></p>
+<p><span class="hilitenote e_l69m1q">Antwort: Weil RKarte diese Methoden geerbt hat.</span></p>
+</div>
+<div class="hint segment" id="ygybx0" data-title="Sie können auch hier wieder die bisherigen Tests ganz oder teilweise auskommentieren, um die Ausgabe übersichtlich zu halten. ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Sie können auch hier wieder die bisherigen Tests ganz oder teilweise auskommentieren, um die Ausgabe übersichtlich zu halten. </span></div></div>
+<div data-uuid="t0xoso" data-hint="U2FsdGVkX1/1y5yU8FtNMNMpV5NewXoTKBhMmVyaBUcdUp/vfNOzhPDpzEG+Ltz2dKOQba+llW22sPIiaj1C33M4jhMnUNPn/3ovCku8R2rk8zmzIzLbPdrdoGzSPRUQK1WGuN4Ag8j5L4VRG+0h8Oi5463jkIiIyzBIdFFSE2TKY3HUUfXenNDkio84ISPeGXpL6Qy8VtAekpGCj5PUnCm3pK6vsInQLFEUBOH8nI+TCJNbapcMjJbKsHR7PkKTKtzqFZTYD4+jAAolKqUnfzEyM/aTvYG5zLxrMZOt/4J8XSBUvJNATxVOK22knh9m0PTn8LL365hEUIEMucu8p6iVm3+WKFfkeKEnG3SgbQCqmsTYoRnNL4yM0x/Ky08RUabz0k85P8VbNY4Y95Nga0mQ4LRkIXEKvVGswUA8+yGR8rz5nSH+5gZ26lqFh9/mUU1ib1OJJUwHprb8h/wmzukV3ZGAkedqPRvXHdybD/twqjPaiKHmlfyCjYwCTNDZC+pN5aMGqoMg+XIFMUB04+heutO6geU7Ygfdag19OafNxrMgXT2K97GuB3g1Kt3GUGP59hUe3YYtYR9tROqII1HE/p7i7tHJweFBquwSguUUx/5wL9LX2vVTeRg5XVwdJc8dY804XSmUtGLAmCccN2w70fFlwdO1wNJGz30uK+e+UeXiD1/Cl6thOFhurSXdYMvw1/vKpYPegHG3oQLjacB1/vv0NxblyN9xyodMjEVxPW6/PhwDyM+XIiB3ulllyUDicyi8c148vdxAmlEOWOJDQ2J2BHvvMFCEHm+8kIkhoGUDeZCBMxblhDY1ryU3obdaeun3ylYwzCjVYsUOUmRrY5+8wcjEEVI1OnvTPTvcR8ao1EXnFJB0i6fuaC4zQwjozUzq8ytKBi/d02HZe8aW2qgDSoeYuZbbXsGpzufRlZUHgFSjxTaU1OruLqpAl86PWBHN9r1VZzjHB6YGsIqVXNVMpwYWKD9MQpQ5u6l6Ie7xhnEnSW/0Q1/UUdNREhYWnrLpDnuO0pOsvvgtgfSvhp24pDCt2jrj8Ekc06fvRHVj0mdm+OxQu8YD1YcYdQWDKFx8+1qv3SzznXt2rdomaAyUuxrAJU32wqqdTAhbNB/u1OJJGbHVK9/Vnhrm94GnANuTurhcpGC80KWrm9lajTDbdRcnjsv6EYKh3G0NU3WzL7ZzUqTmgDw3lV5J2xCAVk5CAPcvfF8Tuc4PKi/jpIre1ayI6vwsY/scekAW8TdNasBwWWf0kse5DYwQrCP850/PK3dJ9TtaYWfQ3zhVGv+hIcbD+ahdecMwOKarDNWFNzQ1h8ZBEU5S8bmmAQoTuEDaPNbdTEull64d6DR5amlm0BXJAXxfJyUOc3+BvFaQ758EmDLWhA/jSmw4qlSbocmqfSWfvthMdLXXnyMVt4vc8tZKXfqU7w1T5pvV3h5W6qJSNJHGCQYuDisgvag0qvVxMf64v+r1G0eugGW/YhflYD8a3lx6kuszVaHf1oMwCX+kmMSQclV03+MFJUlX1G4mvNwWDgmCmItE/kPPHHaDMRZ440fLaEZq9jeoCusLAgvzL0ztZfiXzuka7OESx7KqmmT23lvoiQ4a0egtZRhnml+3WyK1QbBuewmoR7Of76PjFlmfecr0isDXp/y4N4ih4I9uU72L6YY5V32QWUoE8F0hShTgDFT8lh3GnE/2/US1yLH1LV7VfWuThAzVwSjljBK1uoooSdxTwnWHXJIN6tvH3Jdu/ER9CdxNoika/2qEygG6ojs9s82FoX1gEGUieJT2sKtgQYSKdY6LDUCNU7Bidlv26pzw+KJwDi70CnTJ1tCZPWNnCFmsd1HKVnN1nHDSUEXfIGQitFHnIslGxu/QzyLy0RorcNkqEsJFcNp4fZNDdXBtqAyiQozxwRf3C0NRn/GgLDe0/cTWTfNgW9n6L3hbdqNJc10pLsZgsbNuwybKQ4VnCrL5VyDS4Odz6u7nsmPoOTh261qB2WlZOC8HCSeyA0GdCHBg758IHro7PY9qylSdVDsSIRoIwZxbBuRfUSEcTamZeCIX9fMgdQcIfEvWKpAffEOn21g7BWfGRh68IrVyJRI/c6u/wI3KB7B5BL0kw+6PMrsVIEtLZdbEeSkKnVRjGV+JAsUrunQKHUsX/CUK3IPAtQCVWiKoU5lzCVRcrcHozwb1QYio3Vk1zFglP0bh4ky4kozkprLOX9rZzVY3w3k4fukE49QyR4hoCvaMbwy01dOb+mmx3YrqhtAeVsYSVyU3UlxIh9PO97aIRkz7BVY5/bV0JSXK6SicZJg8ZChcTAeC2sy7oI8bABKMX5BwwDs+L5WQ2qmoA83fmXhLEcYhdCJam1r+1SEeVmOhpvPEi62hv62yn8p0hfuv9zx6XWr3EfxubPDeza4Os8BCHa9byapMuRPnyyCSxtoK5uyd6XpyEEeGucQnoWam3ZB1gV1kcjxweOs61uvBgpUYd/9ikLheN7F1jI5TTae0bu+gZjlBV3+087sbWW6B0WcPZ1FxHcA21YqpwQMML7GkRd587syCqlHx8nCRrBpcPhmB+ZjFqytuNHU3QbjD2FpbEHG20D2D6D0J/c1+HXQoLLxGrMcBMB/nvTh9/Q1vBvbzwBiqI7PmMBxFNJgLRtzflLnLiIa318/7mb5FgShPzlxVRAUOMAif0Y0SvVvIwKaD2IU0WFj/OUF5n8SAZpeR6KV7Zsfjdh+l2qK+kRZeOxOk7fkSEnTQXbXd/rZgB9c/34g/MjPVE2/HBZYfzHzMaH5E3juDhXGiA1jklGVSAy7QCmNTGBOqTayhYqJQrkaumxmbJQm+1+dRQ1reiRz7I2Qm+UP3eGfSjN8BQN1aeM22D/xf3hKFYbbhL3WXqUAccTMSjhaOpAW2CHL4Pf/yFdv12fKTVUFWVXNcOSegHL9RuNTdGJl1B/+lmvDmvg9T1U9g4aD56mGmld3hei2h5zaifZR4vPMz3wOa7vG/paaUxgv/qCC/rOxCAQ9kJV3PSOHOnl1kkQfwrjnD3VDKwMNv82bIGyPTLPjILMZ4fEjfTOHcDna7r6ujWkT//IKqtovEPtqlT+kdtbUjnvgm/dFChVnOgOeCZ6btPUKh+hYUh2hQsXKU7XLL3pdTSUbnkhUeujz8QX2rMICSVKTfKCmPaeLjZPPz/k1xyzj4u+rgNl0T+cQTMP4EWJJaIeA+OebWkaIwD9DnkrhWAvq1SolVRAtzSdYtxyOrh+6SWpJAT3GLv4mnVKmB/srlwauz350FgjCynJChI0YJiv8RjEnmWYpy9wq6FdQgG9lzOgR7k0ZJuLQGGJN59Ji44QLSQKtcTDDRPm+obapte5zm0d9Ed7VJ1E9056UM3OdgtjOnO8cATAZu2sIDXN5jcNcJggPLqiKZm4pSfPBIido6C5GQzkTVC07MT+X9gHQ4d27Q1ULBQ+IGQ+bhHxuWwS3gAapyiVJZhC9b3j94E7jawHq8+eTPDtBcwycA7h7ZXJLxIL9ZyByNVldGxsoB4vU8pamnfjn3LyqS5ec323kn995bNywT4kmQ+Q5UVS374vmTbefVCjRHj+LsbJa1e3R7c4I2KNMtNFWdI8w7CFjKq0d7e5ngTRly/UjfQTT2AF5re3zMHO1biOcHW6jZ+ZyJgtyxGqOG17GLQNyqEUryrG3V9OaMqApv/kWFcb5Tm3MgryoQn4fu6XD0YyOURmqnctZ0zSTniyWCkRSTVXVbxBADoLe9HkOIn/I0FslcwGkyyBqUGsAwoHQGM24Oi5oIy5mA1+oR8ePXSpOpgvp7+ZmLz+OUXsKaG3fsVthCW1DaWsIp3US0PBjFkjuyEQ5ZEpLxycEdtvv0Ba7JQ3l18MLAeNhkBER99HBDlTbHvCzLoxwp+xAotAlHUXECMfnD5w5cIVeu1G7NgoINd1rNc2I3ZgMrb9ARLsoFQAZwP58m8/q92EErSDa0VLiJ9Zam43MrN0g4KpDPGLjlakWS0CUWGnFAEmH/XvrEFVnfqxKaY2Gcyt9+sHlVNJrUnF7u2X1zrFNLC0vcq1tSZsHcF9PXPI/3GbF9GmSirR50fhDAw2PP4jtgKwwgeOkTD9vqLXKIwDartd+zrtEugifxiOBo8cw13hv8vCmfWrOEjaOTo/+bsczzZHcz0+eGuvCMOKwFuR7p85kZj+IPvO2Gdp8mS7LgRwQZMOeVSvP1xjhSKYaWuYljwSs2KYXwTMxiLNeRqRYyxp92/0qx8D/MgVwzoQ8RgV0S37IdpoJZ+9MigBfZw+MaZ+Bov0GqgmGxbUYMwvzmoJ//jyRW4mI23C3DUr182K9MJsBti/EJqsKvFmEGi+eIsJvE9U/hDSzJ+wea9pB+JcOWCjdPOgltPVoGFMBRiLWzI2xEKg0O2T3CgcK+Gb48LMNeI2Kx53BMNFhxrbIpQojmKCZYgBXrdK2XRccX82nDsImrjTAlvsynUVw+RbLVsuj4JnwhyAz/r98VlpXnCqxp7nBzob2EV6JN4qM6157clBhiFnvuxU3htVa0ZnzcL6kSOHGZghvn9OgwtLVlXnBXBFxNuw1SM80jdtrW8EZGd+f+jTGnLJq2+RPDYDxLMoYd2fHeED4vM0EZ45uCdWMi+vpVLEIzrTDtdmiCtsKP+xOtqy/c4hZ09jQpFLmPARA6uwpBsINOUqJWcTXQzAZtYyackVfmj6k79MeXjwRLvrsc7TtgP3u3mOYYJKEEPCTTOjC3Lb26vfxwRhj+EyqOrDBzNWV3z2JCDTLQMTdSwBdiJUw3tAN5hpR+wnxt31c60h7jSmoZiRWDCzA+tO5+CrAK6mGLHCdnd5iWo+GF7kwVeuuT+3mk+8SPy7rylMNDjyDaQ5kNleswKp87pwJaITMcihbIAadbs43Usenr4NLvB9E4H2faGOe8BRr3f1bn7rUJrK7YTJHE7c0Qwd8v8paHWKZB8L4EkxuWwbX1C1INbzQK0N58TWLrFmKRzDJRRQv0ANi3e1eJU2lO56ODYuIipAjUlcrHWspgxA5b22HoF0MZJKYI7ZFDAYtNbQb6pwpm3WwtZ02chpfk1Zh2J+XOLt/oYqvp7PXVx6A0U7bQUJ2Z9edSDjmCIdPcbXWTrUxLJtbOabuq9oBAE4pNgx/Mv1a/Ygl9tyVyywzhBVWmu6WbwkdYV/dDOpYf3qY05s1FyRtZsjLgy7Q1h4Rk32FjZbi54z2o/s/ZGe+4v1dbOqnjO+hTAVesGhKKTsbtrDYjO0U2hZZlDxuO/rbjjKsh3q5t5jF7LHC+e+gUAgANXLZSKcT2qPrpBJJA2E0vZrsxqQcROg==" class="hint"></div>
+
+</div>
+<div class="hint segment" id="ycjn0t" data-title="Alternativ können Sie den Code in main() auch zeilenweise ausführen.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Alternativ können Sie den Code in main() auch zeilenweise ausführen.</span></div></div>
+<div data-uuid="iw5e5s" data-hint="U2FsdGVkX18KtmHXJiuvr0DnzUfcUONnOa4TNPKfKOSkTkolX2m0MzvXQ/il3cedMjFYJg91xQv6sjuKclTxB6MnO1B8w5RUWWwWrXr5l3utFjt2OA+uhV6IMN5v08tfyfavN1sKm42liN81po+QR/jRflm1Jas/zzue3iAQnniIObykRND4QepgKOYI6tGdkZfxdCEejeHbqfaOTUHQ1wginZhKSoG1okY9At0x8OxC95zLW/8gZS/XO9P/N6KZ/zkEdU3rvMzsD6nwDrkYiedTt7kIjlc44t2UOyJOOD+7rztp8kDmmie7oHz3/24eiMcoZ7Hf/QrgNvq22lUPApIMi+0qlYWwvoaHOljsTOG+UXke9gip2JBGSxn/rVxVXv2fZSpOBHFkxyOpj68sdWa0XB7MQBvSXBeLJo/eAnVjmOMjJRdtxgn41fO47lC7xHHZqC4RLhwt6sTL+qTD6KikdcAaGUQMfVXKdeuGvZCf2OILhgDnWHGEFQBgpxm3tb6b7tdTgnYG8HgYUF+Wih7yeb4JaNm9ucQQnOwv6DYbAEVmbl/EnjPrc1HicgEoVIbk2lVH8a6KZ7JREmmPqD8RYKhioI94VorRKY1yLEE=" class="hint"></div>
+
+</div>
+<div class="text segment" id="goh57k">
+<p>&nbsp;</p>
+<h2 class="e_cj6dn2" data-number="4.2">Weitere Karten-Arten&nbsp;</h2>
+<p>Im folgenden definieren Sie weitere zusätzliche Klassen-Arten, zunächst mir sehr wenig Aufwand :-). Sie erweitern diese Klassen aber in den nächsten Terminen.&nbsp;</p>
+<h3 class="e_u62b01" data-number="4.2.1">Links-Karte</h3>
+<p>Genauso, wie Sie die Klasse <code>RKarte </code>definiert haben, implementieren Sie nun eine Klasse <code>LKarte</code>. Auch hier brauchen Sie nur den Constructor passend zu definieren.&nbsp;</p>
+<ul>
+<li>Darstellung: Ihr Text ist "&lt;&lt;&lt;", Ihre Farbe ist immer zufällig gewählt.</li>
+</ul>
+<h3 class="e_m0lewx" data-number="4.2.2">Oben-Karte</h3>
+<p>Genauso, wie Sie die Klasse <code>RKarte </code>definiert haben, implementieren Sie nun eine Klasse <code>OKarte</code>. Auch hier brauchen Sie nur den Constructor passend zu definieren.</p>
+<ul>
+<li>Darstellung: Ihr Text ist "^^^", Ihre Farbe ist immer zufällig gewählt.</li>
+</ul>
+<h3 class="e_1bde3b" data-number="4.2.3">Unten-Karte</h3>
+<p>Genauso, wie Sie die Klasse <code>RKarte </code>definiert haben, implementieren Sie nun eine Klasse <code>UKarte</code>. Auch hier brauchen Sie nur den Constructor passend zu definieren.</p>
+<ul>
+<li>Darstellung: Ihr Text ist "vvv", Ihre Farbe ist immer zufällig gewählt.</li>
+</ul>
+<p>&nbsp;</p>
+<h2 class="e_rmtorf" data-number="4.3">Test von unterschiedlichen Karten&nbsp;</h2>
+<p><span class="task-link s_rthfgn main">Testen Sie</span> den Umgang mit unterschiedlichen Karten:</p>
+<ul>
+<li>Definieren Sie Variablen der Klassen <code>Karte</code>, <code>RKarte </code>und <code>OKarte</code></li>
+<li>Lassen Sie nun jede Variable versuchsweise auf jeweils ein neu erzeugtes Objekt der Klassen <code>Karte, RKarte </code>und <code>OKarte</code> zeigen.&nbsp;
+<ul>
+<li>Insgesamt sind das dann 9 Anweisungen</li>
+</ul>
+</li>
+</ul>
+<p>Welche Zuweisung wird vom Compiler erlaubt, welche nicht? Tragen Sie jeweils OK oder X in die Tabelle ein:</p>
+<p><code>Variable&nbsp; &nbsp; zeigt auf&nbsp; &nbsp; Karte&nbsp; &nbsp; &nbsp;RKarte&nbsp; &nbsp; &nbsp;OKarte&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</code></p>
+<p><code>Karte&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OK&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NO&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OK</code></p>
+<p><code>RKarte&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OK&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OK&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NO</code></p>
+<p><code>                   </code><code>OKarte&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OK&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NO&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OK</code></p>
+<p><code></code></p>
+<p><span class="task-link s_qwxrwz text">Warum funktionieren die erlaubten Zuweisungen?</span></p>
+<p><span class="task-link s_qja562 text">Wie heißt das Prinzip, das hierbei angewendet wird (das mit Vererbung zu tun hat)?</span></p>
+<p>&nbsp;</p>
+<h1 class="e_1hql2r" data-number="5">Spielfeld zufällig füllen</h1>
+<p><strong>Weiter im Spiel:</strong> Auf dem Spielfeld sollen nun die oben definierten speziellen Karten-Arten verwendet werden.</p>
+<h2 class="e_xbqbxa" data-number="5.1">Array muss auch Objekt der Klassen RKarte, LKarte, etc. aufnehmen</h2>
+<p>Die verschiedenen Karten-Arten müssen natürlich ebenfalls im Array des Spielfelds gespeichert werden.&nbsp;</p>
+<p>Oben haben wir gesehen, dass eine Variable der Klasse Karte auch auf ein Objekt der Klassen RKarte, LKarte, etc. zeigen kann,</p>
+<p><span class="task-link s_l0pjst text" data-href="#e_l0pjst">Können daher im Array des Spielfelds auch Objekte der Klassen RKarte, LKarte, etc. eingetragen werden?</span></p>
+<p><span class="hilitenote e_l0pjst">Antwort: Ja</span></p>
+<p><span class="task-link s_fzd6c3 text" data-href="#e_fzd6c3">Müssen Sie daher das Array ändern?</span></p>
+<p><span class="hilitenote e_fzd6c3">Antwort: Nein, nur die Art und Weise des Füllens muss geändert werden</span></p>
+<p>&nbsp;</p>
+<h2 class="e_7pf575" data-number="5.2">Array mit zufälligen Karten-Arten füllen</h2>
+<p>Das Spielfeld soll also mit Objekten von zufälligen Karten-Arten (d.h. von <code>RKarte, LKarte, OKarte </code>oder<code> UKarte</code> ) gefüllt werden.&nbsp;</p>
+<h3 class="e_10kf35" data-number="5.2.1">Erzeugen eines Objekts einer zufälligen Klasse</h3>
+<p>Dazu definieren Sie eine Methode in der Klasse <code>Spielfeld</code>, die eine Karte einer zufällig ausgewählten Subklasse von <code>Karte </code>erzeugt und zurückgibt.&nbsp;</p>
+</div>
+<div class="hint segment" id="jfcw0m" data-title="Machen Sie die Erzeugung der Zufallszahl nun auch in Spielfeld verfügbar.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Machen Sie die Erzeugung der Zufallszahl nun auch in Spielfeld verfügbar.</span></div></div>
+<div data-uuid="f46akz" data-hint="U2FsdGVkX1/P1W7qtkdYjnKnKcRIEaRaz4EUuH9PQeFBCtf0C/1kA0hLrpL2KWY/kdRfDz8mdj7k+94651m0FxO+9oRenpBQdhADCbkyT6hYO3jrOQZg/4TF3MiS5xU4aLjLy0efDde/hPA2bi20veJzZkunfOLd3S8/kteHplDnag7ccC42TrVIzCLeyQzZ/A1XTPTPqqzLGB0gPgJELr16jOC9LsKY2H3cjXjGqjiJ9EQ0I+z93J7P8k+AkGWOD4+EcavR/OMa+9oEQmBR5QSqgtZ+8QxBBgWrpiiRbUeeZonxlXAltdtu5Nf3bl1w7rCLkfl6xkyyJbtRNHOrTeWQXVVXJjC7NeG2PAWruGgw5xTNs+cUp3hcihoc2qW4Aobyam1We3NtAb1K638EAO9fPaFW+pkLcVude8IFj+LKNSYDPKY0RmutcPCo1rnytKLtp8oYfnEXmzkoLQ1NwUHLrrEE6oNXKr5UlOdEN8nf3XpLGKbGQVG5clqM1QnLoZ3MkmvLBvoPIB7/JRIjAPyZ/k0JoRpdwzA/3NaVMTUu1e3ERhlw6EuNbloQhT9hA0Lj3zf/cxyGy9GPZRkDvA==" class="hint"></div>
+<div data-uuid="onoez0" data-hint="U2FsdGVkX18dotv3ORLm1uQLpe0z1kkCFZnPpxcCzpFqvnZ+1szOCZCfdaSPRTRkvsg2+oSgfpdC3/HbZk6GH0x1MbgmG01D2wrp0j/u/BnEV3vMKLdJ/2NHGpcHnvzEGNCLhkpOCIeaRYswLeioFWnJKlxHUm41GXLvbmtVBCvGwDE9Zpy286M/aGzSgNlGUzWeDt/bBG77lTniZBl8BmjzK4y3EyGJjuVQxt90eRYlsfgqVg7f4KkCV0j2Kzmqw2L6bsa7lEEmb0UPVw8EUmOQNQx4cU7Dl8TP/lmdSBoqs+IK6HniReAvGDbJ2b5FXPEafJIkKWMe7QmaX267kjeZTgqb/dmm02EQAo+8a4XsEr0nLJmymOwFF1fQEw0XHLPDztVm56Hq9uhBfp64JqIX+0EwwwKlkfQlGaz6hdQ9WkzaSrtAm470DLDW6uWvAg8PimtPGbCHY6MT2LHkFrXAsH2UdH/juDXGAh+KhijqfvZPyn3rt1Yv53AHhJmEfBfeRI83QNDCzYWREZih6ESeM3+8nugTRWpr2MbBACfVI85ThiO9DJOv01+49EMS7xnrm+aQky/R5nCO8hGVNxZzwjV1qQBcl742xTjOjsXihd3pyybjHWJboYFNTZBMlL8EAl8cAy4CRCJ6uaKb1nmG5bI58LVGJ8QD0/LKK5bQIl/wXL46arFR/e+NKoT6f0kBvItdfCGYddoY0c6AMwDWzJ9mRaBDy9uizd2r5niy0XLP/8eGg7vy0usgjWHe" class="hint"></div>
+
+</div>
+<div class="hint segment" id="pvfx9g" data-title="Wie kommt man nun von der Zufallszahl zu einem erzeugten Objekt?">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wie kommt man nun von der Zufallszahl zu einem erzeugten Objekt?</span></div></div>
+<div data-uuid="rr8t73" data-hint="U2FsdGVkX1/uuZu1Nc//goKs+mlvzfRpEAxXnkkwcae2ugBa6JqQXO6iKuZXikEMI3iDSggvcytH93DFGT7htNuSsapN7Dl2pjmnw+WnIVsyZo/Tls2GCENn2a4ieEYItTL0Mhq9B+8un50m5uxeUXeh8AAcQ/TGbwu3VwxeG9K9bW7BvT08NA0ejqXFGjr86g/OI8KJ2XwTZ0yImOLaacnFM9uXHhTBsFWGF3UKOF6VaDORugVjrBgdY/iGUg1tAIG9YrMMh5F7CXLk8Zv3HUuxIeUX1l1viZElok0LzbppTYHAxKagOgfVHSka8Fzfva+jEdojsTzmjIrFDRwscDIqU4oawU+eK8hZWOh5r9mlviSxA3iM7eqiW3QZg0hIcTgGiEvbAJOEL+dFpPqyMD/zzRyAs07ez9BeduO4qJY=" class="hint"></div>
+
+</div>
+<div class="hint segment" id="mlkffg" data-title="Wie ist der Rückgabe-Datentyp dieser Methode?">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Wie ist der Rückgabe-Datentyp dieser Methode?</span></div></div>
+<div data-uuid="pslgp2" data-hint="U2FsdGVkX19IfsQAmHzd9vsHTwZKITe8BgPY1/yIWDOJYEHJSRzsyo/5KPxj7NTr4AQkAnHxyjVcIsNXlW+NRTPolaYnkuAOpQ+7KR8LYhqhs8aBc8TEE2jxolYXRX1oJHibgtr+eTuZwt1S22hyHhDTSWPs4XItHEVnPq6o/TxKVr3Gs224sD0n2kjLy0k61ZTl/R7nSpvIfFHT5ZNkRN8+hRyd+EyUK6EzLIBn+xMeoKKaQz9yi7Vf0Zgmt2lh6vpta++todbww0HWSrch1x7rvm0IQxbXt2RtxL81J/zwAaI0phRwNY9R5NiYOlcqxAQX1erwn5i0O2v6zU0RrXMMwRSOOk6+byqqPDodkdKE5efUjFpAxwDxyG4295oQUngwd3FoFn1dW3W+5Umnmz0zb6oGNomluhf1lqF3dIju/ujWMSJTp5ezKSONWa8y5gbNNJx0ZTnys917IJKTqz184/zuJA9Tle4D9lvosOrTmr2iem4Zsw764DjHsaidhsD1jPvRTeyQRP3cdh8HteMRbY5d01Nks/51XgJ+nusecO1Td3uEVCyYNnfMw/pqoM0e3PbnGeo2gK++BDOadvzaZzmbZ7fC8tULbg1mpW5tm0YsvWUhDMxvzL6rNCkfyIerPDayDjFHQAN49LAssO+4InuUUnPz8EzqmbEhM/pmGN2bmfiCXTfuhmaHkExKZGbEoAHhsQOCjRGJSUbb+RMBt9NTC10IA321R1kSHvmKSYE9PaY4zhhpJP8yXIG5T1rh0X+Ds3M9fnFHY5TcXCjJMOszHkrjcn6XFNiQtgYmk/Iedw0dlZ4gkw/AN9CJXRcWTi3eJ0JmECK3DaEnngMzk8YevSBlJ07ZQiKb08Q7jgfKkwZSLhxuTxRMbRLbcWbrwyVR3DwnofOJccYYETmzDZGw3L+L2guxIiFH5ieLJXB5jsXIQm4k67e15SF07W5eHssWsecltS4yi8HAHtm06C1r/pMnJEFQMeIIoanejgATR5XUvq75pvfVLPKx" class="hint"></div>
+<div data-uuid="2e66t0" data-hint="U2FsdGVkX1/RLWZ4YwF6ABKGXe2GwOwxmgTUIWwl6PDnMu+lX+64xeptT6EZEt6dlmWFei+GjpxJ0GS9BiKNaPi5+eAai0wmm22WOV+Lfi0JqvF8hDWH8qBFZUtBSbiXpwLmSR598v0Xi8txcNnhhqpDad6iOPZP/BkzPzq0MacvhKvjcUTwYdPaYIV2b9adnOW3CLCTrimTpDUVEs4BlSyWzjio6oDnyTNSj0BfiBmCw7hzo8bcE8OyrVaO44V6fOhtHqLfYcYKdHutSJe67Zu8WhUWWV1mhKQv5F6mJ479AVuTaumWWUcKq3USiumhx+nPZeT982pDaqxyusVF+r45iF7MQ1UUMdpUXZAnK7MRhTmdFzQ+K1leWO9O5GSAfgvgF4R4BrXCndmaIx9Jkw312Gxkr3Oal06+jaHeK+xSQqiIteDApj12glJ86Je6U1uW/r33krmw6ZegDtOqeKS7dflzYZ4ij4Cxm/7bL+Vp0oxOmU4jawqhOHllyFqTOeV/Cdz5CQiqs0CnhOsGlSO5BaeXDo+esxD+q+x6jJgWX8zwYGpoDwkBhJ+DM48pfttZiohul3Vxa0Kv3A2pHjomnG/PoEmG2lpPiK/KR6WysOkYlSpNyghsDygt38+YsXbbmqACuPiEGXo+MDzFgA61bkwdHpXArUqt8Ty9Y+mzd5vfhy6Wem7ThPM0hcQYjOkt1wT6UZEhRlOkJewD3avyfU23lfLm6BeLoWmNKi8CMEUkUIaXjet66r6/oPmu" class="hint"></div>
+<div data-uuid="xdxi9n" data-hint="U2FsdGVkX19RE0U2EE83HFK5qq9zyVqVQtuklJulAXvb4TMec+lm8dzr6IA/mvbw519pmHr2hii1cW5HT0t68asHGUG/3L2+w7YAtajDog6z0OSLL3N6bquwEDD8koDsmA9A6CWT7kA8/aQDx6p8Uc83+TwZG98ZIJIIDy0Plo0rMjiCVo5gbeJ4V3YDxR7el4R2oyVWdN/aSiuIKFyrfO9M2f4My4pHjPeK4MLa5c7iEIYPLAyZPBd/4sdGxigLaPDoO2ZvxEpEkNhbUx86MwAt7d+vlo7A0HLsoZgW2ffZG3/RVNsSkJQuUVISSrKgZfJMlZ3WOqYRCpNshW9WgXILfGVUOG0P0uTv8WrAjX2CCYhftknNC99xqpErKE1KLW8w01tp7VPbAd6bLCn7moS+8qWJ2lV8IiZPhWfBnnbdDRfmwfABw/i6s+XcZy4wUC9mOFctq4nvrRfSlMIshbBe4+M6YqSecz6NEWXCN/zxWfNbjnALyuXg4FqVVAQyFvKzlCEmLVJY3xJnuNM6jJA/8Dr3arSJcAU+H1JHyVNpvz+yyMR6PjZ68gj1Dv+Ah5zp3ucAjmDGthzrJM5TUJa67aaPnCR/UBEhX7RwGMlgNHE3ZgEVkmYHLUJ9MHbgDA96ZvuhfA1haS2iDhCjfVRMzrDs/6Wlzo1/rOCaZtBp1e2R8yj4fFcl03icKHZObEY6om0Tc1IfH1t6JoREHw==" class="hint"></div>
+
+</div>
+<div class="text segment" id="2z54hc">
+<p>Machen Sie sich klar: Sie geben nie ein Objekt genau der Klasse zurück, die Sie als Rückgabe-Datentyp angegeben haben. Das ist auch richtig so:</p>
+<ul>
+<li>Der Compiler erlaubt diese Codierung</li>
+<li>Die Methode kann auch aufgerufen werden</li>
+</ul>
+<p><span class="task-link s_hfbe2n text">Wie heißt das Prinzip, das hierbei angewendet wird (das mit Vererbung zu tun hat)</span>?</p>
+<p>Damit die Karte direkt an die richtige Stelle gelegt wird, übergeben Sie dieser Methode die Zeile und die Spalte, an der sie liegen soll.</p>
+<p><span class="task-link s_izdwew def" data-href="Spielfeld.java#e_izdwew">Definieren Sie</span> diese Methode in der Klasse Spielfeld.</p>
+<p><span class="task-link s_zclu7t action">Testen Sie </span>diese Methode, indem Sie diese Methode dreimal aufrufen und das Ergebnis-Objekt auf die Konsole ausgeben.&nbsp;</p>
+<p>&nbsp;</p>
+<h3 class="e_shwqtc" data-number="5.2.2">Array mit zufälligen Karten-Arten füllen</h3>
+<p>Nun können Sie eine Methode definieren, die ein Array mit Objekten zufälligen Karten-Subklassen füllt.&nbsp;</p>
+<p>Dazu kopieren Sie die Methode, mit der Sie ein Spielfeld mit Karten füllen und verwenden nun&nbsp;die gerade geschriebene Methode, die ein Objekt einer zufälligen Karte-Subklasse zurückgibt, um für jedes Element eine zufällige Karte zu erzeugen.&nbsp;</p>
+<p><span class="task-link s_eekd65 def" data-href="Spielfeld.java#e_eekd65">Definieren Sie</span> diese Methode.</p>
+<p><span class="task-link s_z45sd5 main">Testen Sie</span> diese Methode, indem Sie sie aufrufen.</p>
+</div>
+<div class="hint segment" id="zn4w7u" data-title="Tipp: Damit sich nicht mehrere Spielfelder auf der Grafik-Konsole überlagern, kommentieren Sie die vorherigen Erzeugungen eines Spielfelds aus.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Tipp: Damit sich nicht mehrere Spielfelder auf der Grafik-Konsole überlagern, kommentieren Sie die vorherigen Erzeugungen eines Spielfelds aus.</span></div></div>
+
+</div>
+<div class="text segment" id="xa70ou">
+<ul>
+<li>&nbsp;</li>
+</ul>
+<h1 class="e_vxu4wm" data-number="6">Darstellungs-Variationen - Optional</h1>
+<p>Sie können sich gerne noch Variationen ausdenken, um die verschiedenen Karten-Arten noch attraktiver darzustellen. Möglichkeiten wären</p>
+<ul>
+<li>Varianten in der Farbe</li>
+<li>Varianten im Text</li>
+<li>Verwendung von zusätzlichen grafischen Elementen der Grafik-Konsole&nbsp;
+<ul>
+<li>Siehe Hilfe zur Grafik-Konsole</li>
+</ul>
+</li>
+</ul>
+<p>Das sollen keine weiteren Subklassen sein: Sie modifizieren und erweitern die bestehenden Klassen, um die Darstellung zu verschönern.&nbsp;</p>
+<p>Diese Varianten sind aber nicht relevant für die Vergabe des Testats.</p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

@@ -3,10 +3,10 @@
 	"id": "tejne4",
 	"user": "d719bae1994dff7bf719e6b420bdf49a",
 	"programmingLanguage": "JAVA",
-	"mainClass": "",
+	"mainClass": "FiveCrush",
 	"libraries": [],
 	"javadocVisibilityType": 2,
-	"zoom": 1.5,
+	"zoom": -0.3000000000000001,
 	"features": [
 		{
 			"feature": "gamification.feature.Hints",
@@ -88,7 +88,14 @@
 				"U2FsdGVkX18f+KrRzMbvqK/c6rmR5IOGNAjWKbMisS5k/jmYHUIfElVJ0xf/qDDU",
 				"U2FsdGVkX18X2ofNhVlBAoLfzvTJwbYTX2dc3oBMqPY/vNdNnW0uQ79zPEhFIVzj",
 				"U2FsdGVkX19MG5WverNoqjkpraytntjxGH7mz+glL0PK6lomHRUXY0vtoxzqB0ES",
-				"U2FsdGVkX1/oh7TCCq/VatgEu6bu5f/CdmNWXxNgC5OgK4T+COxcyZYZx5JHYHA2"
+				"U2FsdGVkX1/oh7TCCq/VatgEu6bu5f/CdmNWXxNgC5OgK4T+COxcyZYZx5JHYHA2",
+				"U2FsdGVkX1/l0prk5kDUpNcx7VEpJzWirttCP/2mzXEl9NgXkMjKh7EuA/Gy9Ikh",
+				"U2FsdGVkX1+Pdp9m9Flz4ukxqgWjVMqro4EA936UZ4E/ZOHd1zxmWRAoe2C03iIp",
+				"U2FsdGVkX1+GvJ8475M1XO/sVp1QhwF0j0fILFvA9p1vBNlGRTmlvjIdtljl6Dti",
+				"U2FsdGVkX1858Agsgow8DZ3y9WvGee7EGqh5rTB8vn/qQdz2lAzzwTCVuaH83CyR",
+				"U2FsdGVkX18wfiyIepB2cESeS+FwCMPOtyMPr5QLQE3E9u+1Sf0A+Slcxbd2tSSC",
+				"U2FsdGVkX19CzDTQ7bHvmdzTU/3mIasr99uGtNfD5AIYT6vvPrLA5nsswyuRhHO4",
+				"U2FsdGVkX1/m7YUH7Doc/DSvT/f1yFKAztGobOBeHnGPc6RoBLPSZTuenH9G94TE"
 			]
 		},
 		{
@@ -120,7 +127,7 @@
 					"name": "",
 					"description": "",
 					"attributes": [
-						"attr_new"
+						"attr_revision"
 					],
 					"type": "syntax",
 					"assessment_self": 0,
@@ -140,7 +147,7 @@
 					"name": "",
 					"description": "",
 					"attributes": [
-						"attr_new"
+						"attr_revision"
 					],
 					"type": "syntax",
 					"assessment_self": 0,
@@ -160,7 +167,7 @@
 					"name": "",
 					"description": "",
 					"attributes": [
-						"attr_new"
+						"attr_revision"
 					],
 					"type": "syntax",
 					"assessment_self": 0,
@@ -180,7 +187,7 @@
 					"name": "",
 					"description": "",
 					"attributes": [
-						"attr_new"
+						"attr_revision"
 					],
 					"type": "syntax",
 					"assessment_self": 0,
@@ -200,47 +207,7 @@
 					"name": "",
 					"description": "",
 					"attributes": [
-						"attr_new"
-					],
-					"type": "syntax",
-					"assessment_self": 0,
-					"assessment_tutor": 0,
-					"assessment_max": 1,
-					"acquired_self": true,
-					"acquired_tutor": false,
-					"was_acquired": true,
-					"bonus_tutor": 0,
-					"bonus_max": 0,
-					"comment": "",
-					"saved": true
-				},
-				{
-					"skill": "OO.Javadoc.Erzeugen",
-					"uuid": "pa3673",
-					"name": "",
-					"description": "",
-					"attributes": [
-						"attr_new"
-					],
-					"type": "syntax",
-					"assessment_self": 0,
-					"assessment_tutor": 0,
-					"assessment_max": 1,
-					"acquired_self": true,
-					"acquired_tutor": false,
-					"was_acquired": true,
-					"bonus_tutor": 0,
-					"bonus_max": 0,
-					"comment": "",
-					"saved": true
-				},
-				{
-					"skill": "OO.Javadoc.Lesen",
-					"uuid": "wbotm3",
-					"name": "",
-					"description": "",
-					"attributes": [
-						"attr_new"
+						"attr_revision"
 					],
 					"type": "syntax",
 					"assessment_self": 0,
@@ -260,49 +227,9 @@
 					"name": "",
 					"description": "",
 					"attributes": [
-						"attr_new"
+						"attr_revision"
 					],
 					"type": "concept",
-					"assessment_self": 0,
-					"assessment_tutor": 0,
-					"assessment_max": 1,
-					"acquired_self": true,
-					"acquired_tutor": false,
-					"was_acquired": true,
-					"bonus_tutor": 0,
-					"bonus_max": 0,
-					"comment": "",
-					"saved": true
-				},
-				{
-					"skill": "OO.Sichtbarkeit.private",
-					"uuid": "5a4i9r",
-					"name": "",
-					"description": "",
-					"attributes": [
-						"attr_new"
-					],
-					"type": "syntax",
-					"assessment_self": 0,
-					"assessment_tutor": 0,
-					"assessment_max": 1,
-					"acquired_self": true,
-					"acquired_tutor": false,
-					"was_acquired": true,
-					"bonus_tutor": 0,
-					"bonus_max": 0,
-					"comment": "",
-					"saved": true
-				},
-				{
-					"skill": "OO.Sichtbarkeit.public",
-					"uuid": "anfy4j",
-					"name": "",
-					"description": "",
-					"attributes": [
-						"attr_new"
-					],
-					"type": "syntax",
 					"assessment_self": 0,
 					"assessment_tutor": 0,
 					"assessment_max": 1,
@@ -322,22 +249,28 @@
 			"content": [
 				{
 					"type": "document",
-					"path": "::dir/_1_Mehrere_Klassen_Sichtbarkeit.flow.html",
+					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html"
+				},
+				{
+					"type": "document",
+					"path": "::dir/RKarte.java"
+				},
+				{
+					"type": "document",
+					"path": "::dir/LKarte.java",
 					"active": true,
 					"cursor": {
-						"segment": "dtl0s1",
-						"cursor": {
-							"startOffset": 0,
-							"endOffset": 0,
-							"nodeData": "Reflexion - Beauftragen statt Zugreifen",
-							"nodeHTML": "Reflexion - Beauftragen statt Zugreifen",
-							"nodeTagName": "H3"
-						}
+						"line": 5,
+						"ch": 33
 					}
 				},
 				{
 					"type": "document",
-					"path": "::dir/_2_Grafik_Konsole.flow.html"
+					"path": "::dir/UKarte.java"
+				},
+				{
+					"type": "document",
+					"path": "::dir/OKarte.java"
 				}
 			],
 			"type": 1,
@@ -347,20 +280,20 @@
 			"content": [
 				{
 					"type": "document",
-					"path": "::dir/Karte.java",
-					"active": true,
-					"cursor": {
-						"line": 124,
-						"ch": 9
-					}
-				},
-				{
-					"type": "document",
-					"path": "::dir/FiveCrush.java"
+					"path": "::dir/Karte.java"
 				},
 				{
 					"type": "document",
 					"path": "::dir/Spielfeld.java"
+				},
+				{
+					"type": "document",
+					"path": "::dir/FiveCrush.java",
+					"active": true,
+					"cursor": {
+						"line": 24,
+						"ch": 0
+					}
 				}
 			],
 			"type": 1,
@@ -377,8 +310,8 @@
 				true
 			],
 			"dimension": [
-				15.337847641058545,
-				84.66215235894146
+				15.766975907842962,
+				84.23302409215704
 			]
 		},
 		"split2_bottom": {
@@ -387,8 +320,8 @@
 				true
 			],
 			"dimension": [
-				82.09632499218598,
-				17.903675007814012
+				68.79333699343947,
+				31.206663006560532
 			]
 		},
 		"split2_right": {
@@ -408,47 +341,72 @@
 				true
 			],
 			"dimension": [
-				23.570096054970605,
-				76.4299039450294
+				33.333333333333336,
+				30.103785122027546,
+				36.56288154463911
 			]
 		}
 	},
 	"classMap": [
 		{
-			"name": "FiveCrush",
-			"path": "::dir/FiveCrush.java",
-			"id": "li4ves",
-			"isGenerated": false
-		},
-		{
-			"name": "Karte",
-			"path": "::dir/Karte.java",
-			"id": "610qwd",
-			"isGenerated": false
-		},
-		{
-			"name": "Spielfeld",
-			"path": "::dir/Spielfeld.java",
-			"id": "ixy7ux",
-			"isGenerated": false
-		},
-		{
-			"name": "_1_Mehrere_Klassen_Sichtbarkeit",
-			"path": "::dir/_generated/exec/_1_Mehrere_Klassen_Sichtbarkeit.java",
-			"id": "lhhoi4",
+			"name": "1_Weitere_Klasse_Spielfeld",
+			"path": "::dir/_generated/exec/1_Weitere_Klasse_Spielfeld.java",
+			"id": "rqwqed",
 			"isGenerated": true
 		},
 		{
 			"name": "_2_Grafik_Konsole",
 			"path": "::dir/_generated/exec/_2_Grafik_Konsole.java",
-			"id": "dqh0so",
+			"id": "bjbd41",
 			"isGenerated": true
+		},
+		{
+			"name": "FiveCrush",
+			"path": "::dir/FiveCrush.java",
+			"id": "jdsfga",
+			"isGenerated": false
+		},
+		{
+			"name": "Spielfeld",
+			"path": "::dir/Spielfeld.java",
+			"id": "gm71bz",
+			"isGenerated": false
+		},
+		{
+			"name": "Karte",
+			"path": "::dir/Karte.java",
+			"id": "87spb0",
+			"isGenerated": false
+		},
+		{
+			"name": "RKarte",
+			"path": "::dir/RKarte.java",
+			"id": "nhsaxj",
+			"isGenerated": false
+		},
+		{
+			"name": "LKarte",
+			"path": "::dir/LKarte.java",
+			"id": "56yx9l",
+			"isGenerated": false
+		},
+		{
+			"name": "UKarte",
+			"path": "::dir/UKarte.java",
+			"id": "pcyrdn",
+			"isGenerated": false
+		},
+		{
+			"name": "OKarte",
+			"path": "::dir/OKarte.java",
+			"id": "yb2u4g",
+			"isGenerated": false
 		}
 	],
 	"flowMap": [
 		{
-			"name": "_1_Mehrere_Klassen_Sichtbarkeit",
-			"path": "::dir/_1_Mehrere_Klassen_Sichtbarkeit.flow.html",
+			"name": "1_Weitere_Klasse_Spielfeld",
+			"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html",
 			"id": "3qotjf"
 		},
 		{
@@ -459,27 +417,14 @@
 	],
 	"linkMap": [
 		{
-			"id": "j4mn1u",
+			"id": "ug6fl0",
 			"start": "3qotjf",
-			"end": "li4ves",
-			"uniId": null,
-			"isExternal": null
-		},
-		{
-			"id": "znfauj",
-			"start": "3qotjf",
-			"end": "jd83i0",
-			"uniId": "9vxbyo"
-		},
-		{
-			"id": "1ffiji",
-			"start": "3qotjf",
-			"end": "li4ves",
+			"end": "gm71bz",
 			"uniId": null,
 			"isExternal": null
 		}
 	],
-	"activities": "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",
-	"lastSaveDate": "2021-01-19T09:40:11.711Z",
-	"info": "bis 19./20. 01."
+	"activities": "U2FsdGVkX19fa/MrcpBR2N6gMFPi0x1Mb25YAAH+LS43vXM47oVr92LmWBys00sofXqCzRNoRY0UzvsARD/CzZixRxDRAyMi01mkBRLcFS84q35fqlZuECQis7UjoXgF8TcbO7uPNKpIr5wgcibNmN7liEcT7Pn7Buz2w0A8lgXPC+j4YPY6q1kyBaKAYLuPR0Kn10D1tX9h5whxa3aEVa0Lo0PaimE4Qot8aldHODHC45P4cozPDOdqW0b5PVmK4lg7v3tEkxUP9gqaVGKr91nHO7Kiqpd+ALOxzHzfUX0kTO5uLJDgOGnHN+kkiUAfQjtf+B6+jPfpkdd0V3PsP3RFhEHskg0hWh1fyam84YwM2UNQm0MtxyJYJb9eCg2mktRcGiSspmu6xOs7kjlCQkaI8TXa53x9tVP2WO3qAu5KDfN9j4znG4SnpRxb8UoDqmXB0lbjB9HqCWv6FV49Y/PC763aCxa1NNoHcle+Pj1Suy5ayLn7zw9oAIJXjj7nd/Dbk9XnwThAIfqmzaF+xqPhFlLvl/Fbly5Ap2tN6K8Des6jdEjNT4xYGRVP/ZAKkXRs/3d0BqIrTmOqwnU99oKG+gMw06zpx3Ll3UcrYn7kAtrLqlTJyT9RDOEIorClO1E6JscozG3oUKJ6xbEHHL5pEHaCSKTlbVfmXOptKkKnrXhVKNDy9gGrP8Rtsv4PjFXrSTfv24W7gHLgJDK5R7kGOVY0UwfsSVg/kV04qRng0klV4AE59qHQNHilY+pnJv5dyXmH0gt0N97YzhvjzWk6SedBcQLCiYrA4igSiEs98SjVkl6vmGkQiR8ZaYGu7X5H0c4wSvpM1VWxaX+OsfMggzIcPURLiyCGBegOloz3UyU31FYPdKe3TqwqLU3ehjiq3GKL6Pwn9rN1cu1KUvdREiojXSU1XCKSRMAGYl1QayYm5pbIyPW/1ii5RZ8G0kt4uZknz+ommkBSxJN77pkYgAwy/YsJKj5ztLn4VROsdn7XMqIoXSupSqwleYVac1qscaz0HbLxRJC4X8/wDR+b9kqUSVKX1xSFYC/u4Nm6jOfrJ+rjCo1mGhj+XOdsVW9PuLdEEsuBzC69FfyHAoGcJ46RFOP1hyWP8kPxz24OZQkfYOug0wbT1xmYze8Esv8Jn6LDiChfir3N9OFVkUZd/5Jrnxr4p6iqUQRY/cAyRtneMyA61OY8vcJlxTO4rPTLOyb7ZlorcW3hqcrjii7qsdg1iv54ETlWBhXI0rhdrDI1hWNuSZOdzqYJprF6LOBxKc7j+PqZDMtRCr9SrZwJhFq4/FvV7JFqQW0YKjXcU0uxRlwSCh7jDd1rrnWKHHCPSwpbypKAS926ou5kfXqv9Ozc7vhOaAkMb35bCQ4tOWH+ZKKjuRgeN4QZ5eTeS+A0DGidu4NnCA3Kyf3q7Eywhpods5yq1or9p75QdTwMjG2dWizqHYxDpIss1XgF9FR5e40oQlVu8Cmrc4VQDw==",
+	"lastSaveDate": "2021-01-23T17:58:02.478Z",
+	"info": "bis 26./27. 01."
 }

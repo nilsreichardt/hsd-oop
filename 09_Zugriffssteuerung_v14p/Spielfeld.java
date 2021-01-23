@@ -1,5 +1,5 @@
 /**
- * 
+ * Das Spielfeld, welches die Karten kennt.
  */
 class Spielfeld {
 	/**
@@ -19,8 +19,8 @@ class Spielfeld {
     
     /**
     * Das Spielfeld, welches die Karten verwaltet.
-    * @param zeilen Die Zeilen des Spielfeldes
-    * @param spalten Die Spalten des Spielfeldes
+    * @param _zeilen Die Zeilen des Spielfeldes
+    * @param _spalten Die Spalten des Spielfeldes
     */
     public Spielfeld(int _zeilen, int _spalten) {
     	spielfeld = new Karte[_zeilen][_spalten];
@@ -31,6 +31,9 @@ class Spielfeld {
     
     /**
     * Setzt die Position der Karte im Spielfeld
+    * @param karte Die Karte, wo die Position gesetzt werden soll
+    * @param zeile Die Zeile
+    * @param spalte Die Spalte
     */
     public void setzePosition(Karte karte, int zeile, int spalte) {
     	spielfeld[zeile][spalte] = karte;

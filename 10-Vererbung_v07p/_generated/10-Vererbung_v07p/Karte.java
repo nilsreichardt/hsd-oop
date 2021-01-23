@@ -54,6 +54,11 @@ class Karte {
     private String[] gueltigeFarben = {"schwarz", "weiß", "rot", "grün", "blau", "gelb", "magenta", "cyan"};
     
     /**<br>
+    * ID, welcher zur Identifizierung der Karte dient. Die ID besteht aus Zeile und spalte;<br>
+    <br>*/
+    private String id;
+    
+    /**<br>
     * Erstellt eine Karte mit eigenen Parametern.<br>
     * @param neueZeile Die Zeile des Textes<br>
     * @param neueSpalte Die Spalte des Textes<br>
@@ -68,7 +73,7 @@ class Karte {
     
     	meinSpielfeld = spielfeld;
         
-        String id = neueZeile + ", " + neueSpalte;
+        id = neueZeile + ", " + neueSpalte;
         
     	grafikText = new Text(neueSpalte, neueZeile, neuerText, farbInHex(neueFarbe), 20, id);
         
@@ -76,6 +81,9 @@ class Karte {
         setzeAussehen(neueFarbe, neuerText);
     }
     
+    /**<br>
+    * Generiert eine zuf&auml;llige Zahl von 0 bis max (einschlie&szlig;lich max). Also wenn max = 7 ist, wird eine Zahl zwischen 0 und 7 erstellt.<br>
+    <br>*/
     private int zufallsZahl(int max) {
         if(max>1) {
 	     	return 1+((int)(Math.random()*max));
@@ -84,11 +92,19 @@ class Karte {
         }
     }
     
+    /**<br>
+    * Gibt eine zuf&auml;llige g&uuml;ltige Farbe zurück.<br>
+    * @return Zuf&auml;llige g&uuml;ltige Farbe<br>
+    <br>*/
     private String zufallsFarbe() {
     	int max = gueltigeFarben.length - 1; // Zufallszahl zwischen 0 und 7
         return gueltigeFarben[zufallsZahl(max)];
     }
     
+    /**<br>
+    * Wandelt einen Farb-String in einen Hexadezimal Wert um.<br>
+    * @return Die Frabe als Hexadezimal.<br>
+    <br>*/
     private String farbInHex(String neueFarbe) {
         switch(neueFarbe) {
             case "schwarz": return "#000000";
@@ -109,8 +125,8 @@ class Karte {
 	* Setzt die Position der Karte und des grafikText neu. <br>
     * Falls Zeile oder/und spalte nicht positiv sind, wird die neue Positon NICHT &uuml;bernommen.<br>
 	* @author Reichardt, Nils<br>
-	* @param neueZeile - Die neue Zeile<br>
-    * @param neueSpalte - Die neue Spalte<br>
+	* @param neueZeile Die neue Zeile<br>
+    * @param neueSpalte Die neue Spalte<br>
 	<br>*/
 	void setzePosition(int neueZeile, int neueSpalte) {
         if(neueZeile >= 0 && neueSpalte >= 0) {
@@ -224,4 +240,21 @@ class Karte {
     boolean hatSelbeFarbe(Karte andereKarte) {
     	return this.farbe.equals(andereKarte.farbe); 
     }
-}
+    
+    /**<br>
+    * &Uuml;berpr&uuml;ft ob die übergegebene ID die selbe ID wie die Karte hat.<br>
+    * @param _id Die zu pr&uuml;fende ID<br>
+    * @return Gibt an, ob die pr&uuml;fende ID die selbe ID wie die ID der Karte ist.<br>
+    <br>*/
+    boolean hatId(String _id) {
+    	return id.equals(_id);
+    }
+    
+    /**<br>
+    * Wird ausgef&uuml;hrt, wenn die Karte angeklickt wurde.<br>
+    * TODO: Geh&ouml;rt diese Methode hier rein?<br>
+    <br>*/
+    void klick() {
+    	System.out.println(this.toString());
+    }
+ }

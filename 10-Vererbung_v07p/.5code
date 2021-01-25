@@ -249,18 +249,7 @@
 			"content": [
 				{
 					"type": "document",
-					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html",
-					"active": true,
-					"cursor": {
-						"segment": "2z54hc",
-						"cursor": {
-							"startOffset": 0,
-							"endOffset": 0,
-							"nodeData": "Machen Sie sich klar: Sie geben nie ein Objekt genau der Klasse zurück, die Sie als Rückgabe-Datentyp angegeben haben. Das ist auch richtig so:",
-							"nodeHTML": "Machen Sie sich klar: Sie geben nie ein Objekt genau der Klasse zurück, die Sie als Rückgabe-Datentyp angegeben haben. Das ist auch richtig so:",
-							"nodeTagName": "P"
-						}
-					}
+					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html"
 				},
 				{
 					"type": "document",
@@ -268,7 +257,12 @@
 				},
 				{
 					"type": "document",
-					"path": "::dir/LKarte.java"
+					"path": "::dir/LKarte.java",
+					"active": true,
+					"cursor": {
+						"line": 5,
+						"ch": 40
+					}
 				},
 				{
 					"type": "document",
@@ -297,8 +291,8 @@
 					"path": "::dir/FiveCrush.java",
 					"active": true,
 					"cursor": {
-						"line": 24,
-						"ch": 0
+						"line": 6,
+						"ch": 73
 					}
 				}
 			],
@@ -355,18 +349,6 @@
 	},
 	"classMap": [
 		{
-			"name": "1_Weitere_Klasse_Spielfeld",
-			"path": "::dir/_generated/exec/1_Weitere_Klasse_Spielfeld.java",
-			"id": "rqwqed",
-			"isGenerated": true
-		},
-		{
-			"name": "_2_Grafik_Konsole",
-			"path": "::dir/_generated/exec/_2_Grafik_Konsole.java",
-			"id": "bjbd41",
-			"isGenerated": true
-		},
-		{
 			"name": "FiveCrush",
 			"path": "::dir/FiveCrush.java",
 			"id": "jdsfga",
@@ -407,6 +389,18 @@
 			"path": "::dir/OKarte.java",
 			"id": "yb2u4g",
 			"isGenerated": false
+		},
+		{
+			"name": "1_Weitere_Klasse_Spielfeld",
+			"path": "::dir/_generated/exec/1_Weitere_Klasse_Spielfeld.java",
+			"id": "3qpv8x",
+			"isGenerated": true
+		},
+		{
+			"name": "_2_Grafik_Konsole",
+			"path": "::dir/_generated/exec/_2_Grafik_Konsole.java",
+			"id": "90ulpw",
+			"isGenerated": true
 		}
 	],
 	"flowMap": [
@@ -430,7 +424,7 @@
 			"isExternal": null
 		}
 	],
-	"activities": "U2FsdGVkX186dc3AsHYTZY/OjhB6vcd0V4y1gBFz8pNybo3hHJTEDWnkW+KIvK9maV48tQT4ZdJemX3aRcvuG0brERIR8GW3O7X7sEGXzIQbLi7+s/8ofwN49vuDSxepZbwKMhEVSwHGO4Jrks8gpoBpO3smtfbJXUqMVizsadE1roGGfpe+wXFtby390H0iCCPoXkKxwBTo36RbaVkjsgGPMkNShZD5ry7ZkPBiwMBLsuvJAF58rbHDtE2y/cHRLBK38ejYx0yZIzvJRzOECycr2sw6KdoXndJmIhbpLLdgSn738SzD3P9udCy3jjQ49n8cKE55YUus8xzO0MZNUnw6ilU1qvA1wpT8ZfVaU7rboU9plaYzqHDhfH0o+6dv5aKLI3xgxWeqzgcN3rQmMAhgyYkl9yx4gMhjeOKTH4jM7ksJ7h2njRoCd8G9ipmR6cdOZ6ZIGmYnBeyn52NohU0yQ+0jYEBt4kq3AQn2vkhaFB5pnfCWOP9kGRHFUc7vL17N4DK4oy2mZ9iyO3gy5jtdqZyrLHOigjFX06IicZeCKo6rHJeO88Rw5kkngPgS2oHovYxRIegVOR6e8/ktGx63Tv11wdt8756niM5Dbt7U+ZMPMVpkXdaEVdBaR6wWqv/QNjK1064cHThXDQdSw3w8gE1zLD1uba8Vb+hWg7JWwu5uRu5c5GHo85OpcZnd0evCrI6JhoEPy+04EKGZEfl9n/dAYOQHiy0a4UA0drehZMRrh+N5yfDyAd747NgxnZSJuDtp5b2XEBtg4TKSktCmMyHnq/7mKSGaudnw3IYBPad4nX4wSpbb2zLZi2q+1X4YsnH4WY4MEb5s+hknHDUgJBsKvNpHeIwDOvFRmZCQ/b7sJYAKpbr0RU6htxePEUolhcRnbL9VlP99jNha1NC8F0g0nPXSThXE2M/+HiRSDaejPgz56hvwGbANWQ22EvYLB8P3p7+N5TbeNE8yqnxr2dIfwv8F5tuBEAKWyRyjCDNJyTeyd7KPPsOPeMjJwDwjFK0UOBjOhd8JTHw8iEWJaatBvM5VqxpeD45JaNVXobmqPuKB3dl30VxFd+XDa7joLIe6gn5CtqioDNNi45nU1AkdDjLwVSPiESETCP8+5jyYQD/rzUWV9qQdrUCiH3guhqPBG+k0UOzaETA+6WweBCLvvzSfddv8utDAi6pFJeNLQdGDllmQCxzfNx35Um3UgXx6yyYU5NlK0uRGQkI4tcEJuFtYqM/+K/OiWyJPBPCddb62O+4U1aJC8/fRPUZg17u7hjtocYxkcgrBVQfPrZDd6Je2SrME2E69xG6QAOLJP9GpxcdicfBJW7d6eqiuXY5cBWH3P0vGR1ktB1JDTbHgooYzQal/9fc2RSfc/L26z5Olzi8s69Lnkren3+n4G0/4Kru8sset70md9PKEwVzjsn4kAuE7RhjhS90pMZl+RW5jBB6oLMHYbzJNU1AdAB7KqRa5BeTJ8royew==",
-	"lastSaveDate": "2021-01-23T17:58:44.547Z",
+	"activities": "U2FsdGVkX18rADx1tOJWfNUPcjOuXX9fGwZ+fQ2K+78TgmfTR2lHvu4PBdHuVvqUjx+vetmeBBX7wHcCdepIYoes0RiqZKKhQbisqNEmztLVCSRzYJUYYjHSXpwvGMYhEB8G2t16Fl9hCBEzQC1/n8N/p5re+qqe9P5eKTcJQQZHZeK8GXE7E2vcsN21MZTqcVAS+0xdllz1jhR2LJVx+P0dcr81akmMILnj/uT/IDcBwsaVzav52q+mllySBteWoRCl8BrSX/qgUeD80EHL29vnXcOEMqZxiUL5wFTVTQKpdlFXLMFyvXo8z4AL/prGzxvthlU2fG8i9MjIvOn4M8QHAc6bwBx1svdxkzz0Jkt2h4lOGBN2qn/rtZNpyDP/j0aQb0f5tSNeiQWb99mB5V3NsyIntmkZNCo3S3BfZ5MZVAtEwOWpZnBWCcnWcqLHT+nK7H0p1M7g2VwPxC55VgJ/FcCEk3kZ6tKtFUWDIiGZeVy6jf66IbGoj3CAQ1jgOJXD9fyVFELhRHFRWpnNuHcEGbzC8xiJfYdQf9QapncPuXxi4estfmeU27txmdNudWLfqo49YmpLRSNdGqGsX5VHd8kdcgZ3S21bDCuV9MQfYx/0h2HvEIBMmI2Cp+jZ/eC+kyy3vfcO6W2Cgjp+gJ+ioFFf0oFtcNglTVGeV7FzlUnr903TO5GdWmCwCEXqHeEqtVIsJ27KbiFM4RufRPs9ys+41j5XnzOHIQ/mVfG5n2ONcyah4b/fscj1OTQ1TjAe+ZiE94zdZSR9CYeizh98MVnqXUjnF4ptCdjE/M5Mrx1zmN7V0p6IU3leVX9xFX6vTML3/3ULEmQW3k/QqRDOzGBbwe/a6DifsqtBOv42y/ZNhlUr3TMPkZ2Awfpxwe2JmJoXEHoxO8FfNJuYRX9ik2d7JgqUHERfyMKJI9Qjd8k1gcKK1RFml7H1nqOQsCVMF7SlkIc50SZ3qP2T7pr69ZstazrtyTDtFWeJA7BZ0jqXricdzcxDLYzr34Fmv1XVaZXttwS7Jv8capbRMENUr5HGEvn49B4LoKXSi34pmbK4j1/g03SvhzVThN9q0FTUJIM7tDxbZn40wSirrSqc3oJgv2xUYp9mkV6X/dL6dCoHWBvVgRpeFKvITg7W8FPcNfzph6T7jMJbECrjCxAN8ksmx5cYgQYUDn84svrpjzDqhK5McR6PpeTeCW712JU4M1Wr97piGefMYGqTp5v5u2fGbl+oZUj9SbRnzUNLAoo6ZC1IfSsaq8II/CU9orkZJhGtw30OrVcd0ZnBI0b+XPXmonbM4drwWCpxPVZ1xZlRzl17eUmHLGw7BfLVENbBORIADFQQ+95sviwJAC9456/IhSeqv603FcTp1R93uJVFpyW0pfygQKunaDk+Zs/3PpgkcxoLHqATiOHlpogHtK5WbYqJSwV8Wz5NBuioUPnr5hxbx9IOqUSnuA4HJJlWSo62R8rER/h6QtByMA==",
+	"lastSaveDate": "2021-01-25T13:06:27.079Z",
 	"info": "bis 26./27. 01."
 }

@@ -89,7 +89,6 @@ class Spielfeld {
             	Karte karte = spielfeld[zeile][spalte];
                 
                 if(karte != null && karte.hatId(id)) {
-                	// System.out.println("Gefunden bei: " + zeile + " (Zeile), " + spalte + " (Spalte).");
                 	return karte;
                 }
             }
@@ -102,7 +101,7 @@ class Spielfeld {
     /**
     * Gibt die Nachbar-Karte der jeweiligen Karte mit der ID zurück, die in der Richtung der Nachbar ist.
     * @param id Die ID der Karte
-    * @param Die Richtung des zu suchenden Nachbarn (gültige Richtungen: oben, unten, rechts, links)
+    * @param richtung Die Richtung des zu suchenden Nachbarn (gültige Richtungen: oben, unten, rechts, links)
     * @return Die gefunden Karte
     */
     public Karte sucheNachbar(String id, String richtung) {

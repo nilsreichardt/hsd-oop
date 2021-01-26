@@ -249,22 +249,16 @@
 			"content": [
 				{
 					"type": "document",
-					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html",
-					"active": true,
-					"cursor": {
-						"segment": "bxssg7",
-						"cursor": {
-							"startOffset": 0,
-							"endOffset": 0,
-							"nodeData": "Vererbung",
-							"nodeHTML": "Vererbung",
-							"nodeTagName": "H1"
-						}
-					}
+					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html"
 				},
 				{
 					"type": "document",
-					"path": "::dir/RKarte.java"
+					"path": "::dir/RKarte.java",
+					"active": true,
+					"cursor": {
+						"line": 0,
+						"ch": 0
+					}
 				},
 				{
 					"type": "document",
@@ -293,8 +287,8 @@
 					"path": "::dir/Spielfeld.java",
 					"active": true,
 					"cursor": {
-						"line": 51,
-						"ch": 9
+						"line": 103,
+						"ch": 22
 					}
 				},
 				{
@@ -430,7 +424,7 @@
 			"isExternal": null
 		}
 	],
-	"activities": "U2FsdGVkX19qmZFuDKKmTkXU7rifF5CztCu82Ma+cLYQP0f5ycfYuopjoeth95reQR74qO2tJo6PnMbTKw53HGRXSUX6LfKyA/c2qXVM1e1CqrEoa0ILLPWV1Xm7Ri9MehCjeZbL6XN8uHzlWB2j2jRSokOr/ShaYQOQ1ZVXu8DlvJgSztJfRMbONXq5SIW1/26DOOcl+ciGgPen3zGsaXTBtl0epyV1s1SGpd3oOq/N7G6E8lI0lUsVhLxPZXwzz+Zj4YOZ8UF76u2dOkMGwFBZ5qKx/16nXCD9j2IYzSwJGO2xTWPbQq299hfX+GN1mNn8JBgVjdbjGTEHthiwphb0bGG98aa3ujb/K7mb+qQk+juIfCPUdFwZb3PJpm1Rh50zq0pMA3Sbqd5Mgxu7UAYlKErNnGD3L0Q40jzbCmGS8m9puHKZzDy9oulHx7bIVw/yPM1MMZGEmc6RCjHWWCWNsZ7RHGR/m9CXgrljA+6htqERqRJP4XpM/JTCM8uq+mvYEtEwCVReTjV7ugupJmenPLIeBHrsLqxvNl5Ph9u19tyfeTH3Hr7K8AEUaplh5uKW/8Ay/MS6/5v4Jjjm117xWsp5AlvfAzFWuNYAkEOsiwJzZMWjK1uy4SAFcDwXN5nrfw0wPxZxUU3vOslQ+EzPxVGfeXFNzCbg8xLLix7njTA+qPis/ja8ZoR7G7n5xdOh/VJpXsbr/dMvgS8uYMmv0Wjau8Iyc9l5WeNzgUDffwEPm24qSFJtzPgpp5HIGshxsjjS6OUbrBj8rx3vsbmA4x91hoiioPvvBcKT9SbD+SNvxT9v839mE3rxahWQ2cGkA+KxQZpLZZnlLuhPJEJOzifJfoP1ic6Xha87d19L6+TMYBIUkJB3YG7+t1erQoGdrchNa8Z9Nsmphe2CDyptUSWHnOh7JXxZTq6Jw+upUVwz/ukQNaVOmfm0kB8hRSbEdO2Xww2lR8quLiHnbsl0m4A9yfz13WQLABNR6mT2xLoqMeh92W5vAkI3zq+ZfdYnEpfNUKQ+fEze/9Vz+DSYalBTfTPsNOhb5DXf287AN1hmsHI0SFha4BDIrKUeUmpI6g+cVU1ZY163ZwR8BF+5NSao1mGUGLnEzjKpy9O/SSjD/Enhumx8Cihnftu58kOKWMbhHFlzRdvoZKESK58PN7eoJ3rbq7ivUc1tjHDmWC0a7Qcrt0Q/00Y7FbKCp8Xqo2cooorxRKL9e/gY0zHG09/g63ZBfhqZnp/ZbxdPJo9TTvLlJgxGsbzjZppC6lT+wQV1RajCblgdgUJr6/rUEjzQGQvqrK4c6B3bS3D31FkJ83DYdL48jjyaaq3sSxW2OUgmToGv31wbH3ToENcQ1hzFz8qtzvV/wu/Tt4XgySESlxxnPPSYS+r/svTRXgGjQruHw2/jqN6q/R9OvwHRsJLBU1ijg6iEkgPBpSl0DZtGzar3CqwkaVaZVENBCgzmJdgiSbxvN09w8eXXUw==",
-	"lastSaveDate": "2021-01-26T09:01:56.179Z",
+	"activities": "U2FsdGVkX19PjiayHDt2yDO3pcJQ4rnn1TcrOGJLjKzIatRaJzCjQwV1ScXps/D5E255zGj+DoCNbklrW1H0UWF5zZOZM+y9C0leUtRhWyFsl48eehv8PSpS4ZIHPsIYkeUscKxfPcBqCvkcP4pUUApUwC8uzQH/1lMqdfWJ/66aioMbxKxM2gboknWKfvIeMRGSnAv+LxLoMQYlhXKDeNFv443HKrgmkp0NYrwyQHGG6hyiiLQksxpmUDs3mIsSMZPhTbb+jPwgcy38/gy1Q+/LzQmBwQMAzkz4Abg5h38dY1IQkAuhuXl/pWEJ7TLZ0+bIUTwfhpW6Ktq9z9E762zQwDzBUk0qDGiJS1xAyz5lFil++BTEpA3N28pE3JNxiHGR7VO3yG/7Y3qFcm7KL/So1wbNjsXHSIb8n+bLZGJwcgfgSv79z19HCB8Pp0l0lUUmRYqlMyd2QbGdirRtqqwhlI36s7NCJZ+LnaMSLB3snFT10+OnFdQkwXohc74u4bsQ99wG35ALW6swbX7UCBn4PeGF0qEZTIwZubZcLh6bUCr3zv7znMVXJZeTqxeupSv/PTR4S6d2d83xmxqP8DNvWLLxAlLu+bo1UdWOBefhjpMPA3FG3zvdAzWKGz6lYRSju6651wta6FZVNGPQySLP4GUZ25ARl0XWGIP72I9imFilbJlw5hzplcjeA2xJbjleE7JV46dGs/mc5ACN/WWqQujLsbRLrx8qltC4hSZxHBbhP/EMzU030oOO+R21jqEQs0NI2bJL3Wv8tWTxoq/b0KkH9rkFY/zziJ6YYB2K9eudeZlkG03MtG4nSS7tWm1BwfbYhTVdb0vdZlsXuxBD90HXzbQdvM8yaZBgRZSkt7GWqdBdzhnluZzZKL1hHNDV4uopnwpyflQT1jQ/K0lgp39bK8VI2DZws8qYohLC8m227KfWOI5QF6Zw/NzvHlXvTmBv4BicunczwICCs3YFydl3jgFD91/PmE0ve6N+YflmNT9InBvxmg7BIXLlavbN/bCkLJUazC+9E7X+q+TicscDaHQtsZO4Z2ar1DMtvbRyJaEwMPzx7TbQ3dw5PpQ0SmOmgfjmPwIVsRk9L/6+K5sif7hNhjuM1hEeL4wk2l9lFFBncrR+Nn2l3rBMMGSl3+sIfGX3UelA0qOWdgVQ7mdll/TkpQslKA2l2BMTxp96JGgrIxk1ertGUsiPcjHb4ECIVliuaKpdsDtsFXwlZBJq/RNA1DJUIqXanYIQvTxmlWF7yhidC+YSsjiKLgM1zbmK6QUwWLin6ZDgNFLzxHs7nIxc/diYmCgtzvzNqhJUys3D7Gaz6jUXAp/HAYKAmChWyg2Fpbv0UAQgBj5B93EoZLF3PiZUF3a/FFjBDl24yzGlW5lXr+Kj5t7N0j6tt9hDhJDtS5V4aSorDsdhoZKjdnowu3qfqX9Odt2aBuHw9xgf+S3BGHpzo1/NwSKdjYQ/0zOa1ALFv4hVBw==",
+	"lastSaveDate": "2021-01-26T09:35:40.120Z",
 	"info": "bis 26./27. 01."
 }

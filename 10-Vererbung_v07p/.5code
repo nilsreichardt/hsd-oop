@@ -249,16 +249,21 @@
 			"content": [
 				{
 					"type": "document",
-					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html"
+					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "2z54hc",
+						"cursor": {
+							"startOffset": 0,
+							"endOffset": 0,
+							"nodeHTML": "<p>Machen Sie sich klar: Sie geben nie ein Objekt genau der Klasse zurück, die Sie als Rückgabe-Datentyp angegeben haben. Das ist &nbsp;&nbsp;&nbsp;&nbsp;auch richtig so:</p><ul><li>Der Compiler erlaubt diese Codierung</li><li>Die Methode kann auch aufgerufen werden</li></ul><p><span class=\"task-link s_hfbe2n text\">Wie heißt das Prinzip, das hierbei angewendet wird (das mit Vererbung zu tun hat)</span>?</p><p>Damit die Karte direkt an die richtige Stelle gelegt wird, übergeben Sie dieser Methode die Zeile und die Spalte, an der sie liegen soll.</p><p><span class=\"task-link s_izdwew def\" data-href=\"Spielfeld.java#e_izdwew\">Definieren Sie</span> diese Methode in der Klasse Spielfeld.</p><p><span class=\"task-link s_zclu7t action\">Testen Sie </span>diese Methode, indem Sie diese Methode dreimal aufrufen und das Ergebnis-Objekt auf die Konsole ausgeben.&nbsp;</p><p><br></p><h3 class=\"e_shwqtc\" data-number=\"5.2.2\">Array mit zufälligen Karten-Arten füllen</h3><p>Nun können Sie eine Methode definieren, die ein Array mit Objekten zufälligen Karten-Subklassen füllt.&nbsp;</p><p>Dazu kopieren Sie die Methode, mit der Sie ein Spielfeld mit Karten füllen und verwenden nun&nbsp;die gerade geschriebene Methode, die ein Objekt einer zufälligen Karte-Subklasse zurückgibt, um für jedes Element eine zufällige Karte zu erzeugen.&nbsp;</p><p><span class=\"task-link s_eekd65 def\" data-href=\"Spielfeld.java#e_eekd65\">Definieren Sie</span> diese Methode.</p><p><span class=\"task-link s_z45sd5 main\">Testen Sie</span> diese Methode, indem Sie sie aufrufen.</p>",
+							"nodeTagName": "DIV"
+						}
+					}
 				},
 				{
 					"type": "document",
-					"path": "::dir/RKarte.java",
-					"active": true,
-					"cursor": {
-						"line": 0,
-						"ch": 0
-					}
+					"path": "::dir/RKarte.java"
 				},
 				{
 					"type": "document",
@@ -287,8 +292,8 @@
 					"path": "::dir/Spielfeld.java",
 					"active": true,
 					"cursor": {
-						"line": 103,
-						"ch": 22
+						"line": 55,
+						"ch": 120
 					}
 				},
 				{
@@ -320,8 +325,8 @@
 				true
 			],
 			"dimension": [
-				83.49948152337859,
-				16.500518476621416
+				72.11420625942685,
+				27.88579374057315
 			]
 		},
 		"split2_right": {
@@ -424,7 +429,7 @@
 			"isExternal": null
 		}
 	],
-	"activities": "U2FsdGVkX19PjiayHDt2yDO3pcJQ4rnn1TcrOGJLjKzIatRaJzCjQwV1ScXps/D5E255zGj+DoCNbklrW1H0UWF5zZOZM+y9C0leUtRhWyFsl48eehv8PSpS4ZIHPsIYkeUscKxfPcBqCvkcP4pUUApUwC8uzQH/1lMqdfWJ/66aioMbxKxM2gboknWKfvIeMRGSnAv+LxLoMQYlhXKDeNFv443HKrgmkp0NYrwyQHGG6hyiiLQksxpmUDs3mIsSMZPhTbb+jPwgcy38/gy1Q+/LzQmBwQMAzkz4Abg5h38dY1IQkAuhuXl/pWEJ7TLZ0+bIUTwfhpW6Ktq9z9E762zQwDzBUk0qDGiJS1xAyz5lFil++BTEpA3N28pE3JNxiHGR7VO3yG/7Y3qFcm7KL/So1wbNjsXHSIb8n+bLZGJwcgfgSv79z19HCB8Pp0l0lUUmRYqlMyd2QbGdirRtqqwhlI36s7NCJZ+LnaMSLB3snFT10+OnFdQkwXohc74u4bsQ99wG35ALW6swbX7UCBn4PeGF0qEZTIwZubZcLh6bUCr3zv7znMVXJZeTqxeupSv/PTR4S6d2d83xmxqP8DNvWLLxAlLu+bo1UdWOBefhjpMPA3FG3zvdAzWKGz6lYRSju6651wta6FZVNGPQySLP4GUZ25ARl0XWGIP72I9imFilbJlw5hzplcjeA2xJbjleE7JV46dGs/mc5ACN/WWqQujLsbRLrx8qltC4hSZxHBbhP/EMzU030oOO+R21jqEQs0NI2bJL3Wv8tWTxoq/b0KkH9rkFY/zziJ6YYB2K9eudeZlkG03MtG4nSS7tWm1BwfbYhTVdb0vdZlsXuxBD90HXzbQdvM8yaZBgRZSkt7GWqdBdzhnluZzZKL1hHNDV4uopnwpyflQT1jQ/K0lgp39bK8VI2DZws8qYohLC8m227KfWOI5QF6Zw/NzvHlXvTmBv4BicunczwICCs3YFydl3jgFD91/PmE0ve6N+YflmNT9InBvxmg7BIXLlavbN/bCkLJUazC+9E7X+q+TicscDaHQtsZO4Z2ar1DMtvbRyJaEwMPzx7TbQ3dw5PpQ0SmOmgfjmPwIVsRk9L/6+K5sif7hNhjuM1hEeL4wk2l9lFFBncrR+Nn2l3rBMMGSl3+sIfGX3UelA0qOWdgVQ7mdll/TkpQslKA2l2BMTxp96JGgrIxk1ertGUsiPcjHb4ECIVliuaKpdsDtsFXwlZBJq/RNA1DJUIqXanYIQvTxmlWF7yhidC+YSsjiKLgM1zbmK6QUwWLin6ZDgNFLzxHs7nIxc/diYmCgtzvzNqhJUys3D7Gaz6jUXAp/HAYKAmChWyg2Fpbv0UAQgBj5B93EoZLF3PiZUF3a/FFjBDl24yzGlW5lXr+Kj5t7N0j6tt9hDhJDtS5V4aSorDsdhoZKjdnowu3qfqX9Odt2aBuHw9xgf+S3BGHpzo1/NwSKdjYQ/0zOa1ALFv4hVBw==",
-	"lastSaveDate": "2021-01-26T09:35:40.120Z",
+	"activities": "U2FsdGVkX19hATvvtdlCy/MKas4N6FI1lIeY1blhoLbqaBdTi2jIy4oqpj3UXZaet5Cm6r/wVV1CE2xhQb2oZx7m1OSHcpfPD1cs0LfoDgVwy94M0Rcdd3nEgQ5vvyRpxsqYoKSwU0GIZlnKnm4zuUqFk4CdHQEOZB4+otLAFBum8isjmyVkmEiv2rboqA5rIwl70KSgKyQ/GwwcrMBwbm6Y01Hx5jgKNUC++yS+UuzhftynKFbC6p6IyKGj4gbC60K4ma4cQ/2oKMxyo69UVnwPg8rIDNu5pq3S0EpZdEhm7n39IBp9GWLcPXAxb88S8DRQdkZOwZ0yv9udaKHPzbJljZsJX0cP6Ags68lzR2AejYBxfrKRDOecRKkk18H6NzVS+zzEWvxPvN/kmlVRGdP5aBpW7WMrBW9u5Hl+9U6m32poghOVOlZh0lcu+I0BZuwIo/3EkWpVGK2sKaOCLa/hb7eYUXewGWvjddEDv2ezuEMhSrYnzXKymPkTx/BDw6pX2z7vmN18MtW8bKaVX7Z0Wnfcapx8OV5rAPcrMtj/wa+qE6WmI4HJWGOsXaYT1Gl7Re6IRig6Fl7wA3hlQtenw18wi6e9GEosGADQmSRTzOo1rCDcCvY3ioIHEDin/FMMfR7NOK3K7rV89lfkslIZEzlPe7E9Pwqlru52MDUMkBlMSEty4uh+/rIBGSGwDonminTSYA++uumv2qpm0b4Y19hFWH160EfzrF9QJzicziH3rFSoUseJ6ddtcazaUNZrIdR7YgHQGR2sH9nGL6egXEmb3K30ghP3E9WAYAMPZya3tEEKSZi93KLK6peA82umsRegfnDie34QyjBl77iHoT/BTMYWqTLxZAnjbPcIcSrIU9bIKzMPb32MNB1xt8Oq7oSEzdZROj4b7YmibNAb+fPrmaBHSW4NSLzTkjyypoDZCOkSLJDOFLIDe0igjpIDSByZSuwkZaF/Cv5R2VD+OXlAYbxXNNH5lKJQcvxT6MWJrXRKJdfjx5Hwno+tdplkd1XM6hDwpAK3BzD2OEUkWib89gUoXnmMBulhzA79xdiIBln8MgWIFpO4+P58HEdh+uMnAs4GXwPoOfRTLVKZ0N7IbVJ0BS2hj5DF8DqnIYwZO8nNUN7aPQDDw/PvjYzA7CR+6PfehonTXxDIQvlc6iFXIHSQesR/n8zz0rUIqj4fwXNWVcxuBenX+0tewgtdR7d5D+xkJShDNUfohgcwOk49Oyg1QgOdzCE8xCir8VAg/M/XnC+4xrOiUTrF0Qs+h5GbDGuzTe6CDq29v0T62nNtn5/lKniLv5hFYcMfnha7AbcnLr4TB8pxD3ocbKRYcI128cvX05B+Hz7uzWa0OJhR8gZMkXVs8AKJT+XfCAL/ehiFY9KHrB8gGoVXY/m8p/D0CY0w61md7V7FSRTHo0Rp8nch2TNjO3eUu9yABlOKCcR0ItAKQJd01FvhG/TjVFZVgeTsHSQGif0EKA==",
+	"lastSaveDate": "2021-01-26T09:54:56.676Z",
 	"info": "bis 26./27. 01."
 }

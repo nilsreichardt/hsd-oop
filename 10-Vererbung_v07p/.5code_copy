@@ -252,13 +252,12 @@
 					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html",
 					"active": true,
 					"cursor": {
-						"segment": "goh57k",
+						"segment": "2z54hc",
 						"cursor": {
-							"startOffset": 21,
-							"endOffset": 21,
-							"nodeData": "Substitutions-Prinzip",
-							"nodeHTML": "Substitutions-Prinzip",
-							"nodeTagName": "P"
+							"startOffset": 0,
+							"endOffset": 0,
+							"nodeHTML": "<p>Machen Sie sich klar: Sie geben nie ein Objekt genau der Klasse zurück, die Sie als Rückgabe-Datentyp angegeben haben. Das ist &nbsp;&nbsp;&nbsp;&nbsp;auch richtig so:</p><ul><li>Der Compiler erlaubt diese Codierung</li><li>Die Methode kann auch aufgerufen werden</li></ul><p><span class=\"task-link s_hfbe2n text\">Wie heißt das Prinzip, das hierbei angewendet wird (das mit Vererbung zu tun hat)</span>?</p><p>Damit die Karte direkt an die richtige Stelle gelegt wird, übergeben Sie dieser Methode die Zeile und die Spalte, an der sie liegen soll.</p><p><span class=\"task-link s_izdwew def\" data-href=\"Spielfeld.java#e_izdwew\">Definieren Sie</span> diese Methode in der Klasse Spielfeld.</p><p><span class=\"task-link s_zclu7t action\">Testen Sie </span>diese Methode, indem Sie diese Methode dreimal aufrufen und das Ergebnis-Objekt auf die Konsole ausgeben.&nbsp;</p><p><br></p><h3 class=\"e_shwqtc\" data-number=\"5.2.2\">Array mit zufälligen Karten-Arten füllen</h3><p>Nun können Sie eine Methode definieren, die ein Array mit Objekten zufälligen Karten-Subklassen füllt.&nbsp;</p><p>Dazu kopieren Sie die Methode, mit der Sie ein Spielfeld mit Karten füllen und verwenden nun&nbsp;die gerade geschriebene Methode, die ein Objekt einer zufälligen Karte-Subklasse zurückgibt, um für jedes Element eine zufällige Karte zu erzeugen.&nbsp;</p><p><span class=\"task-link s_eekd65 def\" data-href=\"Spielfeld.java#e_eekd65\">Definieren Sie</span> diese Methode.</p><p><span class=\"task-link s_z45sd5 main\">Testen Sie</span> diese Methode, indem Sie sie aufrufen.</p>",
+							"nodeTagName": "DIV"
 						}
 					}
 				},
@@ -290,16 +289,16 @@
 				},
 				{
 					"type": "document",
-					"path": "::dir/Spielfeld.java",
-					"active": true,
-					"cursor": {
-						"line": 127,
-						"ch": 30
-					}
+					"path": "::dir/Spielfeld.java"
 				},
 				{
 					"type": "document",
-					"path": "::dir/FiveCrush.java"
+					"path": "::dir/FiveCrush.java",
+					"active": true,
+					"cursor": {
+						"line": 38,
+						"ch": 12
+					}
 				}
 			],
 			"type": 1,
@@ -326,8 +325,8 @@
 				true
 			],
 			"dimension": [
-				83.49948152337859,
-				16.500518476621416
+				72.11420625942685,
+				27.88579374057315
 			]
 		},
 		"split2_right": {
@@ -430,7 +429,7 @@
 			"isExternal": null
 		}
 	],
-	"activities": "U2FsdGVkX19Fr5+e7kgp2YO5ZmdBU3BMraUDKcKr4kELOnvJcY4+a+AbgHJ9pdaXcgEvl5d7rrS/D/Jid0DoDlLEmbn9KPHiBfQUPJKl0OUpSQahAZj0dU8aTnkANFTeHVNF8ppZojkPhEBGt0C6pAQF2ccv6TjkCBNd37BO/A5oKhPSbFVJcolFCnMlgw9eGUzP2NhhiBRx+qlI0IG0XRZA/fyn9OD7cUh+Q31HyfBRXLsg02eHTUIK52s26HrC/MCw4jxtePivobyYjebpxV0oMybUxlH23jNYv3W3XzTJPAKhb3YEUtNpysgPZEJk4ivbsOzhCLAMl/7D+dvHAG65E+azSCZddJrKuyRtjYNlQM6Pki7xbQQbb1LwrWgjsKq/pBU2nlLJpWTLh8pDawSikAhit7FP5XLeHRRf7CVMQhJi6Ks3hmlbzwl5F+VcuC8XM6XetRqOKVGtMHd1eg5emnJY/BoeO5hcz0rNlmvjPZNi7+5mQ4vzHQfRUVS/RIL0mJPahFiJ6KiifShVVno7DdbceJq/LAwsEo2Nckz4A366bYwVwch2B5eG6MOWZRyL7ympwW21q9mXaZ7kU15vgQsrrsaFxDYHe0Y3y92MHcbvWCLpu+SYKiz0KULJcfMif1NnUWsbac4iYjDbrPu7kUqiFePPem9eeC5EnPg9Oe7ER6rlU4Q9FRq8VbQNWFfU6ew5qpED2Edz4BQWu3GrDYPBue4Pxl1cGp4HoVa6GzPQNYuN8yBS/vDz7wGq/IM0esUB0Lg8uGCeR1K8bfSjUtILGxpIUARqzmK179L/xgrK+HL0pSF6Fm0qPuGnxMmo0itjTiPAJfb+pa5M5+6cViV6gTo9ugmkJlBsK6mkzkbmOxOxXF8mkDXn9lAdKFj1nojgY3u/XsIC5ihunEZoTpyhFSAFTSP9MVdJe81DAxqAvgfYYWBf+ux61Vdg1vYNEP+yO+DxyB4bkk7geKssYXSQz3MzYFrGpPpEQkZMGHu2v/i7OrtYQMIB0/Lnj2u9w23jdOBjFc2D1XtITIqTcHDOUBoqxZDV3pncJFEtgXhZi0loYclWdq4pntZ5cZqZrTruc0CrZPCtvftlvkZchiq80XWt4D21VRmX1PvKU58nIvvHhHVcrnoRLss66IjuYU5ZBiwA9vKQGwBt5L7oP3EgrgOeW+RA/iC4v0nnHA18Runlsczk4eggpBZpoPeDAkTSLKcIO3OU23JjqTPsAJlLEEUTo3gBjEE3UF+B+Kx50fRVQBbMcVOlpugqXt1bxvui94tHy50l130+94qhou5Pt9sevQOHumHjKSg4p1ZQ7SLtCWtpZW3zkMA/RbzoOtis42rntkk0ZfpUOeV6wyLo47MRkKB9ftrBXZiOgE9O7NLk/DGJ+PnGErpbDid7oRq0bZdnMFw4UM/8kqOeQeO18An1aUQJJopd+8YnOHwBD1gYlbm4Q8AG1q25tjVY0LpNpYNhMS6bIZnruQ==",
-	"lastSaveDate": "2021-01-26T09:34:58.013Z",
+	"activities": "U2FsdGVkX18hwnRGCVthV441A0l0KOfYpaueng1zfz+EIyL5OtHJiaPau2ki50thM55G5FrjhD5oc/qDlfTASbWef1257uTsZNN9eMClQmkQELE6JO75E5Xa/9Mk7Qm12W8Xzbis9QrB2ujkLNmd6/3PGxw5yulbZWbF7Rlu9QqtA2/HeTvyLr9hzfzz+UjpNttAMzzqS2arH4gagIkQ5yklfva8bsIecMSiLNRp9yIMYZfYwxMWVR5vwTyrqQuX4ilZkSFmObYsflCBoKN7f5JC9E2OgdQMaGsh7n0tcKP54Z/AJQZIbVxk5S6GlzBdKYEXqyL+ymY/KCaeKJUuL/IECpr/p0KYahxTktI3CIcHR6uLpWQDsNmqBgujCIgAE63Gv7emo8iRd/jCXf9DM/GA42u+hEd/gkX/lBFhs7mlZxqhbCfkASJ7ei2D+hAjvg2M7f5IMwTrmHRsp+rod7zXaZ8F1frFtfa2qUwigZ2nwa4h6NKto8SxKUUtBlDLGvxouK8NUFBQ2k5VsElv8dwZ6ebuqxyW3Ujl7MPWQxNTzpDDCmSyEdi2J5rYM0ZL+b3Ozbtwlpwzk/gXFVcAztebG24xk9CmzF+7Wn8QWBzU8IxXXsMD0BOIzfcxaUktwOuEhpelA8R3ifkb0ZPnspoYK9PYUFuiUUMGm0pt0uICRmJW33BxHWQGVf8+XAMyEdBAKBBAYqBM79437jKk31P1hU2GoW69OTAuk7a+l4vIaVudrzfRiRzcOIdSIv2CWThjygl9n+GcLqi7a4jiWGnBHJNNODqQjiCopyd1PcCMlSft4kJHOBbnCYq5uLjzBLS7nOOVaLRrCUyeEKG5HZwWGnE6kCCHTZiD0I2MOHzGTZhYhRguIV1gElTGiMSrKZmzor1EN5tDRpg3T14o/vI4XLVzJiGTH8XDRqvgKJvnxVC0gWr00ecZC/GtkdJ/qnH8oQZb+iW95YbeN3EK1QTMGsoSnxBRDNCs5KSlHcPk+VDailqI+LAZ/QNdHN+Qn+h5ygwi5cqjYlmURXxk3JzpItowYel0LJuLayEK7faNX/Lb6PUGKdnaY2UFRxJOpVZh0EbOmIbmmDtT7RRFEMi+TPk21kSsOGC/L01rWisE4lUFhy7zxSUClxxMuzugzxXhJEP7ZrawTKY2+x3BmJUKtBQ1Mp4jumErcDhH2e5low2bs5YFuDBBjsF7UVJ39xgJB/o0kzCA0mG3dE52t51m7lLuAun3/Zr+K8ZqvLAlaeFWWzrDFXWm91eW4zb6zxydhlRZHKE0YttT6GHJYh9RMM/f2fiJNOtEqOhWxle/P/17brnIQ794QZkQ54iB/Mgi1oYpqFaM/yzRIE5X+y1NWdT+ANe7+JLnjfrNm8YE4gcvOIAddNGg2bRlsts0zZ7uWYZ0vesRJ5kRkXPf3o3OwXmywunwK88ypjq1v1VeN+LjVaEmrZ+7n4MpRThHjO2LTCcfcs+SRK0XOk5o4A==",
+	"lastSaveDate": "2021-01-26T09:54:11.860Z",
 	"info": "bis 26./27. 01."
 }

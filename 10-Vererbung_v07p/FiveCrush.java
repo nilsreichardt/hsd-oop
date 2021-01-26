@@ -38,8 +38,7 @@ class FiveCrush {
     		System.out.println("Klick auf " + geklickt);
             
             Karte mKarte = spielfeld.sucheKarte(geklickt);
-            Karte nKarte = spielfeld.sucheNachbar(geklickt, "links");
-            nKarte.klick();
+            mKarte.klick();
 		}
 
 	} // ende main()

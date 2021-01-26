@@ -53,7 +53,7 @@ class Spielfeld {
     }
     
     /**
-    * Generiert eine zufällige Zahl von 1 bis max (einschließlich max). Also wenn max = 7 ist, wird eine Zahl zwischen 0 und 7 erstellt.
+    * Generiert eine zufällige Zahl von 1 bis max (einschließlich max). Also wenn max = 7 ist, wird eine Zahl zwischen 1 und 7 erstellt.
     */
     private int zufallsZahl(int max) {
         if(max>1) {

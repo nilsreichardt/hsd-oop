@@ -3,6 +3,6 @@
  <br>*/
 class LKarte extends Karte {
 	LKarte(int zeile, int spalte, Spielfeld spielfeld) {
-    	super(zeile, spalte, "zufall", ">>>", spielfeld);
+    	super(zeile, spalte, "zufall", "<<<", spielfeld);
     }
 }

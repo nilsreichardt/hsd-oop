@@ -47,13 +47,13 @@ class Spielfeld {
         	for(int spalte = 0; spalte < spalten; spalte++) {
             	//spielfeld[zeile][spalte] = new Karte(zeile, spalte, "zufall", "Karte", this);
                 
-                spielfeld[zeile][spalte] = erstelleRichtungsKarte(zufallsZahl(3), zeile, spalte);
+                spielfeld[zeile][spalte] = erstelleRichtungsKarte(zufallsZahl(4), zeile, spalte);
             }
         }
     }
     
     /**<br>
-    * Generiert eine zuf&auml;llige Zahl von 0 bis max (einschlie&szlig;lich max). Also wenn max = 7 ist, wird eine Zahl zwischen 0 und 7 erstellt.<br>
+    * Generiert eine zuf&auml;llige Zahl von 1 bis max (einschlie&szlig;lich max). Also wenn max = 7 ist, wird eine Zahl zwischen 0 und 7 erstellt.<br>
     <br>*/
     private int zufallsZahl(int max) {
         if(max>1) {
@@ -71,9 +71,9 @@ class Spielfeld {
     * @return Die jeweilige Richtungskarte<br>
     <br>*/
     private Karte erstelleRichtungsKarte(int richtung, int zeile, int spalte) {
-    	if(richtung == 0) return new OKarte(zeile, spalte, this);
-        if(richtung == 1) return new RKarte(zeile, spalte, this);
-        if(richtung == 2) return new UKarte(zeile, spalte, this);
+    	if(richtung == 1) return new OKarte(zeile, spalte, this);
+        if(richtung == 2) return new RKarte(zeile, spalte, this);
+        if(richtung == 3) return new UKarte(zeile, spalte, this);
         return new LKarte(zeile, spalte, this);
     }
     

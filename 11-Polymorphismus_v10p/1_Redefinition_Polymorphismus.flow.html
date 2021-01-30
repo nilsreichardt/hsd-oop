@@ -1,0 +1,408 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+	<meta name="headingType" content="2" /> 
+	<meta name="headingStartValue" content="1" /> 
+<title>1_Redefinition_Polymorphismus</title> 
+<style> 
+    body { 
+       font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif; 
+    } 
+    .segment { 
+       font-size: 19px; 
+       line-height: 1.5; 
+    } 
+    .code { 
+       color: #666; 
+       font-family: monospace; 
+       padding: 5px; 
+    } 
+    .task-link { 
+       background-color: hsl(47, 90%, 60%); 
+       border: 2px solid hsl(47, 90%, 40%); 
+       padding: 0 2px; 
+       line-height: 26px; 
+    } 
+    .task-link[data-href] { 
+       cursor: pointer; 
+    } 
+    .task-link::after { 
+       content: "➤"; 
+       margin-left: 3px; 
+       color: hsl(47, 90%, 40%); 
+    } 
+    a { 
+       color: hsl(196, 100%, 47%); 
+    } 
+    .hilitecolor1 { 
+       background-color: hsl(45, 100%, 70%); 
+    } 
+    .hilitecolor2 { 
+       background-color: hsl(218, 100%, 80%); 
+    } 
+    .hilitecolor3 { 
+       background-color: hsl(150, 100%, 70%); 
+    } 
+    .hilitecolor4 { 
+       background-color: hsl(0, 100%, 70%); 
+    } 
+    .hilitenote { 
+       background-color: hsl(218, 100%, 90%); 
+       font-style: italic; 
+    } 
+    h1, h2, h3 { 
+      color: hsl(209, 60%, 45%); 
+    } 
+    h1[data-number]:before, h2[data-number]:before, h3[data-number]:before { 
+      content: attr(data-number); 
+      margin-right: 10px; 
+    } 
+    .skill { 
+      line-height: initial; 
+      padding: 7px 0px 3px 0px; 
+      border: 1px solid hsl(0,0%,100%); 
+    } 
+    .skill .skill { 
+      display: inline-block; 
+      margin: 0px 5px 2px 5px; 
+      position: relative; 
+    } 
+    .skill .skill .container { 
+      min-height: 27px; 
+      display: table; 
+      border: 2px solid hsl(0,0%,25%); 
+    } 
+    .skill .skill .container .block { 
+      font-size: 14px; 
+      display: table-cell; 
+      min-width: 19px; 
+      text-align: center; 
+      vertical-align: middle; 
+      padding: 0px 6px 0px 4px; 
+    } 
+    .skill .skill .container .content { 
+      padding: 2px 6px; 
+      font-size: 14px; 
+      display: table-cell; 
+      vertical-align: middle; 
+    } 
+    .skill .skill .container .content span { 
+      margin-left: 1px; 
+      margin-right: 1px; 
+    } 
+    .skill .skill .container .content .text { 
+      vertical-align: -1px; 
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .block { 
+      background-color: hsl(0,0%,25%);  
+      color: hsl(196, 100%, 97%);  
+    } 
+    .skill .skill .container.attr_certificate { 
+      border: 2px solid hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_certificate .block { 
+      background-color: hsl(0, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new { 
+      border: 2px solid hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_new .block { 
+      background-color: hsl(120, 100%, 80%); 
+    } 
+    .skill .skill .container.attr_revision { 
+      border: 2px solid hsl(47, 90%, 60%); 
+    } 
+    .skill .skill .container.attr_revision .block { 
+      background-color: hsl(47, 90%, 60%); 
+    } 
+    .hint .hint { 
+      margin-left: 30px; 
+      margin-bottom: 5px; 
+    } 
+    .header .wrap { 
+      padding-right: 10px; 
+      width: fit-content; 
+      cursor: pointer; 
+      border-bottom: 2px solid hsl(214, 38%, 59%); 
+    } 
+    .header .wrap .icon { 
+      vertical-align: -4px; 
+      margin-right: 3px; 
+    } 
+    .header .wrap .icon svg{ 
+      fill: hsl(214, 38%, 59%); 
+    } 
+  </style> 
+  <script> 
+     window.onload = function() { 
+       if (window.location.hash) { 
+         let id = window.location.hash.substr(1); 
+         let anchor = document.getElementsByClassName(id); 
+         if (anchor[0]) { 
+           let top = anchor[0].offsetTop; 
+           window.scrollTo(0, top); 
+         } 
+       } 
+       let links = document.querySelectorAll(".task-link"); 
+       for (let i = 0; i < links.length; i++) { 
+         links[i].onclick = function(event) { 
+           if (event.target.getAttribute("data-href")) { 
+             window.open(event.target.getAttribute("data-href"), "_self"); 
+           } 
+         } 
+       } 
+    } 
+  </script> 
+</head> 
+<body>
+<div class="text segment" id="bxssg7">
+<h1 class="e_j45tt2" data-number="1">Vererbung, Redefinition, Polymorphismus</h1>
+<h2 class="e_lhb2ts" data-number="1.1">Weiterentwicklung</h2>
+<p>Sie entwickeln die bereits geschriebenen Klasse(n) weiter und fügen weitere hinzu.</p>
+<p>Alle Tests schreiben Sie in die Methode <code>main() </code>der Klasse <code>FiveCrush</code>.</p>
+<h3 class="e_vqixn6" data-number="1.1.1">Im Spiel geht es in diesem Termin so weiter:</h3>
+<p style="padding-left: 20px;">In den verschiedenen Karten-Arten werden verschiedene Reaktionen implementiert.</p>
+<p style="padding-left: 20px;">Es werden weitere Karten-Arten definiert, mit eigenen Spezial-Reaktionen.&nbsp;</p>
+<p style="padding-left: 20px;">Ein Punktezähler und ein Ende-Button werden hinzugefügt.</p>
+</div>
+<div class="hint segment" id="ns1tlw" data-title="Tipp: Nehmen Sie die Farben heraus, die in ihrem Theme nicht gut sichtbar sind.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Tipp: Nehmen Sie die Farben heraus, die in ihrem Theme nicht gut sichtbar sind.</span></div></div>
+<div data-uuid="inihhz" data-hint="U2FsdGVkX18WClshxmtLhSvgisob7YVzleNhNiOdPltF5idoGZFIrd3SvnPm6ffeuJDE2V6ALlnWn0FgvMyBbYxuoZ+83JyPi6DlivaVpP8Szovt191Vn7tkWnSiNf9wueKKCBq8d+M64yFaI/YPqIsEC4moPJ1RmkAZt/eixtCSy5mRKjWfGIkGK1OhpbWAnLw2yzufLDC8Vh7UmTb/+HBHAb74lMo9EEHg7Nx4qvlewwoY2JSb+5wGOrCM/IdvU1IX8U0kBdMs9BHdtQJl05YSAK95SqVbTACSsO9n+oA1OBxP0gjcNx99VMstN2hQrEGJD8SxXuo+nb2kNc8MZNgPyb7fhx68oUG6NRaQs1v8GPU5MHqJB7iRKFBhYKsxC/NFEIIobekI/xyW25YoNcFFZUNSytKzpWnS+RSdsU9AtcXvQzmLcA6fnkBCSJtCWZoL9T7qzC4LVL/gptotPhD4KB39QXW8MswXGXfi5wyCwN3lNwvall157+Rlb3gfnJV1WfjVejrAqQyeFEpFAl4lYyQ6CpFTuh3y4y2pegyp3OOESzXLr7QsMLFnkEzQQfms3HMZ5SgHsGuJCjsgbyQVclKYDtUR3eUZDnQjdPRaWwfELc4zm6SJfMCIUyz1+rsoo5J64Lb22TfeYzl0k7/IeSzLvAM09fmkWnE+UWPt2Rm1i5AkR6ZMLbn0Tfa78TeUrZj9DqNXDKrJyTPGC13ilBX+nbY4WaEb2wpXwYrNAALgkdkdAS7qhHxv1hKkHycrZ+8inEGvfvkebJiKPNX+TL+5AqtaAe7fVLQaklvlMriBFuq3VjYA80NmzNspdzj7fUCB+pfHAFWtNk7sPw==" class="hint"></div>
+
+</div>
+<div class="text segment" id="ax33hx">
+<h2 class="e_av8cm9" data-number="1.2">Top-Down-Entwicklung - Objektorientiert</h2>
+<p>Sie entwickeln nun <strong>Top-Down </strong>die Anwendung weiter. D.h. Sie beginnen bei einzelnen Aspekten einer Funktionalität (oben) und überlegen, wie diese umgesetzt werden können. Dabei ergeben sich weitere Anforderungen, die ihrerseits umgesetzt werden, wie ausführlich bereits in der Vorlesung dargelegt.&nbsp;</p>
+<p><strong>Objektorientiert </strong>gehen Sie dabei vor, weil für jede Umsetzung (Variable, Methode) überlegt wird, in welcher Klasse diese gehört. Dabei ist auch wichtig, welche Klasse auf welche Eigenschaften zugreifen darf.</p>
+<p>Außerdem folgen Sie dem <strong>OO-Weg "Beauftragen statt Zugreifen"</strong>.</p>
+<p>&nbsp;</p>
+<h2 class="e_kht7zn" data-number="1.3">Skills</h2>
+<p>Sie können in dieser Aufgabe folgende Skills erwerben</p>
+</div>
+<div class="skill segment" id="i0kicz">
+<div data-skill="OO.Klasse.Definieren" data-uuid="ibx15j" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Definieren</span></div></div></div>
+<div data-skill="OO.Instanzmethode.Definieren" data-uuid="w36omm" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Definieren</span></div></div></div>
+<div data-skill="OO.Instanzmethode.Aufrufen" data-uuid="pvkiyc" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Aufrufen</span></div></div></div>
+<div data-skill="OO.Javadoc.Schreiben" data-uuid="284w5i" data-acquired="true" class="skill"><div class="container attr_revision"><div class="block"><span>W</span></div><div class="content"><span>GAMIFICATION.Schreiben</span></div></div></div>
+<div data-skill="OO.Sichtbarkeit" data-uuid="thvlon" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>W</span><span>N</span></div><div class="content"><span>GAMIFICATION.Sichtbarkeit</span></div></div></div>
+<div data-skill="OO.Instanzmethode.Überschreiben" data-uuid="mymd73" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Überschreiben</span></div></div></div>
+<div data-skill="OO.Polymorphismus" data-uuid="sdo873" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.Polymorphismus</span></div></div></div>
+<div data-skill="OO.MessagePassing" data-uuid="t9vr7n" data-acquired="true" class="skill"><div class="container attr_new"><div class="block"><span>N</span></div><div class="content"><span>GAMIFICATION.MessagePassing</span></div></div></div>
+
+</div>
+<div class="text segment" id="ztnlo7">
+<p>&nbsp;</p>
+<h1 class="e_2zy7uc" data-number="2">Karten sollen auf Interaktionen reagieren</h1>
+<p><strong>Weiter im Spiel: </strong>Das Klicken auf eine Spiel-Karte soll eine <em>spezielle </em>Aktion für den Typ dieser Karte auslösen.</p>
+<p>Beim Klick auf eine Karte wird die Methode <code>klickAuf() </code>für das Karten-Objekt aufgerufen. Das hatten Sie bereits im letzten Termin umgesetzt.</p>
+<p>Damit für Objekte verschiedener Klassen <em>verschiedene </em>Dinge passieren, definiert man in&nbsp;jeder Subklasse von Karte die Methode <code>klickAuf() </code>auf eine andere Art und Weise. Damit wird die Methode in der Subklasse <strong>überschrieben (redefiniert)</strong>.</p>
+<h2 class="e_9ux2sg" data-number="2.1">Horizontale Karten tauschen mit dem Nachbarn</h2>
+<h3 class="e_rh8s1u" data-number="2.1.1"><strong>Reaktion von RKarte</strong></h3>
+<p>Zuerst <strong>redefinieren </strong>Sie die Reaktion <code>klickAuf()</code> für die Klasse <code>RKarte</code>. Darin soll folgendes passieren:</p>
+<ul>
+<li>Die Karte soll auf die Text-Konsole ausgegeben werden.</li>
+<li>Die Karte tauscht mit dem <em>rechten </em>Nachbarn die Position.</li>
+</ul>
+<p>Dabei verwenden Sie Methoden, die Sie bereits geschrieben haben. Die Methode sollte also sehr kurz und einfach aussehen.&nbsp;</p>
+<p>Beim Implementieren werden Sie feststellen, dass Sie der Compiler nicht auf das Spielfeld der <code>RKarte </code>zugreifen lässt. <span class="task-link s_1uz69w text">Warum ist das so?</span></p>
+<p>Da die Subklassen von Karte eng mit der Karte verwandt sind, und sie alle gemeinsam erstellt werden, ist es daher zulässig, dass Sie die Sichtbarkeit dieser Instanz-Variablen so ändern, dass sie auch in Subklassen zugreifbar ist.&nbsp;</p>
+<p><span class="task-link s_zr8n2w action">Ändern Sie die Sichtbarkeit der IV</span> - und nur dieser IV! Alle anderen sollen weiter <code>private</code> bleiben.&nbsp;</p>
+<p><span class="task-link s_eesf0s def">Redefinieren Sie</span> nun die Methode <code>klickAuf()</code>.</p>
+<p><span class="hilitecolor1">Ich habe nun alle Tipps und Hinweise NACH der (kurzen) Aufgabenstellung geschrieben. Ist das nun besser so?</span></p>
+</div>
+<div class="hint segment" id="c3qcli" data-title="Tipp: Suchen Sie in den bisher erstellten Klassen nach passenden Methoden">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Tipp: Suchen Sie in den bisher erstellten Klassen nach passenden Methoden</span></div></div>
+<div data-uuid="x7l97m" data-hint="U2FsdGVkX195ehy6QMIH7qtlxtNJaz0XHO34jWxFQg4m/gRsUqJpTnICzQAqBq+P4g/2RiaCqSbbBy7AfLHEtKwzRhLz0Bp78qESEvhQI7k4cFsvslAXsnHfEFZUjMuaCAbdH1DNpPCxf+IRAAez6OpDlNYLsKy57F4nSXrFLVJ/BtulzYzlZnRKLNfjSIH+2YQ9+Kg37QcnDDpg4PWz7JcJcnQ5Sc0W8tyccz93zZNbNhHw4IvSD1wB+1kzyPEVIxjaDsORwRpPuurnKrNUg5Ltq1cOwNejxzAePOn9aDwmfOdo+xFakw8XuDEKpQF3VJOQm9CCuXiuct9gsokvS9ao72wh1sbHiovM12UYRWVMTEmV61ETH1VifH+vI3bDs8T+6sXoPIAMlqyRxj+nUPkx31eLWHK9ElF+n8Qkk9+OkObkV1K/jj/54OhaDthNamK6Xlyfl0JYHiLbLDPD9O2GZHqB7/+0reoYqbQbb/38WrPu1kBLydJYwzz4kO3RmK7uHemiL3GUanKR8qhzvy0Ugu6R65MlVPcw+rQ75KAxB1H8AqycHPNw6pBiS80zYQ6Rv5ErIUvtwL02/+a7UJrr8NoUh/B7sNQF8UEHFWr0I6EzTj/FD2b/TiWc2Vt0Dt7I0C0y2pK1vdI4OE7b0FlMpDDlooeNn6oyIwOQgmUaqoq8sc8QU9SmdbL7rO55lMlfc5t+ZYs5zO7Yxxx5hwrcv6Qe0Ovmlf5lBp9TCQSOMyL2Khh25zk8JuA+3yS3pQPvjdPjLfhpYgoF0GCLihfOvrqQ55rt4oZc5MturpFK2xdBmSXlYYBJMJ/1qpS2ZZB0IzFAP9fWJy1BuEXHAQ==" class="hint"></div>
+
+</div>
+<div class="hint segment" id="6sl3w0" data-title="Hinweis zur Ausgabe auf die Text-Konsole">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis zur Ausgabe auf die Text-Konsole</span></div></div>
+<div data-uuid="zd0uot" data-hint="U2FsdGVkX1+2MuYq32HUoo83Li/Z/RIko5pnK6P8BDzPvk0AqklNkimJHWAOwm7xJ+vOVOBdhBXTYHiR/v4yEQpB58WVxy85WqQplqXpCyzKbPXEvJllPnm1mPIgxD+QhFrrveyjZGCLrne19PMz6fMkoVEDhxi9n14s07PZYb2c6oXQvGxJg8jWLXc8H8SWd5OKUMifl7C7jEY9e1QNXqy7AfS2pQrZ1RS7pXb+B/zc4cutmrOU6nHl0+CZGwPtyxlxRj3XvIgof2mxoSMyBQsz1nzrfwF9dq6fEXn7lqEC59xDB17ytUkFLAn6wGxzu8mrOuVzQIrMgfdB7umLKNrmxQ/ceLhdaq7t1i4WUUyy+hqNFckawncwcH9EQrY1+N+9p1U8l/OEAzNq1Vgh/MwNYvwfeJpreSyqimT1T/wixZ7zpKgY6HfgFuTWJz+FxmVUqBZ3XCTshWCrSx0zK2VmnTiY11D4xWAhXGnMDcJCU7DycHiy8FqvHCKpsDlanU+SgAl8pCoeqIa7btHy48PV0bxprRyjAH6z2HdZLXjTLdBhOWeVXLbA6DOKkslTPziw9D5L8jd+SnfijnFXCvycfKPHd8siua6zsUmzBOVUNRJQIIpD3Hz03YQ6RXL6YLv0PCJ+/5bYWX6td0RK763XZW7R8kHj5ywRuqTFsd568Q4Rp8l70b3HZE/XDjim3TN9l46NeUMAGvY1WePoDQ==" class="hint"></div>
+<div data-uuid="jcxnol" data-hint="U2FsdGVkX18byyXdcSnGcx84ExpJdww7zqVkiWzzRrW7zG4d9R0wdQATjjdUwXZje4da6mV081HFtTiAWzLT23UmmPO5Ro0N5x1zMCyjPU7TTORd0dy/iZj1IUR7dM65axDuDNa8CdEcyEsc1THH95PuVCihtuufPKfh62gbN/drM4cNhtKL7apV4ejB0m73NRNSgDdenVi9LfskgA+lQfMmup7C1xNa+MokIj7cZCAYOas3kIjU9UW61zoDimmCXOINRteTqrW/KozgyBwMjhD1U0chEoASD+HHgDc16+Pad7i3nQFvhMoJ7ojE6p7Lm/74SdOJXfIQZ/aIjpOJElfzll4n7W/m2kUPeFoy/0M2BHzGev1/1ELejI33Mw6h6FJeKqvmW308Y4uStRkx23cDZ4Rhp9VrdF/lIznUAkVG2T0hGSL0nEI0fx3RyPNgODFfPANJIwDIZCck7O8cZZvcZc4lqXmkQIOJ9z8+5EvWGcDv0WkkWqreIgbC8Bx0YGIlN3rs693M8s8JZldYbCyU0KypJhZFudJQmafIDCcXseQPJe+nvr5CiCboq38le6pMkimrKLdnFKdkZlfcr5ucJik8gilF/4Zza+zPsdSU1v6fEm0BlnqUgCbdgbK/Hhhocz+9cAivFsuFv+ksUqtd+uOFLGcUHwBAgRZWOayhyl1e96beKNnlfmncBvZP2WgmzIN3uxu1wTUAfQa8BhtLDafh6MvrUVmLyO0x2Ad+3kI3hZ7So4LeNu6lTauPhGHmPDPiSjeoweX2iPykC3MnI9QasgUwmKU/vjMslqc6Xx4KJjTqvblkI7BFAl9VXt6fX8Hl+Dsl/sX+SZnGHg==" class="hint"></div>
+
+</div>
+<div class="hint segment" id="jhgekk" data-title="Hinweis zum Ermitteln des Nachbarn">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis zum Ermitteln des Nachbarn</span></div></div>
+<div data-uuid="gvwvv5" data-hint="U2FsdGVkX1+hSZe28d4DYfcU63S9r67GtugvuKKaKfaSSDlbROIoOY2/ZsvUR6aG3N8Uj75T6ojxAdJoWBSh5/vOrWSFTgh27MFwf0SZtib2L554kMwcUlpfhTW2yleSYjILHyiQGAUp4Sa7Dc92dWJvlc+3QT3iCRYLdtw0atfwGEC8DnlXodO64s79CW0TfAg531jgGtAc5wwpTVYVneO9Ve4Q6sLwY4XHVYHEm6KbQYOnbsIC5Jv85+7pTv/9c2TLLYzD7zk2A81epRKYbgxVZ8qL2A8PHwd8rAIj1SqDSUqalHtgMRjVg1oA8PQ4CgCrnvMUwCYn97B0hjM3Z7G/jc2nZwQvdW24LqAOnKE3eqLHZGoUwHXLd1fwzRLwjdqhV8f/ZGNUt5Mb19qXIa+i5IYBo+dnHObJZCangBI8fPXauOBanHfEI+oafsQCVNCzzqoPvLL1lN6SUyaiI1HHFGQZFXL59iEEHyEnyL5lFfGoZp8aUDNiqzQtpYXm5BTX2qGIuqEAR1bvWnwHoibQNeONA3SmoUja6iL6wmS8atsoXRNcEANRJAlBZfHVn713mVpEJ82udaobsqknYJpdG13fOR2cNjUYQgO8fVPpKNbZ18kopKdaCRW+VROqiJFVAe3BPclaLv19KoXHNdS7M7WPifyR+3P2Xu4jjgw=" class="hint"></div>
+<div data-uuid="in2gic" data-hint="U2FsdGVkX191+bd/PkSxBkeU5xkkLAr7cHn7kdvlutLlbOexPN20llHSM+cZWjVLRUNBUK0H+75VNEUBvNSo3OgvTZf4dzOFP6A7sxoyqWNJcUyB6oIMD5imSwl57NMX8MnhJrVLgA5FrvqrGYmTKCRMnj6L4Zsf+EbRoBWCizvOoLZoObN+hM1Co6st6phXO8wPe4Y8Q10rJc6t5oyWyhf4nnPbuhQYJ3NjEtYBEu/XPvf4/mEZ94IEVGeRM5Y6TjrzFJtjXE/IugusVk5W2RgtAIvSIXV1qwXgbrDEYci1lAN/tomcNckF0skVclSKCXwrL/FWo/MUNVa9VuqcsWwAYuSQc90KI/0gsvGIjQW8dp2gRab6N9I+h7hvHctRUlHuwakkuXjogZPhCtRIBLuBodN+VlnaEM8e9pMpRT+HBVt9l5c47O3qzxJOQou2J3RpZBs61bzpRdLDB30kTMVDmzU2xzq4NPGtCSm3jf5YgRURXoRCqKl/+S5QOZJTUHoOs6/LfIDyXn3+GEQQ5ebQ6SH0vQoedYWHDgsdhNkixmCUwrmQEOFjnDZYlyInjtmvz2uOObk/4cNUI6kpj2iOQ9txrshM0jxgeDuA1XmfAl8EC7LAuQgO+ZR8Yf6z0GW8C0EDXtHTfCrLKxJb7X4Aqy4tBLBOz/yqY67v00PIubgK6qFjyIdV1ZEqgLt5IJrTyxtIVBEiuayyYytQW7kSfOGKxSd/zP8OomrVe2hVSTJ52v3AbrmZNrP0s6oVSCjyURJg4mYPA+MwqDljkg==" class="hint"></div>
+<div data-uuid="4wy97f" data-hint="U2FsdGVkX1/RymqrUcFYjABl+oFCw4d5qp4jBFMrdrBuSZOUDc3LGYGs8QbHsvmL6Jsh74QFANo+bp1C0EUXg9+zT9GFo+IcZ7I/Jdy+eptrPytYjPvUoiRvZY0pA7J1MljE1S/BmROPYNao3FgimzGPjrMfelbBEh/RUDVuYxqssfbqcftAjfvuSlz8PWZAS3/1ZqXfB0cs0BfeAkxzExUmORrJIfd1A91oznVa2DxcGEaODwuuuF9/buHWKEsdNWOpV7S26u4tt0QBOW4VFnGQBzbdAdE5Dpv4w/086AEWlcuOWJlpOlYRU7RTpRJL+hRIzH9WvP7bmFpoqHV1L6CHAubpdd8UrGM8+6AcALKSkGfA2yVrZgmuZUMuhRsq4mWnxSnlLqTalIyKE7tbNqw8KC47LG/b4H+L3fic32Tqy3JJ9Uc0k+nUnqJI1ZpJcDsNMu+6sKLwwpBB/A1rZpxSpa2P/+S/h4ORcg7odfcejRBY0p1wujwyRcWnp0UXHyiEQy9fMZRrkLdPBUXGpnTB8sLVIAtOJSR5CMc3k/coJqahUa5ltCjlLLHTax50FPPEkszT4jJC4Zm+2vSHAfQQ0XLKRPJxlSasQz14oT8YJGoM6ZcpmBYPzW/WJ7rx+NovqJQUVQeNhNW7SAViJBmWzg7wN33WWxyMbrPcJNAe7m4oH2uH00bwqvuJSN6YtuuLo5Tubh3DZrdeL1dq1tprEoVQh1AM9WtNiuDxJA4=" class="hint"></div>
+<div data-uuid="qdb93d" data-hint="U2FsdGVkX1+5QHg3+lD2sJzMXvC1UyM5YX2Kg23YqJWhms3xiKOe1ckH6nZKEF8d0tVEaVx418+qSKu1bGGDtERgVacZAWSIkyhJG1QegoHW6IaifPOXv2rvUn3M6IfPgPRMlFWSWnQXMfMQIuG8K0NQD1Au5gBoTv+OS7BJAgJDuGLbWWmawnuKDmd+DrNbv6vw3u4uX9u5EFBl2BTRB3eMdA1Wh4wrJXUcpA7S8EaGEqUDxHzfz7Bdh7H9/xLC3OpwFy0CsW55sIsoPjobmE7EEK2NAK/ahPdPPnjYusv3+ZT0DoVQ5b7tEEy5cOiSOKpSXWIjYhr92mz2w+M6/8KIlerbjb4dF4YWfcpkcjUJVdqqAy0rpe6PPPIFHy4sTcb7KGifsDof4ahpYSurt45YVagyDOby/mmOlEodTaRELA2XMX2iPx2BiDLpCRZdH2p6lTPoRYDecL8mqbu/AkDT7z5zdcNx5AP2i1BLQL4+LOmtwIN+djS3I0o+JBZRkmql0lk3cHx51tsdZowULghWXYHoH42+uy7z1fuMS45PqP1PuNN9OQUyKk4el5KlGnDNV3/lLjVgFnqF/FwFHKltic4UnbWAL3Ehbl8kp7wpDMPDYIXck4lCyUT35FSBEMgFRFxlO5SR4ovGgowoaPZaSV8Us2GPHJ9tcnd/2YnOnS53VTsnurujcIWEoWpFsjb1WqLFZNNiuTPb+IAtdJv5HXHQfqzdLEvuEEesY1R4I3I5pe275W1KoAtde5ZbKqweTQS9jnrkNK9NcHDmOUYR3K2gUVz1BgGvxoST/aTUqJ2Jb+IOU9CeADC5sWKv" class="hint"></div>
+
+</div>
+<div class="hint segment" id="uacm0d" data-title="Hinweis zum Tauschen der Position mit dem Nachbarn">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis zum Tauschen der Position mit dem Nachbarn</span></div></div>
+<div data-uuid="g361bf" data-hint="U2FsdGVkX1+8AavU+CqPaTKwfS3GKEZAaVj9uYh5GoqClfluZHQM0czHtfTcIzZm24r885ED/S0e0ZkoDkrtVKRbRAwYRipTLTRIW6YtwNVZgLTltLfNUPIsWF4ETP2odGwLgnpWbW2ku3c6voD4+dY5hs/clPM//QovFidPEEpeyQCIFwnJCpRAzxGD+DjAjtUqzyH7Bf6RxWX0J1gz7tYIa2eVV7UGFJvTWBjZigu0T6vsIrD6hhIxQZtggOFUcYe1GKvR5DGnQKehVzdjGIfjJSxYRYqHPwji3MiJ6McLbOY5NG1SKQSHPltaXeBCm1Ir/cvSgSAEZkcykJ5YuuSH5EE/x6Z2AMbdhNrD3umo+z++vdfnDOASP5/zt4ofZpl1dRzfIVBcax8TSKfwYYLROiqOyzvdp+u14MHp4ThuSsWf5x8VorpEDnMfwJGTy70ipIvS6d5p52+mtuliAnLzKAKVpgnepFwpu7Ge93sDh4j8VHepcUyUtMTyCYAZbJFvSssoEACf29BETOfi7MRk/U69bZ0hKP7TBr5fkoB3rQtjunT/NP8Fmke2nel1pzywxEFJb1yFMruagJAEAcuaAMnI5gXllHqk5mE0aPNjftSQNNuU2syg9CxWLJe4GWAhwPnZNA7OGkqmufxXKI2l/osch+SZi5Wt8wXGtao=" class="hint"></div>
+
+</div>
+<div class="text segment" id="ndt6js">
+<p><span class="task-link s_qm4s34 action">Machen Sie sich nun klar:</span></p>
+<ul>
+<li>Sie haben nun die Methode <code>klickAuf() </code>der Superklasse <code>Karte </code>in der Subklasse <code>RKarte </code>überschrieben (redefiniert).</li>
+<li>Sie haben außerdem in der Methode der Subklasse die Methode der Superklasse aufgerufen</li>
+</ul>
+<p>&nbsp;</p>
+<h3 class="e_uz0vx3" data-number="2.1.2">Reaktion von LKarte</h3>
+<p>Die Reaktion einer LKarte soll genauso aussehen, wie die einer RKarte, allerdings natürlich bezogen auf den linken Nachbarn.&nbsp;</p>
+<p><span class="task-link s_313iq3 def">Redefinieren Sie</span> die Methode <code>klickAuf()</code> für die Klasse <code>LKarte</code>.</p>
+<p>&nbsp;</p>
+<h3 class="e_irr4et" data-number="2.1.3">Reaktionen testen</h3>
+<p>Testen Sie die Reaktionen, indem Sie, wie bisher ein Spielfeld aufbauen und die Reaktionen von geklickten Karten aufrufen. Das haben Sie schon im letzten Termin gemacht, <strong>sie brauchen also nichts zu ändern.</strong></p>
+<p><span class="task-link s_k7zeld action">Machen Sie sich klar:&nbsp;</span></p>
+<ul>
+<li>Zur Laufzeit wird immer die Methode der Klasse des <em>aktuellen Objekts </em>aufgerufen.</li>
+<li>Ohne, dass Sie den Code zum Aufruf der Methode klickAuf() geändert haben, wird unterschiedlicher Code ausgeführt - je nachdem, welcher Klasse die geklickte Karte angehört.&nbsp;</li>
+<li>Die Methoden heißen also alle gleich, sie führen nur unterschiedliche Aktionen durch.&nbsp;</li>
+</ul>
+<p><span class="task-link s_pdp6hm text">Wie heißt dieses Feature von OO-Programmiersprachen?</span></p>
+<p><span class="task-link s_7mqpzb text">Wie heißt das Verfahren, mit dem dieses Feature zur Laufzeit umgesetzt wird?</span></p>
+<p>&nbsp;</p>
+<h2 class="e_th1z6x" data-number="2.2">Vertikale Karten ändern das Aussehen des Nachbarn</h2>
+<p>Um ein bisschen Variation in das Verhalten der verschiedenen Karten zu bekommen sollen sich Karten, die sich vertikal orientieren, d.h. nach oben bzw. unten, anders verhalten.&nbsp;</p>
+<h3 class="e_tipfd4" data-number="2.2.1">Reaktion von OKarte</h3>
+<p>Beim Klick auf ein <code>OKarte </code>soll folgendes passieren:</p>
+<ul>
+<li>Die Karte soll auf die Text-Konsole ausgegeben werden.</li>
+<li>Die Karte ändert das die Farbe des oberen Nachbarn auf die eigene Farbe</li>
+</ul>
+<p><span class="task-link s_vl8uw9 def">Redefinieren Sie</span> die Methode <code>klickAuf()</code> für die Klasse <code>OKarte</code>.</p>
+<p>Dabei sollen Sie natürlich ebenfalls bereits bestehende Methoden verwenden und nicht direkt auf IV zugreifen.&nbsp;</p>
+<p>Um die Reaktion aber nicht zu verwirrend zu gestalten, ändern Sie nun nachträglich eine <em>bereits bestehende Methode</em>: Die Methode, mit der Sie eine Karte anweisen, das Aussehen der als Parameter übergebenen Karte anzunehmen, soll nun NUR die Farbe ändern. Der Text soll gleich bleiben, da er auf die Funktionalität der Karte hinweist, der natürlich gleich bleiben soll.&nbsp;</p>
+<p><span class="task-link s_tra6fz action" data-href="#s_tra6fz">Ändern Sie</span> diese bereits bestehende Methode der Klasse <code>Karte</code>&nbsp;entsprechend.</p>
+<p>&nbsp;</p>
+<h3 class="e_1rem2f" data-number="2.2.2">Reaktion von UKarte</h3>
+<p>Die Reaktion einer LKarte soll genauso aussehen, wie die einer RKarte, allerdings natürlich bezogen auf den linken Nachbarn.</p>
+<p><span class="task-link s_b55qe8 def">Redefinieren Sie</span> die Methode <code>klickAuf()</code> für die Klasse <code>UKarte</code>.</p>
+<p>&nbsp;</p>
+<h3 class="e_em0c6g" data-number="2.2.3">Reaktionen testen</h3>
+<p>Testen Sie die Reaktionen auch bei den neu definierten OKarten und UKarten, indem Sie, wie bisher ein Spielfeld aufbauen und die Reaktionen von geklickten Karten aufrufen. Das haben Sie schon im letzten Termin gemacht, sie brauchen also weiterhin nichts zu ändern.</p>
+<p>&nbsp;</p>
+<h1 class="e_rvslz0" data-number="3">Gegenbeispiel: keine Redefinition</h1>
+<p>Jetzt bauen Sie ein kleines Gegenbeispiel, in dem <em>keine </em>Redefinition und <em>kein </em>Polymorphismus vorliegt:</p>
+<p><span class="task-link s_olfbcm action">Definieren Sie</span> eine Methode <code>keineRedefintion() </code>in jeder Subklasse von <code>Karte</code>, aber <em>nicht (!)</em> in <code>Karte </code>selber. Die Methode gibt nur "Test" auf die Text-Konsole aus.</p>
+<p style="padding-left: 20px;">Kopieren Sie den Code einfach in jede der vier Subklassen. Das muss nicht schön sein, wir wollen nur ein einfaches Beispiel aufbauen.&nbsp;</p>
+<p>Dann <span class="task-link s_29vejm action">erweitern Sie main() </span>so, dass nicht nur <code>klickAuf()</code> als Reaktion aufgerufen wird, sondern auch die gerade definierte Methode <code>keineRedefintion().</code></p>
+<p><span class="task-link s_2c1smq text" data-href="#e_2c1smq">Was meldet der Compiler, wenn Sie dann die Klasse <code>FiveCrush </code>compilieren?</span></p>
+<p><span class="hilitenote e_2c1smq">Antwort: can not find symbol</span></p>
+<p>&nbsp;</p>
+<p><span class="hilitenote e_2c1smq">Weil in der main von FiveCrush mit sucheKarte ein Karte-Objekt zurückgegben wird, welches die speziellen Methoden nicht kennt.&nbsp;</span></p>
+<p><span class="task-link s_ohg5re text">Warum/Wann kann der Aufruf denn potentiell nicht funktionieren?</span></p>
+<p><span class="hilitecolor1">MusterLösung: Weil die Methode karteMitID() ein Karten-Objekt zurückgibt. D.h. ein Objekt des Typs Karte oder eines Subtyps von Karte. Aber eben auch von Karte. Und dort gibt es diese Methode nicht.&nbsp;</span><span class="hilitecolor1">Es reicht also nicht, dass <em>Sie </em>wissen, dass mit dem aktuellen Code kein Problem entstehen würde, wenn er so ausgeführt würde. Es muss immer klappen ("<em>Schisserprinzip</em>"). </span></p>
+<p><span class="task-link s_23tg2k action">Kommentieren Sie </span>nun den gerade eingefügten Aufruf in main() wieder aus, damit Sie weiterarbeiten können.</p>
+<p>&nbsp;</p>
+<h1 class="e_d894pm" data-number="4">Spezial-Karten</h1>
+<p><strong>Weiter im Spiel: </strong>Um noch ein bisschen mehr Variation in das Spiel zu bringen, fügen Sie noch ein paar Spezial-Karten hinzu, die sich wiederum ganz anders bei einem Klick verhalten.&nbsp;</p>
+<h2 class="e_oydk5y" data-number="4.1">Farbbeutel-Karte</h2>
+<p>&nbsp; &nbsp; &nbsp; so eine Karte wird mit "FFF" dargestellt.&nbsp;</p>
+<p><span class="task-link s_wvqr2t action">Definieren Sie</span> für dieses Verhalten die Klasse FKarte mit Constructor und entsprechender Methode <code>klickAuf()</code>- natürlich gemäß den oben gegebenen Hinweisen.&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="e_iadmu6" data-number="4.2">Zufalls-Karte</h2>
+<p>Eine Zufalls-Karte setzt ändert seine eigene Farbe auf eine zufällige Farbe. so eine Karte wird mit "ZZZ" dargestellt.</p>
+<p><span class="task-link s_fldxil action">Definieren Sie</span> für dieses Verhalten die Klasse <code>ZKarte </code>mit Constructor und entsprechender Methode <code>klickAuf()</code> - natürlich gemäß den oben gegebenen Hinweisen.</p>
+<p>&nbsp;</p>
+<h2 class="e_tzjv9i" data-number="4.3">Verwendung der Spezial-Karten</h2>
+<p>Damit diese Spezial-Karten auf dem Spielfeld erscheinen, müssen Sie nur (!) die Methode erweitern, die ein Objekt einer zufällig ausgewählten Subklasse von Karte erzeugt.</p>
+<p><span class="task-link s_41b6rh action" data-href="#s_41b6rh">Erweitern Sie</span> diese Methode.</p>
+<p>&nbsp;</p>
+<h2 class="e_hbq2a5" data-number="4.4">Testen der Spezial-Karten</h2>
+<p>Testen Sie die Reaktionen, auch der Spezial-Karten, indem Sie, wie bisher ein Spielfeld aufbauen und die Reaktionen von geklickten Karten aufrufen. Das haben Sie schon im letzten Termin gemacht, <strong>sie brauchen also nichts zu ändern.</strong></p>
+<p><span class="task-link s_aas248 text">Warum müssen Sie an keiner anderen Stelle etwas ändern, etwa da, wo die Reaktion auf einen Klick aufgerufen wird?</span></p>
+<p><span class="hilitecolor1">MusterLösung: Natürlich ist die Antwort die gleiche wie oben: Polymorphismus, Message Passing sorting. Es braucht keine explizite Unterscheidung mehr getroffen werden (mit switch-case), das macht das Laufzeitsystem.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span class="hilitecolor1">Bis hierhin haben wir nun alle Themen zum Überschreiben und Polymorphismus geübt. Jetzt folgt noch ein bisschen Attraktivität für das Spiel. Dabei wird natürlich weiter der Umgang mit Klassen, IV und IM geübt.</span></p>
+<p>&nbsp;</p>
+<h1 class="e_fymmm8" data-number="5">Punkte im Spiel machen</h1>
+<p><strong>Weiter im Spiel:</strong> Um den Spielfortschritt auch in anderer Form anzuzeigen, sollen Punkte gezählt und angezeigt werden.&nbsp;</p>
+<h2 class="e_u6x9jt" data-number="5.1">Punkte zählen und anzeigen</h2>
+<p>Da die Punkte zum Spielfeld gehören, ist auch das <em>Spielfeld dafür zuständig</em>, diese zu verwalten und darzustellen.</p>
+</div>
+<div class="hint segment" id="zr34ij" data-title="Anmerkung: Wenn man für das OO-Design mehr Zeit hätte ...">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Anmerkung: Wenn man für das OO-Design mehr Zeit hätte ...</span></div></div>
+<div data-uuid="sm5257" data-hint="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" class="hint"></div>
+
+</div>
+<div class="text segment" id="0eybdd">
+<h3 class="e_j5uuwd" data-number="5.1.1">Eigenschaften zum Punktezählen&nbsp;</h3>
+<p>Die Punkte sollen im Spielfeld gezählt werden. Außerdem sollen Sie auch auf der Grafik-Konsole angezeigt werden, was mit einem Grafik-Text geschehen soll.</p>
+<p><span class="task-link s_7tcho8 def">Definieren Sie</span>&nbsp;dafür jeweils eine Instanz-Variable.</p>
+<p>&nbsp;</p>
+<h3 class="e_qcrxzz" data-number="5.1.2">Punkte initialisieren</h3>
+<p>Diese neuen Eigenschaften müssen natürlich auch initialisiert werden.&nbsp;</p>
+<p><span class="task-link s_yv5z29 action">Erweitern Sie</span> den Constructor entsprechend.&nbsp;</p>
+</div>
+<div class="hint segment" id="1cu3am" data-title="Hinweis: Wie man ein Text-Objekt initialisiert, ist in der Hilfe zur Grafik-Konsole beschrieben.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis: Wie man ein Text-Objekt initialisiert, ist in der Hilfe zur Grafik-Konsole beschrieben.</span></div></div>
+<div data-uuid="yx52vy" data-hint="U2FsdGVkX19RqExSyzjt0MTAaj4ZPGoh2eAxlYlAvPDC46pf29iwVGxxnMdFvD6UTvLqcn4eXrBObbWhC+xCYBJCT7AIq9PPdMVssN5t8QRdXHy8iaT3p3z28z+QWsEsMsBHxoQHSclztWMNYrDZUuOhVrQQ6ytZh5R+MDaQbDKSY7hxJOExVC+DZa9tkSY6ZIs9TGpgjvlupCW/SpHpn9cWTHB0C+AKt4+y+vL0pvLWkK7o0lQB5eMBW7TFtXRFu2dJLYSGaigTCshr9JGcamB2OzM4q4fw5eDge8TibV2t1Hm7mmTatr+AGsXWs3vnwXHrtayKGuvF5FsYsWkHcSoY3Ju1dS8IV4Q2wMWH4UDcZxU+fjnKRHkgnc2Z7Hl8BEUeb1wwiP3saxVlk9k0S98y5nl38gTe2h8WEXq06HeXZqjNXpnikbyWa/rxaPZHnSDRRdqNzF1RzHANzIynPReIbalHWtHA1+/MuGRVSThbq7qPQVzozxLyhTRmGccr/c23GS5qp+vqKTqLW1mdvB/c6gqNbBGv2OexxAriY3dxzpWvDYMvMcXJw/6F7LPDBUc8apcodNOaVrXPWhLj6WxGXWT1wuZq/yfwXkRrdmbbAPysE4Xow7wHeIn88/m756cQREoZw+3Sv3uDwc4Xqokf/3S2rmvHH+MUf9Ht6q2RLXW3zN1GoAZu8vKmbUiGkUhqtSNMLX40sjtOsf1m06sgfrUABtN8P5z4VKIsFml5VipzIYgDMF0zwGNMT7ZN/Fu66LorlDvo85J4ZfovbQ4YR1rw+F5x8rUn2pI+32tDYqFYw/IMON2UqByUlF7bAmNrUc2b58vRRaUarFV6iWJE4oRnese/sXE8nk/jGvX13ZeF9jP8pQ3/feKqLRXl" class="hint"></div>
+
+</div>
+<div class="text segment" id="x3z1bw">
+<h3 class="e_837qqw" data-number="5.1.3">Punkte zählen und darstellen</h3>
+<p>Zum Zählen der Punkte stellen Sie eine Methode zur Verfügung, der die Punkte übergeben werden, die zum Punktestand hinzuaddiert werden sollen. Dabei soll der Punktestand auch abnehmen können. Der Punktestand soll dann auf der Grafik-Konsole aktualisiert werden.&nbsp;</p>
+</div>
+<div class="hint segment" id="2zzxdv" data-title="Hinweis: Wie man den angezeigten Text eines grafischen Text-Objekts aktualisiert, ist in der Hilfe zur Grafik-Konsole beschrieben. ">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis: Wie man den angezeigten Text eines grafischen Text-Objekts aktualisiert, ist in der Hilfe zur Grafik-Konsole beschrieben. </span></div></div>
+
+</div>
+<div class="text segment" id="z63x66">
+<p><span class="task-link s_6xuwma def">Implementieren Sie</span> diese Methode.</p>
+<p>&nbsp;</p>
+<h3 class="e_upvlyh" data-number="5.1.4">Punkte vergeben</h3>
+<p>Punkte werden unter anderem beim Klicken auf eine Karte vergeben. Dabei sollen folgende Regeln gelten:</p>
+<ul>
+<li>Die "normalen" Karten O,U,R,L geben jeweils einen Punkt</li>
+<li>Eine Farbeimer-Karte vereinfacht das Spiel, daher werden 3 Punkte abgezogen</li>
+<li>Die Zufalls-Karte kann das Spiel vereinfachen, aber auch erschweren, daher gibt es 0 Punkte.&nbsp;</li>
+</ul>
+<p>Es gibt also eine Standard-Reaktion (1 Punkt vergeben) für alle Karten, sowie zwei spezielle Reaktionen.</p>
+<p><span class="task-link s_kc7okq action">Erweitern Sie</span> daher die Methode <code>klickAuf() </code>in den passenden Klassen.</p>
+</div>
+<div class="hint segment" id="xv7vuf" data-title="Beachten Sie, dass die Standard-Punktevergabe immer stattfindet">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Beachten Sie, dass die Standard-Punktevergabe immer stattfindet</span></div></div>
+<div data-uuid="6lr0yy" data-hint="U2FsdGVkX1+KttEHwjUkYE/tcgzMfmLbxH/ohMNRGDNj43dARQoSm74/mzVeLW/FX6lBAF1XK8chGqYG389FofsGuJbioLEXaym0Y5hCvJr9brHRkt1FNoFIDDu0TnRwkCJLzwYQ6f6PoLaFT3uS7+rhBqIC0LYuWNxRI+7m/AcTWNOdxlsniam7VZ8Ui9YE2m28lpldLklOFe555WCmxCc2ehuiNeQ4Nmt2unuR92rLqtc0GUTb/earSH5GIc0VMFPQlaaHIn9N6SyQdwefCK5ggqHTOp1RwfOOcKayBmh+lIITKWkkA2jPb1W4dmcqRW3TK+FKkRwckALqQdyIADEMWmi5PdBKunPFKZMkfm3svxaOhDx4fvc2BCC+PaooUWUblxwwRcfmosokeNHtLfS0NemmP1P8JbEcxpspW4qN3EzLQ523LyMJLXWuTk3wWM2e/oVUxqtZVEXicEP6OEgVl2Whcxd6PgG86vACcFUegz0WIplwctH8IcFha2NQPWgwJp3hgtMTDTiIf0KvYhx8Uh1W8yBLMd6sBpHfwt0MOjyvMFnAiyhAgE34OZD4uLgjFZabEOQJjf7EhGjHkL7tSrXdyBhjzAIyZvgmPjgjl547GPaxj7Jz2KgS+g1PGI2Xbt1IlVoxGYPfCbA+3tXZReWRk9Uy28v2LteRRT32GWupI+Hlfusw9eBsZtFGXuDB3e/Ig2I+usbONEkBSeZD9IL5M7EbvW0NGhGS4hY=" class="hint"></div>
+
+</div>
+<div class="text segment" id="0ea1rl">
+<p><span class="hilitecolor1">Musterlösung: Die passenden Klassen sind Karte (für die Standard-Reaktion), FKarte und ZKarte.</span></p>
+<p>&nbsp;</p>
+<h1 class="e_yfcy82" data-number="6">Spiel beenden</h1>
+<p><strong>Weiter im Spiel: </strong>Das Spiel soll auch "ordentlich" beendet werden: Es soll ein Button geklickt werden, der die Ausführung des Programms beendet.</p>
+<h2 class="e_aab8w9" data-number="6.1">Ende-Button&nbsp;</h2>
+<p>Den Ende-Button, der den Ablauf des Programms beendet, setzen Sie auf einfache Art und Weise um.</p>
+<h3 class="e_d0vj5z" data-number="6.1.1">Ende-Button definieren</h3>
+<p>Genauso, wie Sie den Punkte-Text im Spielfeld erzeugt haben, erzeugen Sie nun auch ein grafisches Text-Objekt, das dadurch auf der Grafik-Konsole angezeigt wird. Als darzustellender Text bietet sich z.B. "[ENDE]" an. Außerdem sollte beim Klick zur Identifizierung der Text "Ende" zurückgegeben werden.&nbsp;</p>
+<p><span class="task-link s_tqlw5t action">Ergänzen Sie</span> den Constructor entsprechend.&nbsp;</p>
+</div>
+<div class="hint segment" id="vw2l35" data-title="Sie können den Ende-Button rechts neben das Spielfeld oder darunter positionieren.">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Sie können den Ende-Button rechts neben das Spielfeld oder darunter positionieren.</span></div></div>
+<div data-uuid="9af93j" data-hint="U2FsdGVkX1/XeJ6OK+jYZjc7tUqiEG6OUyq+RUk9IjIgX2yhg8Gc185uKAkHi4vNlBDiylvB7Cny9d3T6b2N02bTIeaavYSUjp9Zg7J5NtnbvPPzVFLQ/rzVFPnKIkNHkQ+gygRSf4o1sul3zF6d23UkaAvi/ot59QsO240t1aH5GqMczT47LcA1i55wtoQr547QOsl7Q5gW1z8M9rkQ4aMr5pBQsaexyFcZZv/4lQjuAaDDVRCpuvpwez8iLwFn7fGIrUL0aaf6qRf1IMCLmxg1Mt6C3SaLFsu3p7JAbSNjarRZchWu4Skd9ckGwz1yzkM+HcEUzvI2N/HUYqMbfBSv0KWlE2JnBzfu6514Z98ohg1gxxsMOS/w6QhXXZAdjI1RgVmcocYZJ2huuPkZuAkWjv/5n9SOisL1wJVirIq4TpLgMzWqyS2jSFO4BgDCimxeOiSYMgV9hxqh50viY5Oz0qOkfnb2zSSIqoRXr0nHEdBuODRTWHh2/LjsAhdbhxaSlrPdaXds1gHnODtdAIgRZa0k9K1LN5Xn+rF2uqoM9BqNcdPWxg1jJr9KNabNygTSmWPQcz962rWz7RJQpRAMGFJY2qdyDIvi8toFY5K0oIENcaXIwBDSfZDepy/f1G9rCqUkspsBOh7zhou/wNxXTN4T4Ce5nmExG5xHnVbK/aYf7JY5KvnJy3CwtIog1obUFufzLO+hktJP1auAK475MJEiPAsI3AeJzzsycETQCbmrmGlDdEWF4zbX9VMQHeCOk80htdvwvVo7cbwP8nd88GO43RS5CJGLe6OnYpo/Y7m5z6qX4M5GNWgoNsztNYYCnCEmAJjMGiojuo9ajlfBpyhYYpe9eh4mOBsHPJfTTMcyC/kMKBaL4zOIkzaSc8hW3POetMssnRc3+IIOHg==" class="hint"></div>
+
+</div>
+<div class="text segment" id="vmkis0">
+<h3 class="e_80xsjf" data-number="6.1.2">Ende-Button abfragen</h3>
+<p>Das Programm fragt bisher in einer for-Schleife dreimal die Eingabe an, sucht das geklickte Grafik-Objekt und ruft dessen Klick-Reaktion auf. Das soll nun statt dessen solange passieren, bis der Ende-Button gedrückt wurde, d.h. bis "Ende" eingelesen wurde. Dann soll das Programm beendet werden.&nbsp;</p>
+<p><span class="task-link s_ibn0sx action">Modifizieren Sie</span> die Schleife des Programmablaufs entsprechend.&nbsp;</p>
+</div>
+<div class="hint segment" id="mt7pii" data-title="Hinweis: Sie finden im Spielfeld keine Karte mit der ID &quot;Ende&quot;">
+<div class="header"><div class="wrap"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg></span><span>Hinweis: Sie finden im Spielfeld keine Karte mit der ID "Ende"</span></div></div>
+<div data-uuid="yq0qi7" data-hint="U2FsdGVkX189PECf6esRMtuBmWQfePakgwYAcrvk2Mg+HV0FvKTHBWh7c2fosFCAVzn/bpwIW9h88z0gyvWKdTW1m23nuzW2b3OaARAijQKR0JLTtJ4lUaBiA0vUdFL0M2NrnmU81ZtYrIJC3JL/yHhis/rPJJNoEXiv/bfYoyun5WaDJh82xiq8Lp6uaN+SCpMcWAJbSVVVTr2PPrEUhvyS41uYGZSnZ8eD1D1ZG0kFXLdMTKj+E+I0FCVnvKidoYXCqwDFOCFuu3zyOHhBPTd1msbDPodILfRBQ+eAp8NFmymsc4znvObsX6Zuv7kzjciXD7dvXfCYoYPpml5p0PHPGsSJZQ75icfk7h9wu3sJTfyHH71vG4x4Alh7TR+nHzfA+3bh7uElb+3q7YfxZ9Z8Vaqt0eTzDEewEZrgQw6+RuW4PyFqU1ZxRXYbbJCj9zsS7c14M+T9mb3CX1uw52qph06L8k+UGNBk+OOcVQ0AQ0by4PNBNiNxNcCPt4hdvybAvwWIoAaBIvbaaiUmVuaNDf/QrT8N8lv2JgHgsIHfSxFrPB+kcXTTmZeey+g3UI/iAPxAficRUfHvAC/hDyj+75YU+ch47oCQCepKkLqASK2gS8GtSeZjZVYl9oZQsARFTa026/gD5NZa4AxeCsDO1XySa9N8srSy4HFw5A/477KVSPyiQY9xvsArEXUWBrOHACm8BVsy1iCeiLFNLJb09U+cZ8B2L5c1l8L4U72IZuPRBFokQKrXGGIP5GyFJrZH8cwmSzDhdfmICTMyF/aYdfZYWOBdrIZyvKY+Nc2QTuR/ruhud9jhQlU865eDCfoVdNFsfq7A8EiFJwfnUCRvY/bQ2HE1WV1vekfC3si2uT2LyJyaYEqTjXx2LmxbFe0JWgFjdGYhhn9yKLFulw==" class="hint"></div>
+<div data-uuid="s3dtag" data-hint="U2FsdGVkX19+viSaqkJMzo80JOGDFlTzqyVmP4g1e2Lbpt2sFQByea/5jIW0P/A8hebaqMQUTZUMyc1BIqnHeqKrXvIiuKhjhEdNZHh+rFu6Kzu7Kb/VFVhTI54BkYveqzIgFzJuVx3RFbaLVZxRGaeR/UjxGFwbTGd75wRhNycDO/9Ox3rEpAhrP7y7PKGet7etAUP0twVTjPIPIFqwhshMbsS5elhn/4w9p5RKbavxPD7+zSqr3IyJoM7f8oYJOO+s/3Xh1t6uSm+WDyobEAeDnVdL0bZ3TfU1x7caZXd62DC2Ht2hs0IxWePqi/hIe8fcXffFtyMqzJMXInbxB57OiFltdR6oUx7nOAk5RQxmZJJ4JJVvHS9sHA884etBnguJ9X5h3FWY6AEP9JdTGxtN4pudn+Bpgjy2E7HhYU42W8HUS9mku2dqVysSD1UxI0TTW+TXLdD5OTzNGoSKinyX1Z7lbGWp3ceeQMuMfDLzMqHZLRllW8qchWxjCR/f7wEh4a+3gU/M5Jgl5B9CMtuGxTT1PoXG5cD5k3jsXOx5mg0DXLvJhKtWb5PWosM8exFmk6tonrOUbyerF0ND/AiSuQBUIJleFxdNPZLS2u8rnj4YfMkPB9lAx0p7rGEdce3/GSk5duMdqz4BJIkMoooWDoAppEwWH+q/Nspz0NVtDueyywT5WnRY3b1JL3NUNjEEogGNXhTN6lNnUyX8fuAJVbjoZml1+UmD8Li5d+xiXT0cilWx0XY5yizDBwt+yauAK5FVFoJmPyixt0m2cPMUy/Pp6QYUQ+lonNRU0FCrpvbiZP9l31B0ZYCD3EU2Mi1hnYVTwK9FgtrW1hTBXFxsahyYzlZBWUOiYCSLB4v0MFq1jQKQ6//0gl51vXMBTvdwac0RnGeCltN1TGhjPUdZB91M2MNr6pBycuafGgLzry/CDgpXMlpb3gkWN1tHa0/PnVPqLOVo/+AtyjyGYrrDyfwp4eNry3m499rs3+QI98f6GU/qLUox6SH4yw24Uy0r4s6gNEdzfxWrOFyHZBs28Dn+qOknkMpQs/OoaAGn+Vef8gzIPpRrZTysz0Xd7WVfzTQxAQmG+ap7sA/mYpMj6Q4ioW+uSaZdm3BRWXoy/FEb90ScriKrm/nFDTokNsAGmxBeFDKMca53iMtSliGkvXzY/JQ2385nTrAiNJbGfmoED7hZ29PxZeXpckx7l0NQ6uDSzzeLvBNU/+VXrfcz6Q184jfgpq1JsQEJOnK/5CmX5IgoIozMoLvi4wQYDJc2uQd0QxhcLY6bXyv0O9cl03gNwp9eVHRkDhCMFi2BDnB1vNXu5TaQb5KZaori6N0XxXsRdyporfWz+iRWwjHGTk6qxWM2gCgV2J7AdWQ5Wnh8MYR3aeLCgkONvwyHPju6wzWxEY88bGprNhVJrAeu3O+GL39E3a6y5fhwMYx3cb37GquEEK4UIkePHTfaXfVIFt0uAcJLPMOCCgA3VYWVb0qCw1pQgfUKsEUTclCHAYvA1LRGe+QMLHwoV0JWopd/N5ThwVxqrQJkRBPp9Uj/Cl53IinTVHK/RqA1CBhWGhOiWBgsnUG8xcgjEpHSuE41s/MBtNhF4AuiqUiy72VztdKXpB3AceBo6rELzo23FAzLvZsPn0eS9Igdc6qjxP1BTWET4MrPUmLyewAX+ciPTxwZRuIzQiZDWMMjWnUJ3x4AdK+q7/kDO9q6ofV05aBuoacJoUH+GB16sDVsoUrKzP3eC0KvExS6r6xZWD7Es+vsnFOaScVS2Zj7WGtdfylPZAqlGtJwVl0FdVPwqn0GBcMW2zRwl6BCyVepJUMSxg4aiM9062+5m/xm610CCj5VFYFO1Y0BtMzL4NnXPHCUb36wa3i+mgqkQJ0YtKBcpKnIQMtwMcyCjc+WIbFm88/X/mZPkzwETojMDq03SQ==" class="hint"></div>
+
+</div>
+<div class="text segment" id="89z4uy">
+<p>&nbsp;</p>
+<h1 class="e_9obxw5" data-number="7">Optional</h1>
+<p>Sie können die folgenden Verbesserungen am Spiel vornehmen, wenn Sie möchten. Auf das Testat hat das keinen Einfluss.</p>
+<h2 class="e_b4b790" data-number="7.1">Nachbarn mit Wrapraound implementieren</h2>
+<p>Modifizieren Sie die Methode nachbarVon() so, dass ein "Wraparound" entsteht. D.h. der Nachbar einer Karte am linken Rand ist die Karte am rechten Rand und umgekehrt. Gleiches gilt für den oberen und unteren Rand.&nbsp;</p>
+<p>Damit können z.B. RKarten und LKLarten "im Kreis" geklickt werden und bleiben nicht am rechten Rand stehen. So kann man im Spiel mehr machen.&nbsp;</p>
+<h2 class="e_wo6673" data-number="7.2">Spielende&nbsp;</h2>
+<p>Wer möchte, kann ja optional noch eine Methode „abraeumen()“ für das Spielfeld schreiben. Die kann aufgerufen werden, um zum Ende des Spiels die Darstellung aufzuräumen, "Danke" statt "Ende" zu schreiben, etc.&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+</body> 
+</html>

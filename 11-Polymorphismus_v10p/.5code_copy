@@ -6,7 +6,7 @@
 	"mainClass": "FiveCrush",
 	"libraries": [],
 	"javadocVisibilityType": 2,
-	"zoom": -0.3000000000000001,
+	"zoom": 1.5,
 	"features": [
 		{
 			"feature": "gamification.feature.Hints",
@@ -95,7 +95,16 @@
 				"U2FsdGVkX1858Agsgow8DZ3y9WvGee7EGqh5rTB8vn/qQdz2lAzzwTCVuaH83CyR",
 				"U2FsdGVkX18wfiyIepB2cESeS+FwCMPOtyMPr5QLQE3E9u+1Sf0A+Slcxbd2tSSC",
 				"U2FsdGVkX19CzDTQ7bHvmdzTU/3mIasr99uGtNfD5AIYT6vvPrLA5nsswyuRhHO4",
-				"U2FsdGVkX1/m7YUH7Doc/DSvT/f1yFKAztGobOBeHnGPc6RoBLPSZTuenH9G94TE"
+				"U2FsdGVkX1/m7YUH7Doc/DSvT/f1yFKAztGobOBeHnGPc6RoBLPSZTuenH9G94TE",
+				"U2FsdGVkX1+WvHkkwi4CfZCrOyJTmIffQ25uizJovAC6VbTz+oac2izG+RG5LWmE",
+				"U2FsdGVkX1924JqlZNcXKJUDQs/5joJ+/No0VCaNqQz4zN+3ywyYSS524psgbicx",
+				"U2FsdGVkX19G2gTptzVCpvE5QOBJmpYaDqHCFCSD5kFwWCW/xqhRrd5af+McLQu0",
+				"U2FsdGVkX18NlIjPEO9yKKuLsnHOJSVlz8CTe4oq6RD5kC6YqNbEpT0MkFLOV78S",
+				"U2FsdGVkX19BvY115jzxY1CfgOyB7XdtOlqjb+LNRWFzIvJa9woVreIW8tLkTpNo",
+				"U2FsdGVkX19BjuEIP9+RnvStPd0Werd9uhtzr6xkkpGHxjkrlisWJZ4gsPzV/hlW",
+				"U2FsdGVkX19Ny5xgHiz5apGhsWN5yUOTRfkgpr8XWxlu14F3nvyCi/9hGru0Qvxt",
+				"U2FsdGVkX1+0v0H/bQbEBZGmOZ3qdAhmEBqyCmkq7N7E2VL/Za1AK+Yziwk/F3T7",
+				"U2FsdGVkX1+OYzxf/3QfFhM9eWJgxmHuRO4SRsvjmgEW6mX0qDvpVICpeaPnXsM/"
 			]
 		},
 		{
@@ -108,46 +117,6 @@
 					"description": "",
 					"attributes": [
 						"attr_new"
-					],
-					"type": "syntax",
-					"assessment_self": 0,
-					"assessment_tutor": 0,
-					"assessment_max": 1,
-					"acquired_self": true,
-					"acquired_tutor": false,
-					"was_acquired": true,
-					"bonus_tutor": 0,
-					"bonus_max": 0,
-					"comment": "",
-					"saved": true
-				},
-				{
-					"skill": "OO.Instanzvariable.Definieren",
-					"uuid": "sfkuwe",
-					"name": "",
-					"description": "",
-					"attributes": [
-						"attr_revision"
-					],
-					"type": "syntax",
-					"assessment_self": 0,
-					"assessment_tutor": 0,
-					"assessment_max": 1,
-					"acquired_self": true,
-					"acquired_tutor": false,
-					"was_acquired": true,
-					"bonus_tutor": 0,
-					"bonus_max": 0,
-					"comment": "",
-					"saved": true
-				},
-				{
-					"skill": "OO.Instanzvariable.Verwenden",
-					"uuid": "ickm30",
-					"name": "",
-					"description": "",
-					"attributes": [
-						"attr_revision"
 					],
 					"type": "syntax",
 					"assessment_self": 0,
@@ -227,7 +196,68 @@
 					"name": "",
 					"description": "",
 					"attributes": [
+						"attr_new",
 						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Instanzmethode.Überschreiben",
+					"uuid": "mymd73",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Polymorphismus",
+					"uuid": "sdo873",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "concept",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.MessagePassing",
+					"uuid": "t9vr7n",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
 					],
 					"type": "concept",
 					"assessment_self": 0,
@@ -249,33 +279,22 @@
 			"content": [
 				{
 					"type": "document",
-					"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html",
+					"path": "::dir/1_Redefinition_Polymorphismus.flow.html",
 					"active": true,
 					"cursor": {
-						"segment": "2z54hc",
+						"segment": "0ea1rl",
 						"cursor": {
-							"startOffset": 0,
-							"endOffset": 0,
-							"nodeHTML": "<p>Machen Sie sich klar: Sie geben nie ein Objekt genau der Klasse zurück, die Sie als Rückgabe-Datentyp angegeben haben. Das ist &nbsp;&nbsp;&nbsp;&nbsp;auch richtig so:</p><ul><li>Der Compiler erlaubt diese Codierung</li><li>Die Methode kann auch aufgerufen werden</li></ul><p><span class=\"task-link s_hfbe2n text\">Wie heißt das Prinzip, das hierbei angewendet wird (das mit Vererbung zu tun hat)</span>?</p><p>Damit die Karte direkt an die richtige Stelle gelegt wird, übergeben Sie dieser Methode die Zeile und die Spalte, an der sie liegen soll.</p><p><span class=\"task-link s_izdwew def\" data-href=\"Spielfeld.java#e_izdwew\">Definieren Sie</span> diese Methode in der Klasse Spielfeld.</p><p><span class=\"task-link s_zclu7t action\">Testen Sie </span>diese Methode, indem Sie diese Methode dreimal aufrufen und das Ergebnis-Objekt auf die Konsole ausgeben.&nbsp;</p><p><br></p><h3 class=\"e_shwqtc\" data-number=\"5.2.2\">Array mit zufälligen Karten-Arten füllen</h3><p>Nun können Sie eine Methode definieren, die ein Array mit Objekten zufälligen Karten-Subklassen füllt.&nbsp;</p><p>Dazu kopieren Sie die Methode, mit der Sie ein Spielfeld mit Karten füllen und verwenden nun&nbsp;die gerade geschriebene Methode, die ein Objekt einer zufälligen Karte-Subklasse zurückgibt, um für jedes Element eine zufällige Karte zu erzeugen.&nbsp;</p><p><span class=\"task-link s_eekd65 def\" data-href=\"Spielfeld.java#e_eekd65\">Definieren Sie</span> diese Methode.</p><p><span class=\"task-link s_z45sd5 main\">Testen Sie</span> diese Methode, indem Sie sie aufrufen.</p>",
-							"nodeTagName": "DIV"
+							"startOffset": 166,
+							"endOffset": 166,
+							"nodeData": "Genauso, wie Sie den Punkte-Text im Spielfeld erzeugt haben, erzeugen Sie nun auch ein grafisches Text-Objekt, das dadurch auf der Grafik-Konsole angezeigt wird. Als darzustellender Text bietet sich z.B. \"[ENDE]\" an. Außerdem sollte beim Klick zur Identifizierung der Text \"Ende\" zurückgegeben werden. ",
+							"nodeHTML": "Genauso, wie Sie den Punkte-Text im Spielfeld erzeugt haben, erzeugen Sie nun auch ein grafisches Text-Objekt, das dadurch auf der Grafik-Konsole angezeigt wird. Als darzustellender Text bietet sich z.B. \"[ENDE]\" an. Außerdem sollte beim Klick zur Identifizierung der Text \"Ende\" zurückgegeben werden.&nbsp;",
+							"nodeTagName": "P"
 						}
 					}
 				},
 				{
 					"type": "document",
-					"path": "::dir/RKarte.java"
-				},
-				{
-					"type": "document",
-					"path": "::dir/LKarte.java"
-				},
-				{
-					"type": "document",
-					"path": "::dir/UKarte.java"
-				},
-				{
-					"type": "document",
-					"path": "::dir/OKarte.java"
+					"path": "::dir/FKarte.java"
 				}
 			],
 			"type": 1,
@@ -289,16 +308,36 @@
 				},
 				{
 					"type": "document",
-					"path": "::dir/Spielfeld.java",
+					"path": "::dir/Spielfeld.java"
+				},
+				{
+					"type": "document",
+					"path": "::dir/ZKarte.java"
+				},
+				{
+					"type": "document",
+					"path": "::dir/LKarte.java"
+				},
+				{
+					"type": "document",
+					"path": "::dir/OKarte.java"
+				},
+				{
+					"type": "document",
+					"path": "::dir/FiveCrush.java",
 					"active": true,
 					"cursor": {
-						"line": 55,
-						"ch": 120
+						"line": 35,
+						"ch": 32
 					}
 				},
 				{
 					"type": "document",
-					"path": "::dir/FiveCrush.java"
+					"path": "::dir/RKarte.java"
+				},
+				{
+					"type": "document",
+					"path": "::dir/UKarte.java"
 				}
 			],
 			"type": 1,
@@ -315,8 +354,8 @@
 				true
 			],
 			"dimension": [
-				15.766975907842962,
-				84.23302409215704
+				13.372696099683708,
+				86.62730390031629
 			]
 		},
 		"split2_bottom": {
@@ -325,8 +364,8 @@
 				true
 			],
 			"dimension": [
-				72.11420625942685,
-				27.88579374057315
+				72.58836837998649,
+				27.411631620013505
 			]
 		},
 		"split2_right": {
@@ -356,80 +395,73 @@
 		{
 			"name": "FiveCrush",
 			"path": "::dir/FiveCrush.java",
-			"id": "jdsfga",
-			"isGenerated": false
-		},
-		{
-			"name": "Spielfeld",
-			"path": "::dir/Spielfeld.java",
-			"id": "gm71bz",
+			"id": "fogdwq",
 			"isGenerated": false
 		},
 		{
 			"name": "Karte",
 			"path": "::dir/Karte.java",
-			"id": "87spb0",
-			"isGenerated": false
-		},
-		{
-			"name": "RKarte",
-			"path": "::dir/RKarte.java",
-			"id": "nhsaxj",
+			"id": "o6mjpi",
 			"isGenerated": false
 		},
 		{
 			"name": "LKarte",
 			"path": "::dir/LKarte.java",
-			"id": "56yx9l",
-			"isGenerated": false
-		},
-		{
-			"name": "UKarte",
-			"path": "::dir/UKarte.java",
-			"id": "pcyrdn",
+			"id": "j8xs3i",
 			"isGenerated": false
 		},
 		{
 			"name": "OKarte",
 			"path": "::dir/OKarte.java",
-			"id": "yb2u4g",
+			"id": "3wwkph",
 			"isGenerated": false
 		},
 		{
-			"name": "1_Weitere_Klasse_Spielfeld",
-			"path": "::dir/_generated/exec/1_Weitere_Klasse_Spielfeld.java",
-			"id": "h7zyyd",
+			"name": "RKarte",
+			"path": "::dir/RKarte.java",
+			"id": "5icj5m",
+			"isGenerated": false
+		},
+		{
+			"name": "Spielfeld",
+			"path": "::dir/Spielfeld.java",
+			"id": "a2wngj",
+			"isGenerated": false
+		},
+		{
+			"name": "UKarte",
+			"path": "::dir/UKarte.java",
+			"id": "lurxmu",
+			"isGenerated": false
+		},
+		{
+			"name": "1_Redefinition_Polymorphismus",
+			"path": "::dir/_generated/exec/1_Redefinition_Polymorphismus.java",
+			"id": "8c1pie",
 			"isGenerated": true
 		},
 		{
-			"name": "_2_Grafik_Konsole",
-			"path": "::dir/_generated/exec/_2_Grafik_Konsole.java",
-			"id": "ylrarg",
-			"isGenerated": true
+			"name": "FKarte",
+			"path": "::dir/FKarte.java",
+			"id": "py6gf0",
+			"isGenerated": false
+		},
+		{
+			"name": "ZKarte",
+			"path": "::dir/ZKarte.java",
+			"id": "xngpu5",
+			"isGenerated": false
 		}
 	],
 	"flowMap": [
 		{
-			"name": "1_Weitere_Klasse_Spielfeld",
-			"path": "::dir/1_Weitere_Klasse_Spielfeld.flow.html",
+			"name": "1_Redefinition_Polymorphismus",
+			"path": "::dir/1_Redefinition_Polymorphismus.flow.html",
 			"id": "3qotjf"
-		},
-		{
-			"name": "_2_Grafik_Konsole",
-			"path": "::dir/_2_Grafik_Konsole.flow.html",
-			"id": "jd83i0"
 		}
 	],
-	"linkMap": [
-		{
-			"id": "ug6fl0",
-			"start": "3qotjf",
-			"end": "gm71bz",
-			"uniId": null,
-			"isExternal": null
-		}
-	],
-	"activities": "U2FsdGVkX18ME5w/YIHfVRgaab1GkdVzY6kGdiO6BIrKmyJGhIMSF2Z7ifv3ll70jjH5PrMfvMh2vBIkAw+IiXAqI0mvAi7we3aj6Rqnx6hnJSsd02jX+FaKaFmpjrorrWQQFCDV/6a7SgAjHy/a8zNNvjRO35/3N2AIl3C+7+CF5/JilbYUsXaBpYvKIrljZEI8qbLNyt806qx29mPhrhtE6jkh5tZ6sB4PVa33qXwjF4M/fIX97qPwNOwdtnM5yRFlctt1GZh5cI2wy2jHRAXelmFTQVuan6a4EKUHtQ36O5uy+xLYCg/Fc2on+KjdZ8nOP/NZltFVVuPbd9wUjXz7h5gPrzKUhdfK4KcuNsruFxaMFqezIIwA7ruknv/lzLebyEwTFoH4hrUJwXPzVZcYVsKXROB8bW8DeySHkLATG/QAxgycbnRpxJ47LPCB97m37kLhHhIC6JG1dPRZsVyU7QhPRikwO9qdujzBGPUpFOoipv7xCDnybORV7NjixTS7b9/FKEZry3ztf56AaXGJirBkpXe4h0I0hJQ2YfWOCAWbLAOuggDAzjFyRj0y9kyoIADM1EG+cmA63T5WzetGD2c8Jd0wcE71anYmUHGqDZE1zkcZ2sIYcknJacXj5Waq+f8RhX4TmL5Uvlg+RiTERK2+p1C1MSqmiJGLXMCoyRzyvxSY3OKFAWwKfv/w2K20FfbKQDGkXkeDkZgDk6ZmXaLUTsfzx8PMED1IbDqvPfwCfy70HaL/bDrvW0jmr56kUyvYRwvi5a3vV4MNBuKXFhxMpLFvvuowA9Flp0q9X0lL/r9AG5ppB8OYkv7DIM7CLt/wYXRhhUQhWwmqwbxHp66yApw71pu7MNIp0QPkCvDzpEFXnrPEXEKku79XMdQdM0yemUyT/DqwgEANMtoSQnXoodzoQECO7U/+bCUV9z/x5VEHu97FrSCS458aERTouK6SepID2G4sI8vY5YVeWxB6rRwiDONIoA6I77KlwQevBvIq0pixaYx/0cpqHNMjaXVeKwZhHxjyvkwFoVHmffbZgnLdTgkw+dkV7N3ScsTO4wDz+YeHwijrHbRtmkyiwdYpO/Kwdk54B5ROTjkEiwUX2sdbzmgAtqd7WVHS3L29g0vY/zYHkVc9Vx8SU+zm5J8/0el41fmUzlF59BltMr/vB0F1OrhTqtApMm4ClkXKTbJzP10knVNDHOC2gyHv9KJKcNEd+TAM5ya6TtemvcasYFlnwIFxodTA+4ZMYcGs2jlbOTs/LeOAxZ7+4MhPVNj1uuNc3pCZrawHTHooAgz7Tb2/56FhpKwVF6z2mmdkboq74qbPaFrfhf0aKWtfK0kPY9WffeeLs67VXVFBCZNPhu7sPEeJCRtLewU4ElclVqVofMPyJf6s4QL3kQbCjbVRPaMVy/yLP3s2nRTOZdDooDDE1jPBo3opgZymjkpx52sQjxmcph/GAtcj9Ozr0TjnxO5ThGSSMEB58Q==",
-	"lastSaveDate": "2021-01-26T10:23:53.636Z",
-	"info": "bis 26./27. 01."
+	"linkMap": [],
+	"activities": "U2FsdGVkX1872NIkIMmDHnvj5YaMSmB6NRAor/JMhQAEKITYk6Eb643WgtYfqxycqzM7uzFkX98Jpzslf07OpaigsyXETRAXDCVHsbOEYDwYH0yj3jvR6pLiflJcpcyUR+nia4cQqJxYzVFYf/wrHzyeWBOcFnXzJ72a77t7SFlc3qvwnUihUfxO+MdOCvCTlCZE5GUfwrLTjcobKeVf/9j5uhfDVu4DpDF5z5ZrdDQQPYm+tEVZT2JW2JOQEwG3LrctDOZV+7CEY0zGfy+Udm8mNCl7UiwShxnrizBk1GoBVZOGiO+fj5Fb0CdAjbqf/Lnp9hd0Xeryb9VYYCIEXJaGUsmqM7B3p9c3zNqw2Qs+Lwe+76gmtTmRMINHJli3Y8R1TXFeV+oWFyPeq1DW1HeMg+1xtIPlQorPHMVQUtQvPmYG7Fh0Rd0LR9m2jTLyX6RDwgljF7H/mg06/O16IaC7iBfkpmBpQPgm1l82RqtP9CxDQCasbQ8iggg0Q70jrG5M4ftXmjfOVlm/eQ4hsWo336ta4m/tpbIgIN2X3anoSIyjNI/F5isiyA4axHbyBciMtT80z5x1CwLp/aH25lAZ/ibxRBSlpW2HfvXL7n6LjILswMO7OP0kNYXZBPHhlOWKA1IY2drD8WsBidBrznD8O3XRm39vvQTTATAfweaJe8wS6cRqDGdwbd3oM9egj1NdtWY92FQEWPSXletik9PXodT+D7wfvGubXaOE2hwrOLNOE5cb68Twj993BrToS7oEHehVmrFG6D9wclHhV3pIb4wPDjVr0hdB0abLlGg8HRUwSkEJScXQmzSuwZ6Ny2PYdgIyY/7Htq5hcn7F1s+v2OBTBn2BBt1h6gLcngmbQGcE2urPMx9SS0LEhMYhFMgVrRi/dI/pGVFpwk7+6HJRzG6AGaa6AUPmShKDbLZ4FJ+C1n8RRwP+SI32h9GjpVriflry/FxZvlRVCgQWJVYWTsbchp3eaWUQI0Reo/YjRUS2XVOftDBqoMONQXAohWPsIH78OShIKc3+ZzqXs+abkxdBWVPv5IJjEVAI8BfUniG3k7fmoGaJW+G3QHjSEJUpfS7vcrxdSGx+ZrAuPrqix5taQHBdHEGYucr9F7U+S56BdsglJPn0U9/xDteg7ec9/TaYQ1opH7KYLhYuco8zEMTDBR0puATM9m/BiJWVtXj6gmdrEsa27pAHOJ+MDgphzwlPA4atirfzwMNB3O6WKgVnrkqsqvKg0/AkTAoN0/hhGdzFEQGNDevVaIqnz82BGt2LY03QyQmKNBGT1568/G7U6uXCnZAd6Ex/qUNJAcvtQ3A1uECvS18BTWP5",
+	"lastSaveDate": "2021-01-30T17:56:13.458Z",
+	"info": "bis 02./03. 02."
 }

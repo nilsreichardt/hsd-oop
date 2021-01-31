@@ -6,7 +6,7 @@
 	"mainClass": "FiveCrush",
 	"libraries": [],
 	"javadocVisibilityType": 2,
-	"zoom": 1.5,
+	"zoom": -0.3000000000000001,
 	"features": [
 		{
 			"feature": "gamification.feature.Hints",
@@ -284,11 +284,11 @@
 					"cursor": {
 						"segment": "0ea1rl",
 						"cursor": {
-							"startOffset": 166,
-							"endOffset": 166,
-							"nodeData": "Genauso, wie Sie den Punkte-Text im Spielfeld erzeugt haben, erzeugen Sie nun auch ein grafisches Text-Objekt, das dadurch auf der Grafik-Konsole angezeigt wird. Als darzustellender Text bietet sich z.B. \"[ENDE]\" an. Außerdem sollte beim Klick zur Identifizierung der Text \"Ende\" zurückgegeben werden. ",
-							"nodeHTML": "Genauso, wie Sie den Punkte-Text im Spielfeld erzeugt haben, erzeugen Sie nun auch ein grafisches Text-Objekt, das dadurch auf der Grafik-Konsole angezeigt wird. Als darzustellender Text bietet sich z.B. \"[ENDE]\" an. Außerdem sollte beim Klick zur Identifizierung der Text \"Ende\" zurückgegeben werden.&nbsp;",
-							"nodeTagName": "P"
+							"startOffset": 0,
+							"endOffset": 0,
+							"nodeData": "Musterlösung: Die passenden Klassen sind Karte (für die Standard-Reaktion), FKarte und ZKarte.",
+							"nodeHTML": "Musterlösung: Die passenden Klassen sind Karte (für die Standard-Reaktion), FKarte und ZKarte.",
+							"nodeTagName": "SPAN"
 						}
 					}
 				},
@@ -320,16 +320,16 @@
 				},
 				{
 					"type": "document",
-					"path": "::dir/OKarte.java"
+					"path": "::dir/OKarte.java",
+					"active": true,
+					"cursor": {
+						"line": 22,
+						"ch": 46
+					}
 				},
 				{
 					"type": "document",
-					"path": "::dir/FiveCrush.java",
-					"active": true,
-					"cursor": {
-						"line": 35,
-						"ch": 32
-					}
+					"path": "::dir/FiveCrush.java"
 				},
 				{
 					"type": "document",
@@ -435,12 +435,6 @@
 			"isGenerated": false
 		},
 		{
-			"name": "1_Redefinition_Polymorphismus",
-			"path": "::dir/_generated/exec/1_Redefinition_Polymorphismus.java",
-			"id": "8c1pie",
-			"isGenerated": true
-		},
-		{
 			"name": "FKarte",
 			"path": "::dir/FKarte.java",
 			"id": "py6gf0",
@@ -451,6 +445,12 @@
 			"path": "::dir/ZKarte.java",
 			"id": "xngpu5",
 			"isGenerated": false
+		},
+		{
+			"name": "1_Redefinition_Polymorphismus",
+			"path": "::dir/_generated/exec/1_Redefinition_Polymorphismus.java",
+			"id": "y3qq4n",
+			"isGenerated": true
 		}
 	],
 	"flowMap": [
@@ -461,7 +461,7 @@
 		}
 	],
 	"linkMap": [],
-	"activities": "U2FsdGVkX1872NIkIMmDHnvj5YaMSmB6NRAor/JMhQAEKITYk6Eb643WgtYfqxycqzM7uzFkX98Jpzslf07OpaigsyXETRAXDCVHsbOEYDwYH0yj3jvR6pLiflJcpcyUR+nia4cQqJxYzVFYf/wrHzyeWBOcFnXzJ72a77t7SFlc3qvwnUihUfxO+MdOCvCTlCZE5GUfwrLTjcobKeVf/9j5uhfDVu4DpDF5z5ZrdDQQPYm+tEVZT2JW2JOQEwG3LrctDOZV+7CEY0zGfy+Udm8mNCl7UiwShxnrizBk1GoBVZOGiO+fj5Fb0CdAjbqf/Lnp9hd0Xeryb9VYYCIEXJaGUsmqM7B3p9c3zNqw2Qs+Lwe+76gmtTmRMINHJli3Y8R1TXFeV+oWFyPeq1DW1HeMg+1xtIPlQorPHMVQUtQvPmYG7Fh0Rd0LR9m2jTLyX6RDwgljF7H/mg06/O16IaC7iBfkpmBpQPgm1l82RqtP9CxDQCasbQ8iggg0Q70jrG5M4ftXmjfOVlm/eQ4hsWo336ta4m/tpbIgIN2X3anoSIyjNI/F5isiyA4axHbyBciMtT80z5x1CwLp/aH25lAZ/ibxRBSlpW2HfvXL7n6LjILswMO7OP0kNYXZBPHhlOWKA1IY2drD8WsBidBrznD8O3XRm39vvQTTATAfweaJe8wS6cRqDGdwbd3oM9egj1NdtWY92FQEWPSXletik9PXodT+D7wfvGubXaOE2hwrOLNOE5cb68Twj993BrToS7oEHehVmrFG6D9wclHhV3pIb4wPDjVr0hdB0abLlGg8HRUwSkEJScXQmzSuwZ6Ny2PYdgIyY/7Htq5hcn7F1s+v2OBTBn2BBt1h6gLcngmbQGcE2urPMx9SS0LEhMYhFMgVrRi/dI/pGVFpwk7+6HJRzG6AGaa6AUPmShKDbLZ4FJ+C1n8RRwP+SI32h9GjpVriflry/FxZvlRVCgQWJVYWTsbchp3eaWUQI0Reo/YjRUS2XVOftDBqoMONQXAohWPsIH78OShIKc3+ZzqXs+abkxdBWVPv5IJjEVAI8BfUniG3k7fmoGaJW+G3QHjSEJUpfS7vcrxdSGx+ZrAuPrqix5taQHBdHEGYucr9F7U+S56BdsglJPn0U9/xDteg7ec9/TaYQ1opH7KYLhYuco8zEMTDBR0puATM9m/BiJWVtXj6gmdrEsa27pAHOJ+MDgphzwlPA4atirfzwMNB3O6WKgVnrkqsqvKg0/AkTAoN0/hhGdzFEQGNDevVaIqnz82BGt2LY03QyQmKNBGT1568/G7U6uXCnZAd6Ex/qUNJAcvtQ3A1uECvS18BTWP5",
-	"lastSaveDate": "2021-01-30T17:56:13.458Z",
+	"activities": "U2FsdGVkX1+9z/MdR/+lT3KQpWt0uUPvPhan/0t3LtSthofRMcRrQLhRmLVitowEjH77NKbcQ4/r9qiqgmtTcetdcVm45K4sdg8TOfEu1PfxEllA1AtF7NbC2xxqJru/yXAE4l41cf6MhZWcqAJpKcLgz6YawlpVGNdRpLD63Ais8Hd3V7s94RnTkD/qj6W+J2hxkzGO1t+ZHZTlePVs5/myD0gWhqH2xu8r+s2JF8QiUqyb7C4XnU+T91fTlrQGMcFwAx3aEH9fr15Fpn1+zPCJG9FVbPvhozpduFYZH5efxPMttNtJrThHR+WvlPzhO3c11v1Oj0egQuQUmNOPCJporWHWCjbm7e/Z/+kiRscpZWJ/hA4FQzWxexwbOJaJiVkw5alNoFCyOODrq18PwSF8vM049Nw6r1qpdmzPizgob41DOnQKNfAiKdOXqZ15jW8x8O0LybAsR8+rJtrmbci1/gnnQZjw2C9nILND9VtgJ7g8QcPc+8CiL0azXz1Wako6vpyKAMW4+P6EUF7HejdvOn0IUTEcMQ1xpFG3vOVzqNky6/286oJdqPoYhU5WuqQdzdcnvd22/opwzBsNYtnwVO0LusjS0lbCcMbTc3dh5qlD2vJzrLjobJuAqDOaR/pqzqxfz6sUA2Sv4Le8L+hNh0lOhXDpg+RsQqppSnww07Y1Xsy/XYhHKdd5Li9G+9svoC0h2o6E8OHsfU7DhvNvX8o1pIVdYhoKSvsoCNrEQY+1+bvUOGd0LJxdCASbZa6OiRywGSF/I37TTijrww8oXPWqzMqWLEyAQJSM+J2VVpLgZE/fKLmD+zM6Elvoff3N6tXk4S9s3+UuWnmheOO3/n3072QjQRrTnDonHXZrgqn7JSS6ifjk6dorcjkgONQkht4uvg+OSw160I2hkbk6mXdViPMokANPOLENrykOMA//6D/RWa2veb77r6dySiaaKcei8dFnd9pcNJ8Vjiey7+JMOAJr/g0uA2GhuPplaRdrpqQ5+/FDQr0f4wsjN9eqEqwh9KYgwDjgE2tu/kmJDtGbdZCp90mKBCzY5mXPbKsubsle/0+5LuzsP/y4Av+orjccKErnDcJq9YyEKzr5ltUeeTLsegNoaOIUqhgVxW+uGfjZWAXq2xKNd+BJkkl4KzOSJyhCVKOkazqhBZGH4nHx3bAu8I83id8e7skDySmHjr1e99cZDuubXxIO7fL1yXcOZ6ADREXbiAu9Jv0hS5jtu7FJEVGMjLRaFTyojEJ24SGSZUpbLX5p6tvfrQVlnpUoo000IG5NUX0FpTlWHiF43HQWS/grA9S0juUT8QyKnew8B/NnTgr6jEcD",
+	"lastSaveDate": "2021-01-31T16:27:49.896Z",
 	"info": "bis 02./03. 02."
 }

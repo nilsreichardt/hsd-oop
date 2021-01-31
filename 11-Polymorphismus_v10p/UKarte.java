@@ -20,7 +20,7 @@ class UKarte extends Karte {
         // weswegen überprüft werden muss, ob ein unterer Nachbar gefunden 
         // werden konnte.
         if(untererNachbar != null) {
-        	uebernehmeAussehen(untererNachbar);
+        	untererNachbar.uebernehmeAussehen(untererNachbar);
         }
     }
 }

@@ -6,7 +6,7 @@
 	"mainClass": "FiveCrush",
 	"libraries": [],
 	"javadocVisibilityType": 2,
-	"zoom": 1.5,
+	"zoom": -0.3000000000000001,
 	"features": [
 		{
 			"feature": "gamification.feature.Hints",
@@ -284,11 +284,11 @@
 					"cursor": {
 						"segment": "0ea1rl",
 						"cursor": {
-							"startOffset": 166,
-							"endOffset": 166,
-							"nodeData": "Genauso, wie Sie den Punkte-Text im Spielfeld erzeugt haben, erzeugen Sie nun auch ein grafisches Text-Objekt, das dadurch auf der Grafik-Konsole angezeigt wird. Als darzustellender Text bietet sich z.B. \"[ENDE]\" an. Außerdem sollte beim Klick zur Identifizierung der Text \"Ende\" zurückgegeben werden. ",
-							"nodeHTML": "Genauso, wie Sie den Punkte-Text im Spielfeld erzeugt haben, erzeugen Sie nun auch ein grafisches Text-Objekt, das dadurch auf der Grafik-Konsole angezeigt wird. Als darzustellender Text bietet sich z.B. \"[ENDE]\" an. Außerdem sollte beim Klick zur Identifizierung der Text \"Ende\" zurückgegeben werden.&nbsp;",
-							"nodeTagName": "P"
+							"startOffset": 0,
+							"endOffset": 0,
+							"nodeData": "Musterlösung: Die passenden Klassen sind Karte (für die Standard-Reaktion), FKarte und ZKarte.",
+							"nodeHTML": "Musterlösung: Die passenden Klassen sind Karte (für die Standard-Reaktion), FKarte und ZKarte.",
+							"nodeTagName": "SPAN"
 						}
 					}
 				},
@@ -298,7 +298,7 @@
 				}
 			],
 			"type": 1,
-			"active": true
+			"active": false
 		},
 		{
 			"content": [
@@ -324,12 +324,7 @@
 				},
 				{
 					"type": "document",
-					"path": "::dir/FiveCrush.java",
-					"active": true,
-					"cursor": {
-						"line": 38,
-						"ch": 22
-					}
+					"path": "::dir/FiveCrush.java"
 				},
 				{
 					"type": "document",
@@ -337,11 +332,16 @@
 				},
 				{
 					"type": "document",
-					"path": "::dir/UKarte.java"
+					"path": "::dir/UKarte.java",
+					"active": true,
+					"cursor": {
+						"line": 22,
+						"ch": 47
+					}
 				}
 			],
 			"type": 1,
-			"active": false
+			"active": true
 		},
 		{
 			"type": 2
@@ -435,12 +435,6 @@
 			"isGenerated": false
 		},
 		{
-			"name": "1_Redefinition_Polymorphismus",
-			"path": "::dir/_generated/exec/1_Redefinition_Polymorphismus.java",
-			"id": "8c1pie",
-			"isGenerated": true
-		},
-		{
 			"name": "FKarte",
 			"path": "::dir/FKarte.java",
 			"id": "py6gf0",
@@ -451,6 +445,12 @@
 			"path": "::dir/ZKarte.java",
 			"id": "xngpu5",
 			"isGenerated": false
+		},
+		{
+			"name": "1_Redefinition_Polymorphismus",
+			"path": "::dir/_generated/exec/1_Redefinition_Polymorphismus.java",
+			"id": "y3qq4n",
+			"isGenerated": true
 		}
 	],
 	"flowMap": [
@@ -461,7 +461,7 @@
 		}
 	],
 	"linkMap": [],
-	"activities": "U2FsdGVkX18SwCg4jVhYZ8RPs22cOCC0D6g0p2Nmde49GDynbHVC9X+zP6hi2XrGkSoouxnEkP/6Q/0a+cYkmo+eYmQXKvCHaFXuOY9DAl43ZQLJB15P/tERgmwpKUYErqKOPw0nJmyLzn6Sggaaq9g9Qnn3DPfLFybM4z9jtXmHsExjtiuTuycviaTzC7ye4eaXZ/Gb5Ul9Jo0KDLUVfH/pfD0acGTe7UvDFPTd8sVbWA7og7x/mtlVGrNcvyF+srG2/ePaIb84MY1UH6w0xZS/rkt70AFcOBdPz8gr8lLTViiWEM7/iL+j9cez4Eo2whvHeowDkIsT5/JdCviJUUfV+bpOebUCont4uDFnC9UAWGSQKyEPpAPhVA2MsY44/jOUKKXYC5WqJdSlbkV9Jg3t9yPzq2XXIggdMaEC6/AtG3ilWny2NG3HopbBBL8tfswv7SzSEZyNFbhlim4XTsOzRXZEXZJhaJKzpf2KKpF7hs8s+ybijkVdlEAW8GkRj/HERCZTgv7ALEslt5aqD9nS1R+5xlazqxGNrEOKfgywI6Gu1gN8Ej9FV4Xtfq4Faob37AdKkDoDRf9Q8Y6ykgxGMU/gu2yTJhDeV26JioeDu9vEC5KUh6M41BTHBf7bvcVU6yQbDH4QKGZ9tlE5tEucHEEnRpHLu7UWPEnHVTiCD3CxuNg38FtWt6UV7ceoVBRf2RlfaU7FolILHVltNZLHGXavhpHd8Zziq0DNMqComDtvP8i+4STbXhZF07VbzO34/HghIGlHh+QNt9XWcjlnMSe+KTdpH0K85oNnyPQQvW07i7iD3Y3qRP9/dyAJm2WC7BvCsO1+yUny1fMmSDHfhfJYPv59+i4j1Ke9Cv3ACanSQ5nPgoj5rRnc+k95pBER0kPc26rrxZhQ2+GwMJF2egf5ggXtdANNxi8m8s8u5uPZlthHaa2yzVreT5vPYiwp2+uth/J9mJFDLsjhQO/5hIwvJrUo7q2u/oyjY6gA8+PHhJeHx3LakWXdEEa5bBD73kmE59rjhvFmy+UYXuuTlHGkhCKl7glEuzXDGZfML61qPhEAX1XnfuNIg00yxPdy8D6TTSx33J3BHC2xTY6OWTonvGzdHgKP01MP8tUyO0sEaGyGh34gWxlZt9tzS05D/WQkSvDOR5PthJQ9SX0h/ecwvAnQe8I1FAnIIwIKiLsBSzOXoU99cycLKr8qQOZyCYeu7yQ9K5s+j16hYnN6GOAng2vk4CVs1YttZLR8hmTwykJQp8NPzZkSo8oo6U3zMbhjERI9wxEbZoHOivObvZEtYfytp/dJ954nCMoNnK5/gofnHDEQRIl0/0Om",
-	"lastSaveDate": "2021-01-30T17:56:51.187Z",
+	"activities": "U2FsdGVkX1/nz+YKE+nJstcCaR4kuJsnljv31gn4V+oy+alr5OYpNrb0ix7eRnrvocfSxbETOmEjql0bCb3Jgvp8Mg5KiXV+d/Xc4HhCqB5se6a0Ju56K/tdHd2jWgJmyL0sF5jTDMFqF2va0AjgiNwKfSoogA8EJ37v3PMP3dVgFMhMqW9aCxKp7qXJ2hJNRG+3zvU3M+E1ZgchrH2Q63w+U1exbmJf7p7Djqo38DetizGsqbXrROMxdxeEGusaCDALfHMZghrbUagX8gWcKuCDDGA9kiw6a/QGgTiwT/ewxZyTJIHjDxRdYBwqSMZZwP0Y5POErlNVjalqnkO5hzwaI7WVytCcUTI4JmaxsqAZQB7a8T+GuY4uNaSAQm+66bsEPnREzI9tAAs/kv0bzVMFxO6ONimbvCKV8TSF1djBtOH3rnAiHHT/7T3EslOR46kAu436KK1jpwsqb/CxNAdy5XGaFI1ccxNgNVtBY08FGswbTEa85XWBKjmRydDRKT8l7Y1nOV4jgHaYEeiQjDidboczwbYhAn+PWU5fUek2T5RhRJ+QyOsINM2o1/7Y1Uts9iJbYF1MrrmxS5GA1WthusPt/+34bsHww3HxxjE1DHmR9XI4ee3hy2z+INysSIwxyM3r6oGujlat8aS+rMYkHHYxfLDiPR9uemKI+vgPjd4fGBHKkGOyQgxSXyiqbVr0v8xjBN/8SqHZA927JKj/RzZYcXvTnClBnxYvn4W4zHkZyephEQdPQeE2sGDqcxFMiCZf7QFnRHHUTXkj6u9E109QBG6scMTM61tAuPOAcQlLIQHhhWO3XPNjrXU/oObD7/pRTTJ4YJ+W0SsQN6zHTKQ/QTL+EkBZzlOkov0eMnW71kRikRyKl1vhZcrXVD3tQG+y/B9YVfkW/ft3jtvvuG+EHur46lG47JkWDzVmsd5hZRGUJI30y06bcHvtBmmPKNZWTOFbe6ya8P9lvIqbBlM32ISiHOWfRfcKVFPWFaFswdW5IMkRb6T9QBrqYx0ivjLJB0J2F+xr7Iy/0W+ommiwsy3zw7UeyHmJ/j+jndMiQx6FiVtDcdxqnvF4UwKQ47YZsKGve5rj43HnfaRC9zDMKN6tcZjCe8QUbMumQXJSfGO0Ln8vUpzvnLS2wvnRunamPjjPpLA4amK7KH/JuYRUx0HTFnhrsGdN11BxZ77ptnue2wtuLjehjTkHH/zCIIlXvjX7eSPEM4tBPFzwnk0eopXEQk0UGghaJlJnWpA41XIBZ62GgzvAs8uapIsix+p7Ij92HNQw1yCq0dke+rwKdVWGvy5uRy//PqOxfICxiFKodWGjq9jufpxw",
+	"lastSaveDate": "2021-01-31T16:28:11.270Z",
 	"info": "bis 02./03. 02."
 }

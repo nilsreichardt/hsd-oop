@@ -20,7 +20,7 @@ class OKarte extends Karte {
         // weswegen überprüft werden muss, ob ein oberer Nachbar gefunden 
         // werden konnte.
         if(obererNachbar != null) {
-        	uebernehmeAussehen(obererNachbar);
+        	obererNachbar.uebernehmeAussehen(this);
         }
     }
 }

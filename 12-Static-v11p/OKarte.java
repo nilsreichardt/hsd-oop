@@ -1,14 +1,14 @@
-/**<br>
- * Eine Oben-Karte, die von Karte eerbt.<br>
- <br>*/
+/**
+ * Eine Oben-Karte, die von Karte eerbt.
+ */
 class OKarte extends Karte {
 	OKarte(int zeile, int spalte, Spielfeld spielfeld) {
     	super(zeile, spalte, "zufall", "^^^", spielfeld);
     }
     
-    /**<br>
-    * &Uuml;bernimmt das Aussehen mit dem obereren Nachbarn und gibt die Karte in der Konsole aus<br>
-    <br>*/
+    /**
+    * Übernimmt das Aussehen mit dem obereren Nachbarn und gibt die Karte in der Konsole aus
+    */
     void klickAuf() {
     	super.klickAuf();
         

@@ -1,14 +1,14 @@
-/**<br>
- * Eine Unten-Karte, die von Karte eerbt.<br>
- <br>*/
+/**
+ * Eine Unten-Karte, die von Karte eerbt.
+ */
 class UKarte extends Karte {
 	UKarte(int zeile, int spalte, Spielfeld spielfeld) {
     	super(zeile, spalte, "zufall", "vvv", spielfeld);
     }
     
-    /**<br>
-    * &Uuml;bernimmt das Aussehen mit dem unteren Nachbarn und gibt die Karte in der Konsole aus<br>
-    <br>*/
+    /**
+    * Übernimmt das Aussehen mit dem unteren Nachbarn und gibt die Karte in der Konsole aus
+    */
     void klickAuf() {
     	super.klickAuf();
         

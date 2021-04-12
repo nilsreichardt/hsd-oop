@@ -1,0 +1,445 @@
+{
+	"name": "::dir",
+	"id": "tejne4",
+	"user": "d719bae1994dff7bf719e6b420bdf49a",
+	"programmingLanguage": "JAVA",
+	"mainClass": "",
+	"libraries": [],
+	"javadocVisibilityType": 2,
+	"zoom": 0.8999999999999999,
+	"features": [
+		{
+			"feature": "gamification.feature.Hints",
+			"value": []
+		},
+		{
+			"feature": "gamification.feature.FiveCoins",
+			"value": [
+				"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"
+			]
+		},
+		{
+			"feature": "gamification.feature.Skills",
+			"value": [
+				{
+					"skill": "OO.Javadoc.Schreiben",
+					"uuid": "284w5i",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Sichtbarkeit",
+					"uuid": "thvlon",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new",
+						"attr_revision"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Polymorphismus",
+					"uuid": "sdo873",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "concept",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Klassenvariable.Definieren",
+					"uuid": "d9kyq9",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Klassenvariable.Aufrufen",
+					"uuid": "td5q9p",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Klassenmethode.Definieren",
+					"uuid": "ijxnng",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "OO.Klassenmethode.Aufrufen",
+					"uuid": "apniln",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				},
+				{
+					"skill": "Daten.Konstante",
+					"uuid": "xaw3fn",
+					"name": "",
+					"description": "",
+					"attributes": [
+						"attr_new"
+					],
+					"type": "syntax",
+					"assessment_self": 0,
+					"assessment_tutor": 0,
+					"assessment_max": 1,
+					"acquired_self": true,
+					"acquired_tutor": false,
+					"was_acquired": true,
+					"bonus_tutor": 0,
+					"bonus_max": 0,
+					"comment": "",
+					"saved": true
+				}
+			]
+		}
+	],
+	"layout": [
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/1_Redefinition_Polymorphismus.flow.html",
+					"active": true,
+					"cursor": {
+						"segment": "q2vkrc",
+						"cursor": {
+							"startOffset": 26,
+							"endOffset": 26,
+							"nodeData": "Laufende Nummer definieren",
+							"nodeHTML": "Laufende Nummer definieren",
+							"nodeTagName": "H3"
+						}
+					}
+				},
+				{
+					"type": "browser",
+					"address": "file:///C:/Program%20Files/5code/resources/extraResources/help/de/Grafik_Konsole.flow.html",
+					"active": false
+				}
+			],
+			"type": 1,
+			"active": false
+		},
+		{
+			"content": [
+				{
+					"type": "document",
+					"path": "::dir/Karte.java",
+					"active": true,
+					"cursor": {
+						"line": 58,
+						"ch": 29
+					}
+				},
+				{
+					"type": "document",
+					"path": "::dir/Spielfeld.java"
+				}
+			],
+			"type": 1,
+			"active": true
+		},
+		{
+			"type": 2
+		}
+	],
+	"workspace": {
+		"split2_left": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				13.372696099683708,
+				86.62730390031629
+			]
+		},
+		"split2_bottom": {
+			"visibility": [
+				true,
+				true
+			],
+			"dimension": [
+				85.76973694710523,
+				14.230263052894765
+			]
+		},
+		"split2_right": {
+			"visibility": [
+				false,
+				true
+			],
+			"dimension": [
+				80,
+				20
+			]
+		},
+		"split3_explorer": {
+			"visibility": [
+				true,
+				true,
+				true
+			],
+			"dimension": [
+				31.184428667671312,
+				68.81557133232869
+			]
+		}
+	},
+	"classMap": [
+		{
+			"name": "Karte",
+			"path": "::dir/Karte.java",
+			"id": "rj0m3i",
+			"isGenerated": false
+		},
+		{
+			"name": "Spielfeld",
+			"path": "::dir/Spielfeld.java",
+			"id": "tiyuzb",
+			"isGenerated": false
+		},
+		{
+			"name": "FKarte",
+			"path": "::dir/FKarte.java",
+			"id": "jubghx",
+			"isGenerated": false
+		},
+		{
+			"name": "FiveCrush",
+			"path": "::dir/FiveCrush.java",
+			"id": "feo644",
+			"isGenerated": false
+		},
+		{
+			"name": "LKarte",
+			"path": "::dir/LKarte.java",
+			"id": "ciu6wv",
+			"isGenerated": false
+		},
+		{
+			"name": "OKarte",
+			"path": "::dir/OKarte.java",
+			"id": "bfq5cz",
+			"isGenerated": false
+		},
+		{
+			"name": "RKarte",
+			"path": "::dir/RKarte.java",
+			"id": "qdu1p4",
+			"isGenerated": false
+		},
+		{
+			"name": "UKarte",
+			"path": "::dir/UKarte.java",
+			"id": "0xpkfp",
+			"isGenerated": false
+		},
+		{
+			"name": "ZKarte",
+			"path": "::dir/ZKarte.java",
+			"id": "b1ifph",
+			"isGenerated": false
+		},
+		{
+			"name": "1_Redefinition_Polymorphismus",
+			"path": "::dir/_generated/exec/1_Redefinition_Polymorphismus.java",
+			"id": "opw20t",
+			"isGenerated": true
+		}
+	],
+	"flowMap": [
+		{
+			"name": "1_Redefinition_Polymorphismus",
+			"path": "::dir/1_Redefinition_Polymorphismus.flow.html",
+			"id": "3qotjf"
+		}
+	],
+	"linkMap": [],
+	"activities": "U2FsdGVkX1/36oJ2MHwWtDW63iLshASLxSwwRljeBHQw8Hu1D01wrilX1J9bwP4DRvP0WgQ/NOorQE5eYBQtGhvnQap1oglwzQp/kyoeNQWxHezQx81yTKUSxHvE4YBgCu5l+EBcd6k9f9j5hpvj2dPmgsCWeLU4AISAwFSDjrIC9NUkLGBwMOlL1kV2oeyOMkC9zk8GwnjuhSTuUCykwnwGp0YX7ipcVnBe1rm/4ipexLQABEZS9UxbrI9/DyAoinLsrbrvpv+pvmr2JR9MmGama8szOpA36fYJGbLMEJJvT5bVzIhvg3HKAt+faIV7lSfL11HhCzMF4AfneBOQo38273bUq1x3FcYtg1OEKtdT5akOymamfNUJL7FaL6Cx4Hw0+OOz35mP6vkSoZQIN/28aP6Ms+MtT0BmJrOv8WUz/0K/mZHLOz7YteEnFWIuPCt4q+Cm1iB4ROibNBeMZSiGpCIOY6R2l7tCMEng7J1WrOluV9TV5WpBWO2RN4vMCv04ItQjwd21AewyiUy89aEEaEMt8iS3wU2nTm5Hs1VTw0r+KpyFZk4UWNsGDvYYgtF97itOzdkFI2dxqZ/xAQ4YLIFtDKTIX1S0j0HsRmvSJdgqPZYgl7eVsuRvHsQNn9PXgBFM2e/+40xC88vs5NiZqEbEsbMG7TTUCpkHSqn9zZs4EJleBRO5vcG8tuQsrd1ypJm0/uUNWO/6lVSGsROSJIER566ZsxTDAMrNxIcz1HK2vknvA+EYyujzsLtlw7M5oebnYn7nfMzPPEYVavG0eHgwFNPgUgf87xDFU1e4c3/zCCv13bDIRCg5oo22b1XST0l2RrVt2ac4W0JquUvh0+gQe4Cpf35cFjakazbAuhKfB+XLIDKyRjM1IEB3vixUIaMYhPKIWQBlx4IAR6g1M/TYHEO9Rw8RCRJWMvoQL3BDIEi40ZqluGoaNl9AUjR1w5dVIJ68nNbXE0ob/qO2+syCZUN1YwjnMmABs3F/BVmnvQRP59sdp9TGv7vlNnKHXp75gWHaqTQQWYCQ5wO57vrdIMBYRdFzjIuKNxBgbXFKuIiPgBZ3NR3BinHMQLkVx3yqU3kw2Fnbn0vr63YS3Dzq4b7v8YCB9BVjOJXVWTePDHD/m8z/ONBoejY8UrMLSiykUsfElgBDVDGcLRzF70mJAcn6qQTRQasTtmxlEjEz/ff/6wSpLHa9YgMxSLTxFIrj4qMwpjd8XsQcm8RSE4vt5rCDJ4opEglv4RQCTBL+5HltiR3vYR/FBCnTYuqIIwVXITCZW2ry7ALcije/1dMvYvVEhIojX6NvmLh1dKv9uGhh5sdwoFu8ZswZ",
+	"lastSaveDate": "2021-02-09T08:08:46.498Z",
+	"info": "bis 09/10. 02."
+}

@@ -8,20 +8,37 @@ public class DoLiString {
     }
 
     public static void main(String[] args) {
+//        DoLiString list = new DoLiString();
+//
+//        System.out.println("Die Liste, wenn noch kein Element vorhanden ist:");
+//        System.out.println(list);
+//
+//        list.insert("Berlin");
+//        System.out.println("Die Liste, nachdem das 1. Element hinzugefügt wurde:");
+//        System.out.println(list);
+//
+//        list.insert("München");
+//        System.out.println("Die Liste, nachdem das 2. Element hinzugefügt wurde:");
+//        System.out.println(list);
+//
+//        list.insert("Düsseldorf");
+//        System.out.println("Die Liste, nachdem das 3. Element hinzugefügt wurde:");
+//        System.out.println(list);
+
         DoLiString list = new DoLiString();
 
         System.out.println("Die Liste, wenn noch kein Element vorhanden ist:");
         System.out.println(list);
 
-        list.insert("Berlin");
+        list.append("Berlin");
         System.out.println("Die Liste, nachdem das 1. Element hinzugefügt wurde:");
         System.out.println(list);
 
-        list.insert("München");
+        list.append("München");
         System.out.println("Die Liste, nachdem das 2. Element hinzugefügt wurde:");
         System.out.println(list);
 
-        list.insert("Düsseldorf");
+        list.append("Düsseldorf");
         System.out.println("Die Liste, nachdem das 3. Element hinzugefügt wurde:");
         System.out.println(list);
     }
@@ -41,6 +58,19 @@ public class DoLiString {
 
         if (last == null) {
             last = node;
+        }
+    }
+
+    public void append(String payload) {
+        Node node = new Node(payload);
+
+        if(last != null) {
+            last.append(node);
+        }
+        last = node;
+
+        if(first == null) {
+            first = node;
         }
     }
 
@@ -98,6 +128,19 @@ public class DoLiString {
 
             newNode.next = this;
             this.prev = newNode;
+        }
+
+        /**
+         * Fügt eine neue Node nach dieser Node ein.
+         * @param newNode
+         */
+        public void append(Node newNode) {
+            if (newNode == null) {
+                throw new Error("Neue Node darf nicht null sein");
+            }
+
+            this.next = newNode;
+            newNode.prev = this;
         }
 
         @Override

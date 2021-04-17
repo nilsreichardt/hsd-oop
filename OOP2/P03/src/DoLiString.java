@@ -9,7 +9,39 @@ public class DoLiString {
 
     public static void main(String[] args) {
         DoLiString list = new DoLiString();
+
+        System.out.println("Die Liste, wenn noch kein Element vorhanden ist:");
         System.out.println(list);
+
+        list.insert("Berlin");
+        System.out.println("Die Liste, nachdem das 1. Element hinzugefügt wurde:");
+        System.out.println(list);
+
+        list.insert("München");
+        System.out.println("Die Liste, nachdem das 2. Element hinzugefügt wurde:");
+        System.out.println(list);
+
+        list.insert("Düsseldorf");
+        System.out.println("Die Liste, nachdem das 3. Element hinzugefügt wurde:");
+        System.out.println(list);
+    }
+
+    /**
+     * Fügt einen neuen String in die Liste am Anfang ein.
+     *
+     * @param payload Der String, der zu Liste hinzugefügt werden soll.
+     */
+    public void insert(String payload) {
+        Node node = new Node(payload);
+
+        if (first != null) {
+            first.insert(node);
+        }
+        first = node;
+
+        if (last == null) {
+            last = node;
+        }
     }
 
     private String generateToStringWithAllNodes() {
@@ -17,9 +49,9 @@ public class DoLiString {
 
         StringBuilder s = new StringBuilder();
 
-        while(currentNode != null) {
+        while (currentNode != null) {
             // Tennung zwischen den Node, jedoch nicht für das erste Objekt, damit so ein String entsteht: ", Node(...)"
-            if(!s.isEmpty()) {
+            if (currentNode.prev != null) {
                 s.append(", ");
             }
 
@@ -32,7 +64,7 @@ public class DoLiString {
 
     @Override
     public String toString() {
-        return generateToStringWithAllNodes();
+        return "DoLiString:" + generateToStringWithAllNodes();
     }
 
     private class Node {
@@ -45,6 +77,27 @@ public class DoLiString {
             this.payload = item;
             next = null;
             prev = null;
+        }
+
+        /**
+         * Fügt eine neue Node vor dieser Node ein.
+         *
+         * @param newNode Die neue Node, die eingefügt werden soll. Darf nicht null sein, ansonsten wird ein Fehler
+         *                geworfen.
+         */
+        public void insert(Node newNode) {
+            if (newNode == null) {
+                throw new Error("Neue Node darf nicht null sein");
+            }
+
+            newNode.prev = this.prev;
+
+            if (newNode.prev != null) {
+                newNode.prev.next = newNode;
+            }
+
+            newNode.next = this;
+            this.prev = newNode;
         }
 
         @Override

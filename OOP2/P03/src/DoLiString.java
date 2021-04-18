@@ -127,9 +127,9 @@ public class DoLiString {
             newNode.prev = this;
         }
 
+
         public String generateToStringWithAllNodes(Node newNode) {
-            if(newNode == null) return "";
-            return newNode.toString() + ", " + generateToStringWithAllNodes(newNode.next);
+            return newNode == null ? "" : newNode + ", " + generateToStringWithAllNodes(newNode.next);
         }
 
         @Override

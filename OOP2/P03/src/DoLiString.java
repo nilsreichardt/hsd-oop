@@ -1,52 +1,62 @@
+/**
+ * Eine doppelt verkettete Liste, die nur Daten von dem Datentyp "String" speichern kann (nicht generisch).
+ */
 public class DoLiString {
+    /**
+     * Die erste Node der Liste. Falls first leer ist, ist die Liste leer.
+     */
     private Node first;
+
+    /**
+     * Die letzte Node der Liste. Kann leer sein.
+     */
     private Node last;
 
     public DoLiString() {
-        first = null;
-        last = null;
+        this.first = null;
+        this.last = null;
     }
 
     public static void main(String[] args) {
-//        DoLiString list = new DoLiString();
-//
-//        System.out.println("Die Liste, wenn noch kein Element vorhanden ist:");
-//        System.out.println(list);
-//
-//        list.insert("Berlin");
-//        System.out.println("Die Liste, nachdem das 1. Element hinzugefügt wurde:");
-//        System.out.println(list);
-//
-//        list.insert("München");
-//        System.out.println("Die Liste, nachdem das 2. Element hinzugefügt wurde:");
-//        System.out.println(list);
-//
-//        list.insert("Düsseldorf");
-//        System.out.println("Die Liste, nachdem das 3. Element hinzugefügt wurde:");
-//        System.out.println(list);
-
-        DoLiString list = new DoLiString();
+        DoLiString listInsert = new DoLiString();
 
         System.out.println("Die Liste, wenn noch kein Element vorhanden ist:");
-        System.out.println(list);
+        System.out.println(listInsert);
 
-        list.append("Berlin");
+        listInsert.insert("Berlin");
         System.out.println("Die Liste, nachdem das 1. Element hinzugefügt wurde:");
-        System.out.println(list);
+        System.out.println(listInsert);
 
-        list.append("München");
+        listInsert.insert("München");
         System.out.println("Die Liste, nachdem das 2. Element hinzugefügt wurde:");
-        System.out.println(list);
+        System.out.println(listInsert);
 
-        list.append("Düsseldorf");
+        listInsert.insert("Düsseldorf");
         System.out.println("Die Liste, nachdem das 3. Element hinzugefügt wurde:");
-        System.out.println(list);
+        System.out.println(listInsert);
+
+        DoLiString listAppend = new DoLiString();
+
+        System.out.println("Die Liste, wenn noch kein Element vorhanden ist:");
+        System.out.println(listAppend);
+
+        listAppend.append("Berlin");
+        System.out.println("Die Liste, nachdem das 1. Element hinzugefügt wurde:");
+        System.out.println(listAppend);
+
+        listAppend.append("München");
+        System.out.println("Die Liste, nachdem das 2. Element hinzugefügt wurde:");
+        System.out.println(listAppend);
+
+        listAppend.append("Düsseldorf");
+        System.out.println("Die Liste, nachdem das 3. Element hinzugefügt wurde:");
+        System.out.println(listAppend);
     }
 
     /**
      * Fügt einen neuen String in die Liste am Anfang ein.
      *
-     * @param payload Der String, der zu Liste hinzugefügt werden soll.
+     * @param payload Der String, der zur Liste hinzugefügt werden soll.
      */
     public void insert(String payload) {
         Node node = new Node(payload);
@@ -61,6 +71,11 @@ public class DoLiString {
         }
     }
 
+    /**
+     * Für einen neuen String in die Liste am Ende ein.
+     *
+     * @param payload Der String, der zur Liste hinzugegfügt werden soll.
+     */
     public void append(String payload) {
         Node node = new Node(payload);
 
@@ -76,24 +91,39 @@ public class DoLiString {
 
     @Override
     public String toString() {
-        if(first == null) return "DoLiString:";
+        if (first == null) return "DoLiString:";
         return "DoLiString:" + first.generateToStringWithAllNodes(first);
     }
 
+    /**
+     * Der Knoten, der die Payload, also den String speichert.
+     */
     private class Node {
+        /**
+         * Die nächste Node. Falls null ist, ist die Node am Ende.
+         */
         private Node next;
+
+        /**
+         * Die vorherige Node. Falls null ist, die Node am Anfang.
+         */
         private Node prev;
 
+        /**
+         * Der String, der in der Node gespeichert wird.
+         */
         String payload;
 
         public Node(String item) {
             this.payload = item;
-            next = null;
-            prev = null;
+            this.next = null;
+            this.prev = null;
         }
 
         /**
          * Fügt eine neue Node vor dieser Node ein.
+         *
+         * Falls "newNode" null ist, wird ein Error geworfen.
          *
          * @param newNode Die neue Node, die eingefügt werden soll. Darf nicht null sein, ansonsten wird ein Fehler
          *                geworfen.
@@ -115,8 +145,11 @@ public class DoLiString {
 
         /**
          * Fügt eine neue Node nach dieser Node ein.
+         * <p>
+         * Falls "newNode" null ist, wird ein Error geworfen.
          *
-         * @param newNode
+         * @param newNode Die neue Node, die eingefügt werden. Die neue Node, die eingefügt werden soll. Darf nicht null
+         *                sein, ansonsten wird ein Fehler geworfen.
          */
         public void append(Node newNode) {
             if (newNode == null) {
@@ -127,9 +160,20 @@ public class DoLiString {
             newNode.prev = this;
         }
 
-
-        public String generateToStringWithAllNodes(Node newNode) {
-            return newNode == null ? "" : newNode + ", " + generateToStringWithAllNodes(newNode.next);
+        /**
+         * Erstellt ab dieser Node und den nächsten Nodes einen String, in dem von jeder Node die .toString-Methode
+         * aufgerufen wurde.
+         *
+         * Aufgabenstellung: Dann definieren Sie eine weitere Methode, die entweder iterativ (d.h. mittels einer
+         * Schleife) oder rekursiv die String-Beschreibungen aller Node -Objekte ab dem Ziel-Node-Objekt, zusammenbaut,
+         * d.h. sie konkateniert diese Strings, jeweils mit Komma und Leerzeichen voneinander getrennt.
+         *
+         * @param startNode Die Node, mit der gestartet wird, von allen nächsten Nodes die .toString Methode zusammen zu
+         *                  fügen.
+         * @return Gibt einen zusammengesetzten String aus allen Node ab der "startNode" zurück.
+         */
+        public String generateToStringWithAllNodes(Node startNode) {
+            return startNode == null ? "" : startNode + ", " + generateToStringWithAllNodes(startNode.next);
         }
 
         @Override

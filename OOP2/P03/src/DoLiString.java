@@ -64,12 +64,12 @@ public class DoLiString {
     public void append(String payload) {
         Node node = new Node(payload);
 
-        if(last != null) {
+        if (last != null) {
             last.append(node);
         }
         last = node;
 
-        if(first == null) {
+        if (first == null) {
             first = node;
         }
     }
@@ -132,6 +132,7 @@ public class DoLiString {
 
         /**
          * Fügt eine neue Node nach dieser Node ein.
+         *
          * @param newNode
          */
         public void append(Node newNode) {
@@ -145,9 +146,10 @@ public class DoLiString {
 
         @Override
         public String toString() {
+            // Prev & Next darf nicht gemeinsam ausgegeben werden, da ansonsten beim Ausgeben der gesamten Liste zu
+            // einer Endlosschleife kommt, weil die 1. Node die 2. Node ausgibt, die wiederum die 1. Node wieder ausgibt.
             return "Node{" +
                     "next=" + next +
-                    ", prev=" + prev +
                     ", payload='" + payload + '\'' +
                     '}';
         }

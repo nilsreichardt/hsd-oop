@@ -61,7 +61,7 @@ public class DoLiString {
     public void insert(String payload) {
         Node node = new Node(payload);
 
-        if (first != null) {
+        if (isNotEmpty()) {
             first.insert(node);
         }
         first = node;
@@ -84,9 +84,52 @@ public class DoLiString {
         }
         last = node;
 
-        if (first == null) {
+        if (isEmpty()) {
             first = node;
         }
+    }
+
+    /**
+     * Sucht in der Liste nach einer Note, die den suchenden String als Payload gespeichert hat.
+     *
+     * Aufgabenstellung: Definieren Sie eine private Methode nodeOf(), die einen String sucht und das zugehörigen
+     * Node-Objekt zurückgibt Diese Methode können Sie für Ihre Methoden zum Suchen und Löschen
+     * verwenden, ohne Code duplizieren zu müssen.
+     *
+     * @param searchingString Der suchende String
+     * @return Falls es in der Liste * eine Node mit diesem String gibt, wird diese Node zurückgegeben. Falls es diese
+     * Node nicht gibt, wird null zurück * gegeben.
+     */
+    public Node nodeOf(String searchingString) {
+        if (isEmpty()) return null;
+
+        Node currentNode = first;
+        while (currentNode != null) {
+            if (currentNode.payload.equals(searchingString)) {
+                return currentNode;
+            }
+            currentNode = currentNode.next;
+        }
+
+        return null;
+    }
+
+    /**
+     * Überprüft, ob die Liste leer ist.
+     *
+     * @return Gibt true zurück, falls die Liste leer ist. False, falls die Liste gefüllt ist.
+     */
+    public boolean isEmpty() {
+        return first == null;
+    }
+
+    /**
+     * Überprüft, ob die Liste nicht leer ist.
+     *
+     * @return Gibt true zurück, falls die Liste gefüllt ist. False, falls die Liste leer ist.
+     */
+    public boolean isNotEmpty() {
+        return !isEmpty();
     }
 
     @Override
@@ -122,7 +165,7 @@ public class DoLiString {
 
         /**
          * Fügt eine neue Node vor dieser Node ein.
-         *
+         * <p>
          * Falls "newNode" null ist, wird ein Error geworfen.
          *
          * @param newNode Die neue Node, die eingefügt werden soll. Darf nicht null sein, ansonsten wird ein Fehler
@@ -163,7 +206,7 @@ public class DoLiString {
         /**
          * Erstellt ab dieser Node und den nächsten Nodes einen String, in dem von jeder Node die .toString-Methode
          * aufgerufen wurde.
-         *
+         * <p>
          * Aufgabenstellung: Dann definieren Sie eine weitere Methode, die entweder iterativ (d.h. mittels einer
          * Schleife) oder rekursiv die String-Beschreibungen aller Node -Objekte ab dem Ziel-Node-Objekt, zusammenbaut,
          * d.h. sie konkateniert diese Strings, jeweils mit Komma und Leerzeichen voneinander getrennt.

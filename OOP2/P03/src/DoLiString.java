@@ -74,27 +74,10 @@ public class DoLiString {
         }
     }
 
-    private String generateToStringWithAllNodes() {
-        Node currentNode = first;
-
-        StringBuilder s = new StringBuilder();
-
-        while (currentNode != null) {
-            // Tennung zwischen den Node, jedoch nicht für das erste Objekt, damit so ein String entsteht: ", Node(...)"
-            if (currentNode.prev != null) {
-                s.append(", ");
-            }
-
-            s.append(currentNode);
-            currentNode = currentNode.next;
-        }
-
-        return s.toString();
-    }
-
     @Override
     public String toString() {
-        return "DoLiString:" + generateToStringWithAllNodes();
+        if(first == null) return "DoLiString:";
+        return "DoLiString:" + first.generateToStringWithAllNodes(first);
     }
 
     private class Node {
@@ -142,6 +125,11 @@ public class DoLiString {
 
             this.next = newNode;
             newNode.prev = this;
+        }
+
+        public String generateToStringWithAllNodes(Node newNode) {
+            if(newNode == null) return "";
+            return newNode.toString() + ", " + generateToStringWithAllNodes(newNode.next);
         }
 
         @Override

@@ -20,37 +20,39 @@ public class DoLiString {
     public static void main(String[] args) {
         DoLiString listInsert = new DoLiString();
 
-        System.out.println("Die Liste, wenn noch kein Element vorhanden ist:");
+        System.out.println("Die listInsert, wenn noch kein Element vorhanden ist:");
         System.out.println(listInsert);
 
         listInsert.insert("Berlin");
-        System.out.println("Die Liste, nachdem das 1. Element hinzugefügt wurde:");
+        System.out.println("Die listInsert, nachdem das 1. Element hinzugefügt wurde:");
         System.out.println(listInsert);
 
         listInsert.insert("München");
-        System.out.println("Die Liste, nachdem das 2. Element hinzugefügt wurde:");
+        System.out.println("Die listInsert, nachdem das 2. Element hinzugefügt wurde:");
         System.out.println(listInsert);
 
         listInsert.insert("Düsseldorf");
-        System.out.println("Die Liste, nachdem das 3. Element hinzugefügt wurde:");
+        System.out.println("Die listInsert, nachdem das 3. Element hinzugefügt wurde:");
         System.out.println(listInsert);
 
         DoLiString listAppend = new DoLiString();
 
-        System.out.println("Die Liste, wenn noch kein Element vorhanden ist:");
+        System.out.println("Die listAppend, wenn noch kein Element vorhanden ist:");
         System.out.println(listAppend);
 
         listAppend.append("Berlin");
-        System.out.println("Die Liste, nachdem das 1. Element hinzugefügt wurde:");
+        System.out.println("Die listAppend, nachdem das 1. Element hinzugefügt wurde:");
         System.out.println(listAppend);
 
         listAppend.append("München");
-        System.out.println("Die Liste, nachdem das 2. Element hinzugefügt wurde:");
+        System.out.println("Die listAppend, nachdem das 2. Element hinzugefügt wurde:");
         System.out.println(listAppend);
 
         listAppend.append("Düsseldorf");
-        System.out.println("Die Liste, nachdem das 3. Element hinzugefügt wurde:");
+        System.out.println("Die listAppend, nachdem das 3. Element hinzugefügt wurde:");
         System.out.println(listAppend);
+
+        System.out.println("Gesucht: " + listAppend.nodeOf("Düsseldorf", listAppend.first).payload);
     }
 
     /**
@@ -91,27 +93,33 @@ public class DoLiString {
 
     /**
      * Sucht in der Liste nach einer Note, die den suchenden String als Payload gespeichert hat.
-     *
+     * <p>
      * Aufgabenstellung: Definieren Sie eine private Methode nodeOf(), die einen String sucht und das zugehörigen
-     * Node-Objekt zurückgibt Diese Methode können Sie für Ihre Methoden zum Suchen und Löschen
-     * verwenden, ohne Code duplizieren zu müssen.
+     * Node-Objekt zurückgibt Diese Methode können Sie für Ihre Methoden zum Suchen und Löschen verwenden, ohne Code
+     * duplizieren zu müssen.
      *
      * @param searchingString Der suchende String
      * @return Falls es in der Liste * eine Node mit diesem String gibt, wird diese Node zurückgegeben. Falls es diese
      * Node nicht gibt, wird null zurück * gegeben.
      */
-    public Node nodeOf(String searchingString) {
-        if (isEmpty()) return null;
+    private Node nodeOf(String searchingString) {
+        return nodeOf(searchingString, first);
+    }
 
-        Node currentNode = first;
-        while (currentNode != null) {
-            if (currentNode.payload.equals(searchingString)) {
-                return currentNode;
-            }
-            currentNode = currentNode.next;
-        }
+    private Node nodeOf(String searchingString, Node currentNode) {
+        if(currentNode == null) return null;
+        if(currentNode.payload.equals(searchingString)) return currentNode;
+        return nodeOf(searchingString, currentNode.next);
+    }
 
-        return null;
+    /**
+     * Gibt an, ob der zu suchende String in der Liste vorhanden ist.
+     *
+     * @param searchingString Der suchende String
+     * @return Falls der String vorhanden ist, wird true zurückgegeben, anderenfalls false.
+     */
+    public boolean has(String searchingString) {
+        return nodeOf(searchingString) != null;
     }
 
     /**
@@ -176,14 +184,23 @@ public class DoLiString {
                 throw new Error("Neue Node darf nicht null sein");
             }
 
-            newNode.prev = this.prev;
-
-            if (newNode.prev != null) {
-                newNode.prev.next = newNode;
+            if (!this.isFirst()) {
+                this.prev.next = newNode;
             }
 
+            newNode.prev = this.prev;
             newNode.next = this;
             this.prev = newNode;
+        }
+
+        /**
+         * Überprüft, ob diese Node die erste Node in der Liste ist. Dies ist der Fall, wenn "prev" null ist.
+         *
+         * @return Gibt true zurück, falls prev null ist und somit die erste Node in der Liste sein muss. Andernfalls
+         * wird false zurückgegeben.
+         */
+        private boolean isFirst() {
+            return prev == null;
         }
 
         /**
@@ -216,7 +233,7 @@ public class DoLiString {
          * @return Gibt einen zusammengesetzten String aus allen Node ab der "startNode" zurück.
          */
         public String generateToStringWithAllNodes(Node startNode) {
-            return startNode == null ? "" : startNode + ", " + generateToStringWithAllNodes(startNode.next);
+            return startNode == null ? "" : startNode + "; " + generateToStringWithAllNodes(startNode.next);
         }
 
         @Override

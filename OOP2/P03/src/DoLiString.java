@@ -35,6 +35,7 @@ public class DoLiString {
         System.out.println("Die listInsert, nachdem das 3. Element hinzugefügt wurde:");
         System.out.println(listInsert);
 
+        System.out.println("");
         DoLiString listAppend = new DoLiString();
 
         System.out.println("Die listAppend, wenn noch kein Element vorhanden ist:");
@@ -52,7 +53,13 @@ public class DoLiString {
         System.out.println("Die listAppend, nachdem das 3. Element hinzugefügt wurde:");
         System.out.println(listAppend);
 
-        System.out.println("Gesucht: " + listAppend.nodeOf("Düsseldorf", listAppend.first).payload);
+        System.out.println("");
+
+        listAppend.remove("Berlin");
+        System.out.println("Nach entfernt:");
+        System.out.println(listAppend);
+
+        System.out.println("first: " + listAppend.first);
     }
 
     /**
@@ -116,10 +123,9 @@ public class DoLiString {
      * Visualisierung: Node1 --> Node2 --> Node3 --> Node4 --> null Die Methode geht rekursiv von Node1 zu Node 2 zu
      * Node3, usw. bis null erreicht ist und somit das Ende der Liste erreicht wurde.
      *
-     * Abbruchbedingungen sind folgende:
-     * 1. currentNode ist null: Dies bedeutet, dass die Methode am Ende der Liste angelangt und somit der gesuchte
-     *    String nicht gefunden wurde.
-     * 2. payload von currentNode ist gleich searchingString: Für den gesuchten String wurde die gesuchte Node gefunden.
+     * Abbruchbedingungen sind folgende: 1. currentNode ist null: Dies bedeutet, dass die Methode am Ende der Liste
+     * angelangt und somit der gesuchte String nicht gefunden wurde. 2. payload von currentNode ist gleich
+     * searchingString: Für den gesuchten String wurde die gesuchte Node gefunden.
      *
      * @param searchingString Der suchende String
      * @param currentNode     Die jeweilige Node, die gerade angeschaut wird.
@@ -130,6 +136,29 @@ public class DoLiString {
         if (currentNode == null) return null;
         if (currentNode.payload.equals(searchingString)) return currentNode;
         return nodeOf(searchingString, currentNode.next);
+    }
+
+    /**
+     * Entfernt den angegebenen String aus der List.
+     *
+     * @param searchingString
+     * @return Gibt true ist zurück, falls die Node entfernt wurde. Falls zu dem String keine Node gefunden wurde, wird
+     * false zurückgegeben.
+     */
+    public boolean remove(String searchingString) {
+        Node node = nodeOf(searchingString);
+
+        // Es wurde keine Node mit "searchingString" gefunden. Dieser String ist nicht in der Liste vorhanden.
+        if (node == null) return false;
+
+        if (first == node) {
+            first = node.next;
+        } else if (last == node) {
+            last = node.prev;
+        }
+
+        node.remove();
+        return false;
     }
 
     /**
@@ -224,6 +253,16 @@ public class DoLiString {
         }
 
         /**
+         * Überprüft, ob diese Node die letzte node in der Liste ist. Dies ist der Fall, wenn "next" null ist.
+         *
+         * @return Gibt true zurück, falls next null ist und somit die letzte Node in der Liste sein muss. Andernfalls
+         * wird false zurückgegeben.
+         */
+        private boolean isLast() {
+            return next == null;
+        }
+
+        /**
          * Fügt eine neue Node nach dieser Node ein.
          * <p>
          * Falls "newNode" null ist, wird ein Error geworfen.
@@ -238,6 +277,19 @@ public class DoLiString {
 
             this.next = newNode;
             newNode.prev = this;
+        }
+
+        /**
+         * Entfernt diese Node aus der Liste, indem alle Referenzen (prev & next) aufgehoben werden.
+         */
+        public void remove() {
+            if (!this.isFirst()) {
+                this.prev.next = this.next;
+            }
+
+            if (!this.isLast()) {
+                this.next.prev = this.prev;
+            }
         }
 
         /**

@@ -93,7 +93,7 @@ public class DoLiString {
 
     /**
      * Sucht in der Liste nach einer Note, die den suchenden String als Payload gespeichert hat.
-     * <p>
+     *
      * Aufgabenstellung: Definieren Sie eine private Methode nodeOf(), die einen String sucht und das zugehörigen
      * Node-Objekt zurückgibt Diese Methode können Sie für Ihre Methoden zum Suchen und Löschen verwenden, ohne Code
      * duplizieren zu müssen.
@@ -106,9 +106,29 @@ public class DoLiString {
         return nodeOf(searchingString, first);
     }
 
+    /**
+     * Sucht in der Liste nach einer Note, die den suchenden String als Payload gespeichert hat.
+     *
+     * Aufgabenstellung: Definieren Sie eine private Methode nodeOf(), die einen String sucht und das zugehörigen
+     * Node-Objekt zurückgibt Diese Methode können Sie für Ihre Methoden zum Suchen und Löschen verwenden, ohne Code
+     * duplizieren zu müssen.
+     *
+     * Visualisierung: Node1 --> Node2 --> Node3 --> Node4 --> null Die Methode geht rekursiv von Node1 zu Node 2 zu
+     * Node3, usw. bis null erreicht ist und somit das Ende der Liste erreicht wurde.
+     *
+     * Abbruchbedingungen sind folgende:
+     * 1. currentNode ist null: Dies bedeutet, dass die Methode am Ende der Liste angelangt und somit der gesuchte
+     *    String nicht gefunden wurde.
+     * 2. payload von currentNode ist gleich searchingString: Für den gesuchten String wurde die gesuchte Node gefunden.
+     *
+     * @param searchingString Der suchende String
+     * @param currentNode     Die jeweilige Node, die gerade angeschaut wird.
+     * @return Falls es in der Liste * eine Node mit diesem String gibt, wird diese Node zurückgegeben. Falls es diese *
+     * Node nicht gibt, wird null zurück * gegeben.
+     */
     private Node nodeOf(String searchingString, Node currentNode) {
-        if(currentNode == null) return null;
-        if(currentNode.payload.equals(searchingString)) return currentNode;
+        if (currentNode == null) return null;
+        if (currentNode.payload.equals(searchingString)) return currentNode;
         return nodeOf(searchingString, currentNode.next);
     }
 

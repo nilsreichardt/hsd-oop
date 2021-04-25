@@ -123,9 +123,10 @@ public class DoLiString {
      * Visualisierung: Node1 --> Node2 --> Node3 --> Node4 --> null Die Methode geht rekursiv von Node1 zu Node 2 zu
      * Node3, usw. bis null erreicht ist und somit das Ende der Liste erreicht wurde.
      *
-     * Abbruchbedingungen sind folgende: 1. currentNode ist null: Dies bedeutet, dass die Methode am Ende der Liste
-     * angelangt und somit der gesuchte String nicht gefunden wurde. 2. payload von currentNode ist gleich
-     * searchingString: Für den gesuchten String wurde die gesuchte Node gefunden.
+     * Abbruchbedingungen sind folgende:
+     * 1. currentNode ist null: Dies bedeutet, dass die Methode am Ende der Liste
+     * angelangt und somit der gesuchte String nicht gefunden wurde.
+     * 2. payload von currentNode ist gleich searchingString: Für den gesuchten String wurde die gesuchte Node gefunden.
      *
      * @param searchingString Der suchende String
      * @param currentNode     Die jeweilige Node, die gerade angeschaut wird.
@@ -295,7 +296,7 @@ public class DoLiString {
         /**
          * Erstellt ab dieser Node und den nächsten Nodes einen String, in dem von jeder Node die .toString-Methode
          * aufgerufen wurde.
-         * <p>
+         *
          * Aufgabenstellung: Dann definieren Sie eine weitere Methode, die entweder iterativ (d.h. mittels einer
          * Schleife) oder rekursiv die String-Beschreibungen aller Node -Objekte ab dem Ziel-Node-Objekt, zusammenbaut,
          * d.h. sie konkateniert diese Strings, jeweils mit Komma und Leerzeichen voneinander getrennt.

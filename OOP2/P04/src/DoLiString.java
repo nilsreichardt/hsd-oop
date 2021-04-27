@@ -137,7 +137,7 @@ public class DoLiString {
         }
 
         node.remove();
-        return false;
+        return true;
     }
 
     /**

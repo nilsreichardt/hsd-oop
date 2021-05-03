@@ -1,10 +1,11 @@
 import java.util.Iterator;
+import java.lang.Iterable;
 import java.util.NoSuchElementException;
 
 /**
  * Eine doppelt verkettete Liste, die nur Daten von dem Datentyp "String" speichern kann (nicht generisch).
  */
-public class DoLiString {
+public class DoLiString implements Iterable {
     /**
      * Die erste Node der Liste. Falls first leer ist, ist die Liste leer.
      */
@@ -199,10 +200,15 @@ public class DoLiString {
         return "DoLiString:" + first.generateToStringWithAllNodes(first);
     }
 
+    @Override
+    public Iterator iterator() {
+        return new DoLiIterator(first);
+    }
+
     /**
      * Der Knoten, der die Payload, also den String speichert.
      */
-    private class Node {
+    class Node {
         /**
          * Die nächste Node. Falls null ist, ist die Node am Ende.
          */

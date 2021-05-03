@@ -1,3 +1,6 @@
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 /**
  * Eine doppelt verkettete Liste, die nur Daten von dem Datentyp "String" speichern kann (nicht generisch).
  */
@@ -294,6 +297,20 @@ public class DoLiString {
         }
 
         /**
+         * @return Gibt die nächste Node zurück, kann auch null sein.
+         */
+        public Node getNext() {
+            return next;
+        }
+
+        /**
+         * @return Gibt die Payload der Node an, kann auch null sein.
+         */
+        public String getPayload() {
+            return payload;
+        }
+
+        /**
          * Erstellt ab dieser Node und den nächsten Nodes einen String, in dem von jeder Node die .toString-Methode
          * aufgerufen wurde.
          *
@@ -317,6 +334,44 @@ public class DoLiString {
                     "next=" + next +
                     ", payload='" + payload + '\'' +
                     '}';
+        }
+    }
+
+    private class DoLiIterator implements Iterator<Node> {
+        /**
+         * Die nächste Node der DoLiString Klasse.
+         */
+        Node next;
+
+        /**
+         * Construktor der DoLiIterator Klasse.
+         * @param next Gibt den nächsten Knoten der Liste an. Sollte bei der Übergabe der erste Knoten der Liste sein.
+         */
+        public DoLiIterator(Node next) {
+            this.next = next;
+        }
+
+        /**
+         * Returns {@code true} if the iteration has more elements.
+         * (In other words, returns {@code true} if {@link #next} would
+         * return an element rather than throwing an exception.)
+         *
+         * @return {@code true} if the iteration has more elements
+         */
+        @Override
+        public boolean hasNext() {
+            return next != null;
+        }
+
+        /**
+         * Returns the next element in the iteration.
+         *
+         * @return the next element in the iteration
+         * @throws NoSuchElementException if the iteration has no more elements
+         */
+        @Override
+        public Node next() {
+            return next;
         }
     }
 }

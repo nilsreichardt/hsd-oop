@@ -1,11 +1,7 @@
-import java.util.Iterator;
-import java.lang.Iterable;
-import java.util.NoSuchElementException;
-
 /**
  * Eine doppelt verkettete Liste, die nur Daten von dem Datentyp "String" speichern kann (nicht generisch).
  */
-public class DoLiString implements Iterable<String> {
+public class DoLiString {
     /**
      * Die erste Node der Liste. Falls first leer ist, ist die Liste leer.
      */
@@ -22,55 +18,48 @@ public class DoLiString implements Iterable<String> {
     }
 
     public static void main(String[] args) {
-        // Task 3 a)
-//        DoLiString list = new DoLiString();
-//        Iterator iterator = list.iterator();
-//        for (int i = 0; i < 5; i++) {
-//            iterator.next();
-//        }
+        DoLiString listInsert = new DoLiString();
 
-        // Task 3 b)
-        DoLiString list = new DoLiString();
-        list.append("Düsseldorf");
-        list.append("Berlin");
-        list.append("Siegen");
-        list.append("München");
-        list.append("Köln");
-        list.append("Duisburg");
-        list.append("Dortmund");
-        list.append("Kiel");
-        Iterator iterator = list.iterator();
+        System.out.println("Die listInsert, wenn noch kein Element vorhanden ist:");
+        System.out.println(listInsert);
 
-//        for (Object payload : list) {
-//            System.out.println(payload);
-//        }
-//
-//        System.out.println("");
-//
-//        iterator = list.iterator();
-//        while(iterator.hasNext()) {
-//            System.out.println(iterator.next());
-//        }
-//
-//        iterator.next();
-//        iterator.next();
+        listInsert.insert("Berlin");
+        System.out.println("Die listInsert, nachdem das 1. Element hinzugefügt wurde:");
+        System.out.println(listInsert);
 
-        DoLiString list2 = new DoLiString();
-        list2.append("Peter");
-        list2.append("Günter");
-        list2.append("Herbert");
+        listInsert.insert("München");
+        System.out.println("Die listInsert, nachdem das 2. Element hinzugefügt wurde:");
+        System.out.println(listInsert);
 
-        Iterator iterator2 = list2.iterator();
+        listInsert.insert("Düsseldorf");
+        System.out.println("Die listInsert, nachdem das 3. Element hinzugefügt wurde:");
+        System.out.println(listInsert);
 
-        while(iterator.hasNext() || iterator2.hasNext()) {
-            if(iterator.hasNext()) {
-                System.out.println(iterator.next().toString());
-            }
+        System.out.println("");
+        DoLiString listAppend = new DoLiString();
 
-            if(iterator2.hasNext()) {
-                System.out.println(iterator2.next().toString());
-            }
-        }
+        System.out.println("Die listAppend, wenn noch kein Element vorhanden ist:");
+        System.out.println(listAppend);
+
+        listAppend.append("Berlin");
+        System.out.println("Die listAppend, nachdem das 1. Element hinzugefügt wurde:");
+        System.out.println(listAppend);
+
+        listAppend.append("München");
+        System.out.println("Die listAppend, nachdem das 2. Element hinzugefügt wurde:");
+        System.out.println(listAppend);
+
+        listAppend.append("Düsseldorf");
+        System.out.println("Die listAppend, nachdem das 3. Element hinzugefügt wurde:");
+        System.out.println(listAppend);
+
+        System.out.println("");
+
+        listAppend.remove("Berlin");
+        System.out.println("Nach entfernt:");
+        System.out.println(listAppend);
+
+        System.out.println("first: " + listAppend.first);
     }
 
     /**
@@ -204,33 +193,13 @@ public class DoLiString implements Iterable<String> {
     @Override
     public String toString() {
         if (first == null) return "DoLiString:";
-
-        // while-Schleife
-//        Iterator iterator = iterator();
-//        String string = iterator.next().toString();
-//        while (iterator.hasNext()) {
-//            string += "," + iterator.next().toString();
-//        }
-
-        // forEach-Schleife
-        Iterator iterator = iterator();
-        String string = "";
-        for (String payload: this) {
-            string += "," + payload.toString();
-        }
-
-        return "DoLiString:" + string;
-    }
-
-    @Override
-    public Iterator<String> iterator() {
-        return new DoLiIterator(first);
+        return "DoLiString:" + first.generateToStringWithAllNodes(first);
     }
 
     /**
      * Der Knoten, der die Payload, also den String speichert.
      */
-    class Node {
+    private class Node {
         /**
          * Die nächste Node. Falls null ist, ist die Node am Ende.
          */
@@ -325,67 +294,29 @@ public class DoLiString implements Iterable<String> {
         }
 
         /**
-         * @return Gibt die nächste Node zurück, kann auch null sein.
+         * Erstellt ab dieser Node und den nächsten Nodes einen String, in dem von jeder Node die .toString-Methode
+         * aufgerufen wurde.
+         *
+         * Aufgabenstellung: Dann definieren Sie eine weitere Methode, die entweder iterativ (d.h. mittels einer
+         * Schleife) oder rekursiv die String-Beschreibungen aller Node -Objekte ab dem Ziel-Node-Objekt, zusammenbaut,
+         * d.h. sie konkateniert diese Strings, jeweils mit Komma und Leerzeichen voneinander getrennt.
+         *
+         * @param startNode Die Node, mit der gestartet wird, von allen nächsten Nodes die .toString Methode zusammen zu
+         *                  fügen.
+         * @return Gibt einen zusammengesetzten String aus allen Node ab der "startNode" zurück.
          */
-        public Node next() {
-            return next;
-        }
-
-        /**
-         * @return Gibt die Payload der Node an, kann auch null sein.
-         */
-        public String getPayload() {
-            return payload;
+        public String generateToStringWithAllNodes(Node startNode) {
+            return startNode == null ? "" : startNode + "; " + generateToStringWithAllNodes(startNode.next);
         }
 
         @Override
         public String toString() {
             // Prev & Next darf nicht gemeinsam ausgegeben werden, da ansonsten beim Ausgeben der gesamten Liste zu
             // einer Endlosschleife kommt, weil die 1. Node die 2. Node ausgibt, die wiederum die 1. Node wieder ausgibt.
-            return "Node{" + payload + "}";
-        }
-    }
-
-    private class DoLiIterator implements Iterator<String> {
-        /**
-         * Die nächste Node der DoLiString Klasse.
-         */
-        Node current;
-
-        /**
-         * Construktor der DoLiIterator Klasse.
-         * @param current Gibt den nächsten Knoten der Liste an. Sollte bei der Übergabe der erste Knoten der Liste sein.
-         */
-        public DoLiIterator(Node current) {
-            this.current = current;
-        }
-
-        /**
-         * Returns {@code true} if the iteration has more elements.
-         * (In other words, returns {@code true} if {@link #current} would
-         * return an element rather than throwing an exception.)
-         *
-         * @return {@code true} if the iteration has more elements
-         */
-        @Override
-        public boolean hasNext() {
-            return current != null && current.next() != null;
-        }
-
-        /**
-         * Returns the next element in the iteration.
-         *
-         * @return the next element in the iteration
-         * @throws NoSuchElementException if the iteration has no more elements
-         */
-        @Override
-        public String next() {
-            if(hasNext()) {
-                String payload = current.getPayload();
-                current = current.next();
-                return payload;
-            }
-            return null;
+            return "Node{" +
+                    "next=" + next +
+                    ", payload='" + payload + '\'' +
+                    '}';
         }
     }
 }

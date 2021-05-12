@@ -27,6 +27,7 @@ public class StringTree {
     }
 
     private String inorder() {
+        if(isEmpty()) return "";
         return root.inorder();
     }
 
@@ -91,23 +92,23 @@ public class StringTree {
         }
 
         public void add(Node addingNode) {
-            final int compareResult = payload.compareTo(addingNode.payload);
+            final int compareResult = addingNode.payload.compareTo(payload);
             if(compareResult == 0) {
                 // The case if two payloads are equal will not be treated.
                 return;
             }
 
             if(compareResult > 0) {
-                if(hasSmaller()) {
-                    smaller.add(addingNode);
-                } else {
-                    smaller = addingNode;
-                }
-            } else {
                 if(hasBigger()) {
                     bigger.add(addingNode);
                 } else {
                     bigger = addingNode;
+                }
+            } else {
+                if(hasSmaller()) {
+                    smaller.add(addingNode);
+                } else {
+                    smaller = addingNode;
                 }
             }
         }

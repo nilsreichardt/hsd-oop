@@ -48,108 +48,108 @@ public class StringTree {
     public String toString() {
         return inorder();
     }
-}
 
-class Node {
-    String payload;
+    class Node {
+        String payload;
 
-    Node smaller;
-    Node bigger;
+        Node smaller;
+        Node bigger;
 
-    public Node(String payload) {
-        this.payload = payload;
-    }
-
-    public String inorder() {
-        String string = "";
-
-        if(hasSmaller()) {
-            string += smaller.inorder();
+        public Node(String payload) {
+            this.payload = payload;
         }
 
-        string += payload + "_";
+        public String inorder() {
+            String string = "";
 
-        if(hasBigger()) {
-            string += bigger.inorder();
-        }
-
-        return string;
-    }
-
-    public String paint(String currentString) {
-        String string = "";
-        if(hasBigger()) {
-            string += bigger.paint(currentString + "\t");
-        }
-
-        string += currentString + payload + "\n";
-
-        if(hasSmaller()) {
-            string += smaller.paint(currentString + "\t");
-        }
-
-        return string;
-    }
-
-    public void add(Node addingNode) {
-        final int compareResult = payload.compareTo(addingNode.payload);
-        if(compareResult == 0) {
-            // The case if two payloads are equal will not be treated.
-            return;
-        }
-
-        if(compareResult > 0) {
             if(hasSmaller()) {
-                smaller.add(addingNode);
-            } else {
-                smaller = addingNode;
+                string += smaller.inorder();
             }
-        } else {
+
+            string += payload + "_";
+
             if(hasBigger()) {
-                bigger.add(addingNode);
-            } else {
-                bigger = addingNode;
+                string += bigger.inorder();
             }
-        }
-    }
 
-    public boolean contains(Node searchingNode) {
-        final int compareResult = payload.compareTo(searchingNode.payload);
-        if(compareResult == 0) {
-            return true;
+            return string;
         }
 
-        if(compareResult > 0) {
+        public String paint(String currentString) {
+            String string = "";
+            if(hasBigger()) {
+                string += bigger.paint(currentString + "\t");
+            }
+
+            string += currentString + payload + "\n";
+
             if(hasSmaller()) {
-                return smaller.contains(searchingNode);
+                string += smaller.paint(currentString + "\t");
             }
-        } else {
-            if(hasBigger()) {
-                return bigger.contains(searchingNode);
+
+            return string;
+        }
+
+        public void add(Node addingNode) {
+            final int compareResult = payload.compareTo(addingNode.payload);
+            if(compareResult == 0) {
+                // The case if two payloads are equal will not be treated.
+                return;
+            }
+
+            if(compareResult > 0) {
+                if(hasSmaller()) {
+                    smaller.add(addingNode);
+                } else {
+                    smaller = addingNode;
+                }
+            } else {
+                if(hasBigger()) {
+                    bigger.add(addingNode);
+                } else {
+                    bigger = addingNode;
+                }
             }
         }
 
-        return false;
-    }
+        public boolean contains(Node searchingNode) {
+            final int compareResult = payload.compareTo(searchingNode.payload);
+            if(compareResult == 0) {
+                return true;
+            }
 
-    private boolean hasSmaller() {
-        return smaller != null;
-    }
+            if(compareResult > 0) {
+                if(hasSmaller()) {
+                    return smaller.contains(searchingNode);
+                }
+            } else {
+                if(hasBigger()) {
+                    return bigger.contains(searchingNode);
+                }
+            }
 
-    private boolean hasBigger() {
-        return bigger != null;
-    }
+            return false;
+        }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Node node = (Node) o;
-        return Objects.equals(payload, node.payload) && Objects.equals(smaller, node.smaller) && Objects.equals(bigger, node.bigger);
-    }
+        private boolean hasSmaller() {
+            return smaller != null;
+        }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(payload, smaller, bigger);
+        private boolean hasBigger() {
+            return bigger != null;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node node = (Node) o;
+            return Objects.equals(payload, node.payload) && Objects.equals(smaller, node.smaller) && Objects.equals(bigger, node.bigger);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(payload, smaller, bigger);
+        }
     }
 }

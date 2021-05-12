@@ -14,10 +14,10 @@ public class StringTree {
 
     /**
      * Wird nur fürs Testing gebraucht.
-     * @return Gibt die Root-Node zurück.
+     * @return Gibt die Root-Payload zurück.
      */
-    protected Node getRoot() {
-        return root;
+    protected String getRoot() {
+        return root.payload;
     }
 
     public boolean contains(String searchingString) {

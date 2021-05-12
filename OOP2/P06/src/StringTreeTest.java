@@ -44,7 +44,7 @@ public class StringTreeTest {
     public void testIfRootNodeIsSetWhenFirstNodeIsAdded() {
         assertEquals(true, stringTree.isEmpty());
         stringTree.add("Test");
-        assertEquals(new Node("Test"), stringTree.getRoot());
+        assertEquals("Test", stringTree.getRoot());
     }
 
     @Test

@@ -57,6 +57,26 @@ public class StringTree {
         return root.paint("");
     }
 
+    /**
+     * Returns the smallest payload of the tree.
+     * Note: This method is not mentioned in the task. It was added to test Node.getSmallestSubNode().
+     * @return Smallest payload. If tree is is empty, null will be returned
+     */
+    protected String getSmallestPayload() {
+        if(isEmpty()) return null;
+        return root.getSmallestSubNode().payload;
+    }
+
+    /**
+     * Returns the biggest payload of the tree.
+     * Note: This method is not mentioned in the task. It was added to test Node.getBiggestSubNode().
+     * @return Biggest payload. If tree is is empty, null will be returned
+     */
+    protected String getBiggestPayload() {
+        if(isEmpty()) return null;
+        return root.getBiggestSubNode().payload;
+    }
+
     public String toString() {
         return inorder();
     }
@@ -159,12 +179,26 @@ public class StringTree {
             return false;
         }
 
+        private Node getSmallestSubNode() {
+            if(!hasSmaller()) return this;
+            return smaller.getSmallestSubNode();
+        }
+
+        private Node getBiggestSubNode() {
+            if(!hasBigger()) return this;
+            return bigger.getBiggestSubNode();
+        }
+
         private boolean hasSmaller() {
             return smaller != null;
         }
 
         private boolean hasBigger() {
             return bigger != null;
+        }
+
+        private String getPayload() {
+            return payload;
         }
 
         @Override

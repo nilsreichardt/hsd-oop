@@ -86,6 +86,20 @@ public class StringTreeTest {
     }
 
     @Test
+    @DisplayName(".getSmallestPayload() should return the smallest payload")
+    public void testGetSmallestPayload() {
+        fillTreeWithMockData(stringTree);
+        assertEquals("1", stringTree.getSmallestPayload());
+    }
+
+    @Test
+    @DisplayName(".getBiggestPayload() should return the biggest payload")
+    public void testGetBiggestPayload() {
+        fillTreeWithMockData(stringTree);
+        assertEquals("9", stringTree.getBiggestPayload());
+    }
+
+    @Test
     @DisplayName(".paint() should paint tree correctly")
     public void testIfPaintWorksCorrectly() {
         fillTreeWithMockData(stringTree);

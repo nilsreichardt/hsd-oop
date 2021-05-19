@@ -100,6 +100,35 @@ public class StringTreeTest {
     }
 
     @Test
+    @DisplayName(".remove() should remove a payload from the tree")
+    public void testRemove() {
+        fillTreeWithMockData(stringTree);
+        stringTree.remove("2");
+        assertEquals("1_3_4_5_6_7_8_9_", stringTree.toString());
+
+        stringTree.remove("8");
+        assertEquals("1_3_4_5_6_7_9_", stringTree.toString());
+
+        stringTree.remove("1");
+        assertEquals("3_4_5_6_7_9_", stringTree.toString());
+
+        stringTree.remove("4");
+        assertEquals("3_5_6_7_9_", stringTree.toString());
+
+        stringTree.remove("3");
+        assertEquals("5_6_7_9_", stringTree.toString());
+
+        stringTree.remove("5");
+        assertEquals("6_7_9_", stringTree.toString());
+
+        stringTree.remove("7");
+        assertEquals("6_9_", stringTree.toString());
+
+        stringTree.remove("9");
+        assertEquals("6_", stringTree.toString());
+    }
+
+    @Test
     @DisplayName(".paint() should paint tree correctly")
     public void testIfPaintWorksCorrectly() {
         fillTreeWithMockData(stringTree);

@@ -58,6 +58,24 @@ public class StringTree {
     }
 
     /**
+     * Entfernt einen String aus dem Tree.
+     * @param toBeRemovedPayload Der String, der aus dem Tree entfernt wird.
+     */
+    public void remove(String toBeRemovedPayload) {
+        if(isEmpty()) {
+            System.out.println(toBeRemovedPayload + " kann nicht enfternt werden, weil die Liste leer ist.");
+            return;
+        }
+
+        if(root.getPayload().equals(toBeRemovedPayload)) {
+            System.out.println("Aktuell kann die Root-Node noch nicht entfernt werden.");
+            return;
+        }
+
+        root.remove(toBeRemovedPayload);
+    }
+
+    /**
      * Returns the smallest payload of the tree.
      * Note: This method is not mentioned in the task. It was added to test Node.getSmallestSubNode().
      * @return Smallest payload. If tree is is empty, null will be returned
@@ -199,6 +217,92 @@ public class StringTree {
 
         private String getPayload() {
             return payload;
+        }
+
+        /** Entfernt einen Knoten aus dem Baum ab diesem Knoten
+         *
+         * Dazu suchen wir rekursiv im Baum, bis wir den
+         * zu entfernenden Knoten (zeK) gefunden haben.
+         *
+         * Wenn this entfernt wird, wird der Ersatz-Knoten zurückgegeben
+         * Wenn this nicht der gesuchte Knoten ist, wird this zurückgegeben
+         *
+         * @param toBeRemovedPayload die Payload, die aus dem Baum entfernt werden soll
+         * @return Knoten, der nach dem Löschen anstelle von this referenziert werden soll
+         */
+        private Node remove(String toBeRemovedPayload) {
+            int compareResult = toBeRemovedPayload.compareTo(this.payload);
+
+            // Prüfe, ob diese Node (this) entfernt werden soll
+            if(compareResult == 0) {
+                // Da das Entfernen mit Fallunterscheidung etwas länglich ist,
+                // rufen wir dafür eine Methode entfernenMitFallunterscheidung() auf
+                // Diese gibtden Knoten zurück, der this ersetzen soll
+                Node neu = this.removeWithCases();
+
+                // Da this ersetzt werden soll,
+                // wird der Ersatz-Knoten an die aufrufende Methode zurückgegeben
+                return neu;
+            } else {
+                // Fall vergleich < 0: this.nutzlast ist kleiner als toBeRemovedPayload
+                if(compareResult < 0) {
+                    if(hasSmaller()) {
+                        // Knoten aus dem kleineren Teilbaum entfernen
+                        // -> rekursiver Aufruf von entfernen(s)
+                        // Der Rückgabewert ist das (neue) Ziel von kleiner
+                        smaller = smaller.remove(toBeRemovedPayload);
+                    }
+                    // this wurde nicht gelöscht
+                } else {
+                    // Fall vergleich > 0: this.nutzlast ist größer als toBeRemovedPayload
+                    if(hasBigger()) {
+                        // Knoten aus dem größeren Teilbaum entfernen
+                        // -> rekursiver Aufruf von entfernen(s)
+                        // Der Rückgabewert ist das (neue) Zie
+                        bigger = bigger.remove(toBeRemovedPayload);
+                    }
+                    // this wurde nicht entfernt
+                }
+                return this;
+            }
+        }
+
+        private Node removeWithCases() {
+            // Fall 0: kein Nachfolger
+            // ersetze in der aufrufenden Methode die Referenz auf this
+            // durch eine Referenz auf null -> gebe null zurück
+            if(!hasBigger() && !hasSmaller()) return null;
+
+            // Fall 1a: Nur ein Nachfolger - kleinerer Teilbaum
+            // ersetze in der aufrufenden Methode die Referenz auf this
+            // durch eine Referenz auf this.kleiner -> gebe this.kleiner zurück
+            if(hasBigger() && !hasSmaller()) {
+                return bigger;
+            }
+
+            // Fall 1b: Nur ein Nachfolger - groesserer Teilbaum
+            // ersetze in der aufrufenden Methode die Referenz auf this
+            // durch eine Referenz auf this.groesser -> gebe this.groesser zurück
+            if(!hasBigger() && hasSmaller()) {
+                return smaller;
+            }
+
+
+            //Fall 2: beide Nachfolger existieren
+            // Ermittle den kleinsten Knoten des größeren Teilbaums
+            // Entferne den gefundenen kleinsten Knoten aus dem größeren Teilbaum
+            // mit der bereits definierten Methode
+            Node smallestNodeInBiggerSubTree = bigger.getSmallestSubNode();
+            this.remove(smallestNodeInBiggerSubTree.getPayload());
+
+            // ersetze nun this durch den kleinsten nachfolger
+            // 1) übernehme die Verweise von this in den Ersatz-Knoten kleinster
+            smallestNodeInBiggerSubTree.smaller = smaller;
+            smallestNodeInBiggerSubTree.bigger = bigger;
+
+            // 2) ersetze in der aufrufenden Methode die Referenz auf this
+            // durch eine Referenz auf kleinster -> gebe kleinster zurück
+            return smallestNodeInBiggerSubTree;
         }
 
         @Override

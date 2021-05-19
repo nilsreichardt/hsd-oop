@@ -1,6 +1,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -126,6 +127,20 @@ public class StringTreeTest {
 
         stringTree.remove("9");
         assertEquals("6_", stringTree.toString());
+    }
+
+    // Tests will be skipped, because this function is implemented yet.
+    @Disabled
+    @Test
+    @DisplayName(".remove() should remove the root node correclty")
+    public void testRemoveRoot() {
+        // "fillTreeWithMockData" will fill the tree with 6 as root node.
+        fillTreeWithMockData(stringTree);
+
+        stringTree.remove("6");
+        assertEquals("1_3_4_5_6_7_8_9_", stringTree.toString());
+
+        // Note: Check also if stringTree.root is updated
     }
 
     @Test

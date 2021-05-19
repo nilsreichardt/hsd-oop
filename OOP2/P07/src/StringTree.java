@@ -103,13 +103,7 @@ public class StringTree {
             System.out.println(toBeRemovedPayload + " kann nicht enfternt werden, weil die Liste leer ist.");
             return;
         }
-
-        if(root.getPayload().equals(toBeRemovedPayload)) {
-            System.out.println("Aktuell kann die Root-Node noch nicht entfernt werden.");
-            return;
-        }
-
-        root.remove(toBeRemovedPayload);
+        root = root.remove(toBeRemovedPayload);
     }
 
     /**

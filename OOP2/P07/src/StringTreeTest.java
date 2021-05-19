@@ -134,10 +134,13 @@ public class StringTreeTest {
 
         stringTree.remove("9");
         assertEquals("6_", stringTree.toString());
+
+        stringTree.remove("6");
+        assertEquals("", stringTree.toString());
+
+        assertEquals(true, stringTree.isEmpty());
     }
 
-    // Tests will be skipped, because this function is implemented yet.
-    @Disabled
     @Test
     @DisplayName(".remove() should remove the root node correclty")
     public void testRemoveRoot() {
@@ -145,9 +148,8 @@ public class StringTreeTest {
         fillTreeWithMockData(stringTree);
 
         stringTree.remove("6");
-        assertEquals("1_3_4_5_6_7_8_9_", stringTree.toString());
-
-        // Note: Check also if stringTree.root is updated
+        assertEquals("1_2_3_4_5_7_8_9_", stringTree.toString());
+        assertEquals("7", stringTree.getRoot());
     }
 
     @Test

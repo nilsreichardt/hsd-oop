@@ -8,6 +8,35 @@ public class StringTree {
 
     public StringTree() {}
 
+    public static void main(String[] args) {
+        StringTree tree = new StringTree();
+
+        // Aufgabe 1 b)
+        tree.add("07");
+        tree.add("04");
+        tree.add("15");
+        tree.add("02");
+        tree.add("06");
+        tree.add("05");
+        tree.add("03");
+        tree.add("11");
+        tree.add("13");
+        tree.add("12");
+
+        System.out.println("Preorder " + tree.preorder());
+        System.out.println("Postorder " + tree.postorder());
+
+        System.out.println("----");
+
+        System.out.println("Inorder " + tree.inorder());
+
+        System.out.println("----");
+
+        System.out.println("Entferne '04'");
+        tree.remove("04");
+        System.out.println("Ohne 04: " + tree.inorder());
+    }
+
     public boolean isEmpty() {
         return root == null;
     }
@@ -27,7 +56,7 @@ public class StringTree {
     }
 
     /**
-     * @return Returns in the String in the "in-order" way, like "1, 2, 3, 4, 5, 6"
+     * @return Gibt einen String zurück, wo erst smaller, this, bigger zurückgegeben wird
      */
     protected String inorder() {
         if(isEmpty()) return "";
@@ -35,11 +64,19 @@ public class StringTree {
     }
 
     /**
-     * @return Returns in the String in the "pre-order" way, like "1, 2, 3, 4, 5, 6"
+     * @return Gibt einen String zurück, wo erst this, smaller, bigger zurückgegeben wird
      */
     protected String preorder() {
         if(isEmpty()) return "";
         return root.preorder();
+    }
+
+    /**
+     * @return Gibt einen String zurück, wo erst smaller, bigger, this zurückgegeben wird
+     */
+    protected String postorder() {
+        if(isEmpty()) return "";
+        return root.postorder();
     }
 
     public void add(String addingString) {
@@ -128,15 +165,31 @@ public class StringTree {
         public String preorder() {
             String string = "";
 
-            if(hasBigger()) {
-                string += bigger.preorder();
-            }
-
             string += payload + "_";
 
             if(hasSmaller()) {
                 string += smaller.preorder();
             }
+
+            if(hasBigger()) {
+                string += bigger.preorder();
+            }
+
+            return string;
+        }
+
+        public String postorder() {
+            String string = "";
+
+            if(hasSmaller()) {
+                string += smaller.postorder();
+            }
+
+            if(hasBigger()) {
+                string += bigger.postorder();
+            }
+
+            string += payload + "_";
 
             return string;
         }

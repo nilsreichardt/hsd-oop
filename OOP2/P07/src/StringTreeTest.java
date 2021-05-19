@@ -57,16 +57,23 @@ public class StringTreeTest {
 
     @Test
     @DisplayName(".inorder() should returns tree in a 'inorder' way")
-    public void testIfInorderWorksCorrectly() {
+    public void testInorder() {
         fillTreeWithMockData(stringTree);
         assertEquals("1_2_3_4_5_6_7_8_9_", stringTree.inorder());
     }
 
     @Test
-    @DisplayName(".preorder() should returns tree in a 'inorder' way")
-    public void testIfPreorderWorksCorrectly() {
+    @DisplayName(".preorder() should returns tree in a 'preorder' way")
+    public void testPreorder() {
         fillTreeWithMockData(stringTree);
-        assertEquals("9_8_7_6_5_4_3_2_1_", stringTree.preorder());
+        assertEquals("6_2_1_4_3_5_7_8_9_", stringTree.preorder());
+    }
+
+    @Test
+    @DisplayName(".Postorder() should returns tree in a 'Postorder' way")
+    public void testIfPostorder() {
+        fillTreeWithMockData(stringTree);
+        assertEquals("1_3_5_4_2_9_8_7_6_", stringTree.postorder());
     }
 
     @Test

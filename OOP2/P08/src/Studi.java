@@ -9,10 +9,7 @@ public class Studi implements Comparable {
 
     @Override
     public String toString() {
-        return "Studi{" +
-                "name='" + name + '\'' +
-                ", matrikelnummer='" + matrikelnummer + '\'' +
-                '}';
+        return name + ", " + matrikelnummer;
     }
 
     @Override

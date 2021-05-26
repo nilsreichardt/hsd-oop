@@ -11,7 +11,9 @@ public class CompTree {
     public static void main(String[] args) {
         CompTree tree = new CompTree();
 
-        tree.add("");
+        tree.add(new Studi("Anna", "0000"));
+        tree.add(new Studi("Bernd", "1111"));
+        tree.add(new Studi("Claus", "2222"));
 
         System.out.println(tree.paint());
     }

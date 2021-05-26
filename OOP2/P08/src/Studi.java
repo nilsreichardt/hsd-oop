@@ -12,6 +12,10 @@ public class Studi implements Comparable {
         return name + ", " + matrikelnummer;
     }
 
+    void test(String course) {
+        System.out.println(name + ", " + matrikelnummer + ": " + course);
+    }
+
     @Override
     public int compareTo(Object o) {
         return toString().compareTo(o.toString());

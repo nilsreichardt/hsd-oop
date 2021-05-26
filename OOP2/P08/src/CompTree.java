@@ -1,6 +1,7 @@
+import java.util.Iterator;
 import java.util.Objects;
 
-public class CompTree {
+public class CompTree implements Iterable {
     /**
      * A root node is the starting node of tree.
      */
@@ -16,6 +17,43 @@ public class CompTree {
         tree.add(new Studi("Claus", "2222"));
 
         System.out.println(tree.paint());
+        System.out.println("---");
+        System.out.println();
+
+        // Task 3 c)
+        for (Object studi: tree) {
+            System.out.println(studi.toString());
+        }
+
+        System.out.println();
+        System.out.println("---");
+        System.out.println();
+
+        System.out.println("iterateStudiWithWhile");
+        tree.iterateStudiWithWhile();
+
+        System.out.println();
+        System.out.println("---");
+        System.out.println();
+
+        System.out.println("iterateStudiWithForEach");
+        tree.iterateStudiWithForEach();
+    }
+
+    public void iterateStudiWithWhile() {
+        Iterator it = iterator();
+        while(it.hasNext()) {
+            Studi studi = (Studi) it.next(); // Problem: We need to cast our objetcs
+            studi.test("Informatik");
+        }
+    }
+
+    public void iterateStudiWithForEach() {
+        for (Object studiAsObject: this) {
+            // Problem: We need to cast our objetcs
+            Studi studi = (Studi) studiAsObject;
+            studi.test("Deutsch");
+        }
     }
 
     public boolean isEmpty() {
@@ -111,14 +149,26 @@ public class CompTree {
         return inorder();
     }
 
+    @Override
+    public Iterator iterator() {
+        return new CompIterator(root);
+    }
+
     class Node {
         Comparable payload;
-
         Node smaller;
         Node bigger;
 
         public Node(Comparable payload) {
             this.payload = payload;
+        }
+
+        public Node getSmaller() {
+            return smaller;
+        }
+
+        public Node getBigger() {
+            return bigger;
         }
 
         public String inorder() {
@@ -344,6 +394,29 @@ public class CompTree {
         @Override
         public int hashCode() {
             return Objects.hash(payload, smaller, bigger);
+        }
+    }
+
+    public class CompIterator implements Iterator {
+        Node next;
+
+        public CompIterator(Node start) {
+            this.next = start;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return next != null;
+        }
+
+        @Override
+        public Comparable next() {
+            if(hasNext()) {
+                Comparable temp = next.getPayload();
+                next = next.getBigger();
+                return temp;
+            }
+            return null;
         }
     }
 }

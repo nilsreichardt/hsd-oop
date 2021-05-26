@@ -11,16 +11,7 @@ public class CompTree {
     public static void main(String[] args) {
         CompTree tree = new CompTree();
 
-        tree.add("07");
-        tree.add("04");
-        tree.add("15");
-        tree.add("02");
-        tree.add("06");
-        tree.add("05");
-        tree.add("03");
-        tree.add("11");
-        tree.add("13");
-        tree.add("12");
+        tree.add("");
 
         System.out.println(tree.paint());
     }
@@ -37,7 +28,7 @@ public class CompTree {
         return root.payload;
     }
 
-    public boolean contains(String searchingString) {
+    public boolean contains(Comparable searchingString) {
         if(isEmpty()) return false;
         Node node = new Node(searchingString);
         return root.contains(node);
@@ -67,7 +58,7 @@ public class CompTree {
         return root.postorder();
     }
 
-    public void add(String addingString) {
+    public void add(Comparable addingString) {
         Node node = new Node(addingString);
 
         if(isEmpty()) {
@@ -86,7 +77,7 @@ public class CompTree {
      * Entfernt einen String aus dem Tree.
      * @param toBeRemovedPayload Der String, der aus dem Tree entfernt wird.
      */
-    public void remove(String toBeRemovedPayload) {
+    public void remove(Comparable toBeRemovedPayload) {
         if(isEmpty()) {
             System.out.println(toBeRemovedPayload + " kann nicht enfternt werden, weil die Liste leer ist.");
             return;
@@ -124,7 +115,7 @@ public class CompTree {
         Node smaller;
         Node bigger;
 
-        public Node(String payload) {
+        public Node(Comparable payload) {
             this.payload = payload;
         }
 

@@ -21,6 +21,8 @@ public class CompTree {
         tree.add("11");
         tree.add("13");
         tree.add("12");
+
+        System.out.println(tree.paint());
     }
 
     public boolean isEmpty() {
@@ -31,7 +33,7 @@ public class CompTree {
      * Wird nur fürs Testing gebraucht.
      * @return Gibt die Root-Payload zurück.
      */
-    protected String getRoot() {
+    protected Comparable getRoot() {
         return root.payload;
     }
 
@@ -97,7 +99,7 @@ public class CompTree {
      * Note: This method is not mentioned in the task. It was added to test Node.getSmallestSubNode().
      * @return Smallest payload. If tree is is empty, null will be returned
      */
-    protected String getSmallestPayload() {
+    protected Comparable getSmallestPayload() {
         if(isEmpty()) return null;
         return root.getSmallestSubNode().payload;
     }
@@ -107,7 +109,7 @@ public class CompTree {
      * Note: This method is not mentioned in the task. It was added to test Node.getBiggestSubNode().
      * @return Biggest payload. If tree is is empty, null will be returned
      */
-    protected String getBiggestPayload() {
+    protected Comparable getBiggestPayload() {
         if(isEmpty()) return null;
         return root.getBiggestSubNode().payload;
     }
@@ -117,7 +119,7 @@ public class CompTree {
     }
 
     class Node {
-        String payload;
+        Comparable payload;
 
         Node smaller;
         Node bigger;
@@ -248,7 +250,7 @@ public class CompTree {
             return bigger != null;
         }
 
-        private String getPayload() {
+        private Comparable getPayload() {
             return payload;
         }
 
@@ -263,7 +265,7 @@ public class CompTree {
          * @param toBeRemovedPayload die Payload, die aus dem Baum entfernt werden soll
          * @return Knoten, der nach dem Löschen anstelle von this referenziert werden soll
          */
-        private Node remove(String toBeRemovedPayload) {
+        private Node remove(Comparable toBeRemovedPayload) {
             int compareResult = toBeRemovedPayload.compareTo(this.payload);
 
             // Prüfe, ob diese Node (this) entfernt werden soll

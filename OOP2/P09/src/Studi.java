@@ -1,8 +1,8 @@
 public class Studi implements Comparable<Studi> {
     String name;
-    String matrikelnummer;
+    int matrikelnummer;
 
-    public Studi(String name, String matrikelnummer) {
+    public Studi(String name, int matrikelnummer) {
         this.name = name;
         this.matrikelnummer = matrikelnummer;
     }

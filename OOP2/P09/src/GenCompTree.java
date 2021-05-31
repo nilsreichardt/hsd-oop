@@ -21,6 +21,57 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
 
         System.out.println("Finds '5' (While-Loop): " + tree.findStringInTreeWhile(tree, "5"));
         System.out.println("Finds '5' (ForEach-Loop):" + tree.findStringInTreeFor(tree, "5"));
+
+        System.out.println();
+        System.out.println("---");
+        System.out.println();
+
+        GenCompTree<Integer> treeInt = new GenCompTree<>();
+        GenCompTree<Studi> treeStudi = new GenCompTree<>();
+
+        treeInt.add(7);
+        treeInt.add(4);
+        treeInt.add(15);
+        treeInt.add(2);
+        treeInt.add(6);
+        treeInt.add(5);
+        treeInt.add(3);
+
+        treeStudi.add(new Studi("07", 7));
+        treeStudi.add(new Studi("04", 4));
+        treeStudi.add(new Studi("15", 15));
+        treeStudi.add(new Studi("02", 2));
+        treeStudi.add(new Studi("06", 6));
+        treeStudi.add(new Studi("05", 5));
+        treeStudi.add(new Studi("03", 3));
+
+        System.out.println("Iterating 'treeInt (While)'");
+        treeInt.iterateWithWhile();
+        System.out.println("Iterating 'treeInt (ForEach)'");
+        treeInt.iterateWithFor();
+
+        System.out.println("Iterating 'treeStudi (While)'");
+        treeStudi.iterateWithWhile();
+        System.out.println("Iterating 'treeStudi (ForEach)'");
+        treeStudi.iterateWithFor();
+
+
+        // Task 3 d) Es funktioniert gar keine Kobination
+        // treeInt.add(new Studi("20", 20));
+        // treeStudi.add(20);
+    }
+
+    public void iterateWithWhile() {
+        Iterator<T> it = this.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
+
+    public void iterateWithFor() {
+        for (T t: this) {
+            System.out.println(t);
+        }
     }
 
     public boolean findStringInTreeWhile(GenCompTree<String> tree, String searchingString) {

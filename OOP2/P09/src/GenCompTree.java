@@ -10,7 +10,37 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
     public GenCompTree() {}
 
     public static void main(String[] args) {
-        GenCompTree<Studi> tree = new GenCompTree<>();
+        GenCompTree<String> tree = new GenCompTree<>();
+        tree.add("07");
+        tree.add("04");
+        tree.add("15");
+        tree.add("02");
+        tree.add("06");
+        tree.add("05");
+        tree.add("03");
+
+        System.out.println("Finds '5' (While-Loop): " + tree.findStringInTreeWhile(tree, "5"));
+        System.out.println("Finds '5' (ForEach-Loop):" + tree.findStringInTreeFor(tree, "5"));
+    }
+
+    public boolean findStringInTreeWhile(GenCompTree<String> tree, String searchingString) {
+        Iterator<String> it = tree.iterator();
+        while (it.hasNext()) {
+            final String next = it.next();
+            if(next.contains(searchingString)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean findStringInTreeFor(GenCompTree<String> tree, String searchingString) {
+        for (String next : tree) {
+            if (next.contains(searchingString)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean isEmpty() {
@@ -108,7 +138,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new CompIterator<>(root);
+        return new CompIterator<T>(root);
     }
 
     static class Node<T extends Comparable<T>> {

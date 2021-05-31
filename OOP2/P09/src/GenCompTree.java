@@ -1,7 +1,11 @@
 import java.util.Iterator;
 import java.util.Objects;
 
+// Source for Fall A) - I): https://moodle.hs-duesseldorf.de/pluginfile.php/273295/mod_resource/content/5/OOP2%20-%2007%20-%20Generics%20Einf%C3%BChrung%20v8%20-%20Mit%20Code.pdf
+
+// T (vor dem extends) ist Fall A), <T> in dem Comparable ist Fall B)
 public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
+    // T ist Fall B)
     /**
      * A root node is the starting node of tree.
      */
@@ -10,6 +14,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
     public GenCompTree() {}
 
     public static void main(String[] args) {
+        // T ist Fall F) & G)
         GenCompTree<String> tree = new GenCompTree<>();
         tree.add("07");
         tree.add("04");
@@ -26,7 +31,9 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         System.out.println("---");
         System.out.println();
 
+        // T ist Fall F) & G)
         GenCompTree<Integer> treeInt = new GenCompTree<>();
+        // T ist Fall F) & G)
         GenCompTree<Studi> treeStudi = new GenCompTree<>();
 
         treeInt.add(7);
@@ -62,6 +69,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
     }
 
     public void iterateWithWhile() {
+        // T ist Fall F)
         Iterator<T> it = this.iterator();
         while(it.hasNext()) {
             System.out.println(it.next());
@@ -69,11 +77,13 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
     }
 
     public void iterateWithFor() {
+        // T ist Fall F)
         for (T t: this) {
             System.out.println(t);
         }
     }
 
+    // T ist Fall D)
     public boolean findStringInTreeWhile(GenCompTree<String> tree, String searchingString) {
         Iterator<String> it = tree.iterator();
         while (it.hasNext()) {
@@ -85,6 +95,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         return false;
     }
 
+    // T ist Fall D)
     public boolean findStringInTreeFor(GenCompTree<String> tree, String searchingString) {
         for (String next : tree) {
             if (next.contains(searchingString)) {
@@ -98,6 +109,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         return root == null;
     }
 
+    // T ist Fall E)
     /**
      * Wird nur fürs Testing gebraucht.
      * @return Gibt die Root-Payload zurück.
@@ -106,6 +118,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         return root.payload;
     }
 
+    // T ist Fall D)
     public boolean contains(T searchingString) {
         if(isEmpty()) return false;
         Node<T> node = new Node<>(searchingString);
@@ -136,6 +149,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         return root.postorder();
     }
 
+    // T ist Fall D)
     public void add(T addingString) {
         Node<T> node = new Node<>(addingString);
 
@@ -151,6 +165,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         return root.paint("");
     }
 
+    // T ist Fall D)
     /**
      * Entfernt einen String aus dem Tree.
      * @param toBeRemovedPayload Der String, der aus dem Tree entfernt wird.
@@ -163,6 +178,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         root = root.remove(toBeRemovedPayload);
     }
 
+    // T ist Fall E)
     /**
      * Returns the smallest payload of the tree.
      * Note: This method is not mentioned in the task. It was added to test Node.getSmallestSubNode().
@@ -173,6 +189,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         return root.getSmallestSubNode().payload;
     }
 
+    // T ist Fall E)
     /**
      * Returns the biggest payload of the tree.
      * Note: This method is not mentioned in the task. It was added to test Node.getBiggestSubNode().
@@ -187,24 +204,34 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         return inorder();
     }
 
+    // T ist Fall E)
     @Override
     public Iterator<T> iterator() {
         return new CompIterator<T>(root);
     }
 
+    // T (vor dem extends) ist Fall A), <T> in dem Comparable ist Fall B)
     static class Node<T extends Comparable<T>> {
+        // T ist Fall c)
         T payload;
+
+        // T Fall B)
         Node<T> smaller;
+
+        // T ist Fall B)
         Node<T> bigger;
 
+        // T ist Fall D)
         public Node(T payload) {
             this.payload = payload;
         }
 
+        // T ist Fall E)
         public Node<T> getSmaller() {
             return smaller;
         }
 
+        // T ist Fall E)
         public Node<T> getBigger() {
             return bigger;
         }
@@ -272,6 +299,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
             return string;
         }
 
+        // T ist Fall D)
         public void add(Node<T> addingNode) {
             final int compareResult = addingNode.payload.compareTo(payload);
             if(compareResult == 0) {
@@ -294,6 +322,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
             }
         }
 
+        // T ist Fall D)
         public boolean contains(Node<T> searchingNode) {
             final int compareResult = payload.compareTo(searchingNode.payload);
             if(compareResult == 0) {
@@ -313,11 +342,13 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
             return false;
         }
 
+        // T ist Fall E)
         private Node<T> getSmallestSubNode() {
             if(!hasSmaller()) return this;
             return smaller.getSmallestSubNode();
         }
 
+        // T ist Fall E)
         private Node<T> getBiggestSubNode() {
             if(!hasBigger()) return this;
             return bigger.getBiggestSubNode();
@@ -331,10 +362,12 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
             return bigger != null;
         }
 
+        // T ist Fall E)
         private T getPayload() {
             return payload;
         }
 
+        // T ist Fall E) & D)
         /** Entfernt einen Knoten aus dem Baum ab diesem Knoten
          *
          * Dazu suchen wir rekursiv im Baum, bis wir den
@@ -430,14 +463,18 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
+            // T ist Fall F) & G)
             Node<T> node = (Node<T>) o;
             return Objects.equals(payload, node.payload) && Objects.equals(smaller, node.smaller) && Objects.equals(bigger, node.bigger);
         }
     }
 
+    // T (vor dem extends) ist Fall A), <T> in dem Comparable ist Fall B)
     public static class CompIterator<T extends Comparable<T>> implements Iterator<T> {
+        // T ist Fall C)
         Node<T> next;
 
+        // T ist Fall D)
         public CompIterator(Node<T> start) {
             this.next = start;
         }
@@ -447,6 +484,7 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
             return next != null;
         }
 
+        // T ist Fall E)
         @Override
         public T next() {
             if(hasNext()) {

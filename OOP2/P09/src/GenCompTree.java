@@ -11,49 +11,6 @@ public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
 
     public static void main(String[] args) {
         GenCompTree<Studi> tree = new GenCompTree<>();
-
-        tree.add(new Studi("Anna", "0000"));
-        tree.add(new Studi("Bernd", "1111"));
-        tree.add(new Studi("Claus", "2222"));
-
-        System.out.println(tree.paint());
-        System.out.println("---");
-        System.out.println();
-
-        // Task 3 c)
-        for (Object studi: tree) {
-            System.out.println(studi.toString());
-        }
-
-        System.out.println();
-        System.out.println("---");
-        System.out.println();
-
-        System.out.println("iterateStudiWithWhile");
-        tree.iterateStudiWithWhile();
-
-        System.out.println();
-        System.out.println("---");
-        System.out.println();
-
-        System.out.println("iterateStudiWithForEach");
-        tree.iterateStudiWithForEach();
-    }
-
-    public void iterateStudiWithWhile() {
-        Iterator<T> it = iterator();
-        while(it.hasNext()) {
-            Studi studi = (Studi) it.next(); // Problem: We need to cast our objetcs
-            studi.test("Informatik");
-        }
-    }
-
-    public void iterateStudiWithForEach() {
-        for (Object studiAsObject: this) {
-            // Problem: We need to cast our objetcs
-            Studi studi = (Studi) studiAsObject;
-            studi.test("Deutsch");
-        }
     }
 
     public boolean isEmpty() {

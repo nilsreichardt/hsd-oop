@@ -1,16 +1,16 @@
 import java.util.Iterator;
 import java.util.Objects;
 
-public class CompTree implements Iterable {
+public class GenCompTree<T extends Comparable<T>> implements Iterable<T> {
     /**
      * A root node is the starting node of tree.
      */
-    private Node root;
+    private Node<T> root;
 
-    public CompTree() {}
+    public GenCompTree() {}
 
     public static void main(String[] args) {
-        CompTree tree = new CompTree();
+        GenCompTree<Studi> tree = new GenCompTree<>();
 
         tree.add(new Studi("Anna", "0000"));
         tree.add(new Studi("Bernd", "1111"));
@@ -41,7 +41,7 @@ public class CompTree implements Iterable {
     }
 
     public void iterateStudiWithWhile() {
-        Iterator it = iterator();
+        Iterator<T> it = iterator();
         while(it.hasNext()) {
             Studi studi = (Studi) it.next(); // Problem: We need to cast our objetcs
             studi.test("Informatik");
@@ -64,13 +64,13 @@ public class CompTree implements Iterable {
      * Wird nur fürs Testing gebraucht.
      * @return Gibt die Root-Payload zurück.
      */
-    protected Comparable getRoot() {
+    protected T getRoot() {
         return root.payload;
     }
 
-    public boolean contains(Comparable searchingString) {
+    public boolean contains(T searchingString) {
         if(isEmpty()) return false;
-        Node node = new Node(searchingString);
+        Node<T> node = new Node<>(searchingString);
         return root.contains(node);
     }
 
@@ -98,8 +98,8 @@ public class CompTree implements Iterable {
         return root.postorder();
     }
 
-    public void add(Comparable addingString) {
-        Node node = new Node(addingString);
+    public void add(T addingString) {
+        Node<T> node = new Node<>(addingString);
 
         if(isEmpty()) {
             root = node;
@@ -117,7 +117,7 @@ public class CompTree implements Iterable {
      * Entfernt einen String aus dem Tree.
      * @param toBeRemovedPayload Der String, der aus dem Tree entfernt wird.
      */
-    public void remove(Comparable toBeRemovedPayload) {
+    public void remove(T toBeRemovedPayload) {
         if(isEmpty()) {
             System.out.println(toBeRemovedPayload + " kann nicht enfternt werden, weil die Liste leer ist.");
             return;
@@ -130,7 +130,7 @@ public class CompTree implements Iterable {
      * Note: This method is not mentioned in the task. It was added to test Node.getSmallestSubNode().
      * @return Smallest payload. If tree is is empty, null will be returned
      */
-    protected Comparable getSmallestPayload() {
+    protected T getSmallestPayload() {
         if(isEmpty()) return null;
         return root.getSmallestSubNode().payload;
     }
@@ -140,7 +140,7 @@ public class CompTree implements Iterable {
      * Note: This method is not mentioned in the task. It was added to test Node.getBiggestSubNode().
      * @return Biggest payload. If tree is is empty, null will be returned
      */
-    protected Comparable getBiggestPayload() {
+    protected T getBiggestPayload() {
         if(isEmpty()) return null;
         return root.getBiggestSubNode().payload;
     }
@@ -150,24 +150,24 @@ public class CompTree implements Iterable {
     }
 
     @Override
-    public Iterator iterator() {
-        return new CompIterator(root);
+    public Iterator<T> iterator() {
+        return new CompIterator<>(root);
     }
 
-    class Node {
-        Comparable payload;
-        Node smaller;
-        Node bigger;
+    static class Node<T extends Comparable<T>> {
+        T payload;
+        Node<T> smaller;
+        Node<T> bigger;
 
-        public Node(Comparable payload) {
+        public Node(T payload) {
             this.payload = payload;
         }
 
-        public Node getSmaller() {
+        public Node<T> getSmaller() {
             return smaller;
         }
 
-        public Node getBigger() {
+        public Node<T> getBigger() {
             return bigger;
         }
 
@@ -234,7 +234,7 @@ public class CompTree implements Iterable {
             return string;
         }
 
-        public void add(Node addingNode) {
+        public void add(Node<T> addingNode) {
             final int compareResult = addingNode.payload.compareTo(payload);
             if(compareResult == 0) {
                 // The case if two payloads are equal will not be treated.
@@ -256,7 +256,7 @@ public class CompTree implements Iterable {
             }
         }
 
-        public boolean contains(Node searchingNode) {
+        public boolean contains(Node<T> searchingNode) {
             final int compareResult = payload.compareTo(searchingNode.payload);
             if(compareResult == 0) {
                 return true;
@@ -275,12 +275,12 @@ public class CompTree implements Iterable {
             return false;
         }
 
-        private Node getSmallestSubNode() {
+        private Node<T> getSmallestSubNode() {
             if(!hasSmaller()) return this;
             return smaller.getSmallestSubNode();
         }
 
-        private Node getBiggestSubNode() {
+        private Node<T> getBiggestSubNode() {
             if(!hasBigger()) return this;
             return bigger.getBiggestSubNode();
         }
@@ -293,7 +293,7 @@ public class CompTree implements Iterable {
             return bigger != null;
         }
 
-        private Comparable getPayload() {
+        private T getPayload() {
             return payload;
         }
 
@@ -308,7 +308,7 @@ public class CompTree implements Iterable {
          * @param toBeRemovedPayload die Payload, die aus dem Baum entfernt werden soll
          * @return Knoten, der nach dem Löschen anstelle von this referenziert werden soll
          */
-        private Node remove(Comparable toBeRemovedPayload) {
+        private Node<T> remove(T toBeRemovedPayload) {
             int compareResult = toBeRemovedPayload.compareTo(this.payload);
 
             // Prüfe, ob diese Node (this) entfernt werden soll
@@ -316,7 +316,7 @@ public class CompTree implements Iterable {
                 // Da das Entfernen mit Fallunterscheidung etwas länglich ist,
                 // rufen wir dafür eine Methode entfernenMitFallunterscheidung() auf
                 // Diese gibtden Knoten zurück, der this ersetzen soll
-                Node neu = this.removeWithCases();
+                Node<T> neu = this.removeWithCases();
 
                 // Da this ersetzt werden soll,
                 // wird der Ersatz-Knoten an die aufrufende Methode zurückgegeben
@@ -345,7 +345,7 @@ public class CompTree implements Iterable {
             }
         }
 
-        private Node removeWithCases() {
+        private Node<T> removeWithCases() {
             // Fall 0: kein Nachfolger
             // ersetze in der aufrufenden Methode die Referenz auf this
             // durch eine Referenz auf null -> gebe null zurück
@@ -361,7 +361,7 @@ public class CompTree implements Iterable {
             // Fall 1b: Nur ein Nachfolger - groesserer Teilbaum
             // ersetze in der aufrufenden Methode die Referenz auf this
             // durch eine Referenz auf this.groesser -> gebe this.groesser zurück
-            if(!hasBigger() && hasSmaller()) {
+            if(!hasBigger()) {
                 return smaller;
             }
 
@@ -370,7 +370,7 @@ public class CompTree implements Iterable {
             // Ermittle den kleinsten Knoten des größeren Teilbaums
             // Entferne den gefundenen kleinsten Knoten aus dem größeren Teilbaum
             // mit der bereits definierten Methode
-            Node smallestNodeInBiggerSubTree = bigger.getSmallestSubNode();
+            Node<T> smallestNodeInBiggerSubTree = bigger.getSmallestSubNode();
             this.remove(smallestNodeInBiggerSubTree.getPayload());
 
             // ersetze nun this durch den kleinsten nachfolger
@@ -384,23 +384,23 @@ public class CompTree implements Iterable {
         }
 
         @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Node node = (Node) o;
-            return Objects.equals(payload, node.payload) && Objects.equals(smaller, node.smaller) && Objects.equals(bigger, node.bigger);
-        }
-
-        @Override
         public int hashCode() {
             return Objects.hash(payload, smaller, bigger);
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node<T> node = (Node<T>) o;
+            return Objects.equals(payload, node.payload) && Objects.equals(smaller, node.smaller) && Objects.equals(bigger, node.bigger);
+        }
     }
 
-    public class CompIterator implements Iterator {
-        Node next;
+    public static class CompIterator<T extends Comparable<T>> implements Iterator<T> {
+        Node<T> next;
 
-        public CompIterator(Node start) {
+        public CompIterator(Node<T> start) {
             this.next = start;
         }
 
@@ -410,9 +410,9 @@ public class CompTree implements Iterable {
         }
 
         @Override
-        public Comparable next() {
+        public T next() {
             if(hasNext()) {
-                Comparable temp = next.getPayload();
+                T temp = next.getPayload();
                 next = next.getBigger();
                 return temp;
             }

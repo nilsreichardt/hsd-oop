@@ -1,4 +1,4 @@
-public class Studi implements Comparable {
+public class Studi implements Comparable<Studi> {
     String name;
     String matrikelnummer;
 
@@ -17,7 +17,7 @@ public class Studi implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Studi o) {
         return toString().compareTo(o.toString());
     }
 }

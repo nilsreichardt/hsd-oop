@@ -24,4 +24,9 @@ public class Treffer implements Comparable<Treffer> {
     public int getPunkte() {
         return punkte;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(punkte);
+    }
 }

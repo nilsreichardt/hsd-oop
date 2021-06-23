@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 
+// Fall A
 public class Flasche<T extends Wein> {
     T inhalt;
 
@@ -72,7 +73,6 @@ public class Flasche<T extends Wein> {
         wirdGetrunkenRaw.fuelleMit(wein);
         wirdGetrunkenRaw.fuelleMit(rotwein);
         wirdGetrunkenRaw.fuelleMit(weisswein);
-
 
         // wirdGetrunkenWild.fuelleMit(wein);
         // wirdGetrunkenWild.fuelleMit(rotwein);

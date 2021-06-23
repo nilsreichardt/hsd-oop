@@ -33,9 +33,9 @@ public class Spiel {
         registieren(new Treffer(200));
         registieren(new Treffer(500));
         registieren(new Treffer(750));
-        registieren(new Treffer(180));//Wert der nicht gültig ist
+        registieren(new Treffer(180)); // Wert der nicht gültig ist
         registieren(new Treffer(50));
-        registieren(new Treffer(171));//Wert der nicht gültig ist
+        registieren(new Treffer(171)); // Wert der nicht gültig ist
     }
 
     //Aufgabe 3b)
@@ -66,19 +66,19 @@ public class Spiel {
         System.out.println("zufälliger Treffer hinzufügen");
         meinSpiel.testeTreffer();
 
-        //Treffer Ausgeben
+        // Treffer Ausgeben
         System.out.println("Treffer und score ausgeben " + "\n" + meinSpiel.trefferBericht());
 
-        //Aufgabe 4b) mit richtigem datentyp ohne fehler
+        // Aufgabe 4b) mit richtigem datentyp ohne fehler
         meinSpiel.testExceptions(new Treffer(50));
-        //Aufgabe 4c) mit flaschem datentyp
-        //meinSpiel.testExceptions("moin");
-        //meinSpiel.testExceptions(null);
+        // Aufgabe 4c) mit flaschem datentyp
+        // meinSpiel.testExceptions("moin");
+        // meinSpiel.testExceptions(null);
 
         //Aufgabe 5b)
         meinSpiel.catchExceptions(new Treffer(50));
-        //meinSpiel.catchExceptions("moin");
-        //meinSpiel.catchExceptions(null);
+        // meinSpiel.catchExceptions("moin");
+        // meinSpiel.catchExceptions(null);
 
 
     }
@@ -102,7 +102,7 @@ public class Spiel {
             Integer anzahl = schaden.get(o);
             System.out.println(anzahl);
         }
-        /*catch (Exception e) //Muss ans ende gesetzt werden sonst würde  null/classCast exception bei den catches ignoriert da Exception auf alle arten von exception reagiert
+        /*catch (Exception e) // Muss ans ende gesetzt werden sonst würde null/classCast exception bei den catches ignoriert da Exception auf alle arten von exception reagiert
         {
             //Aufgabe 5c)
             System.err.println("Allgemeiner Fehler: " + e);
@@ -110,7 +110,7 @@ public class Spiel {
             System.err.println("Null Pointer Exception: " + e); //gibt die nullpointer Exception aus
         } catch (ClassCastException e) {
             System.err.println("Class Cast Execption: " + e);
-        } catch (Exception e) //Muss ans ende gesetzt werden sonst würde  null/classCast exception bei den catches ignoriert da Exception auf alle arten von exception reagiert
+        } catch (Exception e) //Muss ans ende gesetzt werden sonst würde null/classCast exception bei den catches ignoriert da Exception auf alle arten von exception reagiert
         {
             //Aufgabe 5c)
             System.err.println("Allgemeiner Fehler: " + e);

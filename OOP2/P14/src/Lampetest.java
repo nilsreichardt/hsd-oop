@@ -4,7 +4,10 @@ public class Lampetest {
         // eineLamp();
 
         // Task 2 b)
-        zweiLampen();
+        // zweiLampen();
+
+        // Task 3 a)
+        lampenWarten();
     }
 
     static void eineLamp() {
@@ -18,5 +21,20 @@ public class Lampetest {
 
         threadLampe1.start();
         threadLampe2.start();
+    }
+
+    static void lampenWarten() {
+        Thread threadLampe1 = new Thread(new Lampe("gelb", 500, 10));
+        Thread threadLampe2 = new Thread(new Lampe("lila", 400, 10));
+
+        try {
+            threadLampe1.start();
+            threadLampe1.join();
+
+            threadLampe2.start();
+            threadLampe2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

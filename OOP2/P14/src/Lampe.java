@@ -36,7 +36,7 @@ public class Lampe implements Runnable {
             System.out.println("Der Zustand der Lampe wurde geändert. Der neue Zustand lautet: " + istAn);
 
             try {
-                wait(verweilDauer);
+                Thread.sleep(verweilDauer);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

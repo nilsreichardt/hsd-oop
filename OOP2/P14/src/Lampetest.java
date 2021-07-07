@@ -10,7 +10,10 @@ public class Lampetest {
         // lampenWarten();
 
         // Task 4 b)
-        lampenUeberwachen();
+        // lampenUeberwachen();
+
+        // Task 5 b)
+        lampenStoppen();
     }
 
     static void eineLamp() {
@@ -56,6 +59,38 @@ public class Lampetest {
 
         while(threadLampe1.isAlive() || threadLampe2.isAlive() || threadLampe3.isAlive()) {
             System.out.println(rot.state() + "," + blau.state() + "," + schwarz.state());
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    static void lampenStoppen() {
+        Lampe rot = new Lampe("rot", 500, 10);
+        Lampe blau = new Lampe("blau", 400, 10);
+        Lampe schwarz = new Lampe("schwarz", 300, 10);
+
+        Thread threadLampe1 = new Thread(rot);
+        Thread threadLampe2 = new Thread(blau);
+        Thread threadLampe3 = new Thread(schwarz);
+
+        threadLampe1.start();
+        threadLampe2.start();
+        threadLampe3.start();
+
+        int rounds = 0;
+        while(threadLampe1.isAlive() || threadLampe2.isAlive() || threadLampe3.isAlive()) {
+            rounds++;
+            System.out.println("Round: " + rounds);
+            System.out.println(rot.state() + "," + blau.state() + "," + schwarz.state());
+            if(rounds >= 5) {
+                threadLampe1.interrupt();
+                threadLampe2.interrupt();
+                threadLampe3.interrupt();
+            }
+
             try {
                 Thread.sleep(300);
             } catch (InterruptedException e) {

@@ -35,13 +35,19 @@ public class Lampe implements Runnable {
         System.out.println("Moin, moin, meine aktiven Freunde :)");
 
         for (int i = 0; i < anzahlWechsel; i++) {
+            if(Thread.currentThread().isInterrupted()) {
+                return;
+            }
+
+            System.out.println("Thread.currentThread().isInterrupted(): " + Thread.currentThread().isInterrupted());
+
             istAn = !istAn;
             System.out.println("Der Zustand der Lampe (Farbe: " + farbe + ") wurde geändert. Der neue Zustand lautet: " + istAn);
 
             try {
                 Thread.sleep(verweilDauer);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
         }
 

@@ -30,10 +30,9 @@ public class Lampe implements Runnable {
     public void run() {
         System.out.println("Moin, moin, meine aktiven Freunde :)");
 
-        int anzahlWechsel = 10;
         for (int i = 0; i < anzahlWechsel; i++) {
             istAn = !istAn;
-            System.out.println("Der Zustand der Lampe wurde geändert. Der neue Zustand lautet: " + istAn);
+            System.out.println("Der Zustand der Lampe (Farbe: " + farbe + ") wurde geändert. Der neue Zustand lautet: " + istAn);
 
             try {
                 Thread.sleep(verweilDauer);

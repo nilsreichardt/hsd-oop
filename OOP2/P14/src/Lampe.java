@@ -26,6 +26,10 @@ public class Lampe implements Runnable {
         this.anzahlWechsel = anzahlWechsel;
     }
 
+    String state() {
+        return istAn ? farbe.toUpperCase() : farbe.toLowerCase();
+    }
+
     @Override
     public void run() {
         System.out.println("Moin, moin, meine aktiven Freunde :)");
